@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Studio Ca' Bragadin | Padova</title>
+  <meta name="description" content="Contact the professionals at Studio Ca' Bragadin in Padova. Lawyer Lenzi, Accountants Maretto and Cecolin. Fill out the form to request a consultation.">
+  <meta name="keywords" content="lawyer lenzi padova, andrea maretto padova, cecolin padova, accountant padova, accounting firm padova, legal services padova">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preload" href="../css/styles.css" as="style">
+  <link rel="preload" href="../images/hall.jpg.avif" as="image" fetchpriority="high">
+  <link rel="preload" href="../images/logo.jpg.avif" as="image" fetchpriority="high">
+
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <link rel="icon" type="image/png" href="../images/favicon-logo.png">
+  <link rel="shortcut icon" href="../images/favicon-logo.png" type="image/png">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+        <img src="../images/logo.jpg.avif" alt="Studio Ca' Bragadin Accounting Firm Padova - Lawyer Lenzi, Andrea Maretto, and Alberto Cecolin" width="80" height="60" loading="eager" decoding="async" fetchpriority="high">
+      </a>
+    </div>
+
+    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <div></div><div></div><div></div>
+    </div>
+
+    <ul class="navMenu" id="navMenu">
+      <li><a href="index.html" class="navLink">Home</a></li>
+      <li><a href="about.html" class="navLink">About Us</a></li>
+      <li><a href="services.html" class="navLink">Services</a></li>
+      <li><a href="sectors.html" class="navLink">Sectors</a></li>
+      <li><a href="contact.html" class="navLink active">Contact</a></li>
+    </ul>
+
+    <div class="languageToggle">
+      <a href="../index.html" class="languageButton" aria-label="Italian">IT</a>
+      <span>|</span>
+      <a href="index.html" class="languageButton active" aria-label="English">EN</a>
+    </div>
+  </nav>
+
+  <section class="contactHero">
+    <div class="contactHeroOverlay"></div>
+    <div class="contactHeroContent">
+      <h1>Contact Our Professionals</h1>
+      <p>Fill out the form to request a personalized consultation</p>
+    </div>
+  </section>
+
+  <section class="contactFormSection">
+    <div class="container">
+      <div class="contactFormWrapper">
+        <div class="formHeader">
+          <h2>Request a Consultation</h2>
+          <p>Please fill in all the fields to send your request</p>
+        </div>
+        
+        <form id="professionalContactForm" class="professionalForm">
+          <div class="formRow">
+            <div class="formGroup">
+              <label for="firstName">First Name*</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="formGroup">
+              <label for="lastName">Last Name*</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+          </div>
+
+          <div class="formGroup">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="formGroup">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="formRow">
+            <div class="formGroup">
+              <label for="professional">Professional*</label>
+              <select id="professional" name="professional" required>
+                <option value="">Select a professional</option>
+                <option value="avv_lenzi">Lawyer Maximiliano Lenzi</option>
+                <option value="dott_maretto">Dr. Andrea Maretto</option>
+                <option value="dott_cecolin">Dr. Alberto Cecolin</option>
+              </select>
+            </div>
+
+            <div class="formGroup">
+              <label for="service">Requested Service*</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="consulenza_legale">Legal Consultation</option>
+                <option value="consulenza_fiscale">Tax Consultation</option>
+                <option value="consulenza_societaria">Corporate Consultation</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="formGroup">
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <div class="formSubmit">
+            <button type="submit" class="ctaButton">Submit Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+ <!-- Map Section -->
+ <section class="mapSection">
+    <div class="container">
+      <h2>Where We Are</h2>
+      <div class="mapWrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2801.345476108059!2d11.876111315552865!3d45.40391797910036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaa7b8c5f6a5%3A0x3e9e8a7a8c5f6a5!2sVia%20Giovanni%20Battista%20Belzoni%2C%20180%2C%2035121%20Padova%20PD!5e0!3m2!1sen!2sit!4v1623256789015!5m2!1sen!2sit" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footerContent">
+      <div class="footerColumn">
+        <div class="footerLogo">
+          <img src="../images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="120" height="40" loading="lazy">
+        </div>
+        <p class="footerTagline">Professionalism and expertise at the service of businesses</p>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Contacts</h3>
+        <div class="footerInfo">
+          <p><strong>Address:</strong> Via G. Belzoni 180, 35121 Padova</p>
+          <p><strong>Email:</strong> info@studicabragadin.it</p>
+          <p><strong>Tel:</strong> +39 049 1234567</p>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Links</h3>
+        <div class="footerLinks">
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="sectors.html">Sectors</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Legal</h3>
+        <div class="footerLinks">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footerCopyright">
+      <p>&copy; <span id="currentYear"></span> Studio Commercialisti Ca' Bragadin. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
