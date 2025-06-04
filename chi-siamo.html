@@ -17,6 +17,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <!-- Preload critical resources -->
   <link rel="preload" href="css/index.css" as="style">
   <link rel="preload" href="css/chi-siamo.css" as="style">
@@ -33,6 +36,9 @@
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
   <link rel="shortcut icon" href="images/favicon-logo.png" type="image/png">
+  
+  <!-- Animate on Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -44,87 +50,98 @@
     <div class="hero-overlay"></div>
     <img src="images/team-glass-room.jpg.avif" alt="Team Studi Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
     <div class="hero-content">
-      <h1>Il Nostro Team</h1>
-      <p>Professionalità ed esperienza al tuo servizio</p>
+      <h1 data-aos="fade-up">Il Nostro Team</h1>
+      <p data-aos="fade-up" data-aos-delay="100">Dove competenza e passione si incontrano per creare valore</p>
     </div>
   </section>
 
   <!-- About Studio Section -->
   <section class="about-studio">
-    <div class="section-header">
-      <h2>Studi Ca' Bragadin</h2>
-      <p class="section-subtitle">Un nuovo approccio alla consulenza d'impresa</p>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Studi Ca' Bragadin</h2>
+        <p class="section-subtitle">Un nuovo approccio alla consulenza d'impresa</p>
+      </div>
+      
+      <div class="about-container">
+        <div class="about-text" data-aos="fade-right">
+          <p>Gli Studi Ca' Bragadin nascono come l'ambizioso progetto, fondato da tre professionisti operativi su Padova già da diversi decenni, di far confluire in un unico spazio tutte le professionalità necessarie per la consulenza d'impresa. Fondati nell'aprile 2024 nella prestigiosa location di Palazzo Bragadin, gli Studi rappresentano un contenitore multidisciplinare di dottori commercialisti, esperti contabili ed avvocati d'impresa che, già forti delle loro esperienze e dei risultati raggiunti in campo economico, finanziario, fiscale e giuridico negli anni, hanno deciso di consolidare ed incrementare il loro network professionale creando un nuovo spazio condiviso a disposizione della comunità degli imprenditori e degli enti istituzionali della provincia e non solo.</p>
+        </div>
+        <div class="about-image" data-aos="fade-left">
+          <img src="images/hall.jpg.avif" alt="Palazzo Bragadin" loading="lazy">
+        </div>
+      </div>
     </div>
-    
-    <div class="about-container">
-      <div class="about-text">
-        <p>Gli Studi Ca' Bragadin nascono come l'ambizioso progetto, fondato da tre professionisti operativi su Padova già da diversi decenni, di far confluire in un unico spazio tutte le professionalità necessarie per la consulenza d'impresa. Fondati nell'aprile 2024 nella prestigiosa location di Palazzo Bragadin, gli Studi rappresentano un contenitore multidisciplinare di dottori commercialisti, esperti contabili ed avvocati d'impresa che, già forti delle loro esperienze e dei risultati raggiunti in campo economico, finanziario, fiscale e giuridico negli anni, hanno deciso di consolidare ed incrementare il loro network professionale creando un nuovo spazio condiviso a disposizione della comunità degli imprenditori e degli enti istituzionali della provincia e non solo.</p>
-      </div>
-      <div class="about-image">
-        <img src="images/team.jpg" alt="Palazzo Bragadin" loading="lazy">
-      </div>
-    </div>
-    
-    <div class="activities-section">
-      <div class="activities-image">
-        <img src="images/team-glass-room.jpg.avif" alt="Riunione di lavoro" loading="lazy">
-      </div>
-      <div class="activities-content">
-        <h3>Attività Principali</h3>
-        <div class="activities-grid">
-          <div class="activity-item">
-            <div class="activity-icon">
-              <img src="images/icons/business-law.svg" alt="Icona diritto societario" width="40" height="40">
-            </div>
-            <h4>Diritto Societario e Commerciale</h4>
+  </section>
+
+  <!-- Activities Section -->
+  <section class="activities-section">
+    <div class="container">
+      <div class="activities-container">
+        <div class="activities-image" data-aos="fade-right">
+          <img src="images/team2.jpg.avif" alt="Riunione di lavoro" loading="lazy">
+        </div>
+        <div class="activities-content" data-aos="fade-left">
+          <div class="section-header">
+            <h2>Le Nostre Aree di Intervento</h2>
+            <p class="section-subtitle">Soluzioni integrate per ogni esigenza aziendale</p>
           </div>
-          <div class="activity-item">
-            <div class="activity-icon">
-              <img src="images/icons/litigation.svg" alt="Icona contenzioso" width="40" height="40">
+          
+          <div class="activities-grid">
+            <div class="activity-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="activity-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <h4>Diritto Societario e Commerciale</h4>
             </div>
-            <h4>Contenzioso Civile</h4>
-          </div>
-          <div class="activity-item">
-            <div class="activity-icon">
-              <img src="images/icons/tax.svg" alt="Icona tributi" width="40" height="40">
+            <div class="activity-item" data-aos="fade-up" data-aos-delay="150">
+              <div class="activity-icon">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <h4>Contenzioso Civile</h4>
             </div>
-            <h4>Contenzioso Tributario</h4>
-          </div>
-          <div class="activity-item">
-            <div class="activity-icon">
-              <img src="images/icons/tax-law.svg" alt="Icona diritto tributario" width="40" height="40">
+            <div class="activity-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="activity-icon">
+                <i class="fas fa-file-invoice-dollar"></i>
+              </div>
+              <h4>Contenzioso Tributario</h4>
             </div>
-            <h4>Diritto Tributario</h4>
-          </div>
-          <div class="activity-item">
-            <div class="activity-icon">
-              <img src="images/icons/compliance.svg" alt="Icona adempimenti" width="40" height="40">
+            <div class="activity-item" data-aos="fade-up" data-aos-delay="250">
+              <div class="activity-icon">
+                <i class="fas fa-balance-scale"></i>
+              </div>
+              <h4>Diritto Tributario</h4>
             </div>
-            <h4>Adempimenti civilistici e fiscali</h4>
-          </div>
-          <div class="activity-item">
-            <div class="activity-icon">
-              <img src="images/icons/merger.svg" alt="Icona operazioni" width="40" height="40">
+            <div class="activity-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="activity-icon">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <h4>Adempimenti civilistici e fiscali</h4>
             </div>
-            <h4>Operazioni Straordinarie d'impresa</h4>
-          </div>
-          <div class="activity-item">
-            <div class="activity-icon">
-              <img src="images/icons/management.svg" alt="Icona controllo" width="40" height="40">
+            <div class="activity-item" data-aos="fade-up" data-aos-delay="350">
+              <div class="activity-icon">
+                <i class="fas fa-exchange-alt"></i>
+              </div>
+              <h4>Operazioni Straordinarie d'impresa</h4>
             </div>
-            <h4>Controllo di Gestione</h4>
-          </div>
-          <div class="activity-item">
-            <div class="activity-icon">
-              <img src="images/icons/finance.svg" alt="Icona finanziamenti" width="40" height="40">
+            <div class="activity-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="activity-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4>Controllo di Gestione</h4>
             </div>
-            <h4>Legislazione Bancaria e Finanziamenti</h4>
-          </div>
-          <div class="activity-item">
-            <div class="activity-icon">
-              <img src="images/icons/audit.svg" alt="Icona revisione" width="40" height="40">
+            <div class="activity-item" data-aos="fade-up" data-aos-delay="450">
+              <div class="activity-icon">
+                <i class="fas fa-university"></i>
+              </div>
+              <h4>Legislazione Bancaria e Finanziamenti</h4>
             </div>
-            <h4>Vigilanza e Revisione Contabile</h4>
+            <div class="activity-item" data-aos="fade-up" data-aos-delay="500">
+              <div class="activity-icon">
+                <i class="fas fa-search-dollar"></i>
+              </div>
+              <h4>Vigilanza e Revisione Contabile</h4>
+            </div>
           </div>
         </div>
       </div>
@@ -133,101 +150,73 @@
 
   <!-- Team Section -->
   <section class="team-section">
-    <div class="section-header">
-      <h2>I Professionisti</h2>
-      <p class="section-subtitle">Conosci il nostro team</p>
-    </div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>I Professionisti</h2>
+        <p class="section-subtitle">Conosci il nostro team</p>
+      </div>
 
-    <div class="team-members">
-      <!-- Avv. Lenzi -->
-      <div class="team-member">
-        <div class="member-image">
-          <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi" loading="lazy">
-         
-        </div>
-        <div class="member-info">
-          <div class="member-header">
+      <div class="team-cards">
+        <!-- Avv. Lenzi -->
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-image">
+            <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi" loading="lazy">
+            <div class="card-overlay">
+              <a href="maximiliano-lenzi.html" class="discover-more">Scopri di più</a>
+            </div>
+          </div>
+          <div class="card-content">
             <h3>Avv. Maximiliano Lenzi</h3>
-            <p class="member-role">Consulenza Legale d'Impresa</p>
-          </div>
-          <div class="member-bio">
-            <p>Avvocato specializzato in diritto commerciale e societario con oltre 18 anni di esperienza. Offre assistenza completa alle imprese in tutte le fasi della loro attività, dalla costituzione alla gestione delle crisi.</p>
-            <div class="member-expertise">
-              <h4>Principali Aree di Competenza:</h4>
-              <ul>
-                <li>Costituzione e organizzazione societaria</li>
-                <li>Contratti commerciali e distributivi</li>
-                <li>Crisi d'impresa e procedure concorsuali</li>
-                <li>Proprietà intellettuale e industriale</li>
-                <li>Conformità normativa e corporate governance</li>
-              </ul>
+            <p class="card-role">Consulenza Legale d'Impresa</p>
+            <div class="card-excerpt">
+              <p>Avvocato specializzato in diritto commerciale e societario con oltre 18 anni di esperienza.</p>
+            </div>
+            <div class="card-cta">
+              <a href="mailto:avvocatolenzi@studicabragadin.it" class="contact-button">Contatta</a>
+              <a href="maximiliano-lenzi.html" class="contact-button profile">Profilo Completo</a>
             </div>
           </div>
-          <div class="member-footer">
-            <a href="mailto:avvocatolenzi@studicabragadin.it" class="contact-button">Contatta</a>
-            <a href="tel:0498751356" class="contact-button secondary">Chiama</a>
-          </div>
         </div>
-      </div>
 
-      <!-- Dott. Maretto -->
-      <div class="team-member">
-        <div class="member-image">
-          <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto" loading="lazy">
-         
-        </div>
-        <div class="member-info">
-          <div class="member-header">
+        <!-- Dott. Maretto -->
+        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-image">
+            <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto" loading="lazy">
+            <div class="card-overlay">
+              <a href="andrea-maretto.html" class="discover-more">Scopri di più</a>
+            </div>
+          </div>
+          <div class="card-content">
             <h3>Dott. Andrea Maretto</h3>
-            <p class="member-role">Consulenza Fiscale e Societaria</p>
-          </div>
-          <div class="member-bio">
-            <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza nella consulenza fiscale e societaria. Specializzato in pianificazione fiscale nazionale e internazionale, operazioni straordinarie e fiscalità delle startup.</p>
-            <div class="member-expertise">
-              <h4>Principali Aree di Competenza:</h4>
-              <ul>
-                <li>Pianificazione fiscale strategica</li>
-                <li>Due diligence fiscali e societarie</li>
-                <li>Fiscalità internazionale e transfer pricing</li>
-                <li>Operazioni di M&A e restructuring</li>
-                <li>Incentivi fiscali per l'innovazione</li>
-              </ul>
+            <p class="card-role">Consulenza Fiscale e Societaria</p>
+            <div class="card-excerpt">
+              <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza nella consulenza fiscale.</p>
+            </div>
+            <div class="card-cta">
+              <a href="mailto:andrea.maretto@studicabragadin.it" class="contact-button">Contatta</a>
+              <a href="andrea-maretto.html" class="contact-button profile">Profilo Completo</a>
             </div>
           </div>
-          <div class="member-footer">
-            <a href="mailto:andrea.maretto@studicabragadin.it" class="contact-button">Contatta</a>
-            <a href="tel:0499562428" class="contact-button secondary">Chiama</a>
-          </div>
         </div>
-      </div>
 
-      <!-- Dott. Cecolin -->
-      <div class="team-member">
-        <div class="member-image">
-          <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin" loading="lazy">
-          
-        </div>
-        <div class="member-info">
-          <div class="member-header">
-            <h3>Dott. Alberto Cecolin</h3>
-            <p class="member-role">Consulenza Contabile e Fiscale</p>
-          </div>
-          <div class="member-bio">
-            <p>Dottore Commercialista con 15 anni di esperienza in revisione contabile e controllo di gestione. Specializzato nell'analisi dei processi aziendali e nell'implementazione di sistemi di reporting avanzati.</p>
-            <div class="member-expertise">
-              <h4>Principali Aree di Competenza:</h4>
-              <ul>
-                <li>Revisione legale dei conti</li>
-                <li>Controllo di gestione e KPI</li>
-                <li>Budgeting e forecasting</li>
-                <li>Adempimenti civilistici e fiscali</li>
-                <li>Sistemi di internal auditing</li>
-              </ul>
+        <!-- Dott. Cecolin -->
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-image">
+            <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin" loading="lazy">
+            <div class="card-overlay">
+              <a href="alberto-cecolin.html" class="discover-more">Scopri di più</a>
             </div>
           </div>
-          <div class="member-footer">
-            <a href="mailto:studio@studiocecolin.com" class="contact-button">Contatta</a>
-            <a href="tel:0497851468" class="contact-button secondary">Chiama</a>
+          <div class="card-content">
+            <h3>Dott. Alberto Cecolin</h3>
+            <p class="card-role">Consulenza Contabile e Fiscale</p>
+            <div class="card-excerpt">
+              <p>Dottore Commercialista con 15 anni di esperienza in revisione contabile e controllo di gestione.</p>
+            </div>
+            <div class="card-cta">
+              <a href="mailto:studio@studiocecolin.com" class="contact-button">Contatta</a>
+              <a href="alberto-cecolin.html" class="contact-button profile">Profilo Completo</a>
+            </div>
           </div>
         </div>
       </div>
@@ -236,86 +225,86 @@
 
   <!-- Values Section -->
   <section class="values-section">
-    <div class="section-header">
-      <h2>La Nostra Missione</h2>
-      <p class="section-subtitle">Ciò che ci guida ogni giorno</p>
-    </div>
-    
-    <div class="mission-container">
-      <div class="mission-content">
-        <p>Eccellenza professionale, etica ed affiancamento alle imprese in tutte le fasi, ordinarie e straordinarie, della loro esistenza: gli Studi Ca' Bragadin nascono con il preciso obiettivo di essere molto di più che un semplice consulente esterno per imprese, quanto piuttosto un partner in grado di creare un tangibile valore aggiunto per i propri clienti grazie alla combinazione delle competenze in ambito legale, tributario e societario e all'assiduo impegno e dedizione dei professionisti che vi convivono.</p>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Missione e Valori</h2>
+        <p class="section-subtitle">Ciò che ci guida ogni giorno</p>
       </div>
-    </div>
-    
-    <div class="values-container">
-      <div class="value-card">
-        <div class="value-icon">
-          <img src="images/icons/ethics.svg" alt="Icona etica" width="48" height="48">
+      
+      <div class="mission-container">
+        <div class="mission-content" data-aos="fade-up">
+          <p>Eccellenza professionale, etica ed affiancamento alle imprese in tutte le fasi, ordinarie e straordinarie, della loro esistenza: gli Studi Ca' Bragadin nascono con il preciso obiettivo di essere molto di più che un semplice consulente esterno per imprese, quanto piuttosto un partner in grado di creare un tangibile valore aggiunto per i propri clienti grazie alla combinazione delle competenze in ambito legale, tributario e societario e all'assiduo impegno e dedizione dei professionisti che vi convivono.</p>
         </div>
-        <h3>Etica Professionale</h3>
-        <p>Rispettiamo i più alti standard deontologici, ponendo l'interesse del cliente al centro di ogni nostra attività. La correttezza e la trasparenza guidano ogni nostro consiglio.</p>
       </div>
-      <div class="value-card">
-        <div class="value-icon">
-          <img src="images/icons/innovation.svg" alt="Icona innovazione" width="48" height="48">
+      
+      <div class="values-grid">
+        <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="value-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Etica Professionale</h3>
+          <p>Rispettiamo i più alti standard deontologici, ponendo l'interesse del cliente al centro di ogni nostra attività.</p>
         </div>
-        <h3>Innovazione</h3>
-        <p>Adottiamo tecnologie avanzate e metodologie aggiornate per offrire servizi efficienti e moderni. Investiamo continuamente nella formazione e nell'aggiornamento professionale.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">
-          <img src="images/icons/teamwork.svg" alt="Icona lavoro di squadra" width="48" height="48">
+        <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>Innovazione</h3>
+          <p>Adottiamo tecnologie avanzate e metodologie aggiornate per offrire servizi efficienti e moderni.</p>
         </div>
-        <h3>Approccio Multidisciplinare</h3>
-        <p>La collaborazione tra i nostri professionisti garantisce soluzioni complete che considerano tutti gli aspetti legali, fiscali e gestionali di ogni problematica aziendale.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">
-          <img src="images/icons/results.svg" alt="Icona risultati" width="48" height="48">
+        <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="value-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Approccio Multidisciplinare</h3>
+          <p>La collaborazione tra i nostri professionisti garantisce soluzioni complete che considerano tutti gli aspetti.</p>
         </div>
-        <h3>Orientamento ai Risultati</h3>
-        <p>Non ci limitiamo a interpretare norme e numeri, ma sviluppiamo strategie concrete per raggiungere gli obiettivi aziendali, misurando sempre l'efficacia del nostro operato.</p>
+        <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="value-icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <h3>Orientamento ai Risultati</h3>
+          <p>Sviluppiamo strategie concrete per raggiungere gli obiettivi aziendali, misurando sempre l'efficacia.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Collaborators Section -->
-  <section class="collaborators-section">
-    <div class="section-header">
-      <h2>Il Nostro Network</h2>
-      <p class="section-subtitle">Collaborazioni e partnership</p>
-    </div>
-    <div class="collaborators-content">
-      <p>Per offrire un servizio completo ai nostri clienti, collaboriamo con una rete selezionata di professionisti specializzati:</p>
-      <div class="collaborators-list">
-        <div class="collaborator">
-          <h4>Notai</h4>
-          <p>Per operazioni immobiliari e societarie complesse</p>
+  <!-- Network Section -->
+  <section class="network-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Il Nostro Network</h2>
+        <p class="section-subtitle">Collaborazioni e partnership di eccellenza</p>
+      </div>
+      
+      <div class="network-container">
+        <div class="network-content" data-aos="fade-right">
+          <p>Per offrire un servizio completo ai nostri clienti, collaboriamo con una rete selezionata di professionisti specializzati:</p>
+          <ul class="network-list">
+            <li data-aos="fade-right" data-aos-delay="100">Notai per operazioni immobiliari e societarie complesse</li>
+            <li data-aos="fade-right" data-aos-delay="150">Banche e Finanziarie per soluzioni di finanziamento e investimento</li>
+            <li data-aos="fade-right" data-aos-delay="200">Consulenti del Lavoro per adempimenti previdenziali e contrattualistica</li>
+            <li data-aos="fade-right" data-aos-delay="250">Specialisti IT per digitalizzazione e sistemi gestionali</li>
+          </ul>
         </div>
-        <div class="collaborator">
-          <h4>Banche e Finanziarie</h4>
-          <p>Per soluzioni di finanziamento e investimento</p>
-        </div>
-        <div class="collaborator">
-          <h4>Consulenti del Lavoro</h4>
-          <p>Per adempimenti previdenziali e contrattualistica</p>
-        </div>
-        <div class="collaborator">
-          <h4>Specialisti IT</h4>
-          <p>Per digitalizzazione e sistemi gestionali</p>
+        <div class="network-image" data-aos="fade-left">
+          <img src="images/mid-hall.avif" alt="Network di collaborazioni" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="about-cta">
-    <div class="cta-content">
-      <h2>Pronto a lavorare con noi?</h2>
-      <p>Il primo incontro è senza impegno. Raccontaci le tue esigenze e scopri come possiamo aiutarti.</p>
-      <div class="cta-buttons">
-        <a href="contatti.html" class="cta-button primary">Prenota una Consulenza</a>
-        <a href="servizi.html" class="cta-button secondary">Scopri i Servizi</a>
+  <section class="about-cta" data-aos="fade-up">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Pronto a lavorare con noi?</h2>
+        <p>Il primo incontro è senza impegno. Raccontaci le tue esigenze e scopri come possiamo aiutarti.</p>
+        <div class="cta-buttons">
+          <a href="contatti.html" class="cta-button primary">Prenota una Consulenza</a>
+          <a href="servizi.html" class="cta-button secondary">Scopri i Servizi</a>
+        </div>
       </div>
     </div>
   </section>
@@ -325,7 +314,16 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    // Initialize AOS animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+
     // Load components
     document.addEventListener('DOMContentLoaded', function() {
       // Load navbar
