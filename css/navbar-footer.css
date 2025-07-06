@@ -3,7 +3,7 @@
   position: sticky;
   top: 0;
   min-height: 100px;
-  background-color: rgba(34, 40, 49, 0.98);
+  background-color: #0d1f3a /* Dark Blue Background */;
   padding: 15px 5%;
   z-index: 1000;
   display: flex;
@@ -97,6 +97,7 @@
   position: relative;
   z-index: 1001;
   margin: 0 auto;
+
 }
 
 .hamburger div {
@@ -135,6 +136,7 @@
 /* ===== DROPDOWN MENU STYLES ===== */
 .dropdown {
   position: relative;
+  background-color: #0d1f3a /* Dark Blue Background */;
 }
 
 .dropdown-arrow {
@@ -156,7 +158,7 @@
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--dark-color);
+  background-color: #0d1f3a /* Dark Blue Background */;
   min-width: 220px;
   box-shadow: var(--shadow-lg);
   border-radius: var(--border-radius);
@@ -185,6 +187,7 @@
   display: block;
   padding: 10px 25px;
   color: var(--white-color);
+  background-color: #0d1f3a /* Dark Blue Background */;
   font-size: 0.9rem;
   text-transform: none;
   transition: var(--transition);
@@ -230,7 +233,8 @@
     right: 0;
     width: 90%;
     height: 0;
-    background-color: var(--dark-color);
+    background-color: #0d1f3a /* Dark Blue Background */;
+
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -252,6 +256,8 @@
     opacity: 1;
     transform: translateY(0);
     overflow-y: auto;
+    background-color: #0d1f3a /* Dark Blue Background */;
+
   }
 
   .navMenu li {
@@ -260,6 +266,8 @@
     margin: 0 auto;
     text-align: center;
     position: relative;
+    background-color: #0d1f3a /* Dark Blue Background */;
+
   }
 
   .navLink {
@@ -376,7 +384,7 @@
 
 /* ===== FOOTER STYLES ===== */
 .footer {
-  background-color: var(--dark-color);
+  background-color: #0d1f3a /* Dark Blue Background */;
   color: var(--white-color);
   padding: 60px 5% 30px;
   position: relative;
@@ -508,6 +516,8 @@
 @media (max-width: 768px) {
   .footer {
     padding: 40px 5% 25px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+
   }
 
   .footerContent {
