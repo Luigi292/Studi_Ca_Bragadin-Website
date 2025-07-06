@@ -4,160 +4,470 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dott. Alberto Cecolin | Commercialista Padova | Studio Ca' Bragadin</title>
-  <meta name="description" content="Dott. Alberto Cecolin - Commercialista specializzato in consulenza fiscale e societaria a Padova. Servizi completi per professionisti e piccole imprese.">
-  <meta name="keywords" content="commercialista padova, alberto cecolin padova, consulenza fiscale padova, servizi societari padova, contabilità padova">
+  <title>Dott. Alberto Cecolin | Commercialista e Revisore Legale | Studio Ca' Bragadin</title>
+  <meta name="description" content="Dott. Alberto Cecolin - Dottore Commercialista e Revisore Legale a Padova. Specializzato in consulenza fiscale, societaria e controllo di gestione.">
+  <meta name="keywords" content="commercialista padova, revisore legale padova, alberto cecolin, consulenza fiscale, consulenza societaria">
 
-  <!-- Favicon Setup -->
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/professional.css">
   <link rel="stylesheet" href="css/index.css">
-
-  <!-- Primary favicon -->
-  <link rel="icon" type="image/png" href="images/favicon-logo.png">
+  
+  
 </head>
 <body>
-  <!-- Navbar Container -->
-  <div class="navbar-container" id="navbar-container"></div>
 
-  <!-- Professional Hero Section -->
-  <section class="professional-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/alberto-hero.jpg.avif');">
-    <div class="container">
-      <div class="professional-header">
-        <h1>Dott. Alberto Cecolin</h1>
-        <p class="professional-title">Commercialista - Consulenza Fiscale e Societaria</p>
-      </div>
+
+   <!-- Navbar Container -->
+<!-- Navbar Component -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+      </a>
+    </div>
+
+    <div class="languageToggle">
+      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+      <span>|</span>
+      <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
+    </div>
+
+    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <div></div><div></div><div></div>
+    </div>
+
+    <ul class="navMenu" id="navMenu">
+      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+      <li class="dropdown">
+        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo</a>
+        <span class="dropdown-arrow"></span>
+        <ul class="dropdown-menu">
+          <li><a href="chi-siamo.html">Chi Siamo</a></li>
+          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+        </ul>
+      </li>
+      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+      <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
+    </ul>
+  </nav>
+
+
+
+  <!-- Hero Section -->
+  <section class="professional-hero">
+    <div class="professional-header">
+      <h1>Dott. Alberto Cecolin</h1>
+      <p class="professional-title">Dottore Commercialista e Revisore Legale</p>
+    </div>
+    
+    <!-- Decorative elements -->
+    <div class="hero-decor decor-1">
+      <i class="fas fa-balance-scale"></i>
+    </div>
+    <div class="hero-decor decor-2">
+      <i class="fas fa-chart-line"></i>
     </div>
   </section>
 
-  <!-- Professional Content Section -->
+  <!-- Profile Section -->
   <section class="professional-content">
-    <div class="container">
-      <div class="professional-grid">
-        <div class="professional-main">
-          <h2>Profilo Professionale</h2>
-          <p>Il Dott. Alberto Cecolin è un commercialista abilitato con una solida esperienza nella consulenza a professionisti e piccole imprese, con particolare attenzione alle esigenze fiscali e contabili.</p>
-          
-          <h3>Esperienze Professionali</h3>
-          <ul class="professional-list">
-            <li>Consulenza fiscale e contabile per professionisti e piccole imprese</li>
-            <li>Redazione e presentazione dichiarazioni dei redditi</li>
-            <li>Assistenza in adempimenti IVA e contributivi</li>
-            <li>Consulenza in materia di startup e nuove imprese</li>
-            <li>Pianificazione fiscale personalizzata</li>
-            <li>Assistenza in controlli e verifiche fiscali</li>
-          </ul>
+    <div class="content-block profile-block">
+      <div class="profile-text">
+        <h2>Profilo Professionale</h2>
+        <p>Il Dott. Alberto Cecolin vanta una consolidata esperienza nel campo della consulenza fiscale, societaria e amministrativa, con particolare specializzazione nella pianificazione finanziaria e nel controllo di gestione per imprese e professionisti.</p>
+        <p>Con importanti incarichi istituzionali nel territorio padovano, il Dott. Cecolin rappresenta un punto di riferimento per clienti che richiedono competenze specialistiche e un approccio personalizzato alle problematiche fiscali e societarie.</p>
+      </div>
+      <div class="profile-image">
+        <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin">
+      </div>
+    </div>
 
-          <h3>Formazione</h3>
-          <ul class="professional-list">
-            <li>Laurea in Economia Aziendale presso l'Università degli Studi di Padova</li>
-            <li>Abilitazione alla professione di Dottore Commercialista</li>
-            <li>Master in Fiscalità per Professionisti</li>
-            <li>Specializzazione in Contabilità e Bilancio</li>
-            <li>Numerosi corsi de aggiornamento in materia fiscale</li>
-          </ul>
+    <!-- Qualifications Section -->
+    <div class="content-block">
+      <div class="block-header">
+        <h2>Qualifiche Professionali</h2>
+        <p>Le certificazioni e i titoli accademici che attestano la competenza del Dott. Cecolin</p>
+      </div>
+      <div class="qualifications-block">
+        <div class="qualification-card">
+          <div class="qualification-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>Laurea Magistrale</h3>
+          <p>Economia Aziendale presso l'Università degli Studi Ca' Foscari di Venezia</p>
+        </div>
+        <div class="qualification-card">
+          <div class="qualification-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>Dottore Commercialista</h3>
+          <p>Iscritto all'Ordine di Padova n° 1531/A dal 17-03-2010</p>
+        </div>
+        <div class="qualification-card">
+          <div class="qualification-icon">
+            <i class="fas fa-file-signature"></i>
+          </div>
+          <h3>Revisore Legale</h3>
+          <p>Abilitazione n° 159679 DM 15/07/2010</p>
+        </div>
+        <div class="qualification-card">
+          <div class="qualification-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3>Specializzazioni</h3>
+          <p>Fiscalità internazionale e controllo di gestione</p>
+        </div>
+      </div>
+    </div>
 
-          <div class="professional-cta">
-            <a href="../contatti.html" class="ctaButton">Richiedi una consulenza</a>
+    <!-- Experience Section -->
+    <div class="content-block">
+      <div class="block-header">
+        <h2>Esperienze Professionali</h2>
+        <p>Gli incarichi istituzionali e le posizioni ricoperte dal Dott. Cecolin</p>
+      </div>
+      <div class="timeline-block">
+        <div class="timeline-item">
+          <span class="timeline-date">Dal 16.04.2025</span>
+          <div class="timeline-content">
+            <h3>Membro del Collegio Sindacale</h3>
+            <p>Estenergy S.p.A.</p>
           </div>
         </div>
-
-        <div class="professional-sidebar">
-          <div class="professional-card">
-            <div class="professional-image">
-              <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin" width="300" height="300">
-            </div>
-            <div class="professional-info">
-              <h3>Contatti</h3>
-              <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
-              <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
-              <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-              <p><strong>Orari:</strong> Lun-Ven 9:00-13:00 / 14:30-18:30</p>
-            </div>
+        <div class="timeline-item">
+          <span class="timeline-date">Dal 30.04.2019</span>
+          <div class="timeline-content">
+            <h3>Membro del C.d.A.</h3>
+            <p>Interporto Padova S.p.A.</p>
           </div>
-
-          <div class="professional-services">
-            <h3>Aree di Competenza</h3>
-            <ul>
-              <li>Consulenza Fiscale</li>
-              <li>Contabilità</li>
-              <li>Dichiarazioni dei Redditi</li>
-              <li>Adempimenti IVA</li>
-              <li>Fiscalità per Professionisti</li>
-              <li>Startup e Nuove Imprese</li>
-            </ul>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">07.06.2017 - 15.01.2020</span>
+          <div class="timeline-content">
+            <h3>Presidente del C.d.A.</h3>
+            <p>Consorzio Zona Industriale e Porto Fluviale di Padova</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">Da maggio 2013</span>
+          <div class="timeline-content">
+            <h3>Sindaco e revisore legale</h3>
+            <p>Società a partecipazione privata</p>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Expertise Section -->
+    <div class="content-block">
+      <div class="block-header">
+        <h2>Aree di Competenza</h2>
+        <p>Le specializzazioni e i servizi offerti dal Dott. Cecolin</p>
+      </div>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Consulenza Fiscale</h3>
+          <p>Pianificazione fiscale strategica per imprese e professionisti</p>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3>Consulenza Societaria</h3>
+          <p>Costituzione, trasformazione e riorganizzazione societaria</p>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>Controllo di Gestione</h3>
+          <p>Analisi dei costi e performance aziendali</p>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <i class="fas fa-search-dollar"></i>
+          </div>
+          <h3>Revisione Legale</h3>
+          <p>Verifica e certificazione dei bilanci</p>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3>Corporate Governance</h3>
+          <p>Adempimenti societari e compliance normativa</p>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <i class="fas fa-landmark"></i>
+          </div>
+          <h3>Consulenza Istituzionale</h3>
+          <p>Supporto ad enti pubblici e istituzioni</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-block">
+      <a href="contatti.html" class="ctaButton">Richiedi una consulenza</a>
     </div>
   </section>
 
   <!-- Footer Container -->
-  <div id="footer-container"></div>
+  <footer class="footer">
+  <div class="footerContent">
+    <div class="footerColumn">
+      <div class="footerLogo">
+        <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+      </div>
+      <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+    </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Load navbar
-      fetch('components/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar-container').innerHTML = data;
+    <div class="footerColumn">
+      <h3 class="footerHeading">Contatti</h3>
+      <div class="footerInfo">
+        <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+        <p><strong>Email:</strong> info@studicabragadin.it</p>
+        <p><strong>Tel:</strong> +39 049 1234567</p>
+      </div>
+    </div>
+
+    <div class="footerColumn">
+      <h3 class="footerHeading">Link</h3>
+      <div class="footerLinks">
+        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="servizi.html">Servizi/Settori</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+    </div>
+
+    <div class="footerColumn">
+      <h3 class="footerHeading">Legale</h3>
+      <div class="footerLinks">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Termini</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footerCopyright">
+    <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+
+
+
+<!-- Scripts -->
+<!-- Scripts -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // =============================================
+  // Navigation Functionality
+  // =============================================
+  
+  // Toggle Hamburger Menu
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  const body = document.body;
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      
+      // Toggle body overflow when menu is open
+      if (navMenu.classList.contains('active')) {
+        body.style.overflow = 'hidden';
+      } else {
+        body.style.overflow = '';
+      }
+      
+      // Update ARIA attribute for accessibility
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+    });
+  }
+
+  // Close mobile menu when clicking on a nav link
+  const navLinks = document.querySelectorAll('.navLink');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+  });
+
+  // Mobile dropdown toggle
+  const dropdowns = document.querySelectorAll('.dropdown');
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('.navLink');
+    const menu = dropdown.querySelector('.dropdown-menu');
+    
+    if (link && menu) {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          menu.classList.toggle('active');
           
-          // Set active link
-          const navLinks = document.querySelectorAll('.navLink');
-          navLinks.forEach(link => {
-            if (link.getAttribute('href').includes('alberto-cecolin.html')) {
-              link.classList.add('active');
-            } else {
-              link.classList.remove('active');
+          // Close other open dropdowns
+          document.querySelectorAll('.dropdown-menu').forEach(otherMenu => {
+            if (otherMenu !== menu) {
+              otherMenu.classList.remove('active');
             }
           });
-          
-          // Initialize mobile menu
-          const hamburger = document.getElementById('hamburger');
-          const navMenu = document.getElementById('navMenu');
-          if (hamburger && navMenu) {
-            hamburger.addEventListener('click', function() {
-              this.classList.toggle('active');
-              navMenu.classList.toggle('active');
-              const isExpanded = this.getAttribute('aria-expanded') === 'true';
-              this.setAttribute('aria-expanded', !isExpanded);
-            });
-          }
+        }
+      });
+    }
+  });
 
-          // Initialize dropdown menus
-          const dropdowns = document.querySelectorAll('.dropdown');
-          dropdowns.forEach(dropdown => {
-            const link = dropdown.querySelector('.navLink');
-            const menu = dropdown.querySelector('.dropdown-menu');
-            
-            link.addEventListener('click', function(e) {
-              if (window.innerWidth <= 768) {
-                e.preventDefault();
-                menu.classList.toggle('active');
-              }
-            });
-          });
-        });
+  // Highlight Active Nav Link
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const allNavLinks = document.querySelectorAll('.navLink, .dropdown-menu a');
+  
+  allNavLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    
+    // Remove active class from all links first
+    link.classList.remove('active');
+    
+    // Special case for chi-siamo.html and its dropdown items
+    if (currentPage === 'chi-siamo.html' && href === 'chi-siamo.html') {
+      link.classList.add('active');
+      // Also highlight the parent navLink in the dropdown
+      const parentNavLink = document.querySelector('.navLink[href="chi-siamo.html"]');
+      if (parentNavLink) parentNavLink.classList.add('active');
+    }
+    // Check if this link matches current page
+    else if (href === currentPage || 
+             (currentPage === '' && href === 'index.html') ||
+             (href.endsWith(currentPage) && currentPage !== 'index.html')) {
+      link.classList.add('active');
+      
+      // If this is a dropdown item, also highlight the parent navLink
+      if (link.closest('.dropdown-menu')) {
+        const parentNavLink = link.closest('.dropdown').querySelector('.navLink');
+        if (parentNavLink) parentNavLink.classList.add('active');
+      }
+    }
+  });
 
-      // Load footer
-      fetch('components/footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-          // Set current year in footer
-          document.querySelector('.current-year').textContent = new Date().getFullYear();
-        });
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown') && window.innerWidth <= 768) {
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.classList.remove('active');
+      });
+    }
+    
+    // Close menu when clicking outside on mobile
+    if (window.innerWidth <= 768 && 
+        !e.target.closest('.navbar') && 
+        navMenu.classList.contains('active')) {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      body.style.overflow = '';
+    }
+  });
+
+  // =============================================
+  // Footer Functionality
+  // =============================================
+  
+  // Set current year in footer
+  const yearElements = document.querySelectorAll('.current-year');
+  yearElements.forEach(element => {
+    element.textContent = new Date().getFullYear();
+  });
+
+  // =============================================
+  // Responsive Adjustments for Professional Pages
+  // =============================================
+  
+  // Responsive adjustments for professional pages
+  function adjustProfessionalLayout() {
+    const profileBlocks = document.querySelectorAll('.profile-block');
+    profileBlocks.forEach(block => {
+      if (window.innerWidth <= 768) {
+        // Mobile layout - stack image above text
+        const image = block.querySelector('.profile-image');
+        const text = block.querySelector('.profile-text');
+        if (image && text) {
+          block.insertBefore(image, text);
+        }
+      } else {
+        // Desktop layout - restore original order
+        const image = block.querySelector('.profile-image');
+        const text = block.querySelector('.profile-text');
+        if (image && text) {
+          block.insertBefore(text, image);
+        }
+      }
     });
-  </script>
+
+    // Adjust qualification and expertise grid for mobile
+    const qualificationsBlock = document.querySelector('.qualifications-block');
+    const expertiseGrid = document.querySelector('.expertise-grid');
+    
+    if (window.innerWidth <= 1024 && qualificationsBlock) {
+      qualificationsBlock.style.gridTemplateColumns = 'repeat(2, 1fr)';
+    }
+    
+    if (window.innerWidth <= 576 && qualificationsBlock) {
+      qualificationsBlock.style.gridTemplateColumns = '1fr';
+    }
+    
+    if (window.innerWidth <= 1024 && expertiseGrid) {
+      expertiseGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+    }
+    
+    if (window.innerWidth <= 576 && expertiseGrid) {
+      expertiseGrid.style.gridTemplateColumns = '1fr';
+    }
+  }
+
+  // Run on load and on resize
+  adjustProfessionalLayout();
+  window.addEventListener('resize', adjustProfessionalLayout);
+
+  // =============================================
+  // Smooth Scrolling for Anchor Links
+  // =============================================
+  
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+</script>
+
+
+
 </body>
 </html>

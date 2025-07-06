@@ -37,8 +37,42 @@
 <body>
   
   <!-- Navbar Component -->
-   <!-- Navbar Container - This will be sticky -->
-  <div class="navbar-container" id="navbar-container"></div>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+      </a>
+    </div>
+
+    <div class="languageToggle">
+      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+      <span>|</span>
+      <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
+    </div>
+
+    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <div></div><div></div><div></div>
+    </div>
+
+    <ul class="navMenu" id="navMenu">
+      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+      <li class="dropdown">
+        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo</a>
+        <span class="dropdown-arrow"></span>
+        <ul class="dropdown-menu">
+          <li><a href="chi-siamo.html">Chi Siamo</a></li>
+          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+        </ul>
+      </li>
+      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+      <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
+    </ul>
+  </nav>
+
 
   <!-- Services Hero Section -->
   <section class="page-servizi-hero">
@@ -310,50 +344,516 @@
   </section>
 
   <!-- Footer Component -->
-  <div id="footer-container"></div>
+<footer class="footer">
+  <div class="footerContent">
+    <div class="footerColumn">
+      <div class="footerLogo">
+        <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+      </div>
+      <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+    </div>
+
+    <div class="footerColumn">
+      <h3 class="footerHeading">Contatti</h3>
+      <div class="footerInfo">
+        <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+        <p><strong>Email:</strong> info@studicabragadin.it</p>
+        <p><strong>Tel:</strong> +39 049 1234567</p>
+      </div>
+    </div>
+
+    <div class="footerColumn">
+      <h3 class="footerHeading">Link</h3>
+      <div class="footerLinks">
+        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="servizi.html">Servizi/Settori</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+    </div>
+
+    <div class="footerColumn">
+      <h3 class="footerHeading">Legale</h3>
+      <div class="footerLinks">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Termini</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footerCopyright">
+    <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
+  </div>
+</footer>
 
   <!-- Scripts -->
-  <script src="js/main.js"></script>
-  <script>
-    // Load components
-    document.addEventListener('DOMContentLoaded', function() {
-      // Load navbar
-      fetch('components/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar-container').innerHTML = data;
-          
-          // Set active link
-          const navLinks = document.querySelectorAll('.navLink');
-          navLinks.forEach(link => {
-            if (link.getAttribute('href') === 'servizi.html') {
-              link.classList.add('active');
+  
+
+<!-- Scripts -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // =============================================
+    // Navigation Functionality
+    // =============================================
+    
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const body = document.body;
+    const dropdowns = document.querySelectorAll('.dropdown');
+    let lastTapTime = 0;
+    const doubleTapDelay = 300; // 300ms for double tap
+
+    // Toggle Hamburger Menu
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Toggle body overflow
+        body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        
+        // Update ARIA attribute
+        this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+        
+        // Close dropdowns when closing menu
+        if (!navMenu.classList.contains('active')) {
+          closeAllDropdowns();
+        }
+      });
+    }
+
+    // Setup dropdown functionality
+    function setupDropdowns() {
+      dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('.navLink');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        
+        if (link && menu) {
+          // Desktop hover behavior
+          dropdown.addEventListener('mouseenter', function() {
+            if (window.innerWidth > 768) {
+              openDropdown(this);
             }
           });
           
-          // Initialize mobile menu
-          const hamburger = document.getElementById('hamburger');
-          const navMenu = document.getElementById('navMenu');
-          if (hamburger && navMenu) {
-            hamburger.addEventListener('click', function() {
-              this.classList.toggle('active');
-              navMenu.classList.toggle('active');
-            });
-          }
-        });
+          dropdown.addEventListener('mouseleave', function() {
+            if (window.innerWidth > 768) {
+              closeDropdown(this);
+            }
+          });
+          
+          // Mobile click behavior
+          link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              e.stopPropagation();
+              
+              const now = new Date().getTime();
+              const isDoubleTap = (now - lastTapTime) < doubleTapDelay;
+              lastTapTime = now;
+              
+              if (isDoubleTap) {
+                // Double tap - navigate to chi-siamo.html
+                window.location.href = link.getAttribute('href');
+              } else {
+                // Single tap - toggle dropdown
+                if (menu.classList.contains('active')) {
+                  closeDropdown(dropdown);
+                } else {
+                  openDropdown(dropdown);
+                  closeOtherDropdowns(dropdown);
+                }
+              }
+            }
+          });
+        }
+      });
+    }
 
-      // Load footer
-      fetch('components/footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-          // Set current year
-          const yearElement = document.querySelector('.current-year');
-          if (yearElement) {
-            yearElement.textContent = new Date().getFullYear();
-          }
-        });
+    // Open a specific dropdown
+    function openDropdown(dropdown) {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      dropdown.classList.add('active');
+      menu.classList.add('active');
+    }
+
+    // Close a specific dropdown
+    function closeDropdown(dropdown) {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      dropdown.classList.remove('active');
+      menu.classList.remove('active');
+    }
+
+    // Close all dropdowns
+    function closeAllDropdowns() {
+      dropdowns.forEach(dropdown => {
+        closeDropdown(dropdown);
+      });
+    }
+
+    // Close other dropdowns except the current one
+    function closeOtherDropdowns(currentDropdown) {
+      dropdowns.forEach(dropdown => {
+        if (dropdown !== currentDropdown) {
+          closeDropdown(dropdown);
+        }
+      });
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && window.innerWidth > 768) {
+        closeAllDropdowns();
+      }
+      
+      // Close menu when clicking outside on mobile
+      if (window.innerWidth <= 768 && 
+          !e.target.closest('.navbar') && 
+          navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        body.style.overflow = '';
+        closeAllDropdowns();
+      }
     });
-  </script>
+
+    // Highlight active nav link
+    function highlightActiveLink() {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const allNavLinks = document.querySelectorAll('.navLink, .dropdown-menu a');
+      
+      allNavLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        // Remove active class first
+        link.classList.remove('active');
+        
+        // Check if link matches current page
+        if (href === currentPage || 
+            (currentPage === '' && href === 'index.html') ||
+            (href.endsWith(currentPage) && currentPage !== 'index.html')) {
+          link.classList.add('active');
+          
+          // If this is a dropdown item, also highlight parent
+          if (link.closest('.dropdown-menu')) {
+            const parentLink = link.closest('.dropdown').querySelector('.navLink');
+            if (parentLink) parentLink.classList.add('active');
+          }
+        }
+      });
+    }
+
+    // Handle window resize
+    function handleResize() {
+      if (window.innerWidth > 768) {
+        // Reset mobile menu state when resizing to desktop
+        if (navMenu) navMenu.classList.remove('active');
+        if (hamburger) {
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+        body.style.overflow = '';
+        closeAllDropdowns();
+      }
+    }
+
+    // Initialize dropdowns and active link highlighting
+    setupDropdowns();
+    highlightActiveLink();
+    window.addEventListener('resize', handleResize);
+
+
+  // =============================================
+  // Page-Specific Functionality
+  // =============================================
+  
+  // Index Page Specific
+  if (document.querySelector('.hero')) {
+    // Carousel functionality
+    const carousel = document.getElementById('carousel');
+    if (carousel) {
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      // Auto-rotate slides every 5 seconds
+      setInterval(nextSlide, 5000);
+    }
+
+    // Load news previews
+    function loadNewsPreviews() {
+      const newsGrid = document.getElementById('newsPreviewGrid');
+      if (!newsGrid) return;
+
+      newsGrid.innerHTML = '<div class="news-loading"><div class="news-loading-spinner"></div></div>';
+
+      fetch('news.html')
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.text();
+        })
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const newsItems = doc.querySelectorAll('.news-card');
+
+          if (newsItems.length === 0) {
+            newsGrid.innerHTML = '<div class="news-error">Nessuna news disponibile al momento</div>';
+            return;
+          }
+
+          newsGrid.innerHTML = '';
+
+          Array.from(newsItems).slice(0, 4).forEach(item => {
+            const date = item.querySelector('.news-date').textContent;
+            const category = item.querySelector('.news-category').textContent;
+            const title = item.querySelector('h3').textContent;
+            const previewText = item.querySelector('.news-preview-content p').textContent;
+            const pdfLink = item.querySelector('.news-download')?.getAttribute('href') || '#';
+            const newsId = item.getAttribute('data-id');
+
+            const newsCard = document.createElement('div');
+            newsCard.className = 'news-preview-card';
+
+            newsCard.innerHTML = `
+              <div class="news-preview-card-header">
+                <span class="news-preview-date">${date}</span>
+                <span class="news-preview-category">${category}</span>
+              </div>
+              <div class="news-preview-content">
+                <h3>${title}</h3>
+                <p>${previewText}</p>
+                <div class="news-preview-actions">
+                  <a href="news.html#news-${newsId}" class="news-preview-more">Leggi tutto</a>
+                  <a href="${pdfLink}" class="news-preview-download" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    PDF
+                  </a>
+                </div>
+              </div>
+            `;
+
+            newsGrid.appendChild(newsCard);
+          });
+        })
+        .catch(error => {
+          console.error('Error loading news:', error);
+          newsGrid.innerHTML = `
+            <div class="news-error">
+              <p>Impossibile caricare le ultime news.</p>
+              <a href="news.html">Visita la pagina news</a>
+            </div>
+          `;
+        });
+    }
+
+    loadNewsPreviews();
+  }
+
+  // Contatti Page Specific
+  if (document.getElementById('professionalContactForm')) {
+    // Define service options for each professional
+    const serviceOptions = {
+      avv_lenzi: [
+        { value: "consulenza_legale", text: "Consulenza Legale" },
+        { value: "contratti", text: "Redazione Contratti" },
+        { value: "diritto_societario", text: "Diritto Societario" },
+        { value: "diritto_lavoro", text: "Diritto del Lavoro" },
+        { value: "tutela_privati", text: "Tutela Privati" },
+        { value: "altro_legale", text: "Altro (specificare nel messaggio)" }
+      ],
+      dott_maretto: [
+        { value: "consulenza_fiscale", text: "Consulenza Fiscale" },
+        { value: "contabilita", text: "Contabilità" },
+        { value: "bilanci", text: "Redazione Bilanci" },
+        { value: "fisco_internazionale", text: "Fisco Internazionale" },
+        { value: "pianificazione_fiscale", text: "Pianificazione Fiscale" },
+        { value: "altro_commerciale", text: "Altro (specificare nel messaggio)" }
+      ],
+      dott_cecolin: [
+        { value: "consulenza_societaria", text: "Consulenza Societaria" },
+        { value: "costituzione_societa", text: "Costituzione Società" },
+        { value: "fisco_societario", text: "Fisco Societario" },
+        { value: "revisione_contabile", text: "Revisione Contabile" },
+        { value: "consulenza_strategica", text: "Consulenza Strategica" },
+        { value: "altro_societario", text: "Altro (specificare nel messaggio)" }
+      ]
+    };
+
+    // Update services when professional changes
+    const professionalSelect = document.getElementById('professional');
+    if (professionalSelect) {
+      professionalSelect.addEventListener('change', function() {
+        const serviceSelect = document.getElementById('service');
+        const selectedProfessional = this.value;
+        serviceSelect.innerHTML = '<option value="">Seleziona un servizio</option>';
+
+        if (selectedProfessional && serviceOptions[selectedProfessional]) {
+          serviceOptions[selectedProfessional].forEach(option => {
+            const opt = document.createElement('option');
+            opt.value = option.value;
+            opt.textContent = option.text;
+            serviceSelect.appendChild(opt);
+          });
+        }
+      });
+    }
+
+    // Handle form submission
+    const form = document.getElementById('professionalContactForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const professional = document.getElementById('professional').value;
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const service = document.getElementById('service').value;
+        const message = document.getElementById('message').value;
+
+        let recipientEmail;
+        switch (professional) {
+          case 'avv_lenzi':
+            recipientEmail = 'avvocatolenzi@studicabragadin.it';
+            break;
+          case 'dott_maretto':
+            recipientEmail = 'andrea.maretto@studicabragadin.it';
+            break;
+          case 'dott_cecolin':
+            recipientEmail = 'studio@studiocecolin.com';
+            break;
+          default:
+            recipientEmail = 'info@studicabragadin.it';
+        }
+
+        alert(`Grazie ${firstName} ${lastName}! La tua richiesta è stata inviata a ${recipientEmail}. Ti contatteremo al più presto.`);
+        this.reset();
+      });
+    }
+  }
+
+  // Chi-siamo Page Specific
+  if (document.querySelector('.page-hero')) {
+    // Initialize AOS animation if available
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+    }
+  }
+
+  // News Page Specific
+  if (document.querySelector('.news-page')) {
+    // News modal functionality
+    const modal = document.getElementById('newsModal');
+    if (modal) {
+      const modalBody = document.getElementById('modalBody');
+      
+      document.querySelectorAll('.news-read-more').forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const newsCard = this.closest('.news-card');
+          const newsId = newsCard.getAttribute('data-id');
+          const newsTitle = newsCard.querySelector('h3').textContent;
+          const newsDate = newsCard.querySelector('.news-date').textContent;
+          const newsCategory = newsCard.querySelector('.news-category').textContent;
+          const newsContent = newsCard.querySelector('.news-full-content').innerHTML;
+          const pdfLink = newsCard.querySelector('.news-download').getAttribute('href');
+          
+          modalBody.innerHTML = `
+            <div class="modal-header">
+              <span class="modal-category">${newsCategory}</span>
+              <span class="modal-date">${newsDate}</span>
+            </div>
+            <h2 class="modal-title">${newsTitle}</h2>
+            <div class="modal-text">${newsContent}</div>
+            <div class="modal-actions">
+              <a href="${pdfLink}" class="ctaButton" download>Scarica PDF Completo</a>
+            </div>
+          `;
+          
+          modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      
+      document.querySelector('.modal-close').addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+      
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    }
+
+    // Newsletter form submission
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        
+        alert(`Grazie ${name}! La tua email ${email} è stata registrata con successo. Riceverai la nostra newsletter a breve.`);
+        this.reset();
+      });
+    }
+  }
+
+  // =============================================
+  // Common Footer Functionality
+  // =============================================
+  
+  // Set current year in footer
+  const yearElements = document.querySelectorAll('.current-year');
+  yearElements.forEach(element => {
+    element.textContent = new Date().getFullYear();
+  });
+});
+</script>
+
+<!-- AOS Animation Script (only needed on chi-siamo.html) -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Initialize AOS animation if not already initialized
+  if (typeof AOS !== 'undefined' && !document.querySelector('[data-aos-init]')) {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+    document.documentElement.setAttribute('data-aos-init', 'true');
+  }
+</script>
+
+
+
+
 </body>
 </html>

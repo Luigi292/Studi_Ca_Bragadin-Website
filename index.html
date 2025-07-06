@@ -17,11 +17,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Preload critical resources -->
-  <link rel="preload" href="css/index.css" as="style">
-  <link rel="preload" href="images/hall.jpg.avif" as="image" fetchpriority="high">
-  <link rel="preload" href="images/logo.jpg.avif" as="image" fetchpriority="high">
-
   <!-- Fonts with font-display: swap -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -37,8 +32,40 @@
 <body>
   
   <!-- Navbar Component -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+      </a>
+    </div>
 
-  <div class="navbar-container" id="navbar-container"></div>
+    <div class="languageToggle">
+      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+      <span>|</span>
+      <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
+    </div>
+
+    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <div></div><div></div><div></div>
+    </div>
+
+    <ul class="navMenu" id="navMenu">
+      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+      <li class="dropdown">
+        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo</a>
+        <span class="dropdown-arrow"></span>
+        <ul class="dropdown-menu">
+          <li><a href="chi-siamo.html">Chi Siamo</a></li>
+          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+        </ul>
+      </li>
+      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+      <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
+    </ul>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -118,8 +145,6 @@
     </div>
   </section>
 
-
-
   <!-- Contact CTA Section -->
   <section class="contactCTA">
     <div class="contactContent">
@@ -129,104 +154,345 @@
     </div>
   </section>
 
-
-  
-<!-- Newsletter Section -->
-
-<section class="newsletter-preview">
-  <div class="container">
-    <div class="section-header">
-      <h2>Ultime News Professionali</h2>
-      <p class="subtitle">Rimani aggiornato sulle ultime novità legali e fiscali</p>
+  <!-- News Preview Section -->
+  <section class="news-preview-section">
+    <div class="news-preview-container">
+      <div class="news-preview-header">
+        <h2>Ultime News Professionali</h2>
+        <p class="subtitle">Rimani aggiornato sulle ultime novità legali e fiscali</p>
+      </div>
       
+      <div class="news-preview-grid" id="newsPreviewGrid">
+        <!-- News items will be loaded here dynamically -->
+        <div class="news-loading">
+          <div class="news-loading-spinner"></div>
+        </div>
+      </div>
+      
+      <div class="news-preview-button">
+        <a href="news.html" class="ctaButton">Vedi Tutte le News ed Iscriviti</a>
+      </div>
     </div>
-    
-    <div class="news-grid" id="latestNews">
-      <!-- News items will be loaded dynamically from news.html -->
-      <div class="loading-spinner"></div>
-    </div>
-    <a href="news.html" class="ctaButton">Vedi Tutte le News ed Iscriviti</a>
-  </div>
-</section>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  if (document.getElementById('latestNews')) {
-    fetch('news.html')
-      .then(response => response.text())
-      .then(data => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(data, 'text/html');
-        const newsItems = doc.querySelectorAll('.news-card');
-        const latestNewsContainer = document.getElementById('latestNews');
-        
-        latestNewsContainer.innerHTML = '';
-        
-        Array.from(newsItems).slice(0, 3).forEach(item => {
-          const clone = item.cloneNode(true);
-          // Convert to preview version
-          clone.querySelector('.news-content').classList.add('preview-content');
-          clone.querySelector('.news-full-content').style.display = 'none';
-          clone.querySelector('.news-read-more').style.display = 'block';
-          latestNewsContainer.appendChild(clone);
-        });
-      })
-      .catch(error => {
-        console.error('Error loading news:', error);
-        document.getElementById('latestNews').innerHTML = 
-          '<p class="error-message">Impossibile caricare le ultime news. <a href="news.html">Visita la pagina news</a></p>';
-      });
-  }
-});
-</script>
-
+  </section>
 
   <!-- Footer Component -->
-  <div id="footer-container"></div>
+  <footer class="footer">
+    <div class="footerContent">
+      <div class="footerColumn">
+        <div class="footerLogo">
+          <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+        </div>
+        <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+      </div>
 
-  <!-- Scripts -->
-  <script src="js/main.js"></script>
-  <script src="js/carousel.js"></script>
+      <div class="footerColumn">
+        <h3 class="footerHeading">Contatti</h3>
+        <div class="footerInfo">
+          <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+          <p><strong>Email:</strong> info@studicabragadin.it</p>
+          <p><strong>Tel:</strong> +39 049 1234567</p>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Link</h3>
+        <div class="footerLinks">
+          <a href="chi-siamo.html">Chi siamo</a>
+          <a href="servizi.html">Servizi/Settori</a>
+          <a href="contatti.html">Contatti</a>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Legale</h3>
+        <div class="footerLinks">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Termini</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footerCopyright">
+      <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
   <script>
-    // Load components
-    document.addEventListener('DOMContentLoaded', function() {
-      // Load navbar
-      fetch('components/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar-container').innerHTML = data;
-          
-          // Set active link
-          const navLinks = document.querySelectorAll('.navLink');
-          navLinks.forEach(link => {
-            if (link.getAttribute('href') === 'index.html') {
-              link.classList.add('active');
+  document.addEventListener('DOMContentLoaded', function() {
+    // =============================================
+    // Navigation Functionality
+    // =============================================
+    
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const body = document.body;
+    const dropdowns = document.querySelectorAll('.dropdown');
+    let lastTapTime = 0;
+    const doubleTapDelay = 300; // 300ms for double tap
+
+    // Toggle Hamburger Menu
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Toggle body overflow
+        body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        
+        // Update ARIA attribute
+        this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+        
+        // Close dropdowns when closing menu
+        if (!navMenu.classList.contains('active')) {
+          closeAllDropdowns();
+        }
+      });
+    }
+
+    // Setup dropdown functionality
+    function setupDropdowns() {
+      dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('.navLink');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        
+        if (link && menu) {
+          // Desktop hover behavior
+          dropdown.addEventListener('mouseenter', function() {
+            if (window.innerWidth > 768) {
+              openDropdown(this);
             }
           });
           
-          // Initialize mobile menu
-          const hamburger = document.getElementById('hamburger');
-          const navMenu = document.getElementById('navMenu');
-          if (hamburger && navMenu) {
-            hamburger.addEventListener('click', function() {
-              this.classList.toggle('active');
-              navMenu.classList.toggle('active');
-            });
-          }
-        });
+          dropdown.addEventListener('mouseleave', function() {
+            if (window.innerWidth > 768) {
+              closeDropdown(this);
+            }
+          });
+          
+          // Mobile click behavior
+          link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              e.stopPropagation();
+              
+              const now = new Date().getTime();
+              const isDoubleTap = (now - lastTapTime) < doubleTapDelay;
+              lastTapTime = now;
+              
+              if (isDoubleTap) {
+                // Double tap - navigate to chi-siamo.html
+                window.location.href = link.getAttribute('href');
+              } else {
+                // Single tap - toggle dropdown
+                if (menu.classList.contains('active')) {
+                  closeDropdown(dropdown);
+                } else {
+                  openDropdown(dropdown);
+                  closeOtherDropdowns(dropdown);
+                }
+              }
+            }
+          });
+        }
+      });
+    }
 
-      // Load footer
-      fetch('components/footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-          // Set current year
-          const yearElement = document.querySelector('.current-year');
-          if (yearElement) {
-            yearElement.textContent = new Date().getFullYear();
-          }
-        });
+    // Open a specific dropdown
+    function openDropdown(dropdown) {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      dropdown.classList.add('active');
+      menu.classList.add('active');
+    }
+
+    // Close a specific dropdown
+    function closeDropdown(dropdown) {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      dropdown.classList.remove('active');
+      menu.classList.remove('active');
+    }
+
+    // Close all dropdowns
+    function closeAllDropdowns() {
+      dropdowns.forEach(dropdown => {
+        closeDropdown(dropdown);
+      });
+    }
+
+    // Close other dropdowns except the current one
+    function closeOtherDropdowns(currentDropdown) {
+      dropdowns.forEach(dropdown => {
+        if (dropdown !== currentDropdown) {
+          closeDropdown(dropdown);
+        }
+      });
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && window.innerWidth > 768) {
+        closeAllDropdowns();
+      }
+      
+      // Close menu when clicking outside on mobile
+      if (window.innerWidth <= 768 && 
+          !e.target.closest('.navbar') && 
+          navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        body.style.overflow = '';
+        closeAllDropdowns();
+      }
     });
+
+    // Highlight active nav link
+    function highlightActiveLink() {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const allNavLinks = document.querySelectorAll('.navLink, .dropdown-menu a');
+      
+      allNavLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        // Remove active class first
+        link.classList.remove('active');
+        
+        // Check if link matches current page
+        if (href === currentPage || 
+            (currentPage === '' && href === 'index.html') ||
+            (href.endsWith(currentPage) && currentPage !== 'index.html')) {
+          link.classList.add('active');
+          
+          // If this is a dropdown item, also highlight parent
+          if (link.closest('.dropdown-menu')) {
+            const parentLink = link.closest('.dropdown').querySelector('.navLink');
+            if (parentLink) parentLink.classList.add('active');
+          }
+        }
+      });
+    }
+
+    // Handle window resize
+    function handleResize() {
+      if (window.innerWidth > 768) {
+        // Reset mobile menu state when resizing to desktop
+        if (navMenu) navMenu.classList.remove('active');
+        if (hamburger) {
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+        body.style.overflow = '';
+        closeAllDropdowns();
+      }
+    }
+
+    // Initialize dropdowns and active link highlighting
+    setupDropdowns();
+    highlightActiveLink();
+    window.addEventListener('resize', handleResize);
+
+    // =============================================
+    // News Loading Functionality
+    // =============================================
+    
+    function loadNewsPreviews() {
+      const newsGrid = document.getElementById('newsPreviewGrid');
+      if (!newsGrid) return;
+
+      newsGrid.innerHTML = '<div class="news-loading"><div class="news-loading-spinner"></div></div>';
+
+      fetch('news.html')
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.text();
+        })
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const newsItems = doc.querySelectorAll('.news-card');
+
+          if (newsItems.length === 0) {
+            newsGrid.innerHTML = '<div class="news-error">Nessuna news disponibile al momento</div>';
+            return;
+          }
+
+          newsGrid.innerHTML = '';
+
+          Array.from(newsItems).slice(0, 4).forEach(item => {
+            const date = item.querySelector('.news-date').textContent;
+            const category = item.querySelector('.news-category').textContent;
+            const title = item.querySelector('h3').textContent;
+            const previewText = item.querySelector('.news-preview-content p').textContent;
+            const pdfLink = item.querySelector('.news-download')?.getAttribute('href') || '#';
+            const newsId = item.getAttribute('data-id');
+
+            const newsCard = document.createElement('div');
+            newsCard.className = 'news-preview-card';
+
+            newsCard.innerHTML = `
+              <div class="news-preview-card-header">
+                <span class="news-preview-date">${date}</span>
+                <span class="news-preview-category">${category}</span>
+              </div>
+              <div class="news-preview-content">
+                <h3>${title}</h3>
+                <p>${previewText}</p>
+                <div class="news-preview-actions">
+                  <a href="news.html#news-${newsId}" class="news-preview-more">Leggi tutto</a>
+                  <a href="${pdfLink}" class="news-preview-download" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    PDF
+                  </a>
+                </div>
+              </div>
+            `;
+
+            newsGrid.appendChild(newsCard);
+          });
+        })
+        .catch(error => {
+          console.error('Error loading news:', error);
+          newsGrid.innerHTML = `
+            <div class="news-error">
+              <p>Impossibile caricare le ultime news.</p>
+              <a href="news.html">Visita la pagina news</a>
+            </div>
+          `;
+        });
+    }
+
+    // =============================================
+    // Footer Functionality
+    // =============================================
+    
+    // Set current year in footer
+    const yearElements = document.querySelectorAll('.current-year');
+    yearElements.forEach(element => {
+      element.textContent = new Date().getFullYear();
+    });
+
+    // =============================================
+    // Initialize all functionality
+    // =============================================
+    
+    loadNewsPreviews();
+
+    // Initialize animations if AOS is loaded
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+    }
+  });
   </script>
+
+  
 </body>
 </html>
