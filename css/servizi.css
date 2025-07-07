@@ -209,6 +209,8 @@
 }
 
 /* ===== APPROACH SECTION ===== */
+
+
 .approach-section {
   padding: 6rem 0;
   background: var(--white-color);
@@ -222,8 +224,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2.5rem;
-  position: relative;
-  z-index: 2;
 }
 
 .approach-item {
@@ -252,10 +252,14 @@
   box-shadow: 0 5px 15px rgba(20, 40, 80, 0.2);
 }
 
-.approach-icon img {
+.approach-icon svg {
   width: 40px;
   height: 40px;
-  filter: brightness(0) invert(1);
+  stroke: var(--white-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
 .approach-item h3 {
@@ -271,6 +275,9 @@
   color: var(--dark-color);
   font-family: var(--font-main);
 }
+
+
+
 
 /* ===== CTA SECTION ===== */
 .service-cta {
