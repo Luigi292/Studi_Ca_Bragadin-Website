@@ -122,18 +122,22 @@ ul {
 }
 
 .hero-content-wrapper {
-  position: relative;
+  position: absolute;
   z-index: 3;
-  flex: 1;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;  /* Horizontally center content */
+  text-align: center;
 }
+
 
 .hero-content {
   max-width: 800px;
   color: var(--white-color);
-  padding-top: 80px;
+
   animation: fadeInUp 0.8s ease-out;
 }
 
@@ -173,9 +177,12 @@ ul {
 
 .hero-cta {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers the buttons horizontally */
   gap: 20px;
   margin-top: 2rem;
 }
+
 
 .ctaButton {
   display: inline-flex;

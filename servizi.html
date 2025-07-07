@@ -17,10 +17,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Preload critical resources -->
-  <link rel="preload" href="css/styles.css" as="style">
-  <link rel="preload" href="images/services-hero.jpg.avif" as="image" fetchpriority="high">
-
   <!-- Fonts with font-display: swap -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -30,88 +26,81 @@
   <link rel="stylesheet" href="css/servizi.css">
   <link rel="stylesheet" href="css/hero.css">
 
-
-
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
   <link rel="shortcut icon" href="images/favicon-logo.png" type="image/png">
 </head>
 <body>
   
-  
-
   <!-- Navbar Component -->
-
-<nav class="navbar">
-  <div class="logo">
-    <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
-      <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
-    </a>
-  </div>
-
-  <div class="languageToggle">
-    <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-
-<!--<span>|</span> <a href="en/index.html" class="languageButton" aria-label="English">EN</a> -->   </div>
-
-  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-    <div></div><div></div><div></div>
-  </div>
-
-  <ul class="navMenu" id="navMenu">
-    <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
-    <li class="dropdown">
-      <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
-      
-      <!-- Dropdown arrow shown next to "Chi Siamo" -->
-    
-      <ul class="dropdown-menu">
-        <li><a href="chi-siamo.html">Il Nostro Team</a></li>
-        <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
-        <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
-        <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
-      </ul>
-    </li>
-    <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
-    <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
-    <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
-  </ul>
-</nav>
-
-
-<!-- Services Hero Section -->
-<section class="hero-section">
-  <div class="hero-overlay"></div>
-  <img src="images/team-glass-room.jpg.avif" alt="Servizi Professionali Studio Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
-  <div class="hero-content">
-    <h1>I Nostri Servizi Professionali</h1>
-    <p>Soluzioni integrate per imprese e professionisti</p>
-    <div class="hero-cta">
-      <a href="#services" class="cta-button">Scopri i servizi</a>
-      <a href="contatti.html" class="secondary-button">Contattaci</a>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+      </a>
     </div>
-  </div>
-  <div class="hero-scroll-indicator">
-    <span>Scorri</span>
-    <div class="hero-mouse"></div>
-  </div>
-</section>
 
+    <div class="languageToggle">
+      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+    </div>
 
+    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <div></div><div></div><div></div>
+    </div>
 
+    <ul class="navMenu" id="navMenu">
+      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+      <li class="dropdown">
+        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="chi-siamo.html">Il Nostro Team</a></li>
+          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+        </ul>
+      </li>
+      <li><a href="servizi.html" class="navLink active" aria-label="Servizi">Servizi/Settori</a></li>
+      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+      <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <!-- Services Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <img src="images/team-glass-room.jpg.avif" alt="Servizi Professionali Studio Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
+    <div class="hero-content">
+      <h1>I Nostri Servizi Professionali</h1>
+      <p>Soluzioni integrate per imprese e professionisti</p>
+    
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scorri</span>
+      <div class="hero-mouse"></div>
+    </div>
+  </section>
 
   <!-- Services Section -->
-  <section class="services-section">
+  <section class="services-section" id="services">
     <div class="section-header">
       <h2>Servizi di Consulenza Legale e Fiscale</h2>
       <p class="section-subtitle">Professionalità e competenza al servizio del tuo successo</p>
     </div>
 
     <div class="services-container">
+
       <!-- Legal Services -->
       <div class="service-category">
         <div class="category-header">
-          <img src="images/legal-icon.svg" alt="Icona servizi legali" width="50" height="50" loading="lazy">
+          <div class="category-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
           <div class="category-header-content">
             <h3>Servizi Legali</h3>
             <p>Avv. Maximiliano Lenzi</p>
@@ -120,7 +109,13 @@
         <div class="service-list">
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/contract-icon.svg" alt="Icona consulenza legale">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Consulenza Legale d'Impresa</h4>
@@ -129,7 +124,12 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/company-icon.svg" alt="Icona diritto societario">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="M8 12h8"></path>
+                <path d="M8 8h8"></path>
+                <path d="M8 16h8"></path>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Diritto Societario</h4>
@@ -138,7 +138,12 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/labor-icon.svg" alt="Icona diritto del lavoro">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Diritto del Lavoro</h4>
@@ -147,7 +152,10 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/ip-icon.svg" alt="Icona proprietà intellettuale">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19h7a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-7M5 17v2a2 2 0 0 0 2 2h7M9 5h9a2 2 0 0 1 2 2v2"></path>
+                <polyline points="12 7 5 17 12 17"></polyline>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Proprietà Intellettuale</h4>
@@ -156,7 +164,10 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/litigation-icon.svg" alt="Icona contenzioso">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Contenzioso Civile e Commerciale</h4>
@@ -169,7 +180,12 @@
       <!-- Accounting Services -->
       <div class="service-category">
         <div class="category-header">
-          <img src="images/accounting-icon.svg" alt="Icona servizi contabili" width="50" height="50" loading="lazy">
+          <div class="category-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
           <div class="category-header-content">
             <h3>Servizi Contabili e Fiscali</h3>
             <p>Dott. Andrea Maretto e Dott. Alberto Cecolin</p>
@@ -178,7 +194,10 @@
         <div class="service-list">
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/tax-icon.svg" alt="Icona consulenza fiscale">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Consulenza Fiscale</h4>
@@ -187,7 +206,14 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/balance-icon.svg" alt="Icona contabilità">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Contabilità e Bilanci</h4>
@@ -196,7 +222,12 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/iva-icon.svg" alt="Icona IVA">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="M8 12h8"></path>
+                <path d="M8 8h8"></path>
+                <path d="M8 16h8"></path>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Adempimenti IVA e Fiscali</h4>
@@ -205,7 +236,12 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/company-icon.svg" alt="Icona consulenza societaria">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Consulenza Societaria</h4>
@@ -214,7 +250,11 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/management-icon.svg" alt="Icona controllo di gestione">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="20" x2="12" y2="10"></line>
+                <line x1="18" y1="20" x2="18" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="16"></line>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Controllo di Gestione</h4>
@@ -223,7 +263,9 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/international-icon.svg" alt="Icona fiscalità internazionale">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Fiscalità Internazionale</h4>
@@ -232,7 +274,13 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/inheritance-icon.svg" alt="Icona successioni">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Successioni e Donazioni</h4>
@@ -245,7 +293,13 @@
       <!-- Specialized Services -->
       <div class="service-category">
         <div class="category-header">
-          <img src="images/special-icon.svg" alt="Icona servizi specializzati" width="50" height="50" loading="lazy">
+          <div class="category-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
           <div class="category-header-content">
             <h3>Servizi Specializzati</h3>
             <p>Team Multidisciplinare</p>
@@ -254,7 +308,9 @@
         <div class="service-list">
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/diligence-icon.svg" alt="Icona due diligence">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Due Diligence</h4>
@@ -263,7 +319,11 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/crisis-icon.svg" alt="Icona crisi d'impresa">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Crisi d'Impresa</h4>
@@ -272,7 +332,12 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/startup-icon.svg" alt="Icona startup">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                <polyline points="13 2 13 9 20 9"></polyline>
+                <circle cx="12" cy="15" r="2"></circle>
+                <line x1="12" y1="12" x2="12.01" y2="12"></line>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Startup e Innovazione</h4>
@@ -281,7 +346,11 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/compliance-icon.svg" alt="Icona compliance">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Compliance Normativa</h4>
@@ -290,7 +359,9 @@
           </div>
           <div class="service-item">
             <div class="service-item-icon">
-              <img src="images/international-icon.svg" alt="Icona consulenza internazionale">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
             </div>
             <div class="service-item-content">
               <h4>Consulenza Internazionale</h4>
@@ -318,28 +389,42 @@
     <div class="approach-container">
       <div class="approach-item">
         <div class="approach-icon">
-          <img src="images/personalized-icon.svg" alt="Icona approccio personalizzato" width="40" height="40" loading="lazy">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a2a4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
         </div>
         <h3>Personalizzato</h3>
         <p>Ogni cliente è unico: sviluppiamo soluzioni su misura dopo un'attenta analisi delle specifiche esigenze.</p>
       </div>
       <div class="approach-item">
         <div class="approach-icon">
-          <img src="images/integrated-icon.svg" alt="Icona approccio integrato" width="40" height="40" loading="lazy">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a2a4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
         </div>
         <h3>Integrato</h3>
         <p>Offriamo una consulenza a 360° che combina competenze legali, fiscali e societarie in un unico team.</p>
       </div>
       <div class="approach-item">
         <div class="approach-icon">
-          <img src="images/proactive-icon.svg" alt="Icona approccio proattivo" width="40" height="40" loading="lazy">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a2a4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
         </div>
         <h3>Proattivo</h3>
         <p>Non ci limitiamo a risolvere problemi, ma anticipiamo le criticità e suggeriamo opportunità.</p>
       </div>
       <div class="approach-item">
         <div class="approach-icon">
-          <img src="images/transparent-icon.svg" alt="Icona trasparenza" width="40" height="40" loading="lazy">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a2a4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
         </div>
         <h3>Trasparente</h3>
         <p>Chiarezza nei costi, nei tempi e nelle soluzioni proposte, con report periodici sull'avanzamento.</p>
@@ -360,54 +445,56 @@
   </section>
 
   <!-- Footer Component -->
-<footer class="footer">
-  <div class="footerContent">
-    <div class="footerColumn">
-      <div class="footerLogo">
-        <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+  <footer class="footer">
+    <div class="footerContent">
+      <div class="footerColumn">
+        <div class="footerLogo">
+          <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+        </div>
+        <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
       </div>
-      <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Contatti</h3>
+        <div class="footerInfo">
+          <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+          <p><strong>Email:</strong> info@studicabragadin.it</p>
+          <p><strong>Tel:</strong> +39 049 1234567</p>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Link</h3>
+        <div class="footerLinks">
+          <a href="chi-siamo.html">Chi siamo</a>
+          <a href="servizi.html">Servizi/Settori</a>
+          <a href="contatti.html">Contatti</a>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Legale</h3>
+        <div class="footerLinks">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Termini</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
     </div>
 
-    <div class="footerColumn">
-      <h3 class="footerHeading">Contatti</h3>
-      <div class="footerInfo">
-        <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-        <p><strong>Email:</strong> info@studicabragadin.it</p>
-        <p><strong>Tel:</strong> +39 049 1234567</p>
-      </div>
+    <div class="footerCopyright">
+      <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
     </div>
+  </footer>
 
-    <div class="footerColumn">
-      <h3 class="footerHeading">Link</h3>
-      <div class="footerLinks">
-        <a href="chi-siamo.html">Chi siamo</a>
-        <a href="servizi.html">Servizi/Settori</a>
-        <a href="contatti.html">Contatti</a>
-      </div>
-    </div>
 
-    <div class="footerColumn">
-      <h3 class="footerHeading">Legale</h3>
-      <div class="footerLinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Termini</a>
-        <a href="cookies.html">Cookies</a>
-      </div>
-    </div>
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop" title="Torna a inizio pagina">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
   </div>
-
-  <div class="footerCopyright">
-    <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
-  </div>
-</footer>
-
-
-  <div class="gototop js-top active">
-  <a href="#" class="js-gotop" title="Torna a inizio pagina">
-    <span class="icon-arrow-up"></span>
-  </a>
-</div>
 
 
   
@@ -895,7 +982,11 @@ document.addEventListener('DOMContentLoaded', function() {
       behavior: "smooth"
     });
   });
+
+
+  
 </script>
+
 
 
 

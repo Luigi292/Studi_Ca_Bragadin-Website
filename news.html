@@ -82,10 +82,7 @@
   <div class="hero-content">
     <h1>News Professionali</h1>
     <p>Approfondimenti e aggiornamenti su temi legali e fiscali</p>
-    <div class="hero-cta">
-      <a href="#latest-news" class="cta-button">Leggi le ultime news</a>
-      <a href="#newsletter" class="secondary-button">Iscriviti alla newsletter</a>
-    </div>
+    
   </div>
   <div class="hero-scroll-indicator">
     <span>Scorri</span>
@@ -317,10 +314,19 @@
           <h3>Rimani sempre aggiornato</h3>
           <p>Iscriviti alla nostra newsletter per ricevere gli ultimi aggiornamenti fiscali e legali direttamente nella tua casella di posta.</p>
         </div>
-        <form class="cta-form">
-          <input type="email" placeholder="La tua email">
-          <button type="submit" class="cta-button">Iscriviti</button>
-        </form>
+            <form class="newsletter-form" id="newsletterForm">
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Nome" required>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+              </div>
+              <div class="form-group checkbox-group">
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <label for="privacy">Accetto l'<a href="privacy.html">informativa sulla privacy</a></label>
+              </div>
+              <button type="submit" class="cta-button">Iscriviti</button>
+            </form>
       </div>
     </div>
   </section>
@@ -369,11 +375,14 @@
     </div>
   </footer>
 
-    <div class="gototop js-top active">
-  <a href="#" class="js-gotop" title="Torna a inizio pagina">
-    <span class="icon-arrow-up"></span>
-  </a>
-</div>
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop" title="Torna a inizio pagina">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+
 
 
 
