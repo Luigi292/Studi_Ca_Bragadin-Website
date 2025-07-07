@@ -94,57 +94,62 @@
   <section class="news-archive">
     <div class="container">
       <div class="archive-grid">
-        <aside class="news-sidebar">
-          <div class="newsletter-form-box">
-            <h3>Iscriviti alla Newsletter</h3>
-            <p>Ricevi gli ultimi aggiornamenti via email</p>
-            
-            <form class="newsletter-form" id="newsletterForm">
-              <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Nome" required>
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Email" required>
-              </div>
-              <div class="form-group checkbox-group">
-                <input type="checkbox" id="privacy" name="privacy" required>
-                <label for="privacy">Accetto l'<a href="privacy.html">informativa sulla privacy</a></label>
-              </div>
-              <button type="submit" class="cta-button">Iscriviti</button>
-            </form>
-          </div>
-          
-          <div class="news-categories">
-            <h4>Categorie</h4>
-            <ul>
-              <li><a href="#" class="active">Tutte le news</a></li>
-              <li><a href="#">Novità fiscali</a></li>
-              <li><a href="#">Aggiornamenti legali</a></li>
-              <li><a href="#">Circolari</a></li>
-              <li><a href="#">Eventi</a></li>
-            </ul>
-          </div>
 
-          <div class="news-downloads">
-            <h4>Risorse Utili</h4>
-            <div class="download-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              <a href="#">Guida Fiscale 2025</a>
-            </div>
-            <div class="download-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              <a href="#">Checklist GDPR</a>
-            </div>
-          </div>
-        </aside>
+
+        <!-- Replace the entire news-sidebar section with this: -->
+<aside class="news-sidebar">
+  <div class="popular-news-box">
+    <h3>News Popolari</h3>
+    <div class="popular-news-item">
+      <span class="popular-news-date">15 Gen</span>
+      <a href="#" class="popular-news-title">Novità Fiscali per il 2025</a>
+    </div>
+    <div class="popular-news-item">
+      <span class="popular-news-date">10 Nov</span>
+      <a href="#" class="popular-news-title">Aggiornamenti GDPR e Privacy</a>
+    </div>
+    <div class="popular-news-item">
+      <span class="popular-news-date">25 Ott</span>
+      <a href="#" class="popular-news-title">Riforma del Diritto Societario</a>
+    </div>
+    <div class="popular-news-item">
+      <span class="popular-news-date">05 Set</span>
+      <a href="#" class="popular-news-title">Incentivi per la Crescita Aziendale</a>
+    </div>
+  </div>
+  
+  <div class="news-categories">
+    <h4>Categorie</h4>
+    <ul>
+      <li><a href="#" class="active">Tutte le news</a></li>
+      <li><a href="#">Novità fiscali</a></li>
+      <li><a href="#">Aggiornamenti legali</a></li>
+      <li><a href="#">Circolari</a></li>
+      <li><a href="#">Eventi</a></li>
+    </ul>
+  </div>
+
+  <div class="news-downloads">
+    <h4>Risorse Utili</h4>
+    <div class="download-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      <a href="#">Guida Fiscale 2025</a>
+    </div>
+    <div class="download-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      <a href="#">Checklist GDPR</a>
+    </div>
+  </div>
+</aside>
+
         
         <main class="news-main-content">
           <div class="news-sort">
@@ -307,29 +312,34 @@
   </section>
 
   <!-- Newsletter CTA Section -->
-  <section class="newsletter-cta-section">
-    <div class="container">
-      <div class="newsletter-cta-box">
-        <div class="cta-content">
-          <h3>Rimani sempre aggiornato</h3>
-          <p>Iscriviti alla nostra newsletter per ricevere gli ultimi aggiornamenti fiscali e legali direttamente nella tua casella di posta.</p>
-        </div>
-            <form class="newsletter-form" id="newsletterForm">
-              <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Nome" required>
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Email" required>
-              </div>
-              <div class="form-group checkbox-group">
-                <input type="checkbox" id="privacy" name="privacy" required>
-                <label for="privacy">Accetto l'<a href="privacy.html">informativa sulla privacy</a></label>
-              </div>
-              <button type="submit" class="cta-button">Iscriviti</button>
-            </form>
+
+<!-- Update the newsletter-cta-section with this improved version: -->
+<section class="newsletter-cta-section">
+  <div class="container">
+    <div class="newsletter-cta-box">
+      <div class="cta-content">
+        <h3>Rimani sempre aggiornato</h3>
+        <p>Iscriviti alla nostra newsletter per ricevere gli ultimi aggiornamenti fiscali e legali direttamente nella tua casella di posta.</p>
       </div>
+      <form class="newsletter-form" id="mainNewsletterForm">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="mainName" name="name" placeholder="Nome" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="mainEmail" name="email" placeholder="Email" required>
+          </div>
+          <button type="submit" class="cta-button">Iscriviti</button>
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="mainPrivacy" name="privacy" required>
+          <label for="mainPrivacy">Accetto l'<a href="privacy.html">informativa sulla privacy</a></label>
+        </div>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
+
 </main>
 
   <!-- Footer Component -->
@@ -587,19 +597,19 @@
         });
       }
 
-      // Newsletter form submission
-      const newsletterForm = document.getElementById('newsletterForm');
-      if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          const name = document.getElementById('name').value;
-          const email = document.getElementById('email').value;
-          
-          // Here you would typically send the data to your server
-          alert(`Grazie ${name}! La tua email ${email} è stata registrata con successo. Riceverai la nostra newsletter a breve.`);
-          this.reset();
-        });
-      }
+// Update the newsletter form submission
+const mainNewsletterForm = document.getElementById('mainNewsletterForm');
+if (mainNewsletterForm) {
+  mainNewsletterForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('mainName').value;
+    const email = document.getElementById('mainEmail').value;
+    
+    // Here you would typically send the data to your server
+    alert(`Grazie ${name}! La tua email ${email} è stata registrata con successo. Riceverai la nostra newsletter a breve.`);
+    this.reset();
+  });
+}
 
       // Set current year in footer
       const yearElements = document.querySelectorAll('.current-year');
