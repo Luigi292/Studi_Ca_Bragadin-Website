@@ -22,256 +22,503 @@
   <link rel="stylesheet" href="css/index.css">
 
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
+  
+  <style>
+    :root {
+      --primary-color: #1a3a6e;
+      --secondary-color: #c29a5b;
+      --accent-color: #2c5282;
+      --dark-color: #2d3748;
+      --gray-color: #4a5568;
+      --light-color: #f7fafc;
+      --white-color: #ffffff;
+      --border-radius: 8px;
+      --transition: all 0.3s ease;
+      --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Modern scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Modern timeline redesign */
+    .timeline-block {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding-left: 0;
+    }
+    
+    .timeline-block::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 120px;
+      height: 100%;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--secondary-color), rgba(194, 154, 91, 0.3));
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+      padding-left: 180px;
+      min-height: 100px;
+    }
+    
+    .timeline-date {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 120px;
+      padding-right: 20px;
+      text-align: right;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--secondary-color);
+      transition: var(--transition);
+    }
+    
+    .timeline-item:hover .timeline-date {
+      transform: translateX(-5px);
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 115px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      background-color: var(--white-color);
+      border: 3px solid var(--secondary-color);
+      border-radius: 50%;
+      z-index: 2;
+      transition: var(--transition);
+    }
+    
+    .timeline-item:hover::before {
+      transform: scale(1.2);
+      background-color: var(--secondary-color);
+    }
+    
+    .timeline-content {
+      background: var(--white-color);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border-left: 4px solid var(--light-color);
+      position: relative;
+    }
+    
+    .timeline-content::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: var(--secondary-color);
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.4s ease 0.1s;
+    }
+    
+    .timeline-item:hover .timeline-content::before {
+      transform: scaleY(1);
+    }
+    
+    .timeline-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    
+    .timeline-content p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--gray-color);
+    }
+    
+    /* Modern section styling */
+    .content-block {
+      position: relative;
+      padding: 80px 40px;
+    }
+    
+    .content-block:nth-child(even) {
+      background-color: var(--light-color);
+    }
+    
+    .content-block::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(26, 58, 110, 0.03) 0%, rgba(194, 154, 91, 0.03) 100%);
+      z-index: -1;
+    }
+    
+    .block-header h2 {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+    }
+    
+    .block-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    }
+    
+    /* Modern hover effects */
+    .qualification-card, .expertise-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      will-change: transform;
+    }
+    
+    .qualification-card:hover, .expertise-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    }
+    
+    /* Modern decorative elements */
+    .content-block::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(194, 154, 91, 0.05);
+      z-index: -1;
+    }
+    
+    .content-block:nth-child(odd)::after {
+      top: -50px;
+      right: -50px;
+    }
+    
+    .content-block:nth-child(even)::after {
+      bottom: -50px;
+      left: -50px;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .timeline-item {
+        padding-left: 150px;
+      }
+      
+      .timeline-date {
+        width: 100px;
+      }
+      
+      .timeline-block::before {
+        left: 100px;
+      }
+      
+      .timeline-item::before {
+        left: 95px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .timeline-block {
+        padding-left: 0;
+      }
+      
+      .timeline-item {
+        padding-left: 0;
+        padding-top: 80px;
+      }
+      
+      .timeline-date {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        top: 30px;
+      }
+      
+      .timeline-block::before {
+        left: 30px;
+      }
+      
+      .timeline-item::before {
+        left: 25px;
+        top: 38px;
+      }
+      
+      .content-block {
+        padding: 60px 20px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .timeline-content {
+        padding: 20px;
+      }
+      
+      .timeline-item {
+        margin-bottom: 40px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  
 <!-- Navbar Component -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+      <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+    </a>
+  </div>
 
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
-        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
-      </a>
+  <div class="languageToggle">
+    <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+    <span>|</span>
+    <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
+  </div>
+
+  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <div></div><div></div><div></div>
+  </div>
+
+  <ul class="navMenu" id="navMenu">
+    <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+    <li class="dropdown">
+      <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo</a>
+      <span class="dropdown-arrow"></span>
+      <ul class="dropdown-menu">
+        <li><a href="chi-siamo.html">Il Nostro Team</a></li>
+        <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+        <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+        <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+      </ul>
+    </li>
+    <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+    <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+    <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
+  </ul>
+</nav>
+
+<section class="professional-hero">
+  <div class="professional-header">
+    <div class="professional-header-content">
+      <h1>Avv. Maximiliano Lenzi</h1>
+      <p class="professional-title">Studio Legale - Consulenza ed Assistenza Legale alle imprese</p>
     </div>
+  </div>
+  
+  <!-- Decorative elements -->
+  <div class="hero-decor decor-1">
+    <i class="fas fa-balance-scale"></i>
+  </div>
+  <div class="hero-decor decor-2">
+    <i class="fas fa-gavel"></i>
+  </div>
+</section>
 
-    <div class="languageToggle">
-      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-      <span>|</span>
-      <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
+<section class="professional-content">
+  <!-- Profile Block -->
+  <div class="content-block profile-block">
+    <div class="profile-text">
+      <h2>Profilo Professionale</h2>
+      <p>L'Avvocato Maximiliano Lenzi vanta un'esperienza pluriennale nel diritto commerciale e societario, con particolare specializzazione nella consulenza legale alle imprese di medie e grandi dimensioni.</p>
+      <p>Con un approccio pragmatico e orientato alla soluzione dei problemi, l'Avv. Lenzi offre assistenza legale completa, garantendo sempre la massima attenzione alle esigenze specifiche di ogni cliente.</p>
     </div>
-
-    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-      <div></div><div></div><div></div>
+    <div class="profile-image">
+      <img src="images/lenzi.jpg.avif" alt="Avv. Maximiliano Lenzi">
     </div>
+  </div>
 
-    <ul class="navMenu" id="navMenu">
-      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
-      <li class="dropdown">
-        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo</a>
-        <span class="dropdown-arrow"></span>
-        <ul class="dropdown-menu">
-          <li><a href="chi-siamo.html">Il Nostro Team</a></li>
-          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
-          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
-          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
-        </ul>
-      </li>
-      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
-      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
-      <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
-    </ul>
-  </nav>
-
-
-
-  <section class="professional-hero">
-    <div class="professional-header">
-      <div class="professional-header-content">
-        <h1>Avv. Maximiliano Lenzi</h1>
-        <p class="professional-title">Studio Legale - Consulenza ed Assistenza Legale alle imprese</p>
+  <!-- Qualifications Block -->
+  <div class="content-block">
+    <div class="block-header">
+      <h2>Qualifiche Professionali</h2>
+      <p>I titoli accademici e le specializzazioni dell'Avv. Lenzi</p>
+    </div>
+    <div class="qualifications-block">
+      <div class="qualification-card">
+        <div class="qualification-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Laurea in Giurisprudenza</h3>
+        <p>Università degli Studi di Padova con lode</p>
+      </div>
+      <div class="qualification-card">
+        <div class="qualification-icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <h3>Avvocato Abilitato</h3>
+        <p>Iscritto all'Albo degli Avvocati di Padova dal 2005</p>
+      </div>
+      <div class="qualification-card">
+        <div class="qualification-icon">
+          <i class="fas fa-certificate"></i>
+        </div>
+        <h3>Specializzazione</h3>
+        <p>Diritto Commerciale e Societario</p>
+      </div>
+      <div class="qualification-card">
+        <div class="qualification-icon">
+          <i class="fas fa-book"></i>
+        </div>
+        <h3>Master</h3>
+        <p>Diritto Fallimentare e delle Crisi d'Impresa</p>
       </div>
     </div>
-    
-    <!-- Decorative elements -->
-    <div class="hero-decor decor-1">
-      <i class="fas fa-balance-scale"></i>
-    </div>
-    <div class="hero-decor decor-2">
-      <i class="fas fa-gavel"></i>
-    </div>
-  </section>
+  </div>
 
-  <section class="professional-content">
-    <!-- Profile Block -->
-    <div class="content-block profile-block">
-      <div class="profile-text">
-        <h2>Profilo Professionale</h2>
-        <p>L'Avvocato Maximiliano Lenzi vanta un'esperienza pluriennale nel diritto commerciale e societario, con particolare specializzazione nella consulenza legale alle imprese di medie e grandi dimensioni.</p>
-        <p>Con un approccio pragmatico e orientato alla soluzione dei problemi, l'Avv. Lenzi offre assistenza legale completa, garantendo sempre la massima attenzione alle esigenze specifiche di ogni cliente.</p>
-      </div>
-      <div class="profile-image">
-        <img src="images/lenzi.jpg.avif" alt="Avv. Maximiliano Lenzi">
-      </div>
+  <!-- Experience Block -->
+  <div class="content-block">
+    <div class="block-header">
+      <h2>Esperienze Professionali</h2>
+      <p>I principali incarichi e posizioni ricoperte dall'Avv. Lenzi</p>
     </div>
-
-    <!-- Qualifications Block -->
-    <div class="content-block">
-      <div class="block-header">
-        <h2>Qualifiche Professionali</h2>
-        <p>I titoli accademici e le specializzazioni dell'Avv. Lenzi</p>
-      </div>
-      <div class="qualifications-block">
-        <div class="qualification-card">
-          <div class="qualification-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <h3>Laurea in Giurisprudenza</h3>
-          <p>Università degli Studi di Padova con lode</p>
-        </div>
-        <div class="qualification-card">
-          <div class="qualification-icon">
-            <i class="fas fa-user-tie"></i>
-          </div>
-          <h3>Avvocato Abilitato</h3>
-          <p>Iscritto all'Albo degli Avvocati di Padova dal 2005</p>
-        </div>
-        <div class="qualification-card">
-          <div class="qualification-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <h3>Specializzazione</h3>
-          <p>Diritto Commerciale e Societario</p>
-        </div>
-        <div class="qualification-card">
-          <div class="qualification-icon">
-            <i class="fas fa-book"></i>
-          </div>
-          <h3>Master</h3>
-          <p>Diritto Fallimentare e delle Crisi d'Impresa</p>
+    <div class="timeline-block">
+      <div class="timeline-item">
+        <span class="timeline-date">Dal 2024</span>
+        <div class="timeline-content">
+          <h3>Partner</h3>
+          <p>Studio Legale associato a Ca' Bragadin, Padova</p>
         </div>
       </div>
-    </div>
-
-    <!-- Experience Block -->
-    <div class="content-block">
-      <div class="block-header">
-        <h2>Esperienze Professionali</h2>
-        <p>I principali incarichi e posizioni ricoperte dall'Avv. Lenzi</p>
+      <div class="timeline-item">
+        <span class="timeline-date">2010 - 2016</span>
+        <div class="timeline-content">
+          <h3>Associato Senior</h3>
+          <p>Studio legale internazionale, Milano</p>
+        </div>
       </div>
-      <div class="timeline-block">
-        <div class="timeline-item">
-          <span class="timeline-date">Dal 2016</span>
-          <div class="timeline-content">
-            <h3>Partner</h3>
-            <p>Studio Legale associato a Ca' Bragadin, Padova</p>
-          </div>
+      <div class="timeline-item">
+        <span class="timeline-date">2008 - 2010</span>
+        <div class="timeline-content">
+          <h3>Avvocato</h3>
+          <p>Studio legale specializzato in diritto societario, Padova</p>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2010 - 2016</span>
-          <div class="timeline-content">
-            <h3>Associato Senior</h3>
-            <p>Studio legale internazionale, Milano</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2008 - 2010</span>
-          <div class="timeline-content">
-            <h3>Avvocato</h3>
-            <p>Studio legale specializzato in diritto societario, Padova</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2005 - 2008</span>
-          <div class="timeline-content">
-            <h3>Praticante Avvocato</h3>
-            <p>Studio legale commercialista, Venezia</p>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">2005 - 2008</span>
+        <div class="timeline-content">
+          <h3>Praticante Avvocato</h3>
+          <p>Studio legale commercialista, Venezia</p>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Expertise Block -->
-    <div class="content-block">
-      <div class="block-header">
-        <h2>Aree di Competenza</h2>
-        <p>Le specializzazioni e i servizi offerti dall'Avv. Lenzi</p>
+  <!-- Expertise Block -->
+  <div class="content-block">
+    <div class="block-header">
+      <h2>Aree di Competenza</h2>
+      <p>Le specializzazioni e i servizi offerti dall'Avv. Lenzi</p>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3>Diritto Societario</h3>
+        <p>Costituzione, modifiche statutarie e governance societaria</p>
       </div>
-      <div class="expertise-grid">
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-building"></i>
-          </div>
-          <h3>Diritto Societario</h3>
-          <p>Costituzione, modifiche statutarie e governance societaria</p>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-file-contract"></i>
         </div>
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-file-contract"></i>
-          </div>
-          <h3>Contrattualistica</h3>
-          <p>Redazione e negoziazione di contratti commerciali</p>
+        <h3>Contrattualistica</h3>
+        <p>Redazione e negoziazione di contratti commerciali</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-landmark"></i>
         </div>
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-landmark"></i>
-          </div>
-          <h3>Diritto Fallimentare</h3>
-          <p>Procedure concorsuali e ristrutturazioni aziendali</p>
+        <h3>Diritto Fallimentare</h3>
+        <p>Procedure concorsuali e ristrutturazioni aziendali</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-briefcase"></i>
         </div>
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <h3>Operazioni Straordinarie</h3>
-          <p>Fusioni, acquisizioni e scissioni societarie</p>
+        <h3>Operazioni Straordinarie</h3>
+        <p>Fusioni, acquisizioni e scissioni societarie</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-handshake"></i>
         </div>
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-handshake"></i>
-          </div>
-          <h3>Conformità Normativa</h3>
-          <p>Adempimenti societari e compliance aziendale</p>
+        <h3>Conformità Normativa</h3>
+        <p>Adempimenti societari e compliance aziendale</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-scale-balanced"></i>
         </div>
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-scale-balanced"></i>
-          </div>
-          <h3>Contenzioso Civile</h3>
-          <p>Rappresentanza in controversie commerciali</p>
-        </div>
+        <h3>Contenzioso Civile</h3>
+        <p>Rappresentanza in controversie commerciali</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Block -->
+  <div class="cta-block">
+    <a href="contatti.html" class="ctaButton">Richiedi una consulenza</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footerContent">
+    <div class="footerColumn">
+      <div class="footerLogo">
+        <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+      </div>
+      <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+    </div>
+
+    <div class="footerColumn">
+      <h3 class="footerHeading">Contatti</h3>
+      <div class="footerInfo">
+        <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+        <p><strong>Email:</strong> info@studicabragadin.it</p>
+        <p><strong>Tel:</strong> +39 049 1234567</p>
       </div>
     </div>
 
-    <!-- CTA Block -->
-    <div class="cta-block">
-      <a href="contatti.html" class="ctaButton">Richiedi una consulenza</a>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footerContent">
-      <div class="footerColumn">
-        <div class="footerLogo">
-          <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
-        </div>
-        <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
-      </div>
-
-      <div class="footerColumn">
-        <h3 class="footerHeading">Contatti</h3>
-        <div class="footerInfo">
-          <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-          <p><strong>Email:</strong> info@studicabragadin.it</p>
-          <p><strong>Tel:</strong> +39 049 1234567</p>
-        </div>
-      </div>
-
-      <div class="footerColumn">
-        <h3 class="footerHeading">Link</h3>
-        <div class="footerLinks">
-          <a href="chi-siamo.html">Chi siamo</a>
-          <a href="servizi.html">Servizi/Settori</a>
-          <a href="contatti.html">Contatti</a>
-        </div>
-      </div>
-
-      <div class="footerColumn">
-        <h3 class="footerHeading">Legale</h3>
-        <div class="footerLinks">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Termini</a>
-          <a href="cookies.html">Cookies</a>
-        </div>
+    <div class="footerColumn">
+      <h3 class="footerHeading">Link</h3>
+      <div class="footerLinks">
+        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="servizi.html">Servizi/Settori</a>
+        <a href="contatti.html">Contatti</a>
       </div>
     </div>
 
-    <div class="footerCopyright">
-      <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
+    <div class="footerColumn">
+      <h3 class="footerHeading">Legale</h3>
+      <div class="footerLinks">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Termini</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
     </div>
-  </footer>
+  </div>
 
-<!-- Scripts -->
+  <div class="footerCopyright">
+    <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // =============================================
@@ -281,11 +528,19 @@ document.addEventListener('DOMContentLoaded', function() {
   // Toggle Hamburger Menu
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('navMenu');
+  const body = document.body;
 
   if (hamburger && navMenu) {
     hamburger.addEventListener('click', function() {
       this.classList.toggle('active');
       navMenu.classList.toggle('active');
+      
+      // Toggle body overflow when menu is open
+      if (navMenu.classList.contains('active')) {
+        body.style.overflow = 'hidden';
+      } else {
+        body.style.overflow = '';
+      }
       
       // Update ARIA attribute for accessibility
       const expanded = this.getAttribute('aria-expanded') === 'true';
@@ -301,6 +556,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
       }
     });
   });
@@ -366,10 +622,20 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.classList.remove('active');
       });
     }
+    
+    // Close menu when clicking outside on mobile
+    if (window.innerWidth <= 768 && 
+        !e.target.closest('.navbar') && 
+        navMenu.classList.contains('active')) {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      body.style.overflow = '';
+    }
   });
 
   // =============================================
-  // Common Footer Functionality
+  // Footer Functionality
   // =============================================
   
   // Set current year in footer
@@ -378,6 +644,36 @@ document.addEventListener('DOMContentLoaded', function() {
     element.textContent = new Date().getFullYear();
   });
 
+  // =============================================
+  // Scroll Animation Effects
+  // =============================================
+  
+  // Animate elements when they come into view
+  const animateOnScroll = function() {
+    const elements = document.querySelectorAll('.content-block, .profile-block');
+    
+    elements.forEach(element => {
+      const elementPosition = element.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.2;
+      
+      if (elementPosition < screenPosition) {
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      }
+    });
+  };
+  
+  // Set initial state for animation
+  document.querySelectorAll('.content-block, .profile-block').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  });
+  
+  // Run on load and on scroll
+  window.addEventListener('load', animateOnScroll);
+  window.addEventListener('scroll', animateOnScroll);
+  
   // =============================================
   // Responsive Adjustments
   // =============================================
@@ -402,29 +698,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     });
+
+    // Adjust qualification and expertise grid for mobile
+    const qualificationsBlock = document.querySelector('.qualifications-block');
+    const expertiseGrid = document.querySelector('.expertise-grid');
+    
+    if (window.innerWidth <= 1024 && qualificationsBlock) {
+      qualificationsBlock.style.gridTemplateColumns = 'repeat(2, 1fr)';
+    }
+    
+    if (window.innerWidth <= 576 && qualificationsBlock) {
+      qualificationsBlock.style.gridTemplateColumns = '1fr';
+    }
+    
+    if (window.innerWidth <= 1024 && expertiseGrid) {
+      expertiseGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+    }
+    
+    if (window.innerWidth <= 576 && expertiseGrid) {
+      expertiseGrid.style.gridTemplateColumns = '1fr';
+    }
   }
 
   // Run on load and on resize
   adjustProfessionalLayout();
   window.addEventListener('resize', adjustProfessionalLayout);
-
-  // =============================================
-  // Smooth Scrolling for Anchor Links
-  // =============================================
-  
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
 });
 </script>
 

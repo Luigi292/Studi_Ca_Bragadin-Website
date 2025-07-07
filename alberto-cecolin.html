@@ -8,6 +8,10 @@
   <meta name="description" content="Dott. Alberto Cecolin - Dottore Commercialista e Revisore Legale a Padova. Specializzato in consulenza fiscale, societaria e controllo di gestione.">
   <meta name="keywords" content="commercialista padova, revisore legale padova, alberto cecolin, consulenza fiscale, consulenza societaria">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,219 +20,212 @@
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/professional.css">
   <link rel="stylesheet" href="css/index.css">
-  
-  
+
+  <link rel="icon" type="image/png" href="images/favicon-logo.png">
 </head>
 <body>
 
+<!-- Navbar Component -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+      <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+    </a>
+  </div>
 
+  <div class="languageToggle">
+    <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+    <span>|</span>
+    <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
+  </div>
 
-  
-  <!-- Navbar Component -->
+  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <div></div><div></div><div></div>
+  </div>
 
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
-        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
-      </a>
-    </div>
+  <ul class="navMenu" id="navMenu">
+    <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+    <li class="dropdown">
+      <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo</a>
+      <span class="dropdown-arrow"></span>
+      <ul class="dropdown-menu">
+        <li><a href="chi-siamo.html">Il Nostro Team</a></li>
+        <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+        <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+        <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+      </ul>
+    </li>
+    <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+    <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+    <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
+  </ul>
+</nav>
 
-    <div class="languageToggle">
-      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-      <span>|</span>
-      <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
-    </div>
-
-    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-      <div></div><div></div><div></div>
-    </div>
-
-    <ul class="navMenu" id="navMenu">
-      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
-      <li class="dropdown">
-        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo</a>
-        <span class="dropdown-arrow"></span>
-        <ul class="dropdown-menu">
-          <li><a href="chi-siamo.html">Il Nostro Team</a></li>
-          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
-          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
-          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
-        </ul>
-      </li>
-      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
-      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
-      <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
-    </ul>
-  </nav>
-
-
-
-
-  <!-- Hero Section -->
-  <section class="professional-hero">
-    <div class="professional-header">
+<section class="professional-hero">
+  <div class="professional-header">
+    <div class="professional-header-content">
       <h1>Dott. Alberto Cecolin</h1>
       <p class="professional-title">Dottore Commercialista e Revisore Legale</p>
     </div>
-    
-    <!-- Decorative elements -->
-    <div class="hero-decor decor-1">
-      <i class="fas fa-balance-scale"></i>
-    </div>
-    <div class="hero-decor decor-2">
-      <i class="fas fa-chart-line"></i>
-    </div>
-  </section>
+  </div>
+  
+  <!-- Decorative elements -->
+  <div class="hero-decor decor-1">
+    <i class="fas fa-balance-scale"></i>
+  </div>
+  <div class="hero-decor decor-2">
+    <i class="fas fa-chart-line"></i>
+  </div>
+</section>
 
-  <!-- Profile Section -->
-  <section class="professional-content">
-    <div class="content-block profile-block">
-      <div class="profile-text">
-        <h2>Profilo Professionale</h2>
-        <p>Il Dott. Alberto Cecolin vanta una consolidata esperienza nel campo della consulenza fiscale, societaria e amministrativa, con particolare specializzazione nella pianificazione finanziaria e nel controllo di gestione per imprese e professionisti.</p>
-        <p>Con importanti incarichi istituzionali nel territorio padovano, il Dott. Cecolin rappresenta un punto di riferimento per clienti che richiedono competenze specialistiche e un approccio personalizzato alle problematiche fiscali e societarie.</p>
+<section class="professional-content">
+  <!-- Profile Block -->
+  <div class="content-block profile-block">
+    <div class="profile-text">
+      <h2>Profilo Professionale</h2>
+      <p>Il Dott. Alberto Cecolin vanta una consolidata esperienza nel campo della consulenza fiscale, societaria e amministrativa, con particolare specializzazione nella pianificazione finanziaria e nel controllo di gestione per imprese e professionisti.</p>
+      <p>Con importanti incarichi istituzionali nel territorio padovano, il Dott. Cecolin rappresenta un punto di riferimento per clienti che richiedono competenze specialistiche e un approccio personalizzato alle problematiche fiscali e societarie.</p>
+    </div>
+    <div class="profile-image">
+      <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin">
+    </div>
+  </div>
+
+  <!-- Qualifications Block -->
+  <div class="content-block">
+    <div class="block-header">
+      <h2>Qualifiche Professionali</h2>
+      <p>Le certificazioni e i titoli accademici che attestano la competenza del Dott. Cecolin</p>
+    </div>
+    <div class="qualifications-block">
+      <div class="qualification-card">
+        <div class="qualification-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Laurea Magistrale</h3>
+        <p>Economia Aziendale presso l'Università degli Studi Ca' Foscari di Venezia</p>
       </div>
-      <div class="profile-image">
-        <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin">
+      <div class="qualification-card">
+        <div class="qualification-icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <h3>Dottore Commercialista</h3>
+        <p>Iscritto all'Ordine di Padova n° 1531/A dal 17-03-2010</p>
+      </div>
+      <div class="qualification-card">
+        <div class="qualification-icon">
+          <i class="fas fa-file-signature"></i>
+        </div>
+        <h3>Revisore Legale</h3>
+        <p>Abilitazione n° 159679 DM 15/07/2010</p>
+      </div>
+      <div class="qualification-card">
+        <div class="qualification-icon">
+          <i class="fas fa-certificate"></i>
+        </div>
+        <h3>Specializzazioni</h3>
+        <p>Fiscalità internazionale e controllo di gestione</p>
       </div>
     </div>
+  </div>
 
-    <!-- Qualifications Section -->
-    <div class="content-block">
-      <div class="block-header">
-        <h2>Qualifiche Professionali</h2>
-        <p>Le certificazioni e i titoli accademici che attestano la competenza del Dott. Cecolin</p>
-      </div>
-      <div class="qualifications-block">
-        <div class="qualification-card">
-          <div class="qualification-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <h3>Laurea Magistrale</h3>
-          <p>Economia Aziendale presso l'Università degli Studi Ca' Foscari di Venezia</p>
-        </div>
-        <div class="qualification-card">
-          <div class="qualification-icon">
-            <i class="fas fa-user-tie"></i>
-          </div>
-          <h3>Dottore Commercialista</h3>
-          <p>Iscritto all'Ordine di Padova n° 1531/A dal 17-03-2010</p>
-        </div>
-        <div class="qualification-card">
-          <div class="qualification-icon">
-            <i class="fas fa-file-signature"></i>
-          </div>
-          <h3>Revisore Legale</h3>
-          <p>Abilitazione n° 159679 DM 15/07/2010</p>
-        </div>
-        <div class="qualification-card">
-          <div class="qualification-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <h3>Specializzazioni</h3>
-          <p>Fiscalità internazionale e controllo di gestione</p>
-        </div>
-      </div>
+  <!-- Experience Block -->
+  <div class="content-block">
+    <div class="block-header">
+      <h2>Esperienze Professionali</h2>
+      <p>Gli incarichi istituzionali e le posizioni ricoperte dal Dott. Cecolin</p>
     </div>
-
-    <!-- Experience Section -->
-    <div class="content-block">
-      <div class="block-header">
-        <h2>Esperienze Professionali</h2>
-        <p>Gli incarichi istituzionali e le posizioni ricoperte dal Dott. Cecolin</p>
-      </div>
-      <div class="timeline-block">
-        <div class="timeline-item">
-          <span class="timeline-date">Dal 16.04.2025</span>
-          <div class="timeline-content">
-            <h3>Membro del Collegio Sindacale</h3>
-            <p>Estenergy S.p.A.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Dal 30.04.2019</span>
-          <div class="timeline-content">
-            <h3>Membro del C.d.A.</h3>
-            <p>Interporto Padova S.p.A.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">07.06.2017 - 15.01.2020</span>
-          <div class="timeline-content">
-            <h3>Presidente del C.d.A.</h3>
-            <p>Consorzio Zona Industriale e Porto Fluviale di Padova</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Da maggio 2013</span>
-          <div class="timeline-content">
-            <h3>Sindaco e revisore legale</h3>
-            <p>Società a partecipazione privata</p>
-          </div>
+    <div class="timeline-block">
+      <div class="timeline-item">
+        <span class="timeline-date">Dal 16.04.2025</span>
+        <div class="timeline-content">
+          <h3>Membro del Collegio Sindacale</h3>
+          <p>Estenergy S.p.A.</p>
         </div>
       </div>
-    </div>
-
-    <!-- Expertise Section -->
-    <div class="content-block">
-      <div class="block-header">
-        <h2>Aree di Competenza</h2>
-        <p>Le specializzazioni e i servizi offerti dal Dott. Cecolin</p>
+      <div class="timeline-item">
+        <span class="timeline-date">Dal 30.04.2019</span>
+        <div class="timeline-content">
+          <h3>Membro del C.d.A.</h3>
+          <p>Interporto Padova S.p.A.</p>
+        </div>
       </div>
-      <div class="expertise-grid">
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3>Consulenza Fiscale</h3>
-          <p>Pianificazione fiscale strategica per imprese e professionisti</p>
+      <div class="timeline-item">
+        <span class="timeline-date">07.06.2017 - 15.01.2020</span>
+        <div class="timeline-content">
+          <h3>Presidente del C.d.A.</h3>
+          <p>Consorzio Zona Industriale e Porto Fluviale di Padova</p>
         </div>
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-building"></i>
-          </div>
-          <h3>Consulenza Societaria</h3>
-          <p>Costituzione, trasformazione e riorganizzazione societaria</p>
-        </div>
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-calculator"></i>
-          </div>
-          <h3>Controllo di Gestione</h3>
-          <p>Analisi dei costi e performance aziendali</p>
-        </div>
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-search-dollar"></i>
-          </div>
-          <h3>Revisione Legale</h3>
-          <p>Verifica e certificazione dei bilanci</p>
-        </div>
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-balance-scale"></i>
-          </div>
-          <h3>Corporate Governance</h3>
-          <p>Adempimenti societari e compliance normativa</p>
-        </div>
-        <div class="expertise-card">
-          <div class="expertise-icon">
-            <i class="fas fa-landmark"></i>
-          </div>
-          <h3>Consulenza Istituzionale</h3>
-          <p>Supporto ad enti pubblici e istituzioni</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Da maggio 2013</span>
+        <div class="timeline-content">
+          <h3>Sindaco e revisore legale</h3>
+          <p>Società a partecipazione privata</p>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- CTA Section -->
-    <div class="cta-block">
-      <a href="contatti.html" class="ctaButton">Richiedi una consulenza</a>
+  <!-- Expertise Block -->
+  <div class="content-block">
+    <div class="block-header">
+      <h2>Aree di Competenza</h2>
+      <p>Le specializzazioni e i servizi offerti dal Dott. Cecolin</p>
     </div>
-  </section>
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Consulenza Fiscale</h3>
+        <p>Pianificazione fiscale strategica per imprese e professionisti</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3>Consulenza Societaria</h3>
+        <p>Costituzione, trasformazione e riorganizzazione societaria</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <h3>Controllo di Gestione</h3>
+        <p>Analisi dei costi e performance aziendali</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-search-dollar"></i>
+        </div>
+        <h3>Revisione Legale</h3>
+        <p>Verifica e certificazione dei bilanci</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-balance-scale"></i>
+        </div>
+        <h3>Corporate Governance</h3>
+        <p>Adempimenti societari e compliance normativa</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-landmark"></i>
+        </div>
+        <h3>Consulenza Istituzionale</h3>
+        <p>Supporto ad enti pubblici e istituzioni</p>
+      </div>
+    </div>
+  </div>
 
-  <!-- Footer Container -->
-  <footer class="footer">
+  <!-- CTA Block -->
+  <div class="cta-block">
+    <a href="contatti.html" class="ctaButton">Richiedi una consulenza</a>
+  </div>
+</section>
+
+<footer class="footer">
   <div class="footerContent">
     <div class="footerColumn">
       <div class="footerLogo">
@@ -270,15 +267,10 @@
   </div>
 </footer>
 
-
-
-
-<!-- Scripts -->
-<!-- Scripts -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // =============================================
-  // Navigation Functionality
+  // Common Navigation Functionality
   // =============================================
   
   // Toggle Hamburger Menu
@@ -401,7 +393,37 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // =============================================
-  // Responsive Adjustments for Professional Pages
+  // Scroll Animation Effects
+  // =============================================
+  
+  // Animate elements when they come into view
+  const animateOnScroll = function() {
+    const elements = document.querySelectorAll('.content-block, .profile-block');
+    
+    elements.forEach(element => {
+      const elementPosition = element.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.2;
+      
+      if (elementPosition < screenPosition) {
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      }
+    });
+  };
+  
+  // Set initial state for animation
+  document.querySelectorAll('.content-block, .profile-block').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  });
+  
+  // Run on load and on scroll
+  window.addEventListener('load', animateOnScroll);
+  window.addEventListener('scroll', animateOnScroll);
+  
+  // =============================================
+  // Responsive Adjustments
   // =============================================
   
   // Responsive adjustments for professional pages
@@ -449,28 +471,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Run on load and on resize
   adjustProfessionalLayout();
   window.addEventListener('resize', adjustProfessionalLayout);
-
-  // =============================================
-  // Smooth Scrolling for Anchor Links
-  // =============================================
-  
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
 });
 </script>
-
-
 
 </body>
 </html>
