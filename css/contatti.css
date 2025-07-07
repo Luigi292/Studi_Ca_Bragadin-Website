@@ -1,87 +1,31 @@
 /* ===== CONTACT PAGE STYLES ===== */
 
-/* ===== HERO SECTION ===== */
-.contact-hero {
-  position: relative;
-  height: 70vh;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+/* ===== MODERN BASE STYLES ===== */
+:root {
+  --primary-color: #1a2a4a;
+  --primary-light: #2c3e66;
+  --secondary-color: #d4af37;
+  --secondary-light: #e8c874;
+  --accent-color: #4a6fa5;
+  --dark-color: #222222;
+  --light-color: #f8f9fa;
+  --gray-color: #6c757d;
+  --white-color: #ffffff;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --border-radius: 6px;
+  --container-width: 1320px;
 }
 
-.contact-hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(26, 58, 110, 0.85) 0%, rgba(26, 58, 110, 0.6) 100%);
-  z-index: 1;
-}
 
-.contact-hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
 
-.contact-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  color: var(--white-color);
-  text-align: center;
-}
 
-.contact-hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-family: 'Raleway', sans-serif;
-}
 
-.contact-hero-content p {
-  font-size: 1.5rem;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  opacity: 0.9;
-  line-height: 1.6;
-  font-family: 'Crimson Text', serif;
-}
-
-@media (max-width: 768px) {
-  .contact-hero {
-    height: 40vh;
-    min-height: 300px;
-  }
-  
-  .contact-hero-content h1 {
-    font-size: 2.2rem;
-  }
-  
-  .contact-hero-content p {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .contact-hero-content h1 {
-    font-size: 2rem;
-  }
-  
-  .contact-hero-content p {
-    font-size: 1rem;
-  }
-}
 
 /* ===== MAIN CONTACT SECTION ===== */
 .contact-main {

@@ -11,14 +11,14 @@
   <!-- Favicon Setup -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#1a2a4a">
 
   <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Fonts with font-display: swap -->
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/navbar-footer.css">
@@ -30,9 +30,9 @@
   <link rel="shortcut icon" href="images/favicon-logo.png" type="image/png">
 </head>
 <body>
+
   
-  
-  <!-- Navbar Component -->
+ <!-- Navbar Component -->
 
 <nav class="navbar">
   <div class="logo">
@@ -43,9 +43,8 @@
 
   <div class="languageToggle">
     <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-    <span>|</span>
-    <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
-  </div>
+
+<!--<span>|</span> <a href="en/index.html" class="languageButton" aria-label="English">EN</a> -->   </div>
 
   <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
     <div></div><div></div><div></div>
@@ -55,7 +54,7 @@
     <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
     <li class="dropdown">
       <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
-
+      
       <!-- Dropdown arrow shown next to "Chi Siamo" -->
     
       <ul class="dropdown-menu">
@@ -72,185 +71,270 @@
 </nav>
 
 
-
-  <!-- Hero Section -->
+  <!-- Modern Hero Section -->
   <section class="hero">
-    <div class="carousel" id="carousel">
-      <div class="slide active" aria-label="Studio Commercialisti Ca' Bragadin - Elegant office reception area">
-        <div class="slideOverlay"></div>
-        <img src="images/hall.jpg.avif" alt="Slide 1" class="heroImage" loading="eager" fetchpriority="high">
-      </div>
-      <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Modern meeting room">
-        <div class="slideOverlay"></div>
-        <img src="images/hall2.jpg.avif" alt="Slide 2" class="heroImage">
-      </div>
-      <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Professional workspace">
-        <div class="slideOverlay"></div>
-        <img src="images/mid-hall.avif" alt="Slide 3" class="heroImage">
+    <div class="hero-background">
+      <div class="carousel" id="carousel">
+        <div class="slide active" aria-label="Studio Commercialisti Ca' Bragadin - Elegant office reception area">
+          <div class="slideOverlay"></div>
+          <img src="images/hall.jpg.avif" alt="Slide 1" class="heroImage" loading="eager" fetchpriority="high">
+        </div>
+        <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Modern meeting room">
+          <div class="slideOverlay"></div>
+          <img src="images/hall2.jpg.avif" alt="Slide 2" class="heroImage">
+        </div>
+        <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Professional workspace">
+          <div class="slideOverlay"></div>
+          <img src="images/mid-hall.avif" alt="Slide 3" class="heroImage">
+        </div>
       </div>
     </div>
-    <div class="heroContent">
-      <h1>Studi Professionali Ca' Bragadin</h1>
-      <p>Soluzioni fiscali e legali su misura per la tua azienda</p>
-      <a href="contatti.html" class="ctaButton">Contattaci</a>
+    
+    <div class="hero-content-wrapper">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Studi Professionali <br> <span>Ca' Bragadin</span></h1>
+          <p class="hero-subtitle">Consulenza legale e fiscale integrata per imprese e professionisti</p>
+          <div class="hero-cta">
+            <a href="contatti.html" class="ctaButton">Richiedi consulenza</a>
+            <a href="chi-siamo.html" class="secondaryButton">Conosci il team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-scroll-indicator">
+      <span>Scorri</span>
+      <div class="mouse"></div>
     </div>
   </section>
 
   <!-- Studios Section -->
   <section class="studios">
-    <div class="sectionHeader">
-      <h2>I Nostri Studi Professionali a Padova</h2>
-      <p class="sectionSubtitle subtitle">Professionalità e competenza al servizio delle aziende</p>
-    </div>
-    <div class="studiosContainer">
-      <div class="studio">
-        <div class="studioImageWrapper">
-          <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
-        </div>
-        <div class="studioContent">
-          <h3>Avv. Maximiliano Lenzi</h3>
-          <p>Studio Legale Consulenza ed Assistenza Legale alle imprese</p>
-          <div class="contactInfo">
-            <p><strong>Telefono:</strong> <a href="tel:0498751356">049-8751356</a></p>
-            <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
-            <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-            <a href="avv-maximiliano-lenzi.html" class="ctaButton small">Scopri di più</a>
+    <div class="container">
+      <div class="sectionHeader">
+        <h2>I Nostri Studi Professionali</h2>
+        <p class="sectionSubtitle">Eccellenza e competenza multidisciplinare a Padova</p>
+      </div>
+      <div class="studiosContainer">
+        <div class="studio">
+          <div class="studioImageWrapper">
+            <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
+          </div>
+          <div class="studioContent">
+            <h3>Avv. Maximiliano Lenzi</h3>
+            <p class="studio-specialty">Consulenza legale e assistenza alle imprese</p>
+            <div class="contactInfo">
+              <p><strong>Telefono:</strong> <a href="tel:0498751356">049-8751356</a></p>
+              <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
+              <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+              <a href="avv-maximiliano-lenzi.html" class="ctaButton small">Profilo completo</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="studio">
-        <div class="studioImageWrapper">
-          <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto - Commercialista Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
-        </div>
-        <div class="studioContent">
-          <h3>Dott. Andrea Maretto</h3>
-          <p>Studio Commercialisti ed Esperti Contabili Consulenza Fiscale e Societaria a Padova</p>
-          <div class="contactInfo">
-            <p><strong>Telefono:</strong> <a href="tel:0499562428">049-9562428</a></p>
-            <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
-            <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-            <a href="andrea-maretto.html" class="ctaButton small">Scopri di più</a>
+        <div class="studio">
+          <div class="studioImageWrapper">
+            <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto - Commercialista Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
+          </div>
+          <div class="studioContent">
+            <h3>Dott. Andrea Maretto</h3>
+            <p class="studio-specialty">Consulenza fiscale e societaria avanzata</p>
+            <div class="contactInfo">
+              <p><strong>Telefono:</strong> <a href="tel:0499562428">049-9562428</a></p>
+              <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
+              <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+              <a href="andrea-maretto.html" class="ctaButton small">Profilo completo</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="studio">
-        <div class="studioImageWrapper">
-          <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin - Commercialista Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
-        </div>
-        <div class="studioContent">
-          <h3>Dott. Alberto Cecolin</h3>
-          <p>Studio Commercialista Consulenza Fiscale e Societaria a Padova</p>
-          <div class="contactInfo">
-            <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
-            <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
-            <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-            <a href="alberto-cecolin.html" class="ctaButton small">Scopri di più</a>
+        <div class="studio">
+          <div class="studioImageWrapper">
+            <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin - Commercialista Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
+          </div>
+          <div class="studioContent">
+            <h3>Dott. Alberto Cecolin</h3>
+            <p class="studio-specialty">Pianificazione fiscale e strategie societarie</p>
+            <div class="contactInfo">
+              <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
+              <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
+              <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+              <a href="alberto-cecolin.html" class="ctaButton small">Profilo completo</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact CTA Section -->
-  <section class="contactCTA">
-    <div class="contactContent">
-      <h2>Hai bisogno di assistenza professionale?</h2>
-      <p>Contatta direttamente uno dei nostri esperti per una consulenza personalizzata.</p>
-      <a href="contatti.html" class="ctaButton">Contatta un Esperto</a>
+
+<!-- Collaboration Section -->
+
+<section class="collaboration-section" id="collaboration-section">
+  <div class="collaboration-bg"></div>
+  
+  <div class="collaboration-content">
+    <div class="container">
+      <span class="section-subtitle">I Nostri Valori</span>
+      <h2>L'Approccio di Studio Ca' Bragadin</h2>
+      <p class="collaboration-intro">La nostra filosofia professionale si basa su quattro pilastri fondamentali</p>
+      
+      <div class="collaboration-grid">
+        <div class="collaboration-item">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Etica Professionale</h3>
+          <p>Rispettiamo i più alti standard deontologici, ponendo l'interesse del cliente al centro di ogni nostra attività.</p>
+        </div>
+        
+        <div class="collaboration-item">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 18V12M12 12V6M12 12H18M12 12H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Innovazione</h3>
+          <p>Adottiamo tecnologie avanzate e metodologie aggiornate per offrire servizi efficienti e moderni.</p>
+        </div>
+        
+        <div class="collaboration-item">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Approccio Multidisciplinare</h3>
+          <p>La collaborazione tra i nostri professionisti garantisce soluzioni complete che considerano tutti gli aspetti.</p>
+        </div>
+        
+        <div class="collaboration-item">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.86" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Orientamento ai Risultati</h3>
+          <p>Sviluppiamo strategie concrete per raggiungere gli obiettivi aziendali, misurando sempre l'efficacia.</p>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- News Preview Section -->
   <section class="news-preview-section">
-    <div class="news-preview-container">
+    <div class="container">
       <div class="news-preview-header">
         <h2>Ultime News Professionali</h2>
-        <p class="subtitle">Rimani aggiornato sulle ultime novità legali e fiscali</p>
+        <p class="subtitle">Aggiornamenti normativi e approfondimenti giuridico-fiscali</p>
       </div>
       
       <div class="news-preview-grid" id="newsPreviewGrid">
-        <!-- News items will be loaded here dynamically -->
         <div class="news-loading">
           <div class="news-loading-spinner"></div>
         </div>
       </div>
       
       <div class="news-preview-button">
-        <a href="news.html" class="ctaButton">Vedi Tutte le News ed Iscriviti</a>
+        <a href="news.html" class="ctaButton">Archivio news e iscrizioni</a>
       </div>
     </div>
   </section>
 
   <!-- Footer Component -->
+
   <footer class="footer">
-    <div class="footerContent">
-      <div class="footerColumn">
-        <div class="footerLogo">
-          <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
-        </div>
-        <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+  <div class="footerContent">
+    <div class="footerColumn">
+      <div class="footerLogo">
+        <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
       </div>
+      <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+    </div>
 
-      <div class="footerColumn">
-        <h3 class="footerHeading">Contatti</h3>
-        <div class="footerInfo">
-          <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-          <p><strong>Email:</strong> info@studicabragadin.it</p>
-          <p><strong>Tel:</strong> +39 049 1234567</p>
-        </div>
-      </div>
-
-      <div class="footerColumn">
-        <h3 class="footerHeading">Link</h3>
-        <div class="footerLinks">
-          <a href="chi-siamo.html">Chi siamo</a>
-          <a href="servizi.html">Servizi/Settori</a>
-          <a href="contatti.html">Contatti</a>
-        </div>
-      </div>
-
-      <div class="footerColumn">
-        <h3 class="footerHeading">Legale</h3>
-        <div class="footerLinks">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Termini</a>
-          <a href="cookies.html">Cookies</a>
-        </div>
+    <div class="footerColumn">
+      <h3 class="footerHeading">Contatti</h3>
+      <div class="footerInfo">
+        <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+        <p><strong>Email:</strong> info@studicabragadin.it</p>
+        <p><strong>Tel:</strong> +39 049 1234567</p>
       </div>
     </div>
 
-    <div class="footerCopyright">
-      <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
+    <div class="footerColumn">
+      <h3 class="footerHeading">Link</h3>
+      <div class="footerLinks">
+        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="servizi.html">Servizi/Settori</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
     </div>
-  </footer>
 
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // =============================================
-    // Navigation Functionality
-    // =============================================
-    
+    <div class="footerColumn">
+      <h3 class="footerHeading">Legale</h3>
+      <div class="footerLinks">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Termini</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footerCopyright">
+    <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop" title="Torna a inizio pagina">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Navbar elements
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
     const body = document.body;
     const dropdowns = document.querySelectorAll('.dropdown');
-    let lastTapTime = 0;
-    const doubleTapDelay = 300; // 300ms for double tap
+    
+    // Current year for footer
+    document.querySelectorAll('.current-year').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
 
-    // Toggle Hamburger Menu
+    // Back to top button
+    const backToTop = document.querySelector('.js-top');
+    if (backToTop) {
+      window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('active', window.scrollY > 300);
+      });
+      backToTop.addEventListener('click', e => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Mobile menu toggle
     if (hamburger && navMenu) {
-      hamburger.addEventListener('click', function(e) {
+      hamburger.addEventListener('click', function (e) {
         e.stopPropagation();
         this.classList.toggle('active');
         navMenu.classList.toggle('active');
         
-        // Toggle body overflow
+        // Toggle body overflow and aria-expanded
         body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-        
-        // Update ARIA attribute
         this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
         
-        // Close dropdowns when closing menu
+        // Close all dropdowns when closing mobile menu
         if (!navMenu.classList.contains('active')) {
           closeAllDropdowns();
         }
@@ -263,144 +347,165 @@
         const link = dropdown.querySelector('.navLink');
         const menu = dropdown.querySelector('.dropdown-menu');
         
-        if (link && menu) {
-          // Desktop hover behavior
-          dropdown.addEventListener('mouseenter', function() {
-            if (window.innerWidth > 768) {
-              openDropdown(this);
+        // Desktop hover events
+        dropdown.addEventListener('mouseenter', () => {
+          if (window.innerWidth > 992) {
+            openDropdown(dropdown);
+          }
+        });
+        
+        dropdown.addEventListener('mouseleave', () => {
+          if (window.innerWidth > 992) {
+            closeDropdown(dropdown);
+          }
+        });
+        
+        // Mobile click events
+        link.addEventListener('click', (e) => {
+          if (window.innerWidth <= 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (dropdown.classList.contains('active')) {
+              closeDropdown(dropdown);
+            } else {
+              openDropdown(dropdown);
+              closeOtherDropdowns(dropdown);
             }
-          });
-          
-          dropdown.addEventListener('mouseleave', function() {
-            if (window.innerWidth > 768) {
-              closeDropdown(this);
-            }
-          });
-          
-          // Mobile click behavior
-          link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-              e.preventDefault();
-              e.stopPropagation();
-              
-              const now = new Date().getTime();
-              const isDoubleTap = (now - lastTapTime) < doubleTapDelay;
-              lastTapTime = now;
-              
-              if (isDoubleTap) {
-                // Double tap - navigate to chi-siamo.html
-                window.location.href = link.getAttribute('href');
-              } else {
-                // Single tap - toggle dropdown
-                if (menu.classList.contains('active')) {
-                  closeDropdown(dropdown);
-                } else {
-                  openDropdown(dropdown);
-                  closeOtherDropdowns(dropdown);
-                }
-              }
-            }
-          });
+          }
+        });
+      });
+    }
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.navMenu .navLink:not(.dropdown .navLink)').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 992) {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+          body.style.overflow = '';
+          closeAllDropdowns();
         }
       });
-    }
-
-    // Open a specific dropdown
-    function openDropdown(dropdown) {
-      const menu = dropdown.querySelector('.dropdown-menu');
-      dropdown.classList.add('active');
-      menu.classList.add('active');
-    }
-
-    // Close a specific dropdown
-    function closeDropdown(dropdown) {
-      const menu = dropdown.querySelector('.dropdown-menu');
-      dropdown.classList.remove('active');
-      menu.classList.remove('active');
-    }
-
-    // Close all dropdowns
-    function closeAllDropdowns() {
-      dropdowns.forEach(dropdown => {
-        closeDropdown(dropdown);
-      });
-    }
-
-    // Close other dropdowns except the current one
-    function closeOtherDropdowns(currentDropdown) {
-      dropdowns.forEach(dropdown => {
-        if (dropdown !== currentDropdown) {
-          closeDropdown(dropdown);
-        }
-      });
-    }
+    });
 
     // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.dropdown') && window.innerWidth > 768) {
-        closeAllDropdowns();
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.dropdown') && !e.target.closest('.hamburger')) {
+        if (window.innerWidth > 992) {
+          closeAllDropdowns();
+        }
+        
+        if (window.innerWidth <= 992 && !e.target.closest('.navbar') && navMenu.classList.contains('active')) {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+          body.style.overflow = '';
+          closeAllDropdowns();
+        }
       }
       
-      // Close menu when clicking outside on mobile
-      if (window.innerWidth <= 768 && 
-          !e.target.closest('.navbar') && 
-          navMenu.classList.contains('active')) {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        body.style.overflow = '';
-        closeAllDropdowns();
+      // Close dropdown when clicking a dropdown menu item
+      if (e.target.closest('.dropdown-menu a')) {
+        const dropdown = e.target.closest('.dropdown');
+        setTimeout(() => {
+          if (window.innerWidth <= 992) {
+            closeDropdown(dropdown);
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            body.style.overflow = '';
+          }
+        }, 300);
       }
     });
 
-    // Highlight active nav link
+    // Highlight active link based on current page
     function highlightActiveLink() {
       const currentPage = window.location.pathname.split('/').pop() || 'index.html';
       const allNavLinks = document.querySelectorAll('.navLink, .dropdown-menu a');
       
       allNavLinks.forEach(link => {
         const href = link.getAttribute('href');
-        
-        // Remove active class first
         link.classList.remove('active');
         
-        // Check if link matches current page
-        if (href === currentPage || 
-            (currentPage === '' && href === 'index.html') ||
-            (href.endsWith(currentPage) && currentPage !== 'index.html')) {
+        if (href === currentPage || (href.endsWith(currentPage) && currentPage !== 'index.html')) {
           link.classList.add('active');
-          
-          // If this is a dropdown item, also highlight parent
-          if (link.closest('.dropdown-menu')) {
-            const parentLink = link.closest('.dropdown').querySelector('.navLink');
-            if (parentLink) parentLink.classList.add('active');
-          }
+          const parent = link.closest('.dropdown');
+          if (parent) parent.querySelector('.navLink')?.classList.add('active');
         }
       });
     }
 
     // Handle window resize
     function handleResize() {
-      if (window.innerWidth > 768) {
-        // Reset mobile menu state when resizing to desktop
-        if (navMenu) navMenu.classList.remove('active');
-        if (hamburger) {
-          hamburger.classList.remove('active');
-          hamburger.setAttribute('aria-expanded', 'false');
-        }
+      if (window.innerWidth > 992) {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
         body.style.overflow = '';
         closeAllDropdowns();
+      } else {
+        dropdowns.forEach(dropdown => {
+          const menu = dropdown.querySelector('.dropdown-menu');
+          menu.style.maxHeight = dropdown.classList.contains('active') ? menu.scrollHeight + 'px' : '0';
+        });
       }
     }
 
-    // Initialize dropdowns and active link highlighting
-    setupDropdowns();
-    highlightActiveLink();
-    window.addEventListener('resize', handleResize);
+    // Dropdown helper functions
+    function openDropdown(dropdown) {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      dropdown.classList.add('active');
+      menu.classList.add('active');
+      
+      if (window.innerWidth <= 992) {
+        menu.style.maxHeight = menu.scrollHeight + 'px';
+      }
+    }
 
-    // =============================================
-    // News Loading Functionality
-    // =============================================
-    
+    function closeDropdown(dropdown) {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      dropdown.classList.remove('active');
+      menu.classList.remove('active');
+      
+      if (window.innerWidth <= 992) {
+        menu.style.maxHeight = '0';
+      }
+    }
+
+    function closeAllDropdowns() {
+      dropdowns.forEach(dropdown => closeDropdown(dropdown));
+    }
+
+    function closeOtherDropdowns(current) {
+      dropdowns.forEach(dropdown => {
+        if (dropdown !== current) closeDropdown(dropdown);
+      });
+    }
+
+    // Initialize carousel
+    function initCarousel() {
+      const carousel = document.getElementById('carousel');
+      if (!carousel) return;
+      
+      const slides = carousel.querySelectorAll('.slide');
+      let current = 0;
+
+      function show(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+      }
+
+      function next() {
+        current = (current + 1) % slides.length;
+        show(current);
+      }
+
+      show(0);
+      setInterval(next, 5000);
+    }
+
+    // Load news previews
     function loadNewsPreviews() {
       const newsGrid = document.getElementById('newsPreviewGrid');
       if (!newsGrid) return;
@@ -408,97 +513,105 @@
       newsGrid.innerHTML = '<div class="news-loading"><div class="news-loading-spinner"></div></div>';
 
       fetch('news.html')
-        .then(response => {
-          if (!response.ok) throw new Error('Network response was not ok');
-          return response.text();
+        .then(res => {
+          if (!res.ok) throw new Error('Network error');
+          return res.text();
         })
         .then(html => {
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, 'text/html');
-          const newsItems = doc.querySelectorAll('.news-card');
+          const items = doc.querySelectorAll('.news-card');
 
-          if (newsItems.length === 0) {
-            newsGrid.innerHTML = '<div class="news-error">Nessuna news disponibile al momento</div>';
+          if (!items.length) {
+            newsGrid.innerHTML = '<div class="news-error">No news available</div>';
             return;
           }
 
           newsGrid.innerHTML = '';
+          Array.from(items).slice(0, 4).forEach(item => {
+            const date = item.querySelector('.news-date')?.textContent || '';
+            const cat = item.querySelector('.news-category')?.textContent || '';
+            const title = item.querySelector('h3')?.textContent || '';
+            const preview = item.querySelector('.news-preview-content p')?.textContent || '';
+            const pdf = item.querySelector('.news-download')?.getAttribute('href') || '#';
+            const id = item.getAttribute('data-id');
 
-          Array.from(newsItems).slice(0, 4).forEach(item => {
-            const date = item.querySelector('.news-date').textContent;
-            const category = item.querySelector('.news-category').textContent;
-            const title = item.querySelector('h3').textContent;
-            const previewText = item.querySelector('.news-preview-content p').textContent;
-            const pdfLink = item.querySelector('.news-download')?.getAttribute('href') || '#';
-            const newsId = item.getAttribute('data-id');
-
-            const newsCard = document.createElement('div');
-            newsCard.className = 'news-preview-card';
-
-            newsCard.innerHTML = `
+            const card = document.createElement('div');
+            card.className = 'news-preview-card';
+            card.innerHTML = `
               <div class="news-preview-card-header">
                 <span class="news-preview-date">${date}</span>
-                <span class="news-preview-category">${category}</span>
+                <span class="news-preview-category">${cat}</span>
               </div>
               <div class="news-preview-content">
                 <h3>${title}</h3>
-                <p>${previewText}</p>
+                <p>${preview}</p>
                 <div class="news-preview-actions">
-                  <a href="news.html#news-${newsId}" class="news-preview-more">Leggi tutto</a>
-                  <a href="${pdfLink}" class="news-preview-download" download>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                      <polyline points="7 10 12 15 17 10"></polyline>
-                      <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    PDF
-                  </a>
+                  <a href="news.html#news-${id}" class="news-preview-more">Read more</a>
+                  <a href="${pdf}" class="news-preview-download" download>PDF</a>
                 </div>
               </div>
             `;
-
-            newsGrid.appendChild(newsCard);
+            newsGrid.appendChild(card);
           });
         })
-        .catch(error => {
-          console.error('Error loading news:', error);
+        .catch(err => {
+          console.error(err);
           newsGrid.innerHTML = `
             <div class="news-error">
-              <p>Impossibile caricare le ultime news.</p>
-              <a href="news.html">Visita la pagina news</a>
-            </div>
-          `;
+              <p>Error loading news.</p>
+              <a href="news.html">Go to news page</a>
+            </div>`;
         });
     }
 
-    // =============================================
-    // Footer Functionality
-    // =============================================
-    
-    // Set current year in footer
-    const yearElements = document.querySelectorAll('.current-year');
-    yearElements.forEach(element => {
-      element.textContent = new Date().getFullYear();
-    });
+    // Setup parallax effect
+    function setupParallax() {
+      const section = document.getElementById('collaboration-section');
+      const bg = document.querySelector('.collaboration-bg');
+      if (!section || !bg) return;
 
-    // =============================================
-    // Initialize all functionality
-    // =============================================
-    
+      function updateParallax() {
+        const rect = section.getBoundingClientRect();
+        const scrollY = window.scrollY;
+        const sectionTop = rect.top + scrollY;
+        const height = rect.height;
+        const viewport = window.innerHeight;
+
+        const visiblePercent = (scrollY + viewport - sectionTop) / (viewport + height);
+        if (scrollY + viewport > sectionTop && scrollY < sectionTop + height) {
+          const offset = height * 0.5 * visiblePercent;
+          bg.style.transform = `translate3d(0, ${-offset}px, 0)`;
+          bg.style.transition = 'transform 0.1s ease-out';
+        }
+      }
+
+      updateParallax();
+      window.addEventListener('scroll', updateParallax);
+      window.addEventListener('resize', updateParallax);
+    }
+
+    // Initialize all functions
+    setupDropdowns();
+    highlightActiveLink();
+    window.addEventListener('resize', handleResize);
+    initCarousel();
     loadNewsPreviews();
+    setupParallax();
+  });
 
-    // Initialize animations if AOS is loaded
-    if (typeof AOS !== 'undefined') {
-      AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        offset: 100
-      });
+  // Optional: generic parallax for other sections
+  window.addEventListener('scroll', () => {
+    const bg = document.querySelector('.parallax-bg');
+    if (bg) {
+      const scroll = window.scrollY;
+      bg.style.transform = `translateY(${scroll * 0.4}px)`;
     }
   });
-  </script>
+</script>
 
-  
+
+
+
 </body>
 </html>

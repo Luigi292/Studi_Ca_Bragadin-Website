@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/professional.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/hero.css">
+
 
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
 </head>
@@ -71,14 +73,21 @@
 
 
 <!-- Hero Section -->
- 
-<section class="professional-hero">
-  <div class="professional-header">
-    <div class="professional-header-content">
-      <h1>Dott. Alberto Cecolin</h1>
-      <p class="professional-title">Dottore Commercialista e Revisore Legale</p>
-    </div>
+<section class="hero-section professional-hero">
+  <div class="hero-overlay"></div>
+  <img src="images/cecolin-hero-bg.jpg.avif" alt="Dott. Alberto Cecolin" class="hero-image" loading="eager" fetchpriority="high">
+  <div class="hero-content">
+    <h1>Dott. Alberto Cecolin</h1>
+    <p class="professional-title">Dottore Commercialista e Revisore Legale</p>
+
   </div>
+  <div class="hero-scroll-indicator">
+    <span>Scorri</span>
+    <div class="hero-mouse"></div>
+  </div>
+</section>
+
+
   
   <!-- Decorative elements -->
   <div class="hero-decor decor-1">
@@ -278,8 +287,15 @@
   </div>
 </footer>
 
+  <div class="gototop js-top active">
+  <a href="#" class="js-gotop" title="Torna a inizio pagina">
+    <span class="icon-arrow-up"></span>
+  </a>
+</div>
 
 
+
+<!-- Scripts -->
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -424,5 +440,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+  // Show button on scroll
+  window.addEventListener("scroll", function () {
+    const scrollBtn = document.querySelector(".js-top");
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("active");
+    } else {
+      scrollBtn.classList.remove("active");
+    }
+  });
+
+  // Scroll to top on click
+  document.querySelector(".js-gotop").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+
+
 </body>
 </html>

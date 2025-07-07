@@ -28,7 +28,9 @@
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/servizi.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/hero.css">
+
+
 
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
@@ -37,8 +39,8 @@
 <body>
   
   
-<!-- Navbar Component -->
 
+  <!-- Navbar Component -->
 
 <nav class="navbar">
   <div class="logo">
@@ -49,9 +51,8 @@
 
   <div class="languageToggle">
     <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-    <span>|</span>
-    <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
-  </div>
+
+<!--<span>|</span> <a href="en/index.html" class="languageButton" aria-label="English">EN</a> -->   </div>
 
   <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
     <div></div><div></div><div></div>
@@ -78,16 +79,26 @@
 </nav>
 
 
-
-  <!-- Services Hero Section -->
-  <section class="page-servizi-hero">
-    <div class="hero-servizi-overlay"></div>
-    <img src="images/team-glass-room.jpg.avif" alt="Servizi Professionali Studio Ca' Bragadin" class="hero-servizi-image" loading="eager" fetchpriority="high">
-    <div class="hero-servizi-content">
-      <h1>I Nostri Servizi Professionali</h1>
-      <p>Soluzioni integrate per imprese e professionisti</p>
+<!-- Services Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <img src="images/team-glass-room.jpg.avif" alt="Servizi Professionali Studio Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
+  <div class="hero-content">
+    <h1>I Nostri Servizi Professionali</h1>
+    <p>Soluzioni integrate per imprese e professionisti</p>
+    <div class="hero-cta">
+      <a href="#services" class="cta-button">Scopri i servizi</a>
+      <a href="contatti.html" class="secondary-button">Contattaci</a>
     </div>
-  </section>
+  </div>
+  <div class="hero-scroll-indicator">
+    <span>Scorri</span>
+    <div class="hero-mouse"></div>
+  </div>
+</section>
+
+
+
 
   <!-- Services Section -->
   <section class="services-section">
@@ -391,10 +402,18 @@
   </div>
 </footer>
 
-  <!-- Scripts -->
+
+  <div class="gototop js-top active">
+  <a href="#" class="js-gotop" title="Torna a inizio pagina">
+    <span class="icon-arrow-up"></span>
+  </a>
+</div>
+
+
   
 
 <!-- Scripts -->
+ 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // =============================================
@@ -857,6 +876,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 </script>
 
+<script>
+  // Show button on scroll
+  window.addEventListener("scroll", function () {
+    const scrollBtn = document.querySelector(".js-top");
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("active");
+    } else {
+      scrollBtn.classList.remove("active");
+    }
+  });
+
+  // Scroll to top on click
+  document.querySelector(".js-gotop").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 
 

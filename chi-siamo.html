@@ -32,7 +32,9 @@
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/chi-siamo.css">
-  <link rel="stylesheet" href="css/news.css">
+  <link rel="stylesheet" href="css/hero.css">
+
+ 
 
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
@@ -43,8 +45,10 @@
 </head>
 <body>
 
-  <!-- Navbar Component -->
+ 
 
+
+  <!-- Navbar Component -->
 
 <nav class="navbar">
   <div class="logo">
@@ -55,9 +59,8 @@
 
   <div class="languageToggle">
     <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-    <span>|</span>
-    <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
-  </div>
+
+<!--<span>|</span> <a href="en/index.html" class="languageButton" aria-label="English">EN</a> -->   </div>
 
   <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
     <div></div><div></div><div></div>
@@ -84,16 +87,25 @@
 </nav>
 
 
-  
-  <!-- Hero Section -->
-  <section class="news-hero">
-    <div class="news-hero-overlay"></div>
-    <img src="images/team-glass-room.jpg.avif" alt="Team Studi Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
-    <div class="news-hero-content">
-      <h1 data-aos="fade-up">Il Nostro Team</h1>
-      <p data-aos="fade-up" data-aos-delay="100">Dove competenza e passione si incontrano per creare valore</p>
+
+<!-- About Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <img src="images/team-glass-room.jpg.avif" alt="Team Studi Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
+  <div class="hero-content">
+    <h1>Il Nostro Team</h1>
+    <p>Dove competenza e passione si incontrano per creare valore</p>
+    <div class="hero-cta">
+      <a href="#team" class="cta-button">Conosci i professionisti</a>
+      <a href="servizi.html" class="secondary-button">I nostri servizi</a>
     </div>
-  </section>
+  </div>
+  <div class="hero-scroll-indicator">
+    <span>Scorri</span>
+    <div class="hero-mouse"></div>
+  </div>
+</section>
+
 
   <!-- About Studio Section -->
   <section class="about-studio">
@@ -392,9 +404,17 @@
   </div>
 </footer>
 
-  <!-- Scripts -->
+
+  <div class="gototop js-top active">
+  <a href="#" class="js-gotop" title="Torna a inizio pagina">
+    <span class="icon-arrow-up"></span>
+  </a>
+</div>
+
+
 
 <!-- Scripts -->
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.getElementById('hamburger');
@@ -538,5 +558,29 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  // Show button on scroll
+  window.addEventListener("scroll", function () {
+    const scrollBtn = document.querySelector(".js-top");
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("active");
+    } else {
+      scrollBtn.classList.remove("active");
+    }
+  });
+
+  // Scroll to top on click
+  document.querySelector(".js-gotop").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+
+
 </body>
 </html>

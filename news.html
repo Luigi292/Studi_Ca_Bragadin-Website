@@ -25,58 +25,74 @@
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/news.css">
+  <link rel="stylesheet" href="css/hero.css">
+
 
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
   <link rel="shortcut icon" href="images/favicon-logo.png" type="image/png">
 </head>
 <body class="news-page">
   
-  <!-- Navbar Component -->
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
-        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
-      </a>
-    </div>
+ 
 
-    <div class="languageToggle">
-      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-      <span>|</span>
-      <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
-    </div>
 
-    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-      <div></div><div></div><div></div>
-    </div>
+<!-- Navbar Component -->
 
-    <ul class="navMenu" id="navMenu">
-      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
-      <li class="dropdown">
-        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
-        
-        <!-- Dropdown arrow shown next to "Chi Siamo" -->
-        <ul class="dropdown-menu">
-          <li><a href="chi-siamo.html">Il Nostro Team</a></li>
-          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
-          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
-          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
-        </ul>
-      </li>
-      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
-      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
-      <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
-    </ul>
-  </nav>
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+      <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+    </a>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="news-hero">
-    <div class="news-hero-overlay"></div>
-    <img src="images/team-glass-room.jpg.avif" alt="Team Studi Ca' Bragadin" class="news-hero-image" loading="lazy">
-    <div class="news-hero-content">
-      <h1>News Professionali</h1>
-      <p>Approfondimenti e aggiornamenti su temi legali e fiscali</p>
+  <div class="languageToggle">
+    <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+
+<!--<span>|</span> <a href="en/index.html" class="languageButton" aria-label="English">EN</a> -->   </div>
+
+  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <div></div><div></div><div></div>
+  </div>
+
+  <ul class="navMenu" id="navMenu">
+    <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+    <li class="dropdown">
+      <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
+      
+      <!-- Dropdown arrow shown next to "Chi Siamo" -->
+    
+      <ul class="dropdown-menu">
+        <li><a href="chi-siamo.html">Il Nostro Team</a></li>
+        <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+        <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+        <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+      </ul>
+    </li>
+    <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+    <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+    <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
+  </ul>
+</nav>
+
+
+<!-- News Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <img src="images/team-glass-room.jpg.avif" alt="Team Studi Ca' Bragadin" class="hero-image" loading="lazy">
+  <div class="hero-content">
+    <h1>News Professionali</h1>
+    <p>Approfondimenti e aggiornamenti su temi legali e fiscali</p>
+    <div class="hero-cta">
+      <a href="#latest-news" class="cta-button">Leggi le ultime news</a>
+      <a href="#newsletter" class="secondary-button">Iscriviti alla newsletter</a>
     </div>
-  </section>
+  </div>
+  <div class="hero-scroll-indicator">
+    <span>Scorri</span>
+    <div class="hero-mouse"></div>
+  </div>
+</section>
+
 
   <section class="news-archive">
     <div class="container">
@@ -353,6 +369,14 @@
     </div>
   </footer>
 
+    <div class="gototop js-top active">
+  <a href="#" class="js-gotop" title="Torna a inizio pagina">
+    <span class="icon-arrow-up"></span>
+  </a>
+</div>
+
+
+
   <div class="news-modal" id="newsModal">
     <div class="modal-content">
       <button class="modal-close">&times;</button>
@@ -580,5 +604,29 @@
       window.addEventListener('resize', handleResize);
     });
   </script>
+
+  <script>
+  // Show button on scroll
+  window.addEventListener("scroll", function () {
+    const scrollBtn = document.querySelector(".js-top");
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("active");
+    } else {
+      scrollBtn.classList.remove("active");
+    }
+  });
+
+  // Scroll to top on click
+  document.querySelector(".js-gotop").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+
+
 </body>
 </html>

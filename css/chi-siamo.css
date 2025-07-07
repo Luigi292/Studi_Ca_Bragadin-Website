@@ -1,46 +1,44 @@
-/* ===== VARIABLES ===== */
+/* ===== MODERN BASE STYLES ===== */
 :root {
-  --primary-color: #1a3a6e;
-  --secondary-color:#f6a62e;
-  --accent-color: #2c5a9a;
-  --dark-color: #0d1f3a;
+  --primary-color: #1a2a4a;
+  --primary-light: #2c3e66;
+  --secondary-color: #d4af37;
+  --secondary-light: #e8c874;
+  --accent-color: #4a6fa5;
+  --dark-color: #222222;
   --light-color: #f8f9fa;
-  --white-color: #ffffff;
   --gray-color: #6c757d;
-  --dark-gray: #343a40;
-  --border-radius: 8px;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
+  --white-color: #ffffff;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --border-radius: 6px;
+  --container-width: 1320px;
 }
 
-/* ===== BASE STYLES ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+}
+
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-main);
+  line-height: 1.7;
   color: var(--dark-color);
-  line-height: 1.6;
+  background-color: var(--white-color);
   overflow-x: hidden;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Crimson Text', serif;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-
 
 img {
   max-width: 100%;
@@ -50,9 +48,9 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 20px;
 }
 
 .section-header {
@@ -557,14 +555,21 @@ img {
   transform: translateY(-5px);
 }
 
+
 /* ===== CTA SECTION ===== */
+/* ===== CTA SECTION FIXED ===== */
 .about-cta {
   padding: 6rem 0;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-  color: var(--white-color);
-  text-align: center;
   position: relative;
   overflow: hidden;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 
 .about-cta::before {
@@ -576,35 +581,47 @@ img {
   height: 100%;
   background: url('../images/pattern-light.png') center/cover;
   opacity: 0.05;
+  z-index: 0;
 }
 
 .cta-content {
   max-width: 800px;
-  margin: 0 auto;
+  padding: 0 2rem;
   position: relative;
   z-index: 1;
-  padding: 0 2rem;
+  color: var(--white-color) !important;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .cta-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-heading);
+  color: var(--white-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-
 .cta-content p {
   font-size: 1.3rem;
   margin-bottom: 2.5rem;
-  opacity: 0.9;
   line-height: 1.7;
-  font-family: 'Crimson Text', serif;
+  font-family: var(--font-heading);
+  color: var(--white-color) !important;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
 
 .cta-buttons {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
 .cta-button {
@@ -640,6 +657,9 @@ img {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-3px);
 }
+
+
+
 
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: 1200px) {
