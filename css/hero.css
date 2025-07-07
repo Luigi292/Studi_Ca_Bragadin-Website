@@ -215,13 +215,14 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 70vh;
-    min-height: 450px;
+    height: 80vh;
+    min-height: 550px;
     margin-top: auto;
   }
   
   .hero-content {
     text-align: center;
+    margin-top: 15%;
   }
   
   .hero-content h1 {
