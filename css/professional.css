@@ -1,18 +1,4 @@
-/* ===== VARIABLES ===== */
-:root {
-  --primary-color: #1a3a6e;
-  --secondary-color: #c29a5b;
-  --accent-color: #2c5282;
-  --dark-color: #2d3748;
-  --gray-color: #4a5568;
-  --light-color: #f7fafc;
-  --white-color: #ffffff;
-  --border-radius: 8px;
-  --transition: all 0.3s ease;
-  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
-}
+
 
 /* ===== BASE STYLES ===== */
 html {

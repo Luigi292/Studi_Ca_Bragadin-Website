@@ -52,8 +52,9 @@
     <ul class="navMenu" id="navMenu">
       <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
       <li class="dropdown">
-        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo</a>
-        <span class="dropdown-arrow"></span>
+        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
+        
+        <!-- Dropdown arrow shown next to "Chi Siamo" -->
         <ul class="dropdown-menu">
           <li><a href="chi-siamo.html">Il Nostro Team</a></li>
           <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
@@ -62,11 +63,12 @@
         </ul>
       </li>
       <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
-      <li><a href="news.html" class="navLink active" aria-label="Newsletter">Newsletter</a></li>
+      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
       <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
     </ul>
   </nav>
 
+  <!-- Hero Section -->
   <section class="news-hero">
     <div class="news-hero-overlay"></div>
     <img src="images/team-glass-room.jpg.avif" alt="Team Studi Ca' Bragadin" class="news-hero-image" loading="lazy">
@@ -143,18 +145,14 @@
           
           <div class="news-list" id="newsList">
             <!-- News Item 1 -->
-            <article class="news-card" data-id="1">
-              <div class="news-image">
-                <img src="images/tax-documents.jpg.avif" alt="Documenti fiscali" loading="lazy">
-                <div class="news-date">
-                  <span>15</span>
-                  <span>Gen</span>
-                </div>
+            <article class="news-preview-card" data-id="1">
+              <div class="news-preview-card-header">
+                <span class="news-preview-date">15 Gen</span>
+                <span class="news-preview-category">Novità fiscali</span>
               </div>
-              <div class="news-content">
-                <span class="news-category">Novità fiscali</span>
+              <div class="news-preview-content">
                 <h3>Novità Fiscali per il 2025</h3>
-                <div class="news-preview-content">
+                <div class="news-preview-text">
                   <p>Analisi completa delle principali novità fiscali introdotte con la Legge di Bilancio 2025 e loro impatto sulle imprese.</p>
                 </div>
                 <div class="news-full-content" style="display:none;">
@@ -168,26 +166,29 @@
                   </ul>
                   <p>Il nostro studio ha preparato un'analisi dettagliata disponibile in formato PDF.</p>
                 </div>
-                <div class="news-actions">
+                <div class="news-preview-actions">
                   <a href="#" class="news-read-more">Leggi tutto</a>
-                  <a href="pdf/newsletter-1.pdf" class="news-download" download>Scarica PDF</a>
+                  <a href="pdf/newsletter-1.pdf" class="news-preview-download" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    PDF
+                  </a>
                 </div>
               </div>
             </article>
             
             <!-- News Item 2 -->
-            <article class="news-card" data-id="2">
-              <div class="news-image">
-                <img src="images/privacy-meeting.jpg.avif" alt="Riunione sulla privacy" loading="lazy">
-                <div class="news-date">
-                  <span>10</span>
-                  <span>Nov</span>
-                </div>
+            <article class="news-preview-card" data-id="2">
+              <div class="news-preview-card-header">
+                <span class="news-preview-date">10 Nov</span>
+                <span class="news-preview-category">Privacy</span>
               </div>
-              <div class="news-content">
-                <span class="news-category">Privacy</span>
+              <div class="news-preview-content">
                 <h3>Aggiornamenti GDPR e Privacy</h3>
-                <div class="news-preview-content">
+                <div class="news-preview-text">
                   <p>Guida pratica agli adempimenti privacy per le PMI alla luce delle ultime modifiche normative.</p>
                 </div>
                 <div class="news-full-content" style="display:none;">
@@ -201,26 +202,29 @@
                   </ul>
                   <p>Scarica la nostra guida completa con modelli e checklist operative.</p>
                 </div>
-                <div class="news-actions">
+                <div class="news-preview-actions">
                   <a href="#" class="news-read-more">Leggi tutto</a>
-                  <a href="pdf/newsletter-2.pdf" class="news-download" download>Scarica PDF</a>
+                  <a href="pdf/newsletter-2.pdf" class="news-preview-download" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    PDF
+                  </a>
                 </div>
               </div>
             </article>
 
             <!-- News Item 3 -->
-            <article class="news-card" data-id="3">
-              <div class="news-image">
-                <img src="images/legal-books.jpg.avif" alt="Libri legali" loading="lazy">
-                <div class="news-date">
-                  <span>25</span>
-                  <span>Ott</span>
-                </div>
+            <article class="news-preview-card" data-id="3">
+              <div class="news-preview-card-header">
+                <span class="news-preview-date">25 Ott</span>
+                <span class="news-preview-category">Legale</span>
               </div>
-              <div class="news-content">
-                <span class="news-category">Legale</span>
+              <div class="news-preview-content">
                 <h3>Riforma del Diritto Societario</h3>
-                <div class="news-preview-content">
+                <div class="news-preview-text">
                   <p>Analisi delle principali modifiche introdotte dalla riforma del diritto societario in vigore dal 2025.</p>
                 </div>
                 <div class="news-full-content" style="display:none;">
@@ -234,26 +238,29 @@
                   </ul>
                   <p>Il nostro studio ha preparato una sintesi delle principali novità.</p>
                 </div>
-                <div class="news-actions">
+                <div class="news-preview-actions">
                   <a href="#" class="news-read-more">Leggi tutto</a>
-                  <a href="pdf/newsletter-3.pdf" class="news-download" download>Scarica PDF</a>
+                  <a href="pdf/newsletter-3.pdf" class="news-preview-download" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    PDF
+                  </a>
                 </div>
               </div>
             </article>
             
             <!-- News Item 4 -->
-            <article class="news-card" data-id="4">
-              <div class="news-image">
-                <img src="images/business-growth.jpg.avif" alt="Crescita aziendale" loading="lazy">
-                <div class="news-date">
-                  <span>05</span>
-                  <span>Set</span>
-                </div>
+            <article class="news-preview-card" data-id="4">
+              <div class="news-preview-card-header">
+                <span class="news-preview-date">05 Set</span>
+                <span class="news-preview-category">Economia</span>
               </div>
-              <div class="news-content">
-                <span class="news-category">Economia</span>
+              <div class="news-preview-content">
                 <h3>Incentivi per la Crescita Aziendale</h3>
-                <div class="news-preview-content">
+                <div class="news-preview-text">
                   <p>Panoramica degli incentivi disponibili per le aziende nel secondo semestre 2025.</p>
                 </div>
                 <div class="news-full-content" style="display:none;">
@@ -267,9 +274,16 @@
                   </ul>
                   <p>Scarica la nostra guida per accedere ai benefici.</p>
                 </div>
-                <div class="news-actions">
+                <div class="news-preview-actions">
                   <a href="#" class="news-read-more">Leggi tutto</a>
-                  <a href="pdf/newsletter-4.pdf" class="news-download" download>Scarica PDF</a>
+                  <a href="pdf/newsletter-4.pdf" class="news-preview-download" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    PDF
+                  </a>
                 </div>
               </div>
             </article>
@@ -294,6 +308,7 @@
       </div>
     </div>
   </section>
+</main>
 
   <!-- Footer Component -->
   <footer class="footer">
@@ -346,7 +361,6 @@
   </div>
 
   <!-- Scripts -->
-    <!-- Scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Navigation Functionality
@@ -502,14 +516,13 @@
         document.querySelectorAll('.news-read-more').forEach(button => {
           button.addEventListener('click', function(e) {
             e.preventDefault();
-            const newsCard = this.closest('.news-card');
+            const newsCard = this.closest('.news-preview-card');
             const newsId = newsCard.getAttribute('data-id');
             const newsTitle = newsCard.querySelector('h3').textContent;
-            const newsDate = newsCard.querySelector('.news-date span:first-child').textContent + ' ' + 
-                             newsCard.querySelector('.news-date span:last-child').textContent;
-            const newsCategory = newsCard.querySelector('.news-category').textContent;
+            const newsDate = newsCard.querySelector('.news-preview-date').textContent;
+            const newsCategory = newsCard.querySelector('.news-preview-category').textContent;
             const newsContent = newsCard.querySelector('.news-full-content').innerHTML;
-            const pdfLink = newsCard.querySelector('.news-download').getAttribute('href');
+            const pdfLink = newsCard.querySelector('.news-preview-download').getAttribute('href');
             
             modalBody.innerHTML = `
               <div class="modal-header">
@@ -555,49 +568,6 @@
         });
       }
 
-      // News fetching for index.html preview
-      const newsContainer = document.getElementById('newsPreviewGrid');
-      if (newsContainer) {
-        fetch('news.html')
-          .then(response => response.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const newsItems = doc.querySelectorAll('.news-card');
-            
-            let newsHTML = '';
-            Array.from(newsItems).slice(0, 3).forEach(item => {
-              const title = item.querySelector('h3').textContent;
-              const preview = item.querySelector('.news-preview-content p').textContent;
-              const category = item.querySelector('.news-category').textContent;
-              const date = item.querySelector('.news-date').textContent;
-              const image = item.querySelector('.news-image img').getAttribute('src');
-              const link = 'news.html#' + item.getAttribute('data-id');
-              
-              newsHTML += `
-                <div class="news-preview-card">
-                  <div class="news-preview-image">
-                    <img src="${image}" alt="${title}" loading="lazy">
-                    <span class="news-preview-category">${category}</span>
-                  </div>
-                  <div class="news-preview-content">
-                    <span class="news-preview-date">${date}</span>
-                    <h3>${title}</h3>
-                    <p>${preview}</p>
-                    <a href="${link}" class="news-preview-link">Leggi tutto →</a>
-                  </div>
-                </div>
-              `;
-            });
-            
-            newsContainer.innerHTML = newsHTML || '<p>Nessuna news disponibile al momento</p>';
-          })
-          .catch(error => {
-            newsContainer.innerHTML = '<p>Impossibile caricare le ultime news</p>';
-            console.error('Error loading news:', error);
-          });
-      }
-
       // Set current year in footer
       const yearElements = document.querySelectorAll('.current-year');
       yearElements.forEach(element => {
@@ -610,6 +580,5 @@
       window.addEventListener('resize', handleResize);
     });
   </script>
-  
 </body>
 </html>

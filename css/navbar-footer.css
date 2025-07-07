@@ -204,8 +204,13 @@
 @media (max-width: 768px) {
   .navbar {
     justify-content: space-between;
-    position: relative;
+    position: sticky; /* ✅ Keep sticky on mobile */
+    top: 0;
+    z-index: 1000;
     padding: 15px 5%;
+    background-color: #0d1f3a;
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow-sm);
   }
 
   .logo {
@@ -300,15 +305,29 @@
 
 
 
+/* Dropdown arrow styling */
 
-  .dropdown-arrow {
-    position: absolute;
-    right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-  }
-  
+.dropdown-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  vertical-align: middle;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--white-color); /* downward arrow */
+  transition: transform 0.3s ease, border-top-color 0.3s ease;
+}
+
+/* Flip arrow on hover or active */
+.dropdown:hover > a .dropdown-arrow,
+.dropdown > a.active .dropdown-arrow {
+  border-top-color: var(--secondary-color);
+  transform: rotate(180deg);
+}
+
+
+
   .dropdown.active .dropdown-arrow {
     transform: translateY(-50%) rotate(180deg);
   }
@@ -517,55 +536,88 @@
   .footer {
     padding: 40px 5% 25px;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-
+    text-align: center;
   }
 
   .footerContent {
     grid-template-columns: 1fr;
     gap: 40px;
+    justify-items: center;
+    text-align: center;
   }
 
-  .footerColumn:first-child,
-  .footerColumn:nth-child(2),
-  .footerColumn:nth-child(3),
-  .footerColumn:nth-child(4) {
-    padding: 0;
+  .footerColumn {
+    padding: 0 !important;
+    text-align: center;
+  }
+
+  .footerLogo img {
+    margin: 0 auto 15px;
+  }
+
+  .footerTagline {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.8;
+  }
+
+  .footerHeading {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .footerHeading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footerInfo {
+    align-items: center;
     text-align: center;
   }
 
   .footerInfo p {
     flex-direction: column;
     align-items: center;
-    text-align: center;
     white-space: normal;
   }
 
   .footerInfo p strong {
     width: auto;
     margin-bottom: 5px;
+    display: block;
   }
 
   .footerLinks {
     align-items: center;
+    padding: 0;
+  }
+
+  .footerLinks a {
+    text-align: center;
+    padding-left: 0;
   }
 
   .footerCopyright {
     text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
     padding-left: 0;
   }
 }
 
-@media (max-width: 480px) {
-  .footer {
-    padding: 30px 5% 20px;
-  }
 
+@media (max-width: 480px) {
   .footerContent {
     gap: 30px;
   }
 
+  .footerTagline {
+    font-size: 0.85rem;
+  }
+
   .footerCopyright {
-    padding-top: 30px;
-    margin-top: 30px;
+    font-size: 0.7rem;
   }
 }
