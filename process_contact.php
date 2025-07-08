@@ -88,19 +88,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             throw new Exception('Errore di invio');
         }
         
-        // Define professional recipients - ONLY these 3 options allowed
+        // Define professional recipients - ONLY these exact emails will be used
         $recipients = [
             'avv_lenzi' => [
-                'email' => 'avvocatolenzi@studicabragadin.it',
-                'name' => 'Avv. Maximiliano Lenzi'
+                'email' => 'avvocatolenzi@studicabragadin.it', // Only Lenzi gets this
+                'name' => 'Avv. Maximiliano Lenzi',
+                'confirmation_name' => 'Avv. Maximiliano Lenzi'
             ],
             'dott_maretto' => [
-                'email' => 'maretto88@gmail.com',
-                'name' => 'Dott. Andrea Maretto'
+                'email' => 'maretto88@gmail.com', // ONLY this email for Maretto
+                'name' => 'Dott. Andrea Maretto',
+                'confirmation_name' => 'Dott. Andrea Maretto'
             ],
             'dott_cecolin' => [
-                'email' => 'studio@studiocecolin.com',
-                'name' => 'Dott. Alberto Cecolin'
+                'email' => 'studio@studiocecolin.com', // Only Cecolin gets this
+                'name' => 'Dott. Alberto Cecolin',
+                'confirmation_name' => 'Dott. Alberto Cecolin'
             ]
         ];
         
@@ -145,32 +148,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $confirmationMail->setFrom(GMAIL_USER, 'Studio Ca\' Bragadin');
         $confirmationMail->addAddress($email, $firstName . ' ' . $lastName);
         
-        // Confirmation email content
+        // Confirmation email content - shows the correct email address
         $confirmationMail->isHTML(true);
         $confirmationMail->Subject = 'Conferma richiesta - Studio Ca\' Bragadin';
-        $confirmationMail->Body = "<h2>Grazie per averci contattato, {$firstName}!</h2>
-            <p>Abbiamo ricevuto la tua richiesta per <strong>{$service}</strong> 
-            indirizzata a <strong>{$recipient['name']}</strong> e ti risponderemo al più presto.</p>
+        $confirmationMail->Body = "<h2>Grazie per il tuo messaggio, {$firstName}!</h2>
+            <p>La tua richiesta per <strong>{$service}</strong> è stata inviata a:</p>
+            <p><strong>{$recipient['confirmation_name']}</strong><br>
+            Email: {$recipient['email']}</p>
+            
             <h3>Riepilogo:</h3>
             <p><strong>Messaggio:</strong></p>
             <p>" . nl2br($message) . "</p>
+            
             <hr>
-            <p><strong>I nostri recapiti:</strong></p>
-            <p>Studio Ca' Bragadin<br>
-            Via G. Belzoni 180, 35121 Padova<br>
-            Tel: +39 049 1234567</p>
+            <p>Riceverai una risposta al più presto.</p>
             <p><em>Questo è un messaggio automatico, si prega di non rispondere.</em></p>";
         
-        $confirmationMail->AltBody = "Grazie per averci contattato, {$firstName}!\n\n" .
-            "Abbiamo ricevuto la tua richiesta per {$service} indirizzata a {$recipient['name']} " .
-            "e ti risponderemo al più presto.\n\n" .
+        $confirmationMail->AltBody = "Grazie per il tuo messaggio, {$firstName}!\n\n" .
+            "La tua richiesta per {$service} è stata inviata a:\n" .
+            "{$recipient['confirmation_name']}\n" .
+            "Email: {$recipient['email']}\n\n" .
             "Riepilogo:\n" .
             "Messaggio:\n{$message}\n\n" .
             "---\n" .
-            "I nostri recapiti:\n" .
-            "Studio Ca' Bragadin\n" .
-            "Via G. Belzoni 180, 35121 Padova\n" .
-            "Tel: +39 049 1234567\n\n" .
+            "Riceverai una risposta al più presto.\n\n" .
             "Questo è un messaggio automatico, si prega di non rispondere.";
         
         // Send confirmation
@@ -179,10 +180,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Update submission time
         $_SESSION['last_submission_time'] = time();
         
-        // Return success
+        // Return success - shows the correct email in confirmation
         echo json_encode([
             'success' => true,
-            'message' => 'Grazie per il tuo messaggio! Ti abbiamo inviato una email di conferma.'
+            'message' => "Grazie {$firstName} {$lastName}! La tua richiesta è stata inviata a {$recipient['email']}. Ti contatteremo al più presto."
         ]);
         
     } catch (Exception $e) {
