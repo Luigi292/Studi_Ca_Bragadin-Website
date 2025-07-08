@@ -90,7 +90,8 @@ ul {
   position: relative;
   display: inline-block;
   padding-bottom: 15px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--white-color);
+
 }
 
 .professional-title::after {
@@ -107,13 +108,15 @@ ul {
 /* Decorative elements */
 .hero-decor {
   position: absolute;
-  opacity: 0.05;
+  opacity: 5;
+ 
 }
 
 .decor-1 {
   top: 20%;
   left: 5%;
   font-size: 10rem;
+  opacity: 5;
 }
 
 .decor-2 {
@@ -121,6 +124,7 @@ ul {
   right: 10%;
   font-size: 8rem;
   transform: rotate(25deg);
+  opacity: 5;
 }
 
 /* ===== CONTENT SECTIONS ===== */

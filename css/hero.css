@@ -17,7 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(26, 42, 74, 0.7) 0%, rgba(26, 42, 74, 0.5) 100%);
+  background: linear-gradient(90deg, rgba(45, 73, 130, 0.9) 0%, rgba(26, 42, 74, 0.95) 100%);
   z-index: 1;
 }
 
@@ -41,6 +41,7 @@
   color: var(--white-color);
   text-align: center;
   animation: fadeInUp 0.8s ease-out;
+  opacity: 2;
 }
 
 .hero-content h1 {
@@ -58,7 +59,7 @@
   max-width: 700px;
   margin: 0 auto 2rem;
   line-height: 1.6;
-  opacity: 0.9;
+  opacity: 2;
   font-weight: 400;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
