@@ -89,7 +89,7 @@ ul {
   margin-bottom: 30px;
   position: relative;
   display: inline-block;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
   color: var(--white-color);
 
 }
@@ -98,6 +98,7 @@ ul {
   content: '';
   position: absolute;
   bottom: 0;
+
   left: 50%;
   transform: translateX(-50%);
   width: 80px;

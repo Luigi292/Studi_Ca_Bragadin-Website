@@ -64,6 +64,19 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+
+.hero-content p::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+
 .hero-cta {
   display: flex;
   gap: 20px;
@@ -205,7 +218,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0.8;
+  opacity: 3;
   animation: bounce 2s infinite;
 }
 
@@ -215,6 +228,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
+  opacity: 3;
 }
 
 .mouse {
@@ -223,6 +237,7 @@
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 12px;
   position: relative;
+  opacity: 3;
 }
 
 .mouse::before {
@@ -236,6 +251,7 @@
   background-color: var(--white-color);
   border-radius: 2px;
   animation: scroll 2s infinite;
+  opacity: 1;
 }
 
 @keyframes bounce {
