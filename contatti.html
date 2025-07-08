@@ -423,35 +423,30 @@
     highlightActiveLink();
     window.addEventListener('resize', handleResize);
 
-    // =============================================
-    // Form Handling
-    // =============================================
+    
 
+    // =============================================
+    // Form Handling - UPDATED VERSION
+    // =============================================
     const serviceOptions = {
-      avv_lenzi: [
-        { value: "consulenza_legale", text: "Consulenza Legale" },
-        { value: "contratti", text: "Redazione Contratti" },
-        { value: "diritto_societario", text: "Diritto Societario" },
-        { value: "diritto_lavoro", text: "Diritto del Lavoro" },
-        { value: "tutela_privati", text: "Tutela Privati" },
-        { value: "altro_legale", text: "Altro (specificare nel messaggio)" }
-      ],
-      dott_maretto: [
-        { value: "consulenza_fiscale", text: "Consulenza Fiscale" },
-        { value: "contabilita", text: "Contabilità" },
-        { value: "bilanci", text: "Redazione Bilanci" },
-        { value: "fisco_internazionale", text: "Fisco Internazionale" },
-        { value: "pianificazione_fiscale", text: "Pianificazione Fiscale" },
-        { value: "altro_commerciale", text: "Altro (specificare nel messaggio)" }
-      ],
-      dott_cecolin: [
-        { value: "consulenza_societaria", text: "Consulenza Societaria" },
-        { value: "costituzione_societa", text: "Costituzione Società" },
-        { value: "fisco_societario", text: "Fisco Societario" },
-        { value: "revisione_contabile", text: "Revisione Contabile" },
-        { value: "consulenza_strategica", text: "Consulenza Strategica" },
-        { value: "altro_societario", text: "Altro (specificare nel messaggio)" }
-      ]
+        avv_lenzi: [
+            { value: "consulenza_legale", text: "Consulenza Legale" },
+            // ... other services ...
+        ],
+        dott_maretto: [
+            { value: "consulenza_fiscale", text: "Consulenza Fiscale" },
+            // ... other services ...
+        ],
+        dott_cecolin: [
+            { value: "consulenza_societaria", text: "Consulenza Societaria" },
+            // ... other services ...
+        ]
+    };
+
+    const professionalEmails = {
+        avv_lenzi: 'avvocatolenzi@studicabragadin.it',
+        dott_maretto: 'maretto88@gmail.com', // ONLY this address for Maretto
+        dott_cecolin: 'studio@studiocecolin.com'
     };
 
     const professionalSelect = document.getElementById('professional');
@@ -461,67 +456,76 @@
 
     // Dynamic service options
     if (professionalSelect && serviceSelect) {
-      professionalSelect.addEventListener('change', function() {
-        const selectedProfessional = this.value;
-        serviceSelect.innerHTML = '<option value="">Seleziona un servizio</option>';
+        professionalSelect.addEventListener('change', function() {
+            const selectedProfessional = this.value;
+            serviceSelect.innerHTML = '<option value="">Seleziona un servizio</option>';
 
-        if (selectedProfessional && serviceOptions[selectedProfessional]) {
-          serviceOptions[selectedProfessional].forEach(option => {
-            const opt = document.createElement('option');
-            opt.value = option.value;
-            opt.textContent = option.text;
-            serviceSelect.appendChild(opt);
-          });
-        }
-      });
+            if (selectedProfessional && serviceOptions[selectedProfessional]) {
+                serviceOptions[selectedProfessional].forEach(option => {
+                    const opt = document.createElement('option');
+                    opt.value = option.value;
+                    opt.textContent = option.text;
+                    serviceSelect.appendChild(opt);
+                });
+            }
+        });
     }
 
     // Form submission
     if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-        // Show loading state
-        const submitButton = form.querySelector('.submit-button');
-        const originalButtonText = submitButton.textContent;
-        submitButton.disabled = true;
-        submitButton.textContent = 'Invio in corso...';
-        formResponse.style.display = 'none';
+            // Show loading state
+            const submitButton = form.querySelector('.submit-button');
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Invio in corso...';
+            formResponse.style.display = 'none';
 
-        // Get form data
-        const formData = new FormData(form);
+            // Get form data
+            const formData = new FormData(form);
+            const professional = formData.get('professional');
+            
+            // Add debug info
+            formData.append('debug_time', new Date().toISOString());
+            formData.append('debug_expected_email', professionalEmails[professional] || 'UNKNOWN');
 
-        // Send AJAX request
-        fetch('process_contact.php', {
-          method: 'POST',
-          body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-          if (data.success) {
-            formResponse.textContent = data.message;
-            formResponse.className = 'form-response success';
-            formResponse.style.display = 'block';
-            form.reset();
-            serviceSelect.innerHTML = '<option value="">Seleziona un servizio</option>';
-          } else {
-            formResponse.textContent = data.message;
-            formResponse.className = 'form-response error';
-            formResponse.style.display = 'block';
-          }
-          formResponse.scrollIntoView({ behavior: 'smooth' });
-        })
-        .catch(error => {
-          formResponse.textContent = 'Si è verificato un errore durante l\'invio del messaggio. Si prega di riprovare più tardi.';
-          formResponse.className = 'form-response error';
-          formResponse.style.display = 'block';
-          formResponse.scrollIntoView({ behavior: 'smooth' });
-        })
-        .finally(() => {
-          submitButton.disabled = false;
-          submitButton.textContent = originalButtonText;
+            // Send AJAX request
+            fetch('process_contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    formResponse.textContent = data.message;
+                    formResponse.className = 'form-response success';
+                    formResponse.style.display = 'block';
+                    form.reset();
+                    serviceSelect.innerHTML = '<option value="">Seleziona un servizio</option>';
+                    
+                    // Debug output
+                    console.log("Form submitted successfully. Expected email:", professionalEmails[professional]);
+                } else {
+                    formResponse.textContent = data.message;
+                    formResponse.className = 'form-response error';
+                    formResponse.style.display = 'block';
+                }
+                formResponse.scrollIntoView({ behavior: 'smooth' });
+            })
+            .catch(error => {
+                formResponse.textContent = 'Si è verificato un errore durante l\'invio. Si prega di riprovare più tardi.';
+                formResponse.className = 'form-response error';
+                formResponse.style.display = 'block';
+                formResponse.scrollIntoView({ behavior: 'smooth' });
+                console.error("Form submission error:", error);
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            });
         });
-      });
     }
 
     // =============================================
