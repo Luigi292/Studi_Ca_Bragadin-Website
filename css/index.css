@@ -1129,7 +1129,7 @@ ul {
 /* Very Small Mobile Devices (up to 360px) */
 @media (max-width: 360px) {
   .hero-content h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   
   .hero-subtitle {
