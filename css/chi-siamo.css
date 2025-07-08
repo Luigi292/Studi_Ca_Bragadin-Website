@@ -416,12 +416,13 @@ img {
 }
 
 .mission-container {
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto 4rem;
   padding: 0 2rem;
 }
 
 .mission-content {
+  width: 100%;
   background: var(--white-color);
   padding: 3rem;
   border-radius: var(--border-radius);
@@ -435,7 +436,7 @@ img {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--dark-color);
-  max-width: 800px;
+  max-width: 70%;
   margin: 0 auto;
   font-family: 'Crimson Text', serif;
 }
@@ -557,7 +558,7 @@ img {
 
 
 /* ===== CTA SECTION ===== */
-/* ===== CTA SECTION FIXED ===== */
+
 .about-cta {
   padding: 6rem 0;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
@@ -708,6 +709,28 @@ img {
   .hero-content p {
     font-size: 1.3rem;
   }
+
+  .mission-container {
+  max-width: 100%;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+  .mission-content{
+    padding: 2rem;
+    margin-top: -2%;
+    width: 100%;
+  }
+  
+  .mission-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--dark-color);
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: 'Crimson Text', serif;
+}
+
 }
 
 @media (max-width: 576px) {
@@ -743,4 +766,19 @@ img {
   .section-subtitle {
     font-size: 1rem;
   }
+
+
+    .mission-content{
+    padding: 2rem;
+    margin-top: -2%;
+  }
+  
+  .mission-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--dark-color);
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: 'Crimson Text', serif;
+}
 }

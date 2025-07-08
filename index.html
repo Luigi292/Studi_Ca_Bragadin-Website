@@ -32,7 +32,7 @@
 <body>
 
   
- <!-- Navbar Component -->
+  <!-- Navbar -->
 
 <nav class="navbar">
   <div class="logo">
@@ -43,8 +43,7 @@
 
   <div class="languageToggle">
     <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-
-<!--<span>|</span> <a href="en/index.html" class="languageButton" aria-label="English">EN</a> -->   </div>
+  </div>
 
   <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
     <div></div><div></div><div></div>
@@ -54,9 +53,6 @@
     <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
     <li class="dropdown">
       <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
-      
-      <!-- Dropdown arrow shown next to "Chi Siamo" -->
-    
       <ul class="dropdown-menu">
         <li><a href="chi-siamo.html">Il Nostro Team</a></li>
         <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
@@ -71,107 +67,109 @@
 </nav>
 
 
-  <!-- Modern Hero Section -->
-  <section class="hero">
-    <div class="hero-background">
-      <div class="carousel" id="carousel">
-        <div class="slide active" aria-label="Studio Commercialisti Ca' Bragadin - Elegant office reception area">
-          <div class="slideOverlay"></div>
-          <img src="images/hall.jpg.avif" alt="Slide 1" class="heroImage" loading="eager" fetchpriority="high">
-        </div>
-        <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Modern meeting room">
-          <div class="slideOverlay"></div>
-          <img src="images/hall2.jpg.avif" alt="Slide 2" class="heroImage">
-        </div>
-        <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Professional workspace">
-          <div class="slideOverlay"></div>
-          <img src="images/mid-hall.avif" alt="Slide 3" class="heroImage">
-        </div>
-      </div>
-    </div>
-    
-    <div class="hero-content-wrapper">
-      <div class="container">
-        <div class="hero-content">
-          <h1>Studi Professionali <br> <span>Ca' Bragadin</span></h1>
-          <p class="hero-subtitle">Consulenza legale e fiscale integrata per imprese e professionisti</p>
-          <div class="hero-cta">
-            <a href="contatti.html" class="ctaButton">Richiedi consulenza</a>
-            <a href="chi-siamo.html" class="secondaryButton">Conosci il team</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="hero-scroll-indicator">
-      <span>Scorri</span>
-      <div class="mouse"></div>
-    </div>
-  </section>
+<!--  Hero Section -->
 
-  <!-- Studios Section -->
-  <section class="studios">
-    <div class="container">
-      <div class="sectionHeader">
-        <h2>I Nostri Studi Professionali</h2>
-        <p class="sectionSubtitle">Eccellenza e competenza multidisciplinare a Padova</p>
+<section class="hero">
+  <div class="hero-background">
+    <div class="carousel" id="carousel">
+      <div class="slide active" aria-label="Studio Commercialisti Ca' Bragadin - Elegant office reception area">
+        <div class="slideOverlay"></div>
+        <img src="images/hall.jpg.avif" alt="Slide 1" class="heroImage" loading="eager" fetchpriority="high">
       </div>
-      <div class="studiosContainer">
-        <div class="studio">
-          <div class="studioImageWrapper">
-            <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
-          </div>
-          <div class="studioContent">
-            <h3>Avv. Maximiliano Lenzi</h3>
-            <p class="studio-specialty">Consulenza legale e assistenza alle imprese</p>
-            <div class="contactInfo">
-              <p><strong>Telefono:</strong> <a href="tel:0498751356">049-8751356</a></p>
-              <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
-              <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-              <a href="avv-maximiliano-lenzi.html" class="ctaButton small">Profilo completo</a>
-            </div>
+      <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Modern meeting room">
+        <div class="slideOverlay"></div>
+        <img src="images/hall2.jpg.avif" alt="Slide 2" class="heroImage">
+      </div>
+      <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Professional workspace">
+        <div class="slideOverlay"></div>
+        <img src="images/mid-hall.avif" alt="Slide 3" class="heroImage">
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-content-wrapper">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Studi Professionali <br> <span>Ca' Bragadin</span></h1>
+        <p class="hero-subtitle">Consulenza legale e fiscale integrata per imprese e professionisti</p>
+        <div class="hero-cta">
+          <a href="contatti.html" class="ctaButton">Richiedi consulenza</a>
+          <a href="chi-siamo.html" class="secondaryButton">Conosci il team</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-scroll-indicator">
+    <span>Scorri</span>
+    <div class="mouse"></div>
+  </div>
+</section>
+
+
+<!-- Studio About Section -->
+
+<section class="studios">
+  <div class="container">
+    <div class="sectionHeader">
+      <h2>I Nostri Studi Professionali</h2>
+      <p class="sectionSubtitle">Eccellenza e competenza multidisciplinare a Padova</p>
+    </div>
+    <div class="studiosContainer">
+      <div class="studio">
+        <div class="studioImageWrapper">
+          <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
+        </div>
+        <div class="studioContent">
+          <h3>Avv. Maximiliano Lenzi</h3>
+          <p class="studio-specialty">Consulenza legale e assistenza alle imprese</p>
+          <div class="contactInfo">
+            <p><strong>Telefono:</strong> <a href="tel:0498751356">049-8751356</a></p>
+            <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
+            <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+            <a href="avv-maximiliano-lenzi.html" class="ctaButton small">Profilo completo</a>
           </div>
         </div>
-        <div class="studio">
-          <div class="studioImageWrapper">
-            <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto - Commercialista Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
-          </div>
-          <div class="studioContent">
-            <h3>Dott. Andrea Maretto</h3>
-            <p class="studio-specialty">Consulenza fiscale e societaria avanzata</p>
-            <div class="contactInfo">
-              <p><strong>Telefono:</strong> <a href="tel:0499562428">049-9562428</a></p>
-              <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
-              <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-              <a href="andrea-maretto.html" class="ctaButton small">Profilo completo</a>
-            </div>
+      </div>
+      <div class="studio">
+        <div class="studioImageWrapper">
+          <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto - Commercialista Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
+        </div>
+        <div class="studioContent">
+          <h3>Dott. Andrea Maretto</h3>
+          <p class="studio-specialty">Consulenza fiscale e societaria avanzata</p>
+          <div class="contactInfo">
+            <p><strong>Telefono:</strong> <a href="tel:0499562428">049-9562428</a></p>
+            <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
+            <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+            <a href="andrea-maretto.html" class="ctaButton small">Profilo completo</a>
           </div>
         </div>
-        <div class="studio">
-          <div class="studioImageWrapper">
-            <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin - Commercialista Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
-          </div>
-          <div class="studioContent">
-            <h3>Dott. Alberto Cecolin</h3>
-            <p class="studio-specialty">Pianificazione fiscale e strategie societarie</p>
-            <div class="contactInfo">
-              <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
-              <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
-              <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-              <a href="alberto-cecolin.html" class="ctaButton small">Profilo completo</a>
-            </div>
+      </div>
+      <div class="studio">
+        <div class="studioImageWrapper">
+          <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin - Commercialista Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
+        </div>
+        <div class="studioContent">
+          <h3>Dott. Alberto Cecolin</h3>
+          <p class="studio-specialty">Pianificazione fiscale e strategie societarie</p>
+          <div class="contactInfo">
+            <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
+            <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
+            <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+            <a href="alberto-cecolin.html" class="ctaButton small">Profilo completo</a>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
 <!-- Collaboration Section -->
 
 <section class="collaboration-section" id="collaboration-section">
   <div class="collaboration-bg"></div>
-  
   <div class="collaboration-content">
     <div class="container">
       <span class="section-subtitle">I Nostri Valori</span>
@@ -221,32 +219,30 @@
   </div>
 </section>
 
-
-
-  <!-- News Preview Section -->
-  <section class="news-preview-section">
-    <div class="news-preview-container">
-      <div class="news-preview-header">
-        <h2>Ultime News Professionali</h2>
-        <p class="subtitle">Rimani aggiornato sulle ultime novità legali e fiscali</p>
-      </div>
-      
-      <div class="news-preview-grid" id="newsPreviewGrid">
-        <!-- News items will be loaded here dynamically -->
-        <div class="news-loading">
-          <div class="news-loading-spinner"></div>
-        </div>
-      </div>
-      
-      <div class="news-preview-button">
-        <a href="news.html" class="ctaButton">Vedi Tutte le News ed Iscriviti</a>
+<section class="news-preview-section">
+  <div class="news-preview-container">
+    <div class="news-preview-header">
+      <h2>Ultime News Professionali</h2>
+      <p class="subtitle">Rimani aggiornato sulle ultime novità legali e fiscali</p>
+    </div>
+    
+    <div class="news-preview-grid" id="newsPreviewGrid">
+      <!-- News items will be loaded here dynamically -->
+      <div class="news-loading">
+        <div class="news-loading-spinner"></div>
       </div>
     </div>
-  </section>
+    
+    <div class="news-preview-button">
+      <a href="news.html" class="ctaButton">Vedi Tutte le News ed Iscriviti</a>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer Component -->
 
-  <footer class="footer">
+<!-- Footer -->
+
+<footer class="footer">
   <div class="footerContent">
     <div class="footerColumn">
       <div class="footerLogo">
@@ -288,16 +284,13 @@
   </div>
 </footer>
 
-
-
-  <div class="gototop js-top">
-    <a href="#" class="js-gotop" title="Torna a inizio pagina">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-  </div>
-
+<div class="gototop js-top">
+  <a href="#" class="js-gotop" title="Torna a inizio pagina">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -330,12 +323,8 @@
         e.stopPropagation();
         this.classList.toggle('active');
         navMenu.classList.toggle('active');
-        
-        // Toggle body overflow and aria-expanded
         body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
-        
-        // Close all dropdowns when closing mobile menu
         if (!navMenu.classList.contains('active')) {
           closeAllDropdowns();
         }
@@ -348,7 +337,6 @@
         const link = dropdown.querySelector('.navLink');
         const menu = dropdown.querySelector('.dropdown-menu');
         
-        // Desktop hover events
         dropdown.addEventListener('mouseenter', () => {
           if (window.innerWidth > 992) {
             openDropdown(dropdown);
@@ -361,12 +349,10 @@
           }
         });
         
-        // Mobile click events
         link.addEventListener('click', (e) => {
           if (window.innerWidth <= 992) {
             e.preventDefault();
             e.stopPropagation();
-            
             if (dropdown.classList.contains('active')) {
               closeDropdown(dropdown);
             } else {
@@ -378,7 +364,6 @@
       });
     }
 
-    // Close mobile menu when clicking a link
     document.querySelectorAll('.navMenu .navLink:not(.dropdown .navLink)').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 992) {
@@ -390,13 +375,11 @@
       });
     });
 
-    // Close dropdowns when clicking outside
     document.addEventListener('click', function (e) {
       if (!e.target.closest('.dropdown') && !e.target.closest('.hamburger')) {
         if (window.innerWidth > 992) {
           closeAllDropdowns();
         }
-        
         if (window.innerWidth <= 992 && !e.target.closest('.navbar') && navMenu.classList.contains('active')) {
           hamburger.classList.remove('active');
           navMenu.classList.remove('active');
@@ -405,7 +388,6 @@
         }
       }
       
-      // Close dropdown when clicking a dropdown menu item
       if (e.target.closest('.dropdown-menu a')) {
         const dropdown = e.target.closest('.dropdown');
         setTimeout(() => {
@@ -419,7 +401,6 @@
       }
     });
 
-    // Highlight active link based on current page
     function highlightActiveLink() {
       const currentPage = window.location.pathname.split('/').pop() || 'index.html';
       const allNavLinks = document.querySelectorAll('.navLink, .dropdown-menu a');
@@ -427,7 +408,6 @@
       allNavLinks.forEach(link => {
         const href = link.getAttribute('href');
         link.classList.remove('active');
-        
         if (href === currentPage || (href.endsWith(currentPage) && currentPage !== 'index.html')) {
           link.classList.add('active');
           const parent = link.closest('.dropdown');
@@ -436,7 +416,6 @@
       });
     }
 
-    // Handle window resize
     function handleResize() {
       if (window.innerWidth > 992) {
         navMenu.classList.remove('active');
@@ -452,12 +431,10 @@
       }
     }
 
-    // Dropdown helper functions
     function openDropdown(dropdown) {
       const menu = dropdown.querySelector('.dropdown-menu');
       dropdown.classList.add('active');
       menu.classList.add('active');
-      
       if (window.innerWidth <= 992) {
         menu.style.maxHeight = menu.scrollHeight + 'px';
       }
@@ -467,7 +444,6 @@
       const menu = dropdown.querySelector('.dropdown-menu');
       dropdown.classList.remove('active');
       menu.classList.remove('active');
-      
       if (window.innerWidth <= 992) {
         menu.style.maxHeight = '0';
       }
@@ -483,7 +459,6 @@
       });
     }
 
-    // Initialize carousel
     function initCarousel() {
       const carousel = document.getElementById('carousel');
       if (!carousel) return;
@@ -506,7 +481,6 @@
       setInterval(next, 5000);
     }
 
-    // Load news previews
     function loadNewsPreviews() {
       const newsGrid = document.getElementById('newsPreviewGrid');
       if (!newsGrid) return;
@@ -514,14 +488,11 @@
       newsGrid.innerHTML = '<div class="news-loading"><div class="news-loading-spinner"></div></div>';
 
       fetch('news.html')
-        .then(res => {
-          if (!res.ok) throw new Error('Network error');
-          return res.text();
-        })
+        .then(res => res.text())
         .then(html => {
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, 'text/html');
-          const items = doc.querySelectorAll('.news-card');
+          const items = doc.querySelectorAll('.news-preview-card');
 
           if (!items.length) {
             newsGrid.innerHTML = '<div class="news-error">No news available</div>';
@@ -529,12 +500,12 @@
           }
 
           newsGrid.innerHTML = '';
-          Array.from(items).slice(0, 4).forEach(item => {
-            const date = item.querySelector('.news-date')?.textContent || '';
-            const cat = item.querySelector('.news-category')?.textContent || '';
+          Array.from(items).slice(0, 3).forEach(item => {
+            const date = item.querySelector('.news-preview-date')?.textContent || '';
+            const cat = item.querySelector('.news-preview-category')?.textContent || '';
             const title = item.querySelector('h3')?.textContent || '';
-            const preview = item.querySelector('.news-preview-content p')?.textContent || '';
-            const pdf = item.querySelector('.news-download')?.getAttribute('href') || '#';
+            const preview = item.querySelector('.news-preview-text p')?.textContent || '';
+            const pdf = item.querySelector('.news-preview-download')?.getAttribute('href') || '#';
             const id = item.getAttribute('data-id');
 
             const card = document.createElement('div');
@@ -548,7 +519,7 @@
                 <h3>${title}</h3>
                 <p>${preview}</p>
                 <div class="news-preview-actions">
-                  <a href="news.html#news-${id}" class="news-preview-more">Read more</a>
+                  <a href="news.html#news-${id}" class="news-preview-more">Leggi tutto</a>
                   <a href="${pdf}" class="news-preview-download" download>PDF</a>
                 </div>
               </div>
@@ -566,7 +537,6 @@
         });
     }
 
-    // Setup parallax effect
     function setupParallax() {
       const section = document.getElementById('collaboration-section');
       const bg = document.querySelector('.collaboration-bg');
@@ -592,7 +562,6 @@
       window.addEventListener('resize', updateParallax);
     }
 
-    // Initialize all functions
     setupDropdowns();
     highlightActiveLink();
     window.addEventListener('resize', handleResize);
@@ -601,7 +570,6 @@
     setupParallax();
   });
 
-  // Optional: generic parallax for other sections
   window.addEventListener('scroll', () => {
     const bg = document.querySelector('.parallax-bg');
     if (bg) {
@@ -610,9 +578,5 @@
     }
   });
 </script>
-
-
-
-
 </body>
 </html>

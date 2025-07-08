@@ -558,29 +558,52 @@ ul {
     order: -1;
   }
   
-  .timeline-block {
-    padding-left: 0;
-  }
-  
-  .timeline-item {
-    padding-left: 0;
-    padding-top: 80px;
+    /* Timeline adjustments */
+  .timeline-block::before {
+    left: 15px; /* Move line closer to edge */
+    background: linear-gradient(to bottom, var(--secondary-color), rgba(194, 154, 91, 0.1)); /* Make line less prominent */
   }
   
   .timeline-date {
     width: 100%;
     text-align: left;
-    padding-right: 0;
+    padding-left: 10%; /* Give more space for date */
     top: 30px;
-  }
-  
-  .timeline-block::before {
-    left: 30px;
+    color: var(--primary-color); /* Make date more readable */
+    font-weight: 600;
   }
   
   .timeline-item::before {
-    left: 25px;
+    left: 10px; /* Align with timeline */
     top: 38px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--white-color);
+    border: 2px solid var(--secondary-color);
+  }
+  
+  .timeline-content {
+    margin-left: 30px; /* Give space from timeline */
+    padding: 20px;
+  }
+  
+  .timeline-item {
+    padding-top: 70px; /* More space for date */
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline-date {
+    font-size: 0.9rem;
+    padding-left: 15%;
+  }
+  
+  .timeline-item::before {
+    left: 8px;
+  }
+  
+  .timeline-content {
+    margin-left: 20px;
   }
   
   .content-block {

@@ -897,7 +897,11 @@ ul {
   height: 20px;
 }
 
+
+
 /* ===== RESPONSIVE STYLES ===== */
+
+/* ===== ENHANCED MEDIA QUERIES ===== */
 @media (max-width: 1200px) {
   .hero-content h1 {
     font-size: 3rem;
@@ -942,86 +946,268 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
+/* Tablet and Small Laptop Devices (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
   .hero-content {
-    text-align: center;
-    padding-top: 40px;
+    max-width: 90%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.15rem;
+    margin: 1.2rem auto;
+  }
+  
+  .hero-cta {
+    margin-top: 1.5rem;
+  }
+  
+  .ctaButton,
+  .secondaryButton {
+    padding: 14px 28px;
+    font-size: 0.95rem;
+  min-width: 180px;
+  }
+  
+  .gototop {
+    bottom: 25px;
+    right: 25px;
+  }
+}
+
+/* Mobile and Small Tablet Devices (up to 767px) */
+@media (max-width: 767px) {
+  /* Hero Section Adjustments */
+  .hero {
+    min-height: 500px;
+    height: 650px;
+    padding-bottom: 60px;
+  }
+  
+  .hero-content-wrapper {
+    top: 50%;
+    width: 90%;
+    padding: 0 15px;
+   
   }
   
   .hero-content h1 {
     font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin: 1rem auto;
+    line-height: 1.5;
   }
   
   .hero-cta {
     flex-direction: column;
-    gap: 15px;
-    align-items: center;
+    gap: 12px;
+    margin-top: 2.8rem;
+    width: 100%;
+    align-items: center; /* Center buttons horizontally */
+
   }
   
+  .ctaButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+  
+  /* Adjust spacing between CTA and "Go to top" button */
+  .hero-content-wrapper {
+    padding-bottom: 30px;
+  }
+  
+  .gototop {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .gototop a {
+    width: 42px;
+    height: 42px;
+  }
+  
+  /* Other sections adjustments */
   .sectionHeader h2,
   .news-preview-header h2,
   .collaboration-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
   
   .sectionSubtitle,
   .news-preview-header .subtitle,
   .collaboration-intro {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   
-  .collaboration-section {
-    padding: 60px 0;
-  }
-  
-  .collaboration-background {
-    background-attachment: scroll;
-  }
-  
-  .gototop {
-    bottom: 20px;
-    right: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero {
-    min-height: 500px;
-  }
-  
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1rem;
-    margin: 1.2rem 0;
-  }
-  
-  .hero-scroll-indicator {
-    bottom: 20px;
-  }
-  
-  .studiosContainer {
+  .studiosContainer,
+  .news-preview-grid {
     grid-template-columns: 1fr;
   }
   
   .studioImageWrapper {
-    height: 250px;
+    height: 220px;
+  }
+}
+
+/* Small Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 450px;
   }
   
-  .news-preview-grid {
-    grid-template-columns: 1fr;
+  .hero-content h1 {
+    font-size: 1.7rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .ctaButton,
+  .secondaryButton {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    max-width: 240px;
+  }
+  
+  .hero-scroll-indicator {
+    bottom: 15px;
+  }
+  
+  .mouse {
+    width: 20px;
+    height: 34px;
   }
   
   .sectionHeader h2,
   .news-preview-header h2,
   .collaboration-content h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+  
+  .sectionHeader h2::after,
+  .news-preview-header h2::after,
+  .collaboration-content h2::after {
+    width: 60px;
+    height: 2px;
+    bottom: -8px;
+  }
+  
+  .gototop {
+    bottom: 10px;
+    right: 10px;
   }
   
   .gototop a {
-    width: 45px;
-    height: 45px;
+    width: 38px;
+    height: 38px;
+  }
+  
+  .gototop svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Very Small Mobile Devices (up to 360px) */
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .ctaButton,
+  .secondaryButton {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    max-width: 220px;
+  }
+  
+  .sectionHeader h2,
+  .news-preview-header h2,
+  .collaboration-content h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* iPad Specific Adjustments */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 80%;
+  }
+  
+  .hero-cta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .ctaButton,
+  .secondaryButton {
+    padding: 14px 28px;
+    font-size: 1rem;
+    min-width: 200px;
+    margin: 0 10px 10px 0;
+  }
+  
+  .gototop {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+/* Landscape Orientation Adjustments */
+@media (max-width: 992px) and (orientation: landscape) {
+  .hero {
+    min-height: 600px;
+  }
+  
+  .hero-content-wrapper {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin: 0.8rem auto;
+  }
+  
+  .hero-cta {
+    margin-top: 1.2rem;
+  }
+  
+  .ctaButton,
+  .secondaryButton {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }

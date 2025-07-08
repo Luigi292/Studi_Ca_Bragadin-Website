@@ -32,7 +32,7 @@
 }
 
 .logo img {
-  width: 80px;
+  width: 90px;
   height: auto;
   transition: var(--transition);
   transform-origin: center;
@@ -270,7 +270,7 @@
   }
 
   .logo img {
-    width: 60px;
+    width: 75px;
   }
 
   /* Hide desktop menu */
@@ -379,7 +379,7 @@
   }
   
   .logo img {
-    width: 55px;
+    width: 65px;
   }
   
   .navLink {
