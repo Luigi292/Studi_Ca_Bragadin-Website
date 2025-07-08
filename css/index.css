@@ -715,8 +715,10 @@ ul {
 .news-preview-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  gap: 15px;
   margin-bottom: 40px;
+  margin-left: 50px; /* <<< ADD THIS LINE */
+  margin-right: 50px; /* <<< ADD THIS LINE */
   padding: 0 15px; /* <<< ADD THIS LINE */
 }
 
