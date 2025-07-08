@@ -410,6 +410,7 @@ img {
 }
 
 /* ===== VALUES SECTION ===== */
+
 .values-section {
   padding: 6rem 0;
   background-color: var(--light-color);
@@ -687,6 +688,24 @@ img {
     max-width: 600px;
     margin: 0 auto;
   }
+
+  .mission-container {
+    padding: 0 1rem; /* Reduced side padding */
+    width: 100%;
+  }
+
+  .mission-content {
+    width: calc(100% - 2rem); /* Full width minus small margins */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 1.5rem; /* Adjusted padding */
+  }
+
+  .mission-content p {
+    font-size: 1.1rem; /* Slightly larger font */
+    line-height: 1.75; /* Better line spacing */
+    max-width: 100%; /* Take full available width */
+  }
 }
 
 @media (max-width: 768px) {
@@ -710,28 +729,56 @@ img {
     font-size: 1.3rem;
   }
 
-  .mission-container {
-  max-width: 100%;
-  margin: 0 auto 4rem;
-  padding: 0 2rem;
-}
-
-  .mission-content{
-    padding: 2rem;
-    margin-top: -2%;
-    width: 100%;
+  .values-section {
+    padding: 3rem 0;
   }
   
+   .mission-container {
+    padding: 0 1rem; /* Reduced side padding */
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .mission-content {
+    width: calc(100% - 2rem); /* Full width minus small margins */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 1.5rem; /* Adjusted padding */
+  }
+
   .mission-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--dark-color);
-  max-width: 100%;
-  margin: 0 auto;
-  font-family: 'Crimson Text', serif;
-}
+    font-size: 1.1rem; /* Slightly larger font */
+    line-height: 1.75; /* Better line spacing */
+    max-width: 100%; /* Take full available width */
+  }
+  
+  .value-card h3 {
+    font-size: 1.15rem;
+  }
+  
+  .value-card p {
+    font-size: 0.92rem;
+  }
+
 
 }
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .mission-content {
+    width: calc(100% - 1.5rem); /* Slightly wider on smallest phones */
+    padding: 1.5rem;
+  }
+
+  .mission-content p {
+    font-size: 1rem;
+  }
+}
+
+
+
 
 @media (max-width: 576px) {
   .team-cards {
@@ -767,11 +814,37 @@ img {
     font-size: 1rem;
   }
 
-
-    .mission-content{
-    padding: 2rem;
-    margin-top: -2%;
+ .mission-container {
+    padding: 0 1rem; /* Reduced side padding */
   }
+
+
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .value-card {
+    padding: 1.3rem;
+  }
+  
+  .value-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.1rem;
+  }
+  
+  .value-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .value-card p {
+    font-size: 0.9rem;
+  }
+
+  
   
   .mission-content p {
   font-size: 1.1rem;
@@ -781,4 +854,21 @@ img {
   margin: 0 auto;
   font-family: 'Crimson Text', serif;
 }
+}
+
+
+
+
+
+/* Honor 70 and iPhone specific (414px and below) */
+@media (max-width: 414px) {
+  .mission-content {
+    width: calc(100% - 1.2rem); /* Matches value card width exactly */
+    padding: 1.3rem;
+  }
+  
+  .mission-content p {
+    font-size: 0.98rem; /* Matches value card text size */
+    line-height: 1.65;
+  }
 }
