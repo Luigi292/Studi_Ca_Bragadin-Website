@@ -1054,6 +1054,8 @@ ul {
   .news-preview-header .subtitle,
   .collaboration-intro {
     font-size: 0.95rem;
+    padding: 0 20px;
+    text-align: center; /* Optional: improves appearance */
   }
   
   .studiosContainer,
@@ -1100,6 +1102,9 @@ ul {
   .news-preview-header h2,
   .collaboration-content h2 {
     font-size: 1.5rem;
+    padding: 0 20px;
+    text-align: center; /* Optional: improves appearance */
+
   }
   
   .sectionHeader h2::after,

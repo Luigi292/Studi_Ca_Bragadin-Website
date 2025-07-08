@@ -270,7 +270,7 @@
   }
 
   .logo img {
-    width: 75px;
+    width: 85px;
   }
 
   /* Hide desktop menu */
@@ -359,14 +359,22 @@
     margin-left: 20px;
   }
 
-  /* Adjust language toggle */
-   .languageToggle {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  .languageToggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
     margin: 0;
-    z-index: 1002;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* fills navbar vertically */
+  }
+
+  /* Optional: adjust language button size if needed */
+  .languageButton {
+    font-size: 14px;
+    padding: 6px 10px;
   }
 }
 
@@ -380,10 +388,29 @@
 
   .navbar {
     padding: 0 15px;
+    align-items: center;
   }
   
   .logo img {
-    width: 65px;
+    width: 85px;
+  }
+
+  .languageToggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* fills navbar vertically */
+  }
+
+  /* Optional: adjust language button size if needed */
+  .languageButton {
+    font-size: 14px;
+    padding: 6px 10px;
   }
   
   .navLink {
