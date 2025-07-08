@@ -717,6 +717,7 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-bottom: 40px;
+  padding: 0 15px; /* <<< ADD THIS LINE */
 }
 
 .news-preview-card {
