@@ -692,7 +692,21 @@ ul {
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
 @media (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .professional-header h1 {
+    font-size: 3rem;
+  }
+  
   .qualifications-block {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -720,19 +734,33 @@ ul {
   .feature-list {
     grid-template-columns: 1fr;
   }
+  
+  .services-overview {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  
   body, html {
     overflow-x: hidden;
   }
 
   .profile-block {
     grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 30px;
+  }
+  
+  .professional-header {
+    padding: 0 20px;
   }
   
   .professional-header h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
   
   .profile-image {
@@ -740,24 +768,38 @@ ul {
     order: -1;
   }
   
-  /* Timeline adjustments */
+  .block-header h2 {
+    font-size: 2rem;
+  }
+  
+  /* Timeline adjustments - Fixed the mobile display issue */
+  .timeline-block {
+    padding-left: 0;
+  }
+  
   .timeline-block::before {
     left: 15px;
     background: linear-gradient(to bottom, var(--secondary-color), rgba(194, 154, 91, 0.1));
   }
   
+  .timeline-item {
+    padding-left: 0;
+    padding-top: 70px;
+    margin-bottom: 30px;
+  }
+  
   .timeline-date {
+    position: static;
     width: 100%;
     text-align: left;
-    padding-left: 10%;
-    top: 30px;
+    padding: 0 0 10px 30px;
     color: var(--primary-color);
     font-weight: 600;
   }
   
   .timeline-item::before {
     left: 10px;
-    top: 38px;
+    top: 75px;
     width: 10px;
     height: 10px;
     background-color: var(--white-color);
@@ -765,12 +807,10 @@ ul {
   }
   
   .timeline-content {
-    margin-left: 30px;
+    margin-left: 0;
     padding: 20px;
-  }
-  
-  .timeline-item {
-    padding-top: 70px;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .content-block {
@@ -783,17 +823,29 @@ ul {
 }
 
 @media (max-width: 576px) {
-  .timeline-date {
-    font-size: 0.9rem;
-    padding-left: 15%;
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
   }
   
-  .timeline-item::before {
-    left: 8px;
+  .professional-header h1 {
+    font-size: 2rem;
   }
   
-  .timeline-content {
-    margin-left: 20px;
+  .professional-title {
+    font-size: 1.2rem;
+  }
+  
+  .block-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .profile-block {
+    padding: 25px 20px;
+  }
+  
+  .profile-image {
+    height: 300px;
   }
   
   .qualifications-block,
@@ -801,27 +853,66 @@ ul {
     grid-template-columns: 1fr;
   }
   
-  .professional-header h1 {
-    font-size: 2.2rem;
+  /* Timeline adjustments for extra small screens */
+  .timeline-date {
+    padding-left: 25px;
+    font-size: 0.95rem;
   }
   
-  .professional-title {
-    font-size: 1.2rem;
-  }
-  
-  .profile-block {
-    padding: 30px 20px;
+  .timeline-item::before {
+    left: 8px;
+    top: 72px;
   }
   
   .timeline-content {
-    padding: 20px;
+    padding: 15px;
   }
   
-  .timeline-item {
-    margin-bottom: 40px;
+  .timeline-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.95rem;
   }
   
   .service-detail {
-    padding: 25px 20px;
+    padding: 20px 15px;
+  }
+  
+  .ctaButton {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .professional-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .professional-title {
+    font-size: 1.1rem;
+  }
+  
+  .content-block {
+    padding: 50px 15px;
+  }
+  
+  .profile-block {
+    margin-top: -20px;
+  }
+  
+  /* Final timeline adjustments for smallest screens */
+  .timeline-date {
+    padding-left: 20px;
+  }
+  
+  .timeline-item::before {
+    left: 6px;
+  }
+  
+  .timeline-content {
+    padding: 15px 10px;
   }
 }
