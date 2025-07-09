@@ -380,12 +380,26 @@
 
 /* Adjustments for very small screens */
 @media (max-width: 480px) {
-  .navMenu {
-    width: 280px;
-    padding-left: 20px;
-    padding-right: 20px;
+    .navMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: calc(100% - 90px - 5%);
+    height: 100vh;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 100px 30px 30px;
+    transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    transform: none;
   }
 
+  
   .navbar {
     padding: 0 15px;
     align-items: center;
