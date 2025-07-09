@@ -1,24 +1,68 @@
-# Logs
-logs
+# ==================== #
+#  SYSTEM FILES        #
+# ==================== #
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.swn
+._*
+.Spotlight-V100
+.Trashes
+
+# ==================== #
+#  DEVELOPMENT         #
+# ==================== #
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+.env.local
+.env.*.local
+
+# ==================== #
+#  LOGS                #
+# ==================== #
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+/private/newsletter_data/*.log
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# ==================== #
+#  EDITORS             #
+# ==================== #
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+
+# ==================== #
+#  SENSITIVE DATA      #
+# ==================== #
+/private/*                # Entire private directory
+admin/.htpasswd           # Auth credentials
+newsletter-config.php     # Contains sensitive paths
+process-newsletter.php    # Contains processing logic
+send-newsletter.php       # Contains sending logic
+
+# ==================== #
+#  TEMPORARY FILES     #
+# ==================== #
+*.tmp
+*.temp
+*.bak
+*.backup
+*.sav
+
+# ==================== #
+#  SYSTEM SPECIFIC     #
+# ==================== #
+*.komodoproject
+*.komodotools

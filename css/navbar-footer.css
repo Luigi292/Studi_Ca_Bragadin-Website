@@ -278,7 +278,7 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 320px;
+    width: 330px;
     height: 100vh;
     background-color: var(--primary-color);
     flex-direction: column;

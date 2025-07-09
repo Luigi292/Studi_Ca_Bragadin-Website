@@ -322,21 +322,27 @@
         <h3>Rimani sempre aggiornato</h3>
         <p>Iscriviti alla nostra newsletter per ricevere gli ultimi aggiornamenti fiscali e legali direttamente nella tua casella di posta.</p>
       </div>
-      <form class="newsletter-form" id="mainNewsletterForm">
-        <div class="form-row">
-          <div class="form-group">
+
+<form class="newsletter-form" id="mainNewsletterForm">
+    <div class="form-row">
+        <div class="form-group">
             <input type="text" id="mainName" name="name" placeholder="Nome" required>
-          </div>
-          <div class="form-group">
+            <div class="error-message" id="nameError"></div>
+        </div>
+        <div class="form-group">
             <input type="email" id="mainEmail" name="email" placeholder="Email" required>
-          </div>
-          <button type="submit" class="cta-button">Iscriviti</button>
+            <div class="error-message" id="emailError"></div>
         </div>
-        <div class="form-group checkbox-group">
-          <input type="checkbox" id="mainPrivacy" name="privacy" required>
-          <label for="mainPrivacy">Accetto l'<a href="privacy.html">informativa sulla privacy</a></label>
-        </div>
-      </form>
+        <button type="submit" class="cta-button">Iscriviti</button>
+    </div>
+    <div class="form-group checkbox-group">
+        <input type="checkbox" id="mainPrivacy" name="privacy" required>
+        <label for="mainPrivacy">Accetto l'<a href="privacy.html">informativa sulla privacy</a></label>
+        <div class="error-message" id="privacyError"></div>
+    </div>
+    <div id="formSuccessMessage" class="success-message" style="display: none;"></div>
+</form>
+
     </div>
   </div>
 </section>
@@ -408,6 +414,9 @@
   <!-- Scripts -->
 
   <script src="js/navbar-scroll.js" defer></script>
+  <script src="js/newsletter-form.js" defer></script>
+
+  
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Navigation Functionality
