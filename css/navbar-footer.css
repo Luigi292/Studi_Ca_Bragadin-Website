@@ -313,6 +313,11 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
+  .navbar.hide {
+    top: -100px;
+  }
+
+
   /* Mobile dropdown styles */
   .dropdown {
     width: 100%;
