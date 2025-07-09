@@ -183,6 +183,10 @@ function getProfessionalEmailTemplate($data) {
                     <span class="info-label">Servizio:</span>
                     <span class="info-value highlight">$serviceDisplay</span>
                 </div>
+                <div class="info-row">
+                    <span class="info-label">Privacy accettata:</span>
+                    <span class="info-value">{$data['privacyConsent']}</span>
+                </div>
             </div>
             <div class="email-section">
                 <h2 class="email-section-title">Messaggio</h2>
@@ -333,6 +337,10 @@ function getConfirmationEmailTemplate($data) {
                     <span class="info-label">Servizio:</span>
                     <span class="info-value highlight">$serviceDisplay</span>
                 </div>
+                <div class="info-row">
+                    <span class="info-label">Privacy accettata:</span>
+                    <span class="info-value">{$data['privacyConsent']}</span>
+                </div>
             </div>
             <div class="email-section">
                 <h2 class="email-section-title">Il suo messaggio</h2>
@@ -365,7 +373,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             throw new Exception('Per favore, attendi qualche istante prima di inviare un\'altra richiesta.');
         }
         
-        $required = ['firstName', 'lastName', 'email', 'professional', 'service', 'message'];
+        $required = ['firstName', 'lastName', 'email', 'professional', 'service', 'message', 'privacyConsent'];
         foreach ($required as $field) {
             if (empty($_POST[$field])) {
                 throw new Exception('Per favore, compila tutti i campi obbligatori (*)');
@@ -379,6 +387,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $professional = sanitizeInput($_POST['professional']);
         $service = sanitizeInput($_POST['service']);
         $message = $_POST['message'];
+        $privacyConsent = isset($_POST['privacyConsent']) ? 'Sì' : 'No';
         
         if (!isValidEmail($email)) {
             throw new Exception('Per favore, inserisci un indirizzo email valido');
@@ -394,6 +403,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         if (!empty($_POST['website'])) {
             throw new Exception('Errore di invio');
+        }
+        
+        if ($privacyConsent === 'No') {
+            throw new Exception('Devi accettare la privacy policy per procedere');
         }
         
         $recipients = [
@@ -442,11 +455,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'phone' => $phone,
             'service' => $service,
             'message' => $message,
+            'privacyConsent' => $privacyConsent,
             'serviceDisplayNames' => $serviceDisplayNames,
             'logoPath' => LOGO_PATH
         ]);
         
-        $mail->AltBody = "Nuova richiesta di contatto\n\nNome: {$firstName} {$lastName}\nEmail: {$email}\nTelefono: {$phone}\nServizio: {$serviceDisplayNames[$service]}\n\nMessaggio:\n{$message}";
+        $mail->AltBody = "Nuova richiesta di contatto\n\nNome: {$firstName} {$lastName}\nEmail: {$email}\nTelefono: {$phone}\nServizio: {$serviceDisplayNames[$service]}\nPrivacy accettata: {$privacyConsent}\n\nMessaggio:\n{$message}";
         $mail->send();
         
         // Send confirmation
@@ -466,6 +480,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'email' => $email,
             'service' => $service,
             'message' => $message,
+            'privacyConsent' => $privacyConsent,
             'professionalName' => $recipient['confirmation_name'],
             'professionalEmail' => $recipient['email'],
             'professionalPhone' => $recipient['phone'],
