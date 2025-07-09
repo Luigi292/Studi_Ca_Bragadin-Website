@@ -1068,6 +1068,29 @@ ul {
   }
 }
 
+
+
+@media (max-width: 500px) {
+  .contactInfo a {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .contactInfo p {
+    flex-direction: column;
+    align-items: flex-start;
+    word-break: break-word;
+  }
+
+  .contactInfo p strong {
+    margin-bottom: 4px;
+  }
+}
+
+
+
 /* Small Mobile Devices (up to 480px) */
 @media (max-width: 480px) {
   .hero {
