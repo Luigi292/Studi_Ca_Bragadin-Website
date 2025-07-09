@@ -385,7 +385,7 @@
   top: 0;
   right: -100%;
   left: auto;
-  width: 320px; /* default hidden state */
+  width: 350px; /* default hidden state */
   height: 100vh;
   background-color: var(--primary-color);
   flex-direction: column;
