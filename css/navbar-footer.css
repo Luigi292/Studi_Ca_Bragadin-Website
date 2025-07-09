@@ -380,26 +380,33 @@
 
 /* Adjustments for very small screens */
 @media (max-width: 480px) {
-    .navMenu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: auto;
-    width: calc(100% - 90px - 5%);
-    height: 100vh;
-    background-color: var(--primary-color);
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 100px 30px 30px;
-    transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1001;
-    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
-    overflow-y: auto;
-    transform: none;
-  }
+.navMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  left: auto;
+  width: 320px; /* default hidden state */
+  height: 100vh;
+  background-color: var(--primary-color);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 100px 30px 30px;
+  transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1001;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  transform: none;
+}
 
-  
+/* When navMenu is active (hamburger clicked) */
+.navMenu.active {
+  right: 0;
+  width: calc(100% - 90px - 5%);
+}
+
+
+
   .navbar {
     padding: 0 15px;
     align-items: center;
