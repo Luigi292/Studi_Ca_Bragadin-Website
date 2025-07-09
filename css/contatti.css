@@ -214,8 +214,8 @@
 }
 
 .form-submit {
-  margin-top: auto;
-  padding-top: 20px;
+  margin-top: -10px;
+  padding-top: 0;
 }
 
 .submit-button {
@@ -235,6 +235,20 @@
 .submit-button:hover {
   background: #0d1e3d;
 }
+
+
+/* Optional - improves checkbox label spacing */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+
+
+
 
 /* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 992px) {

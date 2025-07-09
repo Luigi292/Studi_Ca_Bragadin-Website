@@ -172,58 +172,70 @@
           <p class="form-subtitle">Compila il form e verrai ricontattato entro 24 ore</p>
           
           
-          <!-- Replace your existing form with this one -->
+<!-- Replace your existing form with this one -->
+
 <form id="professionalContactForm" class="professional-form">
-    <div class="form-row">
-        <div class="form-group">
-            <label for="firstName">Nome*</label>
-            <input type="text" id="firstName" name="firstName" required>
-        </div>
-        <div class="form-group">
-            <label for="lastName">Cognome*</label>
-            <input type="text" id="lastName" name="lastName" required>
-        </div>
-    </div>
-    
+  <div class="form-row">
     <div class="form-group">
-        <label for="email">Email*</label>
-        <input type="email" id="email" name="email" required>
+      <label for="firstName">Nome*</label>
+      <input type="text" id="firstName" name="firstName" required>
     </div>
-    
     <div class="form-group">
-        <label for="phone">Telefono</label>
-        <input type="tel" id="phone" name="phone">
+      <label for="lastName">Cognome*</label>
+      <input type="text" id="lastName" name="lastName" required>
     </div>
-    
-    <div class="form-row">
-        <div class="form-group">
-            <label for="professional">Professionista*</label>
-            <select id="professional" name="professional" required>
-                <option value="">Seleziona un professionista</option>
-                <option value="avv_lenzi">Avv. Maximiliano Lenzi</option>
-                <option value="dott_maretto">Dott. Andrea Maretto</option>
-                <option value="dott_cecolin">Dott. Alberto Cecolin</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="service">Servizio richiesto*</label>
-            <select id="service" name="service" required>
-                <option value="">Seleziona un servizio</option>
-            </select>
-        </div>
-    </div>
-    
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Telefono</label>
+    <input type="tel" id="phone" name="phone">
+  </div>
+
+  <div class="form-row">
     <div class="form-group">
-        <label for="message">Messaggio*</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="professional">Professionista*</label>
+      <select id="professional" name="professional" required>
+        <option value="">Seleziona un professionista</option>
+        <option value="avv_lenzi">Avv. Maximiliano Lenzi</option>
+        <option value="dott_maretto">Dott. Andrea Maretto</option>
+        <option value="dott_cecolin">Dott. Alberto Cecolin</option>
+      </select>
     </div>
-    
-    <div class="form-submit">
-        <button type="submit" class="submit-button">Invia Richiesta</button>
+    <div class="form-group">
+      <label for="service">Servizio richiesto*</label>
+      <select id="service" name="service" required>
+        <option value="">Seleziona un servizio</option>
+      </select>
     </div>
-    
-    <div id="formResponse" class="form-response" style="display: none;"></div>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Messaggio*</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+
+  <!-- ✅ Privacy Checkbox added here -->
+  <div class="form-group" style="margin-top: 0px; margin-bottom: 0;">
+    <label style="display: flex; align-items: center; font-size: 13px; gap: 8px; line-height: 1.4;">
+      <input type="checkbox" id="privacyConsent" name="privacyConsent" required style="margin: 0;">
+      <span>
+        Ho letto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a> e i <a href="terms.html" target="_blank">Termini e Condizioni</a> del sito.
+      </span>
+    </label>
+  </div>
+
+  <div class="form-submit">
+    <button type="submit" class="submit-button">Invia Richiesta</button>
+  </div>
+
+  <div id="formResponse" class="form-response" style="display: none;"></div>
 </form>
+
 
 
 
