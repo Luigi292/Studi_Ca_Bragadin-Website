@@ -365,9 +365,17 @@ function getConfirmationEmailTemplate($data) {
 HTML;
 }
 
+header('Content-Type: application/json; charset=utf-8');
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         session_start();
+        
+        // Check for empty POST data
+        if (empty($_POST)) {
+            throw new Exception('Nessun dato ricevuto dal form.');
+        }
+        
         if (isset($_SESSION['last_submission_time']) && 
             (time() - $_SESSION['last_submission_time']) < TIME_BETWEEN_REQUESTS) {
             throw new Exception('Per favore, attendi qualche istante prima di inviare un\'altra richiesta.');
@@ -493,7 +501,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         $_SESSION['last_submission_time'] = time();
         
-        header('Content-Type: application/json; charset=utf-8');
         echo json_encode([
             'success' => true,
             'message' => "La sua richiesta è stata inviata correttamente. Riceverà una risposta al più presto. Se la richiesta è urgente o non dovesse ricevere risposta entro 48 ore, la invitiamo a contattare telefonicamente il professionista al numero indicato nella email di conferma."
@@ -501,7 +508,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
         
     } catch (Exception $e) {
-        header('Content-Type: application/json; charset=utf-8');
         http_response_code(400);
         echo json_encode([
             'success' => false,
@@ -510,7 +516,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 } else {
-    header('Content-Type: application/json; charset=utf-8');
     http_response_code(405);
     echo json_encode([
         'success' => false,
