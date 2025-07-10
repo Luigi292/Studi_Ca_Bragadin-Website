@@ -746,6 +746,109 @@
     .news-error a:hover {
       text-decoration: underline;
     }
+
+/* News Section Media Queries */
+@media (max-width: 992px) {
+  .news-preview-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-preview-section {
+    padding: 60px 0;
+  }
+  
+  .news-preview-header {
+    margin-bottom: 40px;
+  }
+  
+  .news-preview-header h2 {
+    font-size: 2rem;
+  }
+  
+  .news-preview-header .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .news-preview-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto 30px;
+  }
+  
+  .news-preview-card {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-preview-section {
+    padding: 50px 0;
+  }
+  
+  .news-preview-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .news-preview-header .subtitle {
+    font-size: 1rem;
+  }
+  
+  .news-preview-grid {
+    padding: 0 10px;
+  }
+  
+  .news-preview-card {
+    max-width: 100%;
+  }
+  
+  .news-preview-card-header {
+    padding: 12px 15px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .news-preview-content {
+    padding: 15px;
+  }
+  
+  .news-preview-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Special adjustments for very small phones */
+@media (max-width: 360px) {
+  .news-preview-section {
+    padding: 40px 0;
+  }
+  
+  .news-preview-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .news-preview-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .news-preview-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .news-preview-more,
+  .news-preview-download {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
   </style>
 </body>
 </html>
