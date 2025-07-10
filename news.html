@@ -27,17 +27,12 @@
   <link rel="stylesheet" href="css/news.css">
   <link rel="stylesheet" href="css/hero.css">
 
-
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
   <link rel="shortcut icon" href="images/favicon-logo.png" type="image/png">
 </head>
 <body class="news-page">
   
- 
-
-
 <!-- Navbar Component -->
-
 <nav class="navbar">
   <div class="logo">
     <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
@@ -47,8 +42,7 @@
 
   <div class="languageToggle">
     <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-
-<!--<span>|</span> <a href="en/index.html" class="languageButton" aria-label="English">EN</a> -->   </div>
+  </div>
 
   <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
     <div></div><div></div><div></div>
@@ -58,9 +52,6 @@
     <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
     <li class="dropdown">
       <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
-      
-      <!-- Dropdown arrow shown next to "Chi Siamo" -->
-    
       <ul class="dropdown-menu">
         <li><a href="chi-siamo.html">Il Nostro Team</a></li>
         <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
@@ -74,7 +65,6 @@
   </ul>
 </nav>
 
-
 <!-- News Hero Section -->
 <section class="hero-section">
   <div class="hero-overlay"></div>
@@ -82,7 +72,6 @@
   <div class="hero-content">
     <h1>News Professionali</h1>
     <p>Approfondimenti e aggiornamenti su temi legali e fiscali</p>
-    
   </div>
   <div class="hero-scroll-indicator">
     <span>Scorri</span>
@@ -90,556 +79,703 @@
   </div>
 </section>
 
-
-  <section class="news-archive">
-    <div class="container">
-      <div class="archive-grid">
-
-
-        <!-- Replace the entire news-sidebar section with this: -->
-<aside class="news-sidebar">
-  <div class="popular-news-box">
-    <h3>News Popolari</h3>
-    <div class="popular-news-item">
-      <span class="popular-news-date">15 Gen</span>
-      <a href="#" class="popular-news-title">Novità Fiscali per il 2025</a>
-    </div>
-    <div class="popular-news-item">
-      <span class="popular-news-date">10 Nov</span>
-      <a href="#" class="popular-news-title">Aggiornamenti GDPR e Privacy</a>
-    </div>
-    <div class="popular-news-item">
-      <span class="popular-news-date">25 Ott</span>
-      <a href="#" class="popular-news-title">Riforma del Diritto Societario</a>
-    </div>
-    <div class="popular-news-item">
-      <span class="popular-news-date">05 Set</span>
-      <a href="#" class="popular-news-title">Incentivi per la Crescita Aziendale</a>
-    </div>
-  </div>
-  
-  <div class="news-categories">
-    <h4>Categorie</h4>
-    <ul>
-      <li><a href="#" class="active">Tutte le news</a></li>
-      <li><a href="#">Novità fiscali</a></li>
-      <li><a href="#">Aggiornamenti legali</a></li>
-      <li><a href="#">Circolari</a></li>
-      <li><a href="#">Eventi</a></li>
-    </ul>
-  </div>
-
-  <div class="news-downloads">
-    <h4>Risorse Utili</h4>
-    <div class="download-item">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-        <polyline points="7 10 12 15 17 10"></polyline>
-        <line x1="12" y1="15" x2="12" y2="3"></line>
-      </svg>
-      <a href="#">Guida Fiscale 2025</a>
-    </div>
-    <div class="download-item">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-        <polyline points="7 10 12 15 17 10"></polyline>
-        <line x1="12" y1="15" x2="12" y2="3"></line>
-      </svg>
-      <a href="#">Checklist GDPR</a>
-    </div>
-  </div>
-</aside>
-
-        
-        <main class="news-main-content">
-          <div class="news-sort">
-            <span>Ordina per:</span>
-            <select>
-              <option>Più recenti</option>
-              <option>Più vecchi</option>
-              <option>Più letti</option>
-            </select>
-          </div>
-          
-          <div class="news-list" id="newsList">
-            <!-- News Item 1 -->
-            <article class="news-preview-card" data-id="1">
-              <div class="news-preview-card-header">
-                <span class="news-preview-date">15 Gen</span>
-                <span class="news-preview-category">Novità fiscali</span>
-              </div>
-              <div class="news-preview-content">
-                <h3>Novità Fiscali per il 2025</h3>
-                <div class="news-preview-text">
-                  <p>Analisi completa delle principali novità fiscali introdotte con la Legge di Bilancio 2025 e loro impatto sulle imprese.</p>
-                </div>
-                <div class="news-full-content" style="display:none;">
-                  <p>La Legge di Bilancio 2025 introduce importanti novità nel panorama fiscale italiano. Tra le principali modifiche:</p>
-                  <ul>
-                    <li>Revisione degli scaglioni IRPEF con nuove aliquote</li>
-                    <li>Modifiche al regime forfettario con aumento della soglia a 85.000€</li>
-                    <li>Nuove detrazioni per investimenti in innovazione tecnologica</li>
-                    <li>Proroga del superammortamento al 140%</li>
-                    <li>Introduzione del credito d'imposta formazione 4.0</li>
-                  </ul>
-                  <p>Il nostro studio ha preparato un'analisi dettagliata disponibile in formato PDF.</p>
-                </div>
-                <div class="news-preview-actions">
-                  <a href="#" class="news-read-more">Leggi tutto</a>
-                  <a href="pdf/newsletter-1.pdf" class="news-preview-download" download>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                      <polyline points="7 10 12 15 17 10"></polyline>
-                      <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    PDF
-                  </a>
-                </div>
-              </div>
-            </article>
-            
-            <!-- News Item 2 -->
-            <article class="news-preview-card" data-id="2">
-              <div class="news-preview-card-header">
-                <span class="news-preview-date">10 Nov</span>
-                <span class="news-preview-category">Privacy</span>
-              </div>
-              <div class="news-preview-content">
-                <h3>Aggiornamenti GDPR e Privacy</h3>
-                <div class="news-preview-text">
-                  <p>Guida pratica agli adempimenti privacy per le PMI alla luce delle ultime modifiche normative.</p>
-                </div>
-                <div class="news-full-content" style="display:none;">
-                  <p>Il Garante per la protezione dei dati personali ha recentemente pubblicato nuove linee guida che impattano sulle PMI:</p>
-                  <ul>
-                    <li>Nuovi requisiti per i registri dei trattamenti</li>
-                    <li>Obblighi aggiornati per i DPO (Data Protection Officer)</li>
-                    <li>Procedure semplificate per le valutazioni d'impatto</li>
-                    <li>Maggiori responsabilità per i responsabili del trattamento</li>
-                    <li>Nuove sanzioni per violazioni del GDPR</li>
-                  </ul>
-                  <p>Scarica la nostra guida completa con modelli e checklist operative.</p>
-                </div>
-                <div class="news-preview-actions">
-                  <a href="#" class="news-read-more">Leggi tutto</a>
-                  <a href="pdf/newsletter-2.pdf" class="news-preview-download" download>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                      <polyline points="7 10 12 15 17 10"></polyline>
-                      <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    PDF
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- News Item 3 -->
-            <article class="news-preview-card" data-id="3">
-              <div class="news-preview-card-header">
-                <span class="news-preview-date">25 Ott</span>
-                <span class="news-preview-category">Legale</span>
-              </div>
-              <div class="news-preview-content">
-                <h3>Riforma del Diritto Societario</h3>
-                <div class="news-preview-text">
-                  <p>Analisi delle principali modifiche introdotte dalla riforma del diritto societario in vigore dal 2025.</p>
-                </div>
-                <div class="news-full-content" style="display:none;">
-                  <p>La riforma del diritto societario introduce significative novità per le società italiane:</p>
-                  <ul>
-                    <li>Nuove regole per le assemblee telematiche</li>
-                    <li>Modifiche alla responsabilità degli amministratori</li>
-                    <li>Introduzione del voto per corrispondenza</li>
-                    <li>Nuove disposizioni sulle fusioni semplificate</li>
-                    <li>Adempimenti digitali obbligatori</li>
-                  </ul>
-                  <p>Il nostro studio ha preparato una sintesi delle principali novità.</p>
-                </div>
-                <div class="news-preview-actions">
-                  <a href="#" class="news-read-more">Leggi tutto</a>
-                  <a href="pdf/newsletter-3.pdf" class="news-preview-download" download>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                      <polyline points="7 10 12 15 17 10"></polyline>
-                      <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    PDF
-                  </a>
-                </div>
-              </div>
-            </article>
-            
-            <!-- News Item 4 -->
-            <article class="news-preview-card" data-id="4">
-              <div class="news-preview-card-header">
-                <span class="news-preview-date">05 Set</span>
-                <span class="news-preview-category">Economia</span>
-              </div>
-              <div class="news-preview-content">
-                <h3>Incentivi per la Crescita Aziendale</h3>
-                <div class="news-preview-text">
-                  <p>Panoramica degli incentivi disponibili per le aziende nel secondo semestre 2025.</p>
-                </div>
-                <div class="news-full-content" style="display:none;">
-                  <p>Il Ministero dello Sviluppo Economico ha pubblicato il bando per gli incentivi alla crescita aziendale:</p>
-                  <ul>
-                    <li>Crediti d'imposta per assunzioni under 35</li>
-                    <li>Finanziamenti a tasso zero per digitalizzazione</li>
-                    <li>Contributi per formazione del personale</li>
-                    <li>Sgravi fiscali per investimenti in R&S</li>
-                    <li>Agevolazioni per transizione ecologica</li>
-                  </ul>
-                  <p>Scarica la nostra guida per accedere ai benefici.</p>
-                </div>
-                <div class="news-preview-actions">
-                  <a href="#" class="news-read-more">Leggi tutto</a>
-                  <a href="pdf/newsletter-4.pdf" class="news-preview-download" download>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                      <polyline points="7 10 12 15 17 10"></polyline>
-                      <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    PDF
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </main>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- Newsletter CTA Section -->
-
-<section class="newsletter-cta-section">
+<section class="news-archive">
   <div class="container">
-    <div class="newsletter-cta-box">
-      <div class="cta-content">
-        <h3>Rimani sempre aggiornato</h3>
-        <p>Iscriviti alla nostra newsletter per ricevere gli ultimi aggiornamenti fiscali e legali direttamente nella tua casella di posta.</p>
-      </div>
-
-<form class="newsletter-form" id="mainNewsletterForm">
-    <div class="form-row">
-        <div class="form-group">
-            <input type="text" id="mainName" name="name" placeholder="Nome" required>
-            <div class="error-message" id="nameError"></div>
+    <div class="archive-grid">
+      <!-- Sidebar -->
+      <aside class="news-sidebar">
+        <div class="popular-news-box" id="popularNewsBox">
+          <h3>News Popolari</h3>
+          <!-- Popular news items will be dynamically inserted here -->
         </div>
-        <div class="form-group">
-            <input type="email" id="mainEmail" name="email" placeholder="Email" required>
-            <div class="error-message" id="emailError"></div>
+        
+        <div class="news-categories">
+          <h4>Categorie</h4>
+          <ul id="newsCategories">
+            <li><a href="#" class="active" data-category="all">Tutte le news</a></li>
+            <!-- Category links will be dynamically inserted here -->
+          </ul>
         </div>
-        <button type="submit" class="cta-button">Iscriviti</button>
-    </div>
-    <div class="form-group checkbox-group">
-        <input type="checkbox" id="mainPrivacy" name="privacy" required>
-        <label for="mainPrivacy">Accetto l'<a href="privacy.html">informativa sulla privacy</a></label>
-        <div class="error-message" id="privacyError"></div>
-    </div>
-    <div id="formSuccessMessage" class="success-message" style="display: none;"></div>
-</form>
 
+        <div class="news-downloads">
+          <h4>Risorse Utili</h4>
+          <div class="download-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <a href="#">Guida Fiscale 2025</a>
+          </div>
+          <div class="download-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <a href="#">Checklist GDPR</a>
+          </div>
+        </div>
+      </aside>
+      
+      <main class="news-main-content">
+        <div class="news-sort">
+          <span>Ordina per:</span>
+          <select id="newsSort">
+            <option value="recent">Più recenti</option>
+            <option value="oldest">Più vecchi</option>
+            <option value="popular">Più letti</option>
+          </select>
+        </div>
+        
+        <div class="news-list" id="newsList">
+          <!-- News items will be dynamically inserted here -->
+        </div>
+        
+        <div class="news-pagination" id="newsPagination">
+          <!-- Pagination will be dynamically inserted here -->
+        </div>
+      </main>
     </div>
   </div>
 </section>
 
-
-</main>
-
-  <!-- Footer Component -->
-  <footer class="footer">
-    <div class="footerContent">
-      <div class="footerColumn">
-        <div class="footerLogo">
-          <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
-        </div>
-        <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+<!-- Footer Component -->
+<footer class="footer">
+  <div class="footerContent">
+    <div class="footerColumn">
+      <div class="footerLogo">
+        <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
       </div>
+      <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+    </div>
 
-      <div class="footerColumn">
-        <h3 class="footerHeading">Contatti</h3>
-        <div class="footerInfo">
-          <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-          <p><strong>Email:</strong> info@studicabragadin.it</p>
-          <p><strong>Tel:</strong> +39 049 1234567</p>
-        </div>
-      </div>
-
-      <div class="footerColumn">
-        <h3 class="footerHeading">Link</h3>
-        <div class="footerLinks">
-          <a href="chi-siamo.html">Chi siamo</a>
-          <a href="servizi.html">Servizi/Settori</a>
-          <a href="contatti.html">Contatti</a>
-        </div>
-      </div>
-
-      <div class="footerColumn">
-        <h3 class="footerHeading">Legale</h3>
-        <div class="footerLinks">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Termini</a>
-          <a href="cookies.html">Cookies</a>
-        </div>
+    <div class="footerColumn">
+      <h3 class="footerHeading">Contatti</h3>
+      <div class="footerInfo">
+        <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+        <p><strong>Email:</strong> info@studicabragadin.it</p>
+        <p><strong>Tel:</strong> +39 049 1234567</p>
       </div>
     </div>
 
-    <div class="footerCopyright">
-      <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
+    <div class="footerColumn">
+      <h3 class="footerHeading">Link</h3>
+      <div class="footerLinks">
+        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="servizi.html">Servizi/Settori</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
     </div>
-  </footer>
 
-  <div class="gototop js-top">
-    <a href="#" class="js-gotop" title="Torna a inizio pagina">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-  </div>
-
-
-
-
-  <div class="news-modal" id="newsModal">
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <div class="modal-body" id="modalBody"></div>
+    <div class="footerColumn">
+      <h3 class="footerHeading">Legale</h3>
+      <div class="footerLinks">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Termini</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
     </div>
   </div>
 
-  <!-- Scripts -->
+  <div class="footerCopyright">
+    <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
+  </div>
+</footer>
 
-  <script src="js/navbar-scroll.js" defer></script>
-  <script src="js/newsletter-form.js" defer></script>
+<div class="gototop js-top">
+  <a href="#" class="js-gotop" title="Torna a inizio pagina">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</div>
 
+<div class="news-modal" id="newsModal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+// News data - this would typically come from a database in a real application
+const newsData = [
+  {
+    id: 1,
+    title: "Novità Fiscali per il 2025",
+    date: "15 Gen 2025",
+    fullDate: "2025-01-15",
+    category: "Novità fiscali",
+    preview: "Analisi completa delle principali novità fiscali introdotte con la Legge di Bilancio 2025 e loro impatto sulle imprese.",
+    content: `<p>La Legge di Bilancio 2025 introduce importanti novità nel panorama fiscale italiano. Tra le principali modifiche:</p>
+      <ul>
+        <li>Revisione degli scaglioni IRPEF con nuove aliquote</li>
+        <li>Modifiche al regime forfettario con aumento della soglia a 85.000€</li>
+        <li>Nuove detrazioni per investimenti in innovazione tecnologica</li>
+        <li>Proroga del superammortamento al 140%</li>
+        <li>Introduzione del credito d'imposta formazione 4.0</li>
+      </ul>
+      <p>Il nostro studio ha preparato un'analisi dettagliata disponibile in formato PDF.</p>`,
+    pdf: "pdf/newsletter-1.pdf",
+    views: 1250
+  },
+  {
+    id: 2,
+    title: "Aggiornamenti GDPR e Privacy",
+    date: "10 Nov 2024",
+    fullDate: "2024-11-10",
+    category: "Privacy",
+    preview: "Guida pratica agli adempimenti privacy per le PMI alla luce delle ultime modifiche normative.",
+    content: `<p>Il Garante per la protezione dei dati personali ha recentemente pubblicato nuove linee guida che impattano sulle PMI:</p>
+      <ul>
+        <li>Nuovi requisiti per i registri dei trattamenti</li>
+        <li>Obblighi aggiornati per i DPO (Data Protection Officer)</li>
+        <li>Procedure semplificate per le valutazioni d'impatto</li>
+        <li>Maggiori responsabilità per i responsabili del trattamento</li>
+        <li>Nuove sanzioni per violazioni del GDPR</li>
+      </ul>
+      <p>Scarica la nostra guida completa con modelli e checklist operative.</p>`,
+    pdf: "pdf/newsletter-2.pdf",
+    views: 980
+  },
+  {
+    id: 3,
+    title: "Riforma del Diritto Societario",
+    date: "25 Ott 2024",
+    fullDate: "2024-10-25",
+    category: "Legale",
+    preview: "Analisi delle principali modifiche introdotte dalla riforma del diritto societario in vigore dal 2025.",
+    content: `<p>La riforma del diritto societario introduce significative novità per le società italiane:</p>
+      <ul>
+        <li>Nuove regole per le assemblee telematiche</li>
+        <li>Modifiche alla responsabilità degli amministratori</li>
+        <li>Introduzione del voto per corrispondenza</li>
+        <li>Nuove disposizioni sulle fusioni semplificate</li>
+        <li>Adempimenti digitali obbligatori</li>
+      </ul>
+      <p>Il nostro studio ha preparato una sintesi delle principali novità.</p>`,
+    pdf: "pdf/newsletter-3.pdf",
+    views: 850
+  },
+  {
+    id: 4,
+    title: "Incentivi per la Crescita Aziendale",
+    date: "05 Set 2024",
+    fullDate: "2024-09-05",
+    category: "Economia",
+    preview: "Panoramica degli incentivi disponibili per le aziende nel secondo semestre 2025.",
+    content: `<p>Il Ministero dello Sviluppo Economico ha pubblicato il bando per gli incentivi alla crescita aziendale:</p>
+      <ul>
+        <li>Crediti d'imposta per assunzioni under 35</li>
+        <li>Finanziamenti a tasso zero per digitalizzazione</li>
+        <li>Contributi per formazione del personale</li>
+        <li>Sgravi fiscali per investimenti in R&S</li>
+        <li>Agevolazioni per transizione ecologica</li>
+      </ul>
+      <p>Scarica la nostra guida per accedere ai benefici.</p>`,
+    pdf: "pdf/newsletter-4.pdf",
+    views: 720
+  },
+  {
+    id: 5,
+    title: "Nuove Regole per il Lavoro Agile",
+    date: "20 Ago 2024",
+    fullDate: "2024-08-20",
+    category: "Legale",
+    preview: "Le nuove disposizioni sul lavoro agile e i loro impatti su aziende e lavoratori.",
+    content: `<p>La nuova normativa sul lavoro agile introduce diverse novità:</p>
+      <ul>
+        <li>Definizione chiara di lavoro agile e telelavoro</li>
+        <li>Nuovi obblighi per le aziende in termini di sicurezza</li>
+        <li>Diritto alla disconnessione</li>
+        <li>Modifiche alla disciplina degli orari</li>
+        <li>Agevolazioni fiscali per le aziende che adottano modelli strutturati</li>
+      </ul>
+      <p>Scarica la nostra guida per un'analisi completa.</p>`,
+    pdf: "pdf/newsletter-5.pdf",
+    views: 650
+  },
+  {
+    id: 6,
+    title: "Digitalizzazione Processi Aziendali",
+    date: "12 Lug 2024",
+    fullDate: "2024-07-12",
+    category: "Economia",
+    preview: "Opportunità e vantaggi della digitalizzazione dei processi aziendali nel 2025.",
+    content: `<p>La digitalizzazione dei processi aziendali offre numerosi vantaggi:</p>
+      <ul>
+        <li>Riduzione dei costi operativi fino al 30%</li>
+        <li>Miglioramento dell'efficienza dei processi</li>
+        <li>Nuove opportunità di business digitale</li>
+        <li>Miglioramento dell'esperienza cliente</li>
+        <li>Accesso a nuovi mercati</li>
+      </ul>
+      <p>Scarica la nostra guida per iniziare il percorso di digitalizzazione.</p>`,
+    pdf: "pdf/newsletter-6.pdf",
+    views: 580
+  },
+  {
+    id: 7,
+    title: "Nuove Agevolazioni per le Startup",
+    date: "30 Giu 2024",
+    fullDate: "2024-06-30",
+    category: "Economia",
+    preview: "Le nuove agevolazioni fiscali per startup innovative nel 2025.",
+    content: `<p>Il Ministero dello Sviluppo Economico ha introdotto nuove agevolazioni:</p>
+      <ul>
+        <li>Crediti d'imposta per assunzioni di ricercatori</li>
+        <li>Estensione del patent box</li>
+        <li>Nuove detrazioni per investimenti in R&S</li>
+        <li>Agevolazioni per l'internazionalizzazione</li>
+      </ul>
+      <p>Scarica la nostra guida per accedere alle agevolazioni.</p>`,
+    pdf: "pdf/newsletter-7.pdf",
+    views: 520
+  },
+  {
+    id: 8,
+    title: "Modifiche alla Normativa Antiriciclaggio",
+    date: "15 Mag 2024",
+    fullDate: "2024-05-15",
+    category: "Legale",
+    preview: "Le nuove disposizioni antiriciclaggio e loro impatto sulle aziende.",
+    content: `<p>La nuova normativa antiriciclaggio introduce importanti novità:</p>
+      <ul>
+        <li>Nuovi obblighi di verifica della clientela</li>
+        <li>Estensione dei soggetti obbligati</li>
+        <li>Maggiori requisiti per i sistemi di controllo interni</li>
+        <li>Nuove sanzioni per inadempienze</li>
+      </ul>
+      <p>Scarica la nostra checklist per l'adeguamento.</p>`,
+    pdf: "pdf/newsletter-8.pdf",
+    views: 490
+  }
+];
+
+// Pagination variables
+let currentPage = 1;
+const newsPerPage = 4;
+let currentNewsItems = [];
+
+// Function to render news items with pagination
+function renderNewsItems(newsItems, sortBy = 'recent', page = 1) {
+  const newsList = document.getElementById('newsList');
+  const pagination = document.getElementById('newsPagination');
+  newsList.innerHTML = '';
+  pagination.innerHTML = '';
+
+  // Sort news items based on the selected option
+  let sortedNews = [...newsItems];
   
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Navigation Functionality
-      const hamburger = document.getElementById('hamburger');
-      const navMenu = document.getElementById('navMenu');
-      const body = document.body;
-      const dropdowns = document.querySelectorAll('.dropdown');
-      let lastTapTime = 0;
-      const doubleTapDelay = 300;
+  if (sortBy === 'recent') {
+    sortedNews.sort((a, b) => new Date(b.fullDate) - new Date(a.fullDate));
+  } else if (sortBy === 'oldest') {
+    sortedNews.sort((a, b) => new Date(a.fullDate) - new Date(b.fullDate));
+  } else if (sortBy === 'popular') {
+    sortedNews.sort((a, b) => b.views - a.views);
+  }
 
-      // Toggle Hamburger Menu
-      if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function(e) {
-          e.stopPropagation();
-          this.classList.toggle('active');
-          navMenu.classList.toggle('active');
-          body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-          this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
-          
-          if (!navMenu.classList.contains('active')) {
-            closeAllDropdowns();
-          }
-        });
+  // Update current news items
+  currentNewsItems = sortedNews;
+  
+  // Calculate total pages
+  const totalPages = Math.ceil(sortedNews.length / newsPerPage);
+  
+  // Calculate start and end index for current page
+  const startIndex = (page - 1) * newsPerPage;
+  const endIndex = Math.min(startIndex + newsPerPage, sortedNews.length);
+  
+  // Render news items for current page
+  for (let i = startIndex; i < endIndex; i++) {
+    const news = sortedNews[i];
+    const newsItem = document.createElement('article');
+    newsItem.className = 'news-preview-card';
+    newsItem.setAttribute('data-id', news.id);
+    newsItem.innerHTML = `
+      <div class="news-preview-card-header">
+        <span class="news-preview-date">${news.date}</span>
+        <span class="news-preview-category">${news.category}</span>
+      </div>
+      <div class="news-preview-content">
+        <h3>${news.title}</h3>
+        <div class="news-preview-text">
+          <p>${news.preview}</p>
+        </div>
+        <div class="news-full-content" style="display:none;">
+          ${news.content}
+        </div>
+        <div class="news-preview-actions">
+          <a href="#" class="news-read-more">Leggi tutto</a>
+          <a href="${news.pdf}" class="news-preview-download" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            PDF
+          </a>
+        </div>
+      </div>
+    `;
+    newsList.appendChild(newsItem);
+  }
+
+  // Render pagination controls if needed
+  if (totalPages > 1) {
+    let paginationHTML = '<div class="pagination-controls">';
+    
+    // Previous button
+    if (page > 1) {
+      paginationHTML += `<button class="pagination-button" data-page="${page - 1}">Precedente</button>`;
+    }
+    
+    // Page numbers
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === page) {
+        paginationHTML += `<span class="current-page">${i}</span>`;
+      } else {
+        paginationHTML += `<button class="pagination-button" data-page="${i}">${i}</button>`;
       }
-
-      // Setup dropdown functionality
-      function setupDropdowns() {
-        dropdowns.forEach(dropdown => {
-          const link = dropdown.querySelector('.navLink');
-          const menu = dropdown.querySelector('.dropdown-menu');
-          
-          if (link && menu) {
-            // Desktop hover behavior
-            dropdown.addEventListener('mouseenter', function() {
-              if (window.innerWidth > 768) {
-                openDropdown(this);
-              }
-            });
-            
-            dropdown.addEventListener('mouseleave', function() {
-              if (window.innerWidth > 768) {
-                closeDropdown(this);
-              }
-            });
-            
-            // Mobile click behavior
-            link.addEventListener('click', function(e) {
-              if (window.innerWidth <= 768) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                const now = new Date().getTime();
-                const isDoubleTap = (now - lastTapTime) < doubleTapDelay;
-                lastTapTime = now;
-                
-                if (isDoubleTap) {
-                  window.location.href = link.getAttribute('href');
-                } else {
-                  if (menu.classList.contains('active')) {
-                    closeDropdown(dropdown);
-                  } else {
-                    openDropdown(dropdown);
-                    closeOtherDropdowns(dropdown);
-                  }
-                }
-              }
-            });
-          }
-        });
-      }
-
-      function openDropdown(dropdown) {
-        const menu = dropdown.querySelector('.dropdown-menu');
-        dropdown.classList.add('active');
-        menu.classList.add('active');
-      }
-
-      function closeDropdown(dropdown) {
-        const menu = dropdown.querySelector('.dropdown-menu');
-        dropdown.classList.remove('active');
-        menu.classList.remove('active');
-      }
-
-      function closeAllDropdowns() {
-        dropdowns.forEach(dropdown => {
-          closeDropdown(dropdown);
-        });
-      }
-
-      function closeOtherDropdowns(currentDropdown) {
-        dropdowns.forEach(dropdown => {
-          if (dropdown !== currentDropdown) {
-            closeDropdown(dropdown);
-          }
-        });
-      }
-
-      document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown') && window.innerWidth > 768) {
-          closeAllDropdowns();
+    }
+    
+    // Next button
+    if (page < totalPages) {
+      paginationHTML += `<button class="pagination-button" data-page="${page + 1}">Successivo</button>`;
+    }
+    
+    paginationHTML += '</div>';
+    pagination.innerHTML = paginationHTML;
+    
+    // Add event listeners to pagination buttons
+    document.querySelectorAll('.pagination-button').forEach(button => {
+      button.addEventListener('click', function() {
+        const newPage = parseInt(this.getAttribute('data-page'));
+        const activeCategory = document.querySelector('#newsCategories a.active');
+        const category = activeCategory ? activeCategory.getAttribute('data-category') : 'all';
+        
+        if (category === 'all') {
+          renderNewsItems(newsData, sortBy, newPage);
+        } else {
+          const filteredNews = newsData.filter(news => news.category === category);
+          renderNewsItems(filteredNews, sortBy, newPage);
         }
         
-        if (window.innerWidth <= 768 && 
-            !e.target.closest('.navbar') && 
-            navMenu.classList.contains('active')) {
-          hamburger.classList.remove('active');
-          navMenu.classList.remove('active');
-          body.style.overflow = '';
-          closeAllDropdowns();
-        }
+        // Scroll to top of news list
+        document.getElementById('newsList').scrollIntoView({ behavior: 'smooth' });
       });
+    });
+  }
 
-      // Highlight active nav link
-      function highlightActiveLink() {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        const allNavLinks = document.querySelectorAll('.navLink, .dropdown-menu a');
+  // Reattach event listeners to the new elements
+  setupNewsModal();
+}
+
+// Function to render popular news in sidebar
+function renderPopularNews() {
+  const popularNewsBox = document.getElementById('popularNewsBox');
+  
+  // Sort news by views and take top 4
+  const popularNews = [...newsData]
+    .sort((a, b) => b.views - a.views)
+    .slice(0, 4);
+  
+  let popularNewsHTML = '<h3>News Popolari</h3>';
+  
+  popularNews.forEach(news => {
+    popularNewsHTML += `
+      <div class="popular-news-item">
+        <span class="popular-news-date">${news.date}</span>
+        <a href="#" class="popular-news-title" data-id="${news.id}">${news.title}</a>
+      </div>
+    `;
+  });
+  
+  popularNewsBox.innerHTML = popularNewsHTML;
+  
+  // Add click event to popular news titles
+  document.querySelectorAll('.popular-news-title').forEach(title => {
+    title.addEventListener('click', function(e) {
+      e.preventDefault();
+      const newsId = parseInt(this.getAttribute('data-id'));
+      const newsItem = newsData.find(item => item.id === newsId);
+      if (newsItem) {
+        showNewsModal(newsItem);
+      }
+    });
+  });
+}
+
+// Function to render categories in sidebar
+function renderCategories() {
+  const categoriesContainer = document.getElementById('newsCategories');
+  
+  // Get unique categories from news data
+  const categories = [...new Set(newsData.map(news => news.category))];
+  
+  let categoriesHTML = '<li><a href="#" class="active" data-category="all">Tutte le news</a></li>';
+  
+  categories.forEach(category => {
+    categoriesHTML += `
+      <li><a href="#" data-category="${category}">${category}</a></li>
+    `;
+  });
+  
+  categoriesContainer.innerHTML = categoriesHTML;
+  
+  // Add click event to category links
+  document.querySelectorAll('#newsCategories a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Update active state
+      document.querySelectorAll('#newsCategories a').forEach(a => a.classList.remove('active'));
+      this.classList.add('active');
+      
+      const category = this.getAttribute('data-category');
+      const sortBy = document.getElementById('newsSort').value;
+      
+      if (category === 'all') {
+        renderNewsItems(newsData, sortBy, 1);
+      } else {
+        const filteredNews = newsData.filter(news => news.category === category);
+        renderNewsItems(filteredNews, sortBy, 1);
+      }
+    });
+  });
+}
+
+// Function to setup news modal functionality
+function setupNewsModal() {
+  const modal = document.getElementById('newsModal');
+  
+  document.querySelectorAll('.news-read-more').forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      const newsCard = this.closest('.news-preview-card');
+      const newsId = parseInt(newsCard.getAttribute('data-id'));
+      const newsItem = newsData.find(item => item.id === newsId);
+      
+      if (newsItem) {
+        showNewsModal(newsItem);
+      }
+    });
+  });
+  
+  document.querySelector('.modal-close').addEventListener('click', function() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+  
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+}
+
+// Function to show news in modal
+function showNewsModal(newsItem) {
+  const modal = document.getElementById('newsModal');
+  const modalBody = document.getElementById('modalBody');
+  
+  modalBody.innerHTML = `
+    <div class="modal-header">
+      <span class="modal-category">${newsItem.category}</span>
+      <span class="modal-date">${newsItem.date}</span>
+    </div>
+    <h2 class="modal-title">${newsItem.title}</h2>
+    <div class="modal-text">${newsItem.content}</div>
+    <div class="modal-actions">
+      <a href="${newsItem.pdf}" class="cta-button" download>Scarica PDF Completo</a>
+    </div>
+  `;
+  
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  
+  // Increment view count (in a real app, this would be saved to a database)
+  newsItem.views++;
+  
+  // Update the popular news in sidebar
+  renderPopularNews();
+}
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', function() {
+  // Set current year in footer
+  document.querySelector('.current-year').textContent = new Date().getFullYear();
+  
+  // Initial render
+  renderNewsItems(newsData);
+  renderPopularNews();
+  renderCategories();
+  
+  // Setup sort functionality
+  document.getElementById('newsSort').addEventListener('change', function() {
+    const sortBy = this.value;
+    const activeCategory = document.querySelector('#newsCategories a.active');
+    const category = activeCategory ? activeCategory.getAttribute('data-category') : 'all';
+    
+    if (category === 'all') {
+      renderNewsItems(newsData, sortBy, 1);
+    } else {
+      const filteredNews = newsData.filter(news => news.category === category);
+      renderNewsItems(filteredNews, sortBy, 1);
+    }
+  });
+  
+  // Navigation functionality (from your original code)
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  const body = document.body;
+  const dropdowns = document.querySelectorAll('.dropdown');
+  let lastTapTime = 0;
+  const doubleTapDelay = 300;
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+      this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+      
+      if (!navMenu.classList.contains('active')) {
+        closeAllDropdowns();
+      }
+    });
+  }
+
+  function setupDropdowns() {
+    dropdowns.forEach(dropdown => {
+      const link = dropdown.querySelector('.navLink');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      
+      if (link && menu) {
+        // Desktop hover behavior
+        dropdown.addEventListener('mouseenter', function() {
+          if (window.innerWidth > 768) {
+            openDropdown(this);
+          }
+        });
         
-        allNavLinks.forEach(link => {
-          const href = link.getAttribute('href');
-          link.classList.remove('active');
-          
-          if (href === currentPage || 
-              (currentPage === '' && href === 'index.html') ||
-              (href.endsWith(currentPage) && currentPage !== 'index.html')) {
-            link.classList.add('active');
+        dropdown.addEventListener('mouseleave', function() {
+          if (window.innerWidth > 768) {
+            closeDropdown(this);
+          }
+        });
+        
+        // Mobile click behavior
+        link.addEventListener('click', function(e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            e.stopPropagation();
             
-            if (link.closest('.dropdown-menu')) {
-              const parentLink = link.closest('.dropdown').querySelector('.navLink');
-              if (parentLink) parentLink.classList.add('active');
+            const now = new Date().getTime();
+            const isDoubleTap = (now - lastTapTime) < doubleTapDelay;
+            lastTapTime = now;
+            
+            if (isDoubleTap) {
+              window.location.href = link.getAttribute('href');
+            } else {
+              if (menu.classList.contains('active')) {
+                closeDropdown(dropdown);
+              } else {
+                openDropdown(dropdown);
+                closeOtherDropdowns(dropdown);
+              }
             }
           }
         });
       }
+    });
+  }
 
-      // Handle window resize
-      function handleResize() {
-        if (window.innerWidth > 768) {
-          if (navMenu) navMenu.classList.remove('active');
-          if (hamburger) {
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
-          }
-          body.style.overflow = '';
-          closeAllDropdowns();
+  function openDropdown(dropdown) {
+    const menu = dropdown.querySelector('.dropdown-menu');
+    dropdown.classList.add('active');
+    menu.classList.add('active');
+  }
+
+  function closeDropdown(dropdown) {
+    const menu = dropdown.querySelector('.dropdown-menu');
+    dropdown.classList.remove('active');
+    menu.classList.remove('active');
+  }
+
+  function closeAllDropdowns() {
+    dropdowns.forEach(dropdown => {
+      closeDropdown(dropdown);
+    });
+  }
+
+  function closeOtherDropdowns(currentDropdown) {
+    dropdowns.forEach(dropdown => {
+      if (dropdown !== currentDropdown) {
+        closeDropdown(dropdown);
+      }
+    });
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown') && window.innerWidth > 768) {
+      closeAllDropdowns();
+    }
+    
+    if (window.innerWidth <= 768 && 
+        !e.target.closest('.navbar') && 
+        navMenu.classList.contains('active')) {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      body.style.overflow = '';
+      closeAllDropdowns();
+    }
+  });
+
+  // Highlight active nav link
+  function highlightActiveLink() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const allNavLinks = document.querySelectorAll('.navLink, .dropdown-menu a');
+    
+    allNavLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      link.classList.remove('active');
+      
+      if (href === currentPage || 
+          (currentPage === '' && href === 'index.html') ||
+          (href.endsWith(currentPage) && currentPage !== 'index.html')) {
+        link.classList.add('active');
+        
+        if (link.closest('.dropdown-menu')) {
+          const parentLink = link.closest('.dropdown').querySelector('.navLink');
+          if (parentLink) parentLink.classList.add('active');
         }
       }
-
-      // News modal functionality
-      const modal = document.getElementById('newsModal');
-      if (modal) {
-        const modalBody = document.getElementById('modalBody');
-        
-        document.querySelectorAll('.news-read-more').forEach(button => {
-          button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const newsCard = this.closest('.news-preview-card');
-            const newsId = newsCard.getAttribute('data-id');
-            const newsTitle = newsCard.querySelector('h3').textContent;
-            const newsDate = newsCard.querySelector('.news-preview-date').textContent;
-            const newsCategory = newsCard.querySelector('.news-preview-category').textContent;
-            const newsContent = newsCard.querySelector('.news-full-content').innerHTML;
-            const pdfLink = newsCard.querySelector('.news-preview-download').getAttribute('href');
-            
-            modalBody.innerHTML = `
-              <div class="modal-header">
-                <span class="modal-category">${newsCategory}</span>
-                <span class="modal-date">${newsDate}</span>
-              </div>
-              <h2 class="modal-title">${newsTitle}</h2>
-              <div class="modal-text">${newsContent}</div>
-              <div class="modal-actions">
-                <a href="${pdfLink}" class="cta-button" download>Scarica PDF Completo</a>
-              </div>
-            `;
-            
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-          });
-        });
-        
-        document.querySelector('.modal-close').addEventListener('click', function() {
-          modal.style.display = 'none';
-          document.body.style.overflow = 'auto';
-        });
-        
-        modal.addEventListener('click', function(e) {
-          if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-          }
-        });
-      }
-
-// Update the newsletter form submission
-const mainNewsletterForm = document.getElementById('mainNewsletterForm');
-if (mainNewsletterForm) {
-  mainNewsletterForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('mainName').value;
-    const email = document.getElementById('mainEmail').value;
-    
-    // Here you would typically send the data to your server
-    alert(`Grazie ${name}! La tua email ${email} è stata registrata con successo. Riceverai la nostra newsletter a breve.`);
-    this.reset();
-  });
-}
-
-      // Set current year in footer
-      const yearElements = document.querySelectorAll('.current-year');
-      yearElements.forEach(element => {
-        element.textContent = new Date().getFullYear();
-      });
-
-      // Initialize dropdowns and active link highlighting
-      setupDropdowns();
-      highlightActiveLink();
-      window.addEventListener('resize', handleResize);
     });
-  </script>
+  }
 
-  <script>
-  // Show button on scroll
-  window.addEventListener("scroll", function () {
+  // Handle window resize
+  function handleResize() {
+    if (window.innerWidth > 768) {
+      if (navMenu) navMenu.classList.remove('active');
+      if (hamburger) {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+      body.style.overflow = '';
+      closeAllDropdowns();
+    }
+  }
+
+  // Initialize dropdowns and active link highlighting
+  setupDropdowns();
+  highlightActiveLink();
+  window.addEventListener('resize', handleResize);
+  
+  // Scroll to top button functionality
+  window.addEventListener("scroll", function() {
     const scrollBtn = document.querySelector(".js-top");
     if (window.scrollY > 300) {
       scrollBtn.classList.add("active");
@@ -648,17 +784,75 @@ if (mainNewsletterForm) {
     }
   });
 
-  // Scroll to top on click
-  document.querySelector(".js-gotop").addEventListener("click", function (e) {
+  document.querySelector(".js-gotop").addEventListener("click", function(e) {
     e.preventDefault();
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
   });
+});
 </script>
 
+<style>
+/* Additional CSS for pagination */
+.news-pagination {
+  margin-top: 40px;
+  text-align: center;
+}
 
+.pagination-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
 
+.pagination-button, .current-page {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.pagination-button {
+  background-color: var(--light-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.pagination-button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.current-page {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+}
+
+/* Adjust news list height to match sidebar */
+.archive-grid {
+  align-items: flex-start;
+}
+
+.news-main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.news-list {
+  flex: 1;
+  min-height: 600px; /* Adjust this value to match your sidebar height */
+}
+
+@media (max-width: 992px) {
+  .news-list {
+    min-height: auto;
+  }
+}
+</style>
 </body>
 </html>
