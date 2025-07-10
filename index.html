@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -219,6 +220,10 @@
   </div>
 </section>
 
+
+
+<!-- News Section -->
+ <!-- News Preview Section -->
 <section class="news-preview-section">
   <div class="news-preview-container">
     <div class="news-preview-header">
@@ -227,7 +232,6 @@
     </div>
     
     <div class="news-preview-grid" id="newsPreviewGrid">
-      <!-- News items will be loaded here dynamically -->
       <div class="news-loading">
         <div class="news-loading-spinner"></div>
       </div>
@@ -293,9 +297,9 @@
 </div>
 
 
-
 <!-- Scripts -->
  
+<!-- Scripts -->
 <script src="js/navbar-scroll.js" defer></script>
 
 <script>
@@ -498,35 +502,50 @@
         .then(html => {
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, 'text/html');
-          const items = doc.querySelectorAll('.news-preview-card');
+          const scriptContent = doc.querySelector('script').textContent;
+          
+          // Extract newsData from the script
+          const newsDataMatch = scriptContent.match(/const newsData = (\[.*?\])/s);
+          if (!newsDataMatch || !newsDataMatch[1]) {
+            throw new Error('News data not found');
+          }
+          
+          // Safely evaluate the newsData array
+          const newsData = JSON.parse(newsDataMatch[1]
+            .replace(/(\w+):/g, '"$1":')  // Convert keys to quoted
+            .replace(/'/g, '"')           // Replace single with double quotes
+            .replace(/,\s*]/g, ']')       // Remove trailing commas
+          );
 
-          if (!items.length) {
-            newsGrid.innerHTML = '<div class="news-error">No news available</div>';
+          if (!newsData.length) {
+            newsGrid.innerHTML = '<div class="news-error">Nessuna news disponibile</div>';
             return;
           }
 
-          newsGrid.innerHTML = '';
-          Array.from(items).slice(0, 3).forEach(item => {
-            const date = item.querySelector('.news-preview-date')?.textContent || '';
-            const cat = item.querySelector('.news-preview-category')?.textContent || '';
-            const title = item.querySelector('h3')?.textContent || '';
-            const preview = item.querySelector('.news-preview-text p')?.textContent || '';
-            const pdf = item.querySelector('.news-preview-download')?.getAttribute('href') || '#';
-            const id = item.getAttribute('data-id');
+          // Sort by most recent first (using fullDate if available)
+          const sortedNews = [...newsData].sort((a, b) => {
+            return new Date(b.fullDate || b.date) - new Date(a.fullDate || a.date);
+          });
 
+          // Take top 3
+          const topNews = sortedNews.slice(0, 3);
+          
+          newsGrid.innerHTML = '';
+          
+          topNews.forEach(news => {
             const card = document.createElement('div');
             card.className = 'news-preview-card';
             card.innerHTML = `
               <div class="news-preview-card-header">
-                <span class="news-preview-date">${date}</span>
-                <span class="news-preview-category">${cat}</span>
+                <span class="news-preview-date">${news.date}</span>
+                <span class="news-preview-category">${news.category}</span>
               </div>
               <div class="news-preview-content">
-                <h3>${title}</h3>
-                <p>${preview}</p>
+                <h3>${news.title}</h3>
+                <p>${news.preview}</p>
                 <div class="news-preview-actions">
-                  <a href="news.html#news-${id}" class="news-preview-more">Leggi tutto</a>
-                  <a href="${pdf}" class="news-preview-download" download>PDF</a>
+                  <a href="news.html#news-${news.id}" class="news-preview-more">Leggi tutto</a>
+                  <a href="${news.pdf}" class="news-preview-download" download>PDF</a>
                 </div>
               </div>
             `;
@@ -534,11 +553,11 @@
           });
         })
         .catch(err => {
-          console.error(err);
+          console.error('Error loading news:', err);
           newsGrid.innerHTML = `
             <div class="news-error">
-              <p>Error loading news.</p>
-              <a href="news.html">Go to news page</a>
+              <p>Impossibile caricare le news al momento.</p>
+              <a href="news.html">Vai alla pagina news</a>
             </div>`;
         });
     }
@@ -583,7 +602,9 @@
       bg.style.transform = `translateY(${scroll * 0.4}px)`;
     }
   });
-
 </script>
+
+
+
 </body>
 </html>
