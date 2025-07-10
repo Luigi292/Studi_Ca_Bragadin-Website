@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Novità Fiscali per il 2025",
+    "date": "15 Gen 2025",
+    "fullDate": "2025-01-15",
+    "category": "Novità fiscali",
+    "preview": "Analisi completa delle principali novità fiscali introdotte con la Legge di Bilancio 2025 e loro impatto sulle imprese.",
+    "content": "<p>La Legge di Bilancio 2025 introduce importanti novità nel panorama fiscale italiano. Tra le principali modifiche:</p><ul><li>Revisione degli scaglioni IRPEF con nuove aliquote</li><li>Modifiche al regime forfettario con aumento della soglia a 85.000€</li><li>Nuove detrazioni per investimenti in innovazione tecnologica</li><li>Proroga del superammortamento al 140%</li><li>Introduzione del credito d'imposta formazione 4.0</li></ul><p>Il nostro studio ha preparato un'analisi dettagliata disponibile in formato PDF.</p>",
+    "pdf": "pdf/newsletter-1.pdf",
+    "views": 1250
+  },
+  {
+    "id": 2,
+    "title": "Aggiornamenti GDPR e Privacy",
+    "date": "10 Nov 2024",
+    "fullDate": "2024-11-10",
+    "category": "Privacy",
+    "preview": "Guida pratica agli adempimenti privacy per le PMI alla luce delle ultime modifiche normative.",
+    "content": "<p>Il Garante per la protezione dei dati personali ha recentemente pubblicato nuove linee guida che impattano sulle PMI:</p><ul><li>Nuovi requisiti per i registri dei trattamenti</li><li>Obblighi aggiornati per i DPO (Data Protection Officer)</li><li>Procedure semplificate per le valutazioni d'impatto</li><li>Maggiori responsabilità per i responsabili del trattamento</li><li>Nuove sanzioni per violazioni del GDPR</li></ul><p>Scarica la nostra guida completa con modelli e checklist operative.</p>",
+    "pdf": "pdf/newsletter-2.pdf",
+    "views": 980
+  },
+  {
+    "id": 3,
+    "title": "Riforma del Diritto Societario",
+    "date": "25 Ott 2024",
+    "fullDate": "2024-10-25",
+    "category": "Legale",
+    "preview": "Analisi delle principali modifiche introdotte dalla riforma del diritto societario in vigore dal 2025.",
+    "content": "<p>La riforma del diritto societario introduce significative novità per le società italiane:</p><ul><li>Nuove regole per le assemblee telematiche</li><li>Modifiche alla responsabilità degli amministratori</li><li>Introduzione del voto per corrispondenza</li><li>Nuove disposizioni sulle fusioni semplificate</li><li>Adempimenti digitali obbligatori</li></ul><p>Il nostro studio ha preparato una sintesi delle principali novità.</p>",
+    "pdf": "pdf/newsletter-3.pdf",
+    "views": 850
+  },
+  {
+    "id": 4,
+    "title": "Incentivi per la Crescita Aziendale",
+    "date": "05 Set 2024",
+    "fullDate": "2024-09-05",
+    "category": "Economia",
+    "preview": "Panoramica degli incentivi disponibili per le aziende nel secondo semestre 2025.",
+    "content": "<p>Il Ministero dello Sviluppo Economico ha pubblicato il bando per gli incentivi alla crescita aziendale:</p><ul><li>Crediti d'imposta per assunzioni under 35</li><li>Finanziamenti a tasso zero per digitalizzazione</li><li>Contributi per formazione del personale</li><li>Sgravi fiscali per investimenti in R&S</li><li>Agevolazioni per transizione ecologica</li></ul><p>Scarica la nostra guida per accedere ai benefici.</p>",
+    "pdf": "pdf/newsletter-4.pdf",
+    "views": 720
+  },
+  {
+    "id": 5,
+    "title": "Nuove Regole per il Lavoro Agile",
+    "date": "20 Ago 2024",
+    "fullDate": "2024-08-20",
+    "category": "Legale",
+    "preview": "Le nuove disposizioni sul lavoro agile e i loro impatti su aziende e lavoratori.",
+    "content": "<p>La nuova normativa sul lavoro agile introduce diverse novità:</p><ul><li>Definizione chiara di lavoro agile e telelavoro</li><li>Nuovi obblighi per le aziende in termini di sicurezza</li><li>Diritto alla disconnessione</li><li>Modifiche alla disciplina degli orari</li><li>Agevolazioni fiscali per le aziende che adottano modelli strutturati</li></ul><p>Scarica la nostra guida per un'analisi completa.</p>",
+    "pdf": "pdf/newsletter-5.pdf",
+    "views": 650
+  },
+  {
+    "id": 6,
+    "title": "Digitalizzazione Processi Aziendali",
+    "date": "12 Lug 2024",
+    "fullDate": "2024-07-12",
+    "category": "Economia",
+    "preview": "Opportunità e vantaggi della digitalizzazione dei processi aziendali nel 2025.",
+    "content": "<p>La digitalizzazione dei processi aziendali offre numerosi vantaggi:</p><ul><li>Riduzione dei costi operativi fino al 30%</li><li>Miglioramento dell'efficienza dei processi</li><li>Nuove opportunità di business digitale</li><li>Miglioramento dell'esperienza cliente</li><li>Accesso a nuovi mercati</li></ul><p>Scarica la nostra guida per iniziare il percorso di digitalizzazione.</p>",
+    "pdf": "pdf/newsletter-6.pdf",
+    "views": 580
+  },
+  {
+    "id": 7,
+    "title": "Nuove Agevolazioni per le Startup",
+    "date": "30 Giu 2024",
+    "fullDate": "2024-06-30",
+    "category": "Economia",
+    "preview": "Le nuove agevolazioni fiscali per startup innovative nel 2025.",
+    "content": "<p>Il Ministero dello Sviluppo Economico ha introdotto nuove agevolazioni:</p><ul><li>Crediti d'imposta per assunzioni di ricercatori</li><li>Estensione del patent box</li><li>Nuove detrazioni per investimenti in R&S</li><li>Agevolazioni per l'internazionalizzazione</li></ul><p>Scarica la nostra guida per accedere alle agevolazioni.</p>",
+    "pdf": "pdf/newsletter-7.pdf",
+    "views": 520
+  },
+  {
+    "id": 8,
+    "title": "Modifiche alla Normativa Antiriciclaggio",
+    "date": "15 Mag 2024",
+    "fullDate": "2024-05-15",
+    "category": "Legale",
+    "preview": "Le nuove disposizioni antiriciclaggio e loro impatto sulle aziende.",
+    "content": "<p>La nuova normativa antiriciclaggio introduce importanti novità:</p><ul><li>Nuovi obblighi di verifica della clientela</li><li>Estensione dei soggetti obbligati</li><li>Maggiori requisiti per i sistemi di controllo interni</li><li>Nuove sanzioni per inadempienze</li></ul><p>Scarica la nostra checklist per l'adeguamento.</p>",
+    "pdf": "pdf/newsletter-8.pdf",
+    "views": 490
+  }
+]
