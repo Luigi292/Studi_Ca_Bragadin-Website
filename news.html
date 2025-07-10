@@ -86,14 +86,13 @@
       <aside class="news-sidebar">
         <div class="popular-news-box" id="popularNewsBox">
           <h3>News Popolari</h3>
-          <!-- Popular news items will be dynamically inserted here -->
+          <div class="loading-spinner"></div>
         </div>
         
         <div class="news-categories">
           <h4>Categorie</h4>
           <ul id="newsCategories">
             <li><a href="#" class="active" data-category="all">Tutte le news</a></li>
-            <!-- Category links will be dynamically inserted here -->
           </ul>
         </div>
 
@@ -129,12 +128,10 @@
         </div>
         
         <div class="news-list" id="newsList">
-          <!-- News items will be dynamically inserted here -->
+          <div class="loading-spinner"></div>
         </div>
         
-        <div class="news-pagination" id="newsPagination">
-          <!-- Pagination will be dynamically inserted here -->
-        </div>
+        <div class="news-pagination" id="newsPagination"></div>
       </main>
     </div>
   </div>
@@ -199,170 +196,35 @@
 </div>
 
 <script>
-// News data - this would typically come from a database in a real application
-const newsData = [
-  {
-    id: 1,
-    title: "Novità Fiscali per il 2025",
-    date: "15 Gen 2025",
-    fullDate: "2025-01-15",
-    category: "Novità fiscali",
-    preview: "Analisi completa delle principali novità fiscali introdotte con la Legge di Bilancio 2025 e loro impatto sulle imprese.",
-    content: `<p>La Legge di Bilancio 2025 introduce importanti novità nel panorama fiscale italiano. Tra le principali modifiche:</p>
-      <ul>
-        <li>Revisione degli scaglioni IRPEF con nuove aliquote</li>
-        <li>Modifiche al regime forfettario con aumento della soglia a 85.000€</li>
-        <li>Nuove detrazioni per investimenti in innovazione tecnologica</li>
-        <li>Proroga del superammortamento al 140%</li>
-        <li>Introduzione del credito d'imposta formazione 4.0</li>
-      </ul>
-      <p>Il nostro studio ha preparato un'analisi dettagliata disponibile in formato PDF.</p>`,
-    pdf: "pdf/newsletter-1.pdf",
-    views: 1250
-  },
-  {
-    id: 2,
-    title: "Aggiornamenti GDPR e Privacy",
-    date: "10 Nov 2024",
-    fullDate: "2024-11-10",
-    category: "Privacy",
-    preview: "Guida pratica agli adempimenti privacy per le PMI alla luce delle ultime modifiche normative.",
-    content: `<p>Il Garante per la protezione dei dati personali ha recentemente pubblicato nuove linee guida che impattano sulle PMI:</p>
-      <ul>
-        <li>Nuovi requisiti per i registri dei trattamenti</li>
-        <li>Obblighi aggiornati per i DPO (Data Protection Officer)</li>
-        <li>Procedure semplificate per le valutazioni d'impatto</li>
-        <li>Maggiori responsabilità per i responsabili del trattamento</li>
-        <li>Nuove sanzioni per violazioni del GDPR</li>
-      </ul>
-      <p>Scarica la nostra guida completa con modelli e checklist operative.</p>`,
-    pdf: "pdf/newsletter-2.pdf",
-    views: 980
-  },
-  {
-    id: 3,
-    title: "Riforma del Diritto Societario",
-    date: "25 Ott 2024",
-    fullDate: "2024-10-25",
-    category: "Legale",
-    preview: "Analisi delle principali modifiche introdotte dalla riforma del diritto societario in vigore dal 2025.",
-    content: `<p>La riforma del diritto societario introduce significative novità per le società italiane:</p>
-      <ul>
-        <li>Nuove regole per le assemblee telematiche</li>
-        <li>Modifiche alla responsabilità degli amministratori</li>
-        <li>Introduzione del voto per corrispondenza</li>
-        <li>Nuove disposizioni sulle fusioni semplificate</li>
-        <li>Adempimenti digitali obbligatori</li>
-      </ul>
-      <p>Il nostro studio ha preparato una sintesi delle principali novità.</p>`,
-    pdf: "pdf/newsletter-3.pdf",
-    views: 850
-  },
-  {
-    id: 4,
-    title: "Incentivi per la Crescita Aziendale",
-    date: "05 Set 2024",
-    fullDate: "2024-09-05",
-    category: "Economia",
-    preview: "Panoramica degli incentivi disponibili per le aziende nel secondo semestre 2025.",
-    content: `<p>Il Ministero dello Sviluppo Economico ha pubblicato il bando per gli incentivi alla crescita aziendale:</p>
-      <ul>
-        <li>Crediti d'imposta per assunzioni under 35</li>
-        <li>Finanziamenti a tasso zero per digitalizzazione</li>
-        <li>Contributi per formazione del personale</li>
-        <li>Sgravi fiscali per investimenti in R&S</li>
-        <li>Agevolazioni per transizione ecologica</li>
-      </ul>
-      <p>Scarica la nostra guida per accedere ai benefici.</p>`,
-    pdf: "pdf/newsletter-4.pdf",
-    views: 720
-  },
-  {
-    id: 5,
-    title: "Nuove Regole per il Lavoro Agile",
-    date: "20 Ago 2024",
-    fullDate: "2024-08-20",
-    category: "Legale",
-    preview: "Le nuove disposizioni sul lavoro agile e i loro impatti su aziende e lavoratori.",
-    content: `<p>La nuova normativa sul lavoro agile introduce diverse novità:</p>
-      <ul>
-        <li>Definizione chiara di lavoro agile e telelavoro</li>
-        <li>Nuovi obblighi per le aziende in termini di sicurezza</li>
-        <li>Diritto alla disconnessione</li>
-        <li>Modifiche alla disciplina degli orari</li>
-        <li>Agevolazioni fiscali per le aziende che adottano modelli strutturati</li>
-      </ul>
-      <p>Scarica la nostra guida per un'analisi completa.</p>`,
-    pdf: "pdf/newsletter-5.pdf",
-    views: 650
-  },
-  {
-    id: 6,
-    title: "Digitalizzazione Processi Aziendali",
-    date: "12 Lug 2024",
-    fullDate: "2024-07-12",
-    category: "Economia",
-    preview: "Opportunità e vantaggi della digitalizzazione dei processi aziendali nel 2025.",
-    content: `<p>La digitalizzazione dei processi aziendali offre numerosi vantaggi:</p>
-      <ul>
-        <li>Riduzione dei costi operativi fino al 30%</li>
-        <li>Miglioramento dell'efficienza dei processi</li>
-        <li>Nuove opportunità di business digitale</li>
-        <li>Miglioramento dell'esperienza cliente</li>
-        <li>Accesso a nuovi mercati</li>
-      </ul>
-      <p>Scarica la nostra guida per iniziare il percorso di digitalizzazione.</p>`,
-    pdf: "pdf/newsletter-6.pdf",
-    views: 580
-  },
-  {
-    id: 7,
-    title: "Nuove Agevolazioni per le Startup",
-    date: "30 Giu 2024",
-    fullDate: "2024-06-30",
-    category: "Economia",
-    preview: "Le nuove agevolazioni fiscali per startup innovative nel 2025.",
-    content: `<p>Il Ministero dello Sviluppo Economico ha introdotto nuove agevolazioni:</p>
-      <ul>
-        <li>Crediti d'imposta per assunzioni di ricercatori</li>
-        <li>Estensione del patent box</li>
-        <li>Nuove detrazioni per investimenti in R&S</li>
-        <li>Agevolazioni per l'internazionalizzazione</li>
-      </ul>
-      <p>Scarica la nostra guida per accedere alle agevolazioni.</p>`,
-    pdf: "pdf/newsletter-7.pdf",
-    views: 520
-  },
-  {
-    id: 8,
-    title: "Modifiche alla Normativa Antiriciclaggio",
-    date: "15 Mag 2024",
-    fullDate: "2024-05-15",
-    category: "Legale",
-    preview: "Le nuove disposizioni antiriciclaggio e loro impatto sulle aziende.",
-    content: `<p>La nuova normativa antiriciclaggio introduce importanti novità:</p>
-      <ul>
-        <li>Nuovi obblighi di verifica della clientela</li>
-        <li>Estensione dei soggetti obbligati</li>
-        <li>Maggiori requisiti per i sistemi di controllo interni</li>
-        <li>Nuove sanzioni per inadempienze</li>
-      </ul>
-      <p>Scarica la nostra checklist per l'adeguamento.</p>`,
-    pdf: "pdf/newsletter-8.pdf",
-    views: 490
-  }
-];
-
-// Pagination variables
+// Global variables
+let newsData = [];
 let currentPage = 1;
 const newsPerPage = 4;
 let currentNewsItems = [];
+
+// Function to fetch news data from JSON file
+async function fetchNewsData() {
+  try {
+    const response = await fetch('news-data.json');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    newsData = await response.json();
+    return newsData;
+  } catch (error) {
+    console.error('Error fetching news data:', error);
+    showError('Impossibile caricare le news al momento. Riprova più tardi.');
+    return [];
+  }
+}
 
 // Function to render news items with pagination
 function renderNewsItems(newsItems, sortBy = 'recent', page = 1) {
   const newsList = document.getElementById('newsList');
   const pagination = document.getElementById('newsPagination');
-  newsList.innerHTML = '';
+  
+  // Show loading state
+  newsList.innerHTML = '<div class="loading-spinner"></div>';
   pagination.innerHTML = '';
 
   // Sort news items based on the selected option
@@ -387,6 +249,7 @@ function renderNewsItems(newsItems, sortBy = 'recent', page = 1) {
   const endIndex = Math.min(startIndex + newsPerPage, sortedNews.length);
   
   // Render news items for current page
+  newsList.innerHTML = '';
   for (let i = startIndex; i < endIndex; i++) {
     const news = sortedNews[i];
     const newsItem = document.createElement('article');
@@ -482,14 +345,18 @@ function renderPopularNews() {
   
   let popularNewsHTML = '<h3>News Popolari</h3>';
   
-  popularNews.forEach(news => {
-    popularNewsHTML += `
-      <div class="popular-news-item">
-        <span class="popular-news-date">${news.date}</span>
-        <a href="#" class="popular-news-title" data-id="${news.id}">${news.title}</a>
-      </div>
-    `;
-  });
+  if (popularNews.length === 0) {
+    popularNewsHTML += '<p>Nessuna news popolare al momento</p>';
+  } else {
+    popularNews.forEach(news => {
+      popularNewsHTML += `
+        <div class="popular-news-item">
+          <span class="popular-news-date">${news.date}</span>
+          <a href="#" class="popular-news-title" data-id="${news.id}">${news.title}</a>
+        </div>
+      `;
+    });
+  }
   
   popularNewsBox.innerHTML = popularNewsHTML;
   
@@ -602,199 +469,272 @@ function showNewsModal(newsItem) {
   renderPopularNews();
 }
 
-// Initialize the page
-document.addEventListener('DOMContentLoaded', function() {
-  // Set current year in footer
-  document.querySelector('.current-year').textContent = new Date().getFullYear();
+// Function to show error message
+function showError(message) {
+  const newsList = document.getElementById('newsList');
+  newsList.innerHTML = `
+    <div class="news-error">
+      <p>${message}</p>
+      <button class="retry-button" id="retryButton">Riprova</button>
+    </div>
+  `;
   
-  // Initial render
-  renderNewsItems(newsData);
-  renderPopularNews();
-  renderCategories();
-  
-  // Setup sort functionality
-  document.getElementById('newsSort').addEventListener('change', function() {
-    const sortBy = this.value;
-    const activeCategory = document.querySelector('#newsCategories a.active');
-    const category = activeCategory ? activeCategory.getAttribute('data-category') : 'all';
-    
-    if (category === 'all') {
-      renderNewsItems(newsData, sortBy, 1);
-    } else {
-      const filteredNews = newsData.filter(news => news.category === category);
-      renderNewsItems(filteredNews, sortBy, 1);
-    }
-  });
-  
-  // Navigation functionality (from your original code)
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
-  const body = document.body;
-  const dropdowns = document.querySelectorAll('.dropdown');
-  let lastTapTime = 0;
-  const doubleTapDelay = 300;
+  document.getElementById('retryButton').addEventListener('click', initializePage);
+}
 
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', function(e) {
-      e.stopPropagation();
-      this.classList.toggle('active');
-      navMenu.classList.toggle('active');
-      body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-      this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+// Initialize the page
+async function initializePage() {
+  try {
+    // Set current year in footer
+    document.querySelector('.current-year').textContent = new Date().getFullYear();
+    
+    // Show loading state
+    document.getElementById('newsList').innerHTML = '<div class="loading-spinner"></div>';
+    document.getElementById('popularNewsBox').innerHTML = '<h3>News Popolari</h3><div class="loading-spinner"></div>';
+    
+    // Fetch news data
+    await fetchNewsData();
+    
+    if (newsData.length === 0) {
+      showError('Nessuna news disponibile al momento.');
+      return;
+    }
+    
+    // Initial render
+    renderNewsItems(newsData);
+    renderPopularNews();
+    renderCategories();
+    
+    // Setup sort functionality
+    document.getElementById('newsSort').addEventListener('change', function() {
+      const sortBy = this.value;
+      const activeCategory = document.querySelector('#newsCategories a.active');
+      const category = activeCategory ? activeCategory.getAttribute('data-category') : 'all';
       
-      if (!navMenu.classList.contains('active')) {
+      if (category === 'all') {
+        renderNewsItems(newsData, sortBy, 1);
+      } else {
+        const filteredNews = newsData.filter(news => news.category === category);
+        renderNewsItems(filteredNews, sortBy, 1);
+      }
+    });
+    
+    // Navigation functionality
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const body = document.body;
+    const dropdowns = document.querySelectorAll('.dropdown');
+    let lastTapTime = 0;
+    const doubleTapDelay = 300;
+
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+        
+        if (!navMenu.classList.contains('active')) {
+          closeAllDropdowns();
+        }
+      });
+    }
+
+    function setupDropdowns() {
+      dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('.navLink');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        
+        if (link && menu) {
+          // Desktop hover behavior
+          dropdown.addEventListener('mouseenter', function() {
+            if (window.innerWidth > 768) {
+              openDropdown(this);
+            }
+          });
+          
+          dropdown.addEventListener('mouseleave', function() {
+            if (window.innerWidth > 768) {
+              closeDropdown(this);
+            }
+          });
+          
+          // Mobile click behavior
+          link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              e.stopPropagation();
+              
+              const now = new Date().getTime();
+              const isDoubleTap = (now - lastTapTime) < doubleTapDelay;
+              lastTapTime = now;
+              
+              if (isDoubleTap) {
+                window.location.href = link.getAttribute('href');
+              } else {
+                if (menu.classList.contains('active')) {
+                  closeDropdown(dropdown);
+                } else {
+                  openDropdown(dropdown);
+                  closeOtherDropdowns(dropdown);
+                }
+              }
+            }
+          });
+        }
+      });
+    }
+
+    function openDropdown(dropdown) {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      dropdown.classList.add('active');
+      menu.classList.add('active');
+    }
+
+    function closeDropdown(dropdown) {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      dropdown.classList.remove('active');
+      menu.classList.remove('active');
+    }
+
+    function closeAllDropdowns() {
+      dropdowns.forEach(dropdown => {
+        closeDropdown(dropdown);
+      });
+    }
+
+    function closeOtherDropdowns(currentDropdown) {
+      dropdowns.forEach(dropdown => {
+        if (dropdown !== currentDropdown) {
+          closeDropdown(dropdown);
+        }
+      });
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && window.innerWidth > 768) {
+        closeAllDropdowns();
+      }
+      
+      if (window.innerWidth <= 768 && 
+          !e.target.closest('.navbar') && 
+          navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        body.style.overflow = '';
         closeAllDropdowns();
       }
     });
-  }
 
-  function setupDropdowns() {
-    dropdowns.forEach(dropdown => {
-      const link = dropdown.querySelector('.navLink');
-      const menu = dropdown.querySelector('.dropdown-menu');
+    // Highlight active nav link
+    function highlightActiveLink() {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const allNavLinks = document.querySelectorAll('.navLink, .dropdown-menu a');
       
-      if (link && menu) {
-        // Desktop hover behavior
-        dropdown.addEventListener('mouseenter', function() {
-          if (window.innerWidth > 768) {
-            openDropdown(this);
-          }
-        });
+      allNavLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        link.classList.remove('active');
         
-        dropdown.addEventListener('mouseleave', function() {
-          if (window.innerWidth > 768) {
-            closeDropdown(this);
+        if (href === currentPage || 
+            (currentPage === '' && href === 'index.html') ||
+            (href.endsWith(currentPage) && currentPage !== 'index.html')) {
+          link.classList.add('active');
+          
+          if (link.closest('.dropdown-menu')) {
+            const parentLink = link.closest('.dropdown').querySelector('.navLink');
+            if (parentLink) parentLink.classList.add('active');
           }
-        });
-        
-        // Mobile click behavior
-        link.addEventListener('click', function(e) {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const now = new Date().getTime();
-            const isDoubleTap = (now - lastTapTime) < doubleTapDelay;
-            lastTapTime = now;
-            
-            if (isDoubleTap) {
-              window.location.href = link.getAttribute('href');
-            } else {
-              if (menu.classList.contains('active')) {
-                closeDropdown(dropdown);
-              } else {
-                openDropdown(dropdown);
-                closeOtherDropdowns(dropdown);
-              }
-            }
-          }
-        });
-      }
-    });
-  }
-
-  function openDropdown(dropdown) {
-    const menu = dropdown.querySelector('.dropdown-menu');
-    dropdown.classList.add('active');
-    menu.classList.add('active');
-  }
-
-  function closeDropdown(dropdown) {
-    const menu = dropdown.querySelector('.dropdown-menu');
-    dropdown.classList.remove('active');
-    menu.classList.remove('active');
-  }
-
-  function closeAllDropdowns() {
-    dropdowns.forEach(dropdown => {
-      closeDropdown(dropdown);
-    });
-  }
-
-  function closeOtherDropdowns(currentDropdown) {
-    dropdowns.forEach(dropdown => {
-      if (dropdown !== currentDropdown) {
-        closeDropdown(dropdown);
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.dropdown') && window.innerWidth > 768) {
-      closeAllDropdowns();
-    }
-    
-    if (window.innerWidth <= 768 && 
-        !e.target.closest('.navbar') && 
-        navMenu.classList.contains('active')) {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
-      body.style.overflow = '';
-      closeAllDropdowns();
-    }
-  });
-
-  // Highlight active nav link
-  function highlightActiveLink() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const allNavLinks = document.querySelectorAll('.navLink, .dropdown-menu a');
-    
-    allNavLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      link.classList.remove('active');
-      
-      if (href === currentPage || 
-          (currentPage === '' && href === 'index.html') ||
-          (href.endsWith(currentPage) && currentPage !== 'index.html')) {
-        link.classList.add('active');
-        
-        if (link.closest('.dropdown-menu')) {
-          const parentLink = link.closest('.dropdown').querySelector('.navLink');
-          if (parentLink) parentLink.classList.add('active');
         }
+      });
+    }
+
+    // Handle window resize
+    function handleResize() {
+      if (window.innerWidth > 768) {
+        if (navMenu) navMenu.classList.remove('active');
+        if (hamburger) {
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+        body.style.overflow = '';
+        closeAllDropdowns();
+      }
+    }
+
+    // Initialize dropdowns and active link highlighting
+    setupDropdowns();
+    highlightActiveLink();
+    window.addEventListener('resize', handleResize);
+    
+    // Scroll to top button functionality
+    window.addEventListener("scroll", function() {
+      const scrollBtn = document.querySelector(".js-top");
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add("active");
+      } else {
+        scrollBtn.classList.remove("active");
       }
     });
-  }
 
-  // Handle window resize
-  function handleResize() {
-    if (window.innerWidth > 768) {
-      if (navMenu) navMenu.classList.remove('active');
-      if (hamburger) {
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-      body.style.overflow = '';
-      closeAllDropdowns();
-    }
-  }
-
-  // Initialize dropdowns and active link highlighting
-  setupDropdowns();
-  highlightActiveLink();
-  window.addEventListener('resize', handleResize);
-  
-  // Scroll to top button functionality
-  window.addEventListener("scroll", function() {
-    const scrollBtn = document.querySelector(".js-top");
-    if (window.scrollY > 300) {
-      scrollBtn.classList.add("active");
-    } else {
-      scrollBtn.classList.remove("active");
-    }
-  });
-
-  document.querySelector(".js-gotop").addEventListener("click", function(e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    document.querySelector(".js-gotop").addEventListener("click", function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
-  });
-});
+  } catch (error) {
+    console.error('Error initializing page:', error);
+    showError('Si è verificato un errore durante il caricamento della pagina.');
+  }
+}
+
+// Start the page initialization when DOM is loaded
+document.addEventListener('DOMContentLoaded', initializePage);
 </script>
 
 <style>
+/* Loading spinner styles */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--secondary-color);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error message styles */
+.news-error {
+  text-align: center;
+  padding: 20px;
+  color: #d9534f;
+}
+
+.news-error p {
+  margin-bottom: 15px;
+}
+
+.retry-button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.retry-button:hover {
+  background-color: var(--secondary-color-dark);
+}
+
 /* Additional CSS for pagination */
 .news-pagination {
   margin-top: 40px;
