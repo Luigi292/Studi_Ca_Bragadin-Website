@@ -2,8 +2,8 @@
 :root {
   --primary-color: #1a2a4a;
   --primary-light: #2c3e66;
-  --secondary-color: #d4af37;
-  --secondary-light: #e8c874;
+  --secondary-color: #bca454;
+  --secondary-light: #9d8854;
   --accent-color: #4a6fa5;
   --dark-color: #222222;
   --light-color: #f8f9fa;
@@ -161,9 +161,8 @@ ul {
   letter-spacing: -0.5px;
 }
 
-.hero-content h1 span {
+.hero-content span {
   color: var(--secondary-color);
-  display: inline;
 }
 
 .hero-subtitle {
@@ -478,16 +477,17 @@ ul {
   color: var(--white-color);
 }
 
-/* ===== COLLABORATION SECTION ===== */
+
+
 
 /* ===== COLLABORATION SECTION ===== */
 .collaboration-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh; /* Reduced from 100vh */
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 120px 0;
+  padding: 80px 0; /* Reduced padding */
   z-index: 1;
 }
 
@@ -496,14 +496,13 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  height: 150%;
+  height: 100%;
   background-image: url('../images/hall2.jpg.avif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   z-index: -1;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
 }
 
 .collaboration-section::before {
@@ -553,25 +552,29 @@ ul {
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.9);
   max-width: 700px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem; /* Reduced margin */
   line-height: 1.6;
 }
 
 .collaboration-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px; /* Increased max-width */
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .collaboration-item {
-  padding: 2.5rem;
+  padding: 1.8rem; /* Reduced padding */
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   border-radius: var(--border-radius);
   border: 1px solid rgba(255, 255, 255, 0.15);
   transition: var(--transition);
+  min-height: auto; /* Removed fixed height */
+  display: flex;
+  flex-direction: column;
 }
 
 .collaboration-item:hover {
@@ -586,48 +589,31 @@ ul {
 }
 
 .collaboration-item svg {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 1.5rem;
+  width: 40px; /* Smaller icon */
+  height: 40px;
+  margin-bottom: 1rem; /* Reduced margin */
   color: var(--secondary-color);
 }
 
 .collaboration-item h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+  font-size: 1.2rem; /* Slightly smaller heading */
+  margin-bottom: 0.8rem; /* Reduced margin */
   color: var(--white-color);
   font-family: var(--font-heading);
 }
 
 .collaboration-item p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.95rem; /* Slightly smaller text */
+  line-height: 1.5; /* Tighter line height */
   color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0;
 }
 
 /* Responsive adjustments */
-@media (max-width: 992px) {
-  .collaboration-section {
-    padding: 100px 0;
-  }
-  
-  .collaboration-bg {
-    height: 120%;
-  }
-}
-
-@media (max-width: 768px) {
-  .collaboration-section {
-    padding: 80px 0;
-  }
-  
-  .collaboration-content h2 {
-    font-size: 2rem;
-  }
-  
-  .collaboration-intro {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+@media (min-width: 992px) {
+  .collaboration-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+    gap: 30px;
   }
   
   .collaboration-item {
@@ -635,26 +621,31 @@ ul {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .collaboration-section {
+    min-height: auto;
     padding: 60px 0;
   }
   
   .collaboration-content h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   
   .collaboration-grid {
     grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 576px) {
+  .collaboration-content h2 {
+    font-size: 1.8rem;
   }
   
   .collaboration-item {
     padding: 1.5rem;
   }
 }
-
-
-
 
 
 

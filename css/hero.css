@@ -54,6 +54,11 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+
+.hero-content h1 span {
+  color: aqua;
+}  
+
 .hero-content p {
   font-size: 1.25rem;
   max-width: 700px;

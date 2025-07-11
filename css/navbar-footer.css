@@ -1,7 +1,7 @@
 /* ===== NAVBAR STYLES ===== */
 :root {
   --primary-color: #0d1f3a;
-  --secondary-color: #d4af37;
+  --secondary-color: #bca454;
   --white-color: #ffffff;
   --transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 }
@@ -262,7 +262,12 @@
   padding-left: 30px;
 }
 
-/* ===== MOBILE STYLES (BELOW 992px) ===== */
+
+
+
+
+
+/* ===== NAVBAR MEDIA QUERIES ===== */
 @media (max-width: 992px) {
   .navbar {
     height: 80px;
@@ -273,7 +278,6 @@
     width: 85px;
   }
 
-  /* Hide desktop menu */
   .navMenu {
     position: fixed;
     top: 0;
@@ -317,8 +321,6 @@
     top: -100px;
   }
 
-
-  /* Mobile dropdown styles */
   .dropdown {
     width: 100%;
   }
@@ -357,7 +359,6 @@
     padding-left: 35px;
   }
 
-  /* Show hamburger */
   .hamburger {
     display: block;
     order: 4;
@@ -373,44 +374,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* fills navbar vertically */
+    height: 100%;
   }
 
-  /* Optional: adjust language button size if needed */
   .languageButton {
     font-size: 14px;
     padding: 6px 10px;
   }
 }
 
-/* Adjustments for very small screens */
 @media (max-width: 480px) {
-.navMenu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  left: auto;
-  width: 350px; /* default hidden state */
-  height: 100vh;
-  background-color: var(--primary-color);
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 100px 30px 30px;
-  transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1001;
-  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
-  overflow-y: auto;
-  transform: none;
-}
+  .navMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    left: auto;
+    width: 350px;
+    height: 100vh;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 100px 30px 30px;
+    transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    transform: none;
+  }
 
-/* When navMenu is active (hamburger clicked) */
-.navMenu.active {
-  right: 0;
-  width: calc(100% - 90px - 5%);
-}
-
-
+  .navMenu.active {
+    right: 0;
+    width: calc(100% - 90px - 5%);
+  }
 
   .navbar {
     padding: 0 15px;
@@ -430,10 +426,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* fills navbar vertically */
+    height: 100%;
   }
 
-  /* Optional: adjust language button size if needed */
   .languageButton {
     font-size: 14px;
     padding: 6px 10px;
@@ -443,6 +438,12 @@
     font-size: 15px;
   }
 }
+
+
+
+
+
+
 
 /* ===== FOOTER STYLES ===== */
 .footer {
@@ -563,13 +564,73 @@
   padding-left: 5px;
 }
 
-.footerCopyright {
+/* ===== FOOTER BOTTOM SECTION ===== */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding-top: 40px;
   margin-top: 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.75rem;
 }
+
+.footer-copyright {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+
+.footer-developer {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.footer-developer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.footer-developer a:hover {
+  color: #d4af37;
+}
+
+.footer-developer a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+.footer-developer a:hover::after {
+  width: 100%;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .footer-bottom {
+    padding-top: 30px;
+    margin-top: 30px;
+  }
+  
+  .footer-copyright {
+    font-size: 0.75rem;
+  }
+  
+  .footer-developer {
+    font-size: 0.8rem;
+  }
+}
+
 
 /* ===== MOBILE FOOTER ===== */
 @media (max-width: 768px) {
