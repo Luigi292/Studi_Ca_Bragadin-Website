@@ -2,6 +2,7 @@
 .legal-container {
   max-width: 900px;
   margin: 40px auto;
+  margin-top: 10%;
   padding: 0 20px;
   font-family: 'Crimson Text', serif;
   line-height: 1.8;
@@ -108,6 +109,8 @@ address {
 @media (max-width: 768px) {
   .legal-container {
     padding: 0 15px;
+    margin-top: 30%;
+    
   }
   
   .legal-container h1 {

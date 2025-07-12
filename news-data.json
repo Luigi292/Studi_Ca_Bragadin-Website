@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "title": "Aggiornamenti GDPR e Privacy",
+    "title": "Aggiornamenti GDPR e Privacy", 
     "date": "10 Nov 2024",
     "fullDate": "2024-11-10",
     "category": "Privacy",
@@ -20,7 +20,7 @@
     "content": "<p>Il Garante per la protezione dei dati personali ha recentemente pubblicato nuove linee guida che impattano sulle PMI:</p><ul><li>Nuovi requisiti per i registri dei trattamenti</li><li>Obblighi aggiornati per i DPO (Data Protection Officer)</li><li>Procedure semplificate per le valutazioni d'impatto</li><li>Maggiori responsabilità per i responsabili del trattamento</li><li>Nuove sanzioni per violazioni del GDPR</li></ul><p>Scarica la nostra guida completa con modelli e checklist operative.</p>",
     "pdf": "pdf/newsletter-2.pdf",
     "views": 980
-  },
+  }, 
   {
     "id": 3,
     "title": "Riforma del Diritto Societario",
@@ -87,4 +87,5 @@
     "pdf": "pdf/newsletter-8.pdf",
     "views": 490
   }
+  
 ]

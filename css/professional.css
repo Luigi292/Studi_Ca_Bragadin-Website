@@ -133,6 +133,69 @@ ul {
   background-color: var(--white-color);
 }
 
+
+
+/* Skills Grid Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-item {
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid transparent;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-top-color: var(--secondary-color);
+}
+
+.skill-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background-color: var(--light-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  transition: var(--transition);
+}
+
+.skill-item:hover .skill-icon {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  transform: rotateY(180deg);
+}
+
+.skill-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.skill-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray-color);
+}
+
+
+
+
 .content-block {
   max-width: 1200px;
   margin: 0 auto;
@@ -563,7 +626,7 @@ ul {
 .services-overview {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
+  gap: 40px;
   margin-top: 50px;
 }
 
@@ -802,6 +865,15 @@ ul {
   .block-header h2 {
     font-size: 2rem;
   }
+
+
+    .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+
   
   /* Timeline adjustments - Fixed the mobile display issue */
   .timeline-block {
@@ -851,7 +923,7 @@ ul {
   .services-overview {
     grid-template-columns: 1fr;
   }
-}
+
 
 @media (max-width: 576px) {
   .container {
@@ -860,7 +932,7 @@ ul {
   }
 
 
-      .hero-decor {
+  .hero-decor {
     z-index: 3; /* bring decor above text */
     opacity: 0.2; /* soft visibility */
     font-size: 5rem; /* smaller size for mobile */
@@ -890,6 +962,14 @@ ul {
   
   .professional-title {
     font-size: 1.2rem;
+  }
+
+   .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-item {
+    padding: 25px 20px;
   }
   
   .block-header h2 {
