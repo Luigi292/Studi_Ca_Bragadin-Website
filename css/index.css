@@ -479,6 +479,40 @@ ul {
 
 
 
+/* Add this to your CSS file */
+.professional-address {
+  text-align: center;
+  margin: 0 auto 40px;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(182, 151, 51, 0.6);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--secondary-color);
+}
+
+.professional-address p {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.professional-address p:first-child {
+  font-style: italic;
+}
+
+.professional-address p:last-child {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .professional-address {
+    margin-bottom: 30px;
+    padding: 15px;
+  }
+}
+
+
 
 /* ===== COLLABORATION SECTION ===== */
 .collaboration-section {
