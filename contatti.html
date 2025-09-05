@@ -23,14 +23,16 @@
   <link rel="preload" href="images/logo.jpg.avif" as="image" fetchpriority="high">
 
   <!-- Fonts with font-display: swap -->
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+ 
   <!-- CSS -->
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/fade-animation.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/contatti.css">
   <link rel="stylesheet" href="css/hero.css">
-
 
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
@@ -38,66 +40,54 @@
 </head>
 <body>
 
-  
+  <!-- Navbar Component -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+      </a>
+    </div>
 
-<!-- Navbar Component -->
+    <div class="languageToggle">
+      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+      <span>|</span>
+      <!--<a href="en/index.html" class="languageButton" aria-label="English">EN</a> -->
+    </div>
 
-<nav class="navbar">
-  <div class="logo">
-    <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
-      <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
-    </a>
-  </div>
+    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <div></div><div></div><div></div>
+    </div>
 
-  <div class="languageToggle">
-    <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-    <span>|</span>
-    <!--<a href="en/index.html" class="languageButton" aria-label="English">EN</a> <!-->
-  </div>
+    <ul class="navMenu" id="navMenu">
+      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+      <li class="dropdown">
+        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="chi-siamo.html">Il Nostro Team</a></li>
+          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+        </ul>
+      </li>
+      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+      <li><a href="contatti.html" class="navLink active" aria-label="Contatti">Contatti</a></li>
+    </ul>
+  </nav>
 
-  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-    <div></div><div></div><div></div>
-  </div>
-
-  <ul class="navMenu" id="navMenu">
-    <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
-    <li class="dropdown">
-      <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
-      
-      <!-- Dropdown arrow shown next to "Chi Siamo" -->
-    
-      <ul class="dropdown-menu">
-        <li><a href="chi-siamo.html">Il Nostro Team</a></li>
-        <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
-        <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
-        <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
-      </ul>
-    </li>
-    <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
-    <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
-    <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
-  </ul>
-</nav>
-
-
-
-
-<!-- Contact Hero Section -->
-<section class="hero-section">
-  <div class="hero-overlay"></div>
-  <img src="images/hall.jpg.avif" alt="Team Studi Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
-  <div class="hero-content">
-    <h1>Contatta il nostro studio</h1>
-    <p>Professionalità e competenza al servizio delle tue esigenze</p>
-    
-  </div>
-  <div class="hero-scroll-indicator">
-    <span>Scorri</span>
-    <div class="hero-mouse"></div>
-  </div>
-</section>
-
-
+  <!-- Contact Hero Section -->
+  <section class="hero-section contact-hero">
+    <div class="hero-overlay"></div>
+    <img src="images/hall.jpg.avif" alt="Team Studi Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
+    <div class="hero-content">
+      <h1>Contatta il nostro studio</h1>
+      <p>Professionalità e competenza al servizio delle tue esigenze</p>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scorri</span>
+      <div class="hero-mouse"></div>
+    </div>
+  </section>
 
   <!-- Contact Main Section -->
   <main class="contact-main">
@@ -161,7 +151,16 @@
         </div>
 
         <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2801.345476108059!2d11.876111315552865!3d45.40391797910036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaa7b8c5f6a5%3A0x3e9e8a7a8c5f6a5!2sVia%20Giovanni%20Battista%20Belzoni%2C%20180%2C%2035121%20Padova%20PD!5e0!3m2!1sen!2sit!4v1623256789015!5m2!1sen!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2801.099744286783!2d11.886468576270891!3d45.4073281710731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf7920fffff%3A0x59abea9c9faff6c5!2sVia%20Giambattista%20Belzoni%2C%20180%2C%2035121%20Padova%20PD%2C%20Italy!5e0!3m2!1sen!2suk!4v1756774420635!5m2!1sen!2suk"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mappa con l'ubicazione di Studio Ca' Bragadin a Padova">
+          </iframe>
         </div>
       </div>
 
@@ -171,130 +170,114 @@
           <h2>Richiedi una consulenza</h2>
           <p class="form-subtitle">Compila il form e verrai ricontattato entro 24 ore</p>
           
-          
+          <form id="professionalContactForm" class="professional-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">Nome*</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Cognome*</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
 
-<!-- Replace your existing form with this one -->
-<form id="professionalContactForm" class="professional-form">
-  <div class="form-row">
-    <div class="form-group">
-      <label for="firstName">Nome*</label>
-      <input type="text" id="firstName" name="firstName" required>
-    </div>
-    <div class="form-group">
-      <label for="lastName">Cognome*</label>
-      <input type="text" id="lastName" name="lastName" required>
-    </div>
-  </div>
+            <div class="form-group">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" required>
+            </div>
 
-  <div class="form-group">
-    <label for="email">Email*</label>
-    <input type="email" id="email" name="email" required>
-  </div>
+            <div class="form-group">
+              <label for="phone">Telefono</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
 
-  <div class="form-group">
-    <label for="phone">Telefono</label>
-    <input type="tel" id="phone" name="phone">
-  </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="professional">Professionista*</label>
+                <select id="professional" name="professional" required>
+                  <option value="">Seleziona un professionista</option>
+                  <option value="avv_lenzi">Avv. Maximiliano Lenzi</option>
+                  <option value="dott_maretto">Dott. Andrea Maretto</option>
+                  <option value="dott_cecolin">Dott. Alberto Cecolin</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="service">Servizio richiesto*</label>
+                <select id="service" name="service" required>
+                  <option value="">Seleziona un servizio</option>
+                </select>
+              </div>
+            </div>
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="professional">Professionista*</label>
-      <select id="professional" name="professional" required>
-        <option value="">Seleziona un professionista</option>
-        <option value="avv_lenzi">Avv. Maximiliano Lenzi</option>
-        <option value="dott_maretto">Dott. Andrea Maretto</option>
-        <option value="dott_cecolin">Dott. Alberto Cecolin</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="service">Servizio richiesto*</label>
-      <select id="service" name="service" required>
-        <option value="">Seleziona un servizio</option>
-      </select>
-    </div>
-  </div>
+            <div class="form-group message-group">
+              <label for="message">Messaggio*</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
 
-  <div class="form-group">
-    <label for="message">Messaggio*</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-  </div>
+            <!-- Privacy Checkbox -->
+            <div class="form-group privacy-group">
+              <input type="checkbox" id="privacyConsent" name="privacyConsent" required>
+              <label for="privacyConsent">
+                Ho letto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a> e i <a href="terms.html" target="_blank">Termini e Condizioni</a> del sito.
+              </label>
+            </div>
 
-  <!-- Privacy Checkbox -->
-  <div class="form-group" style="margin-top: 0px; margin-bottom: 20px;">
-    <label style="display: flex; align-items: center; font-size: 13px; gap: 8px; line-height: 1.4;">
-      <input type="checkbox" id="privacyConsent" name="privacyConsent" required style="margin: 0;">
-      <span>
-        Ho letto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a> e i <a href="terms.html" target="_blank">Termini e Condizioni</a> del sito.
-      </span>
-    </label>
-  </div>
+            <div class="form-submit">
+              <button type="submit" class="submit-button">Invia Richiesta</button>
+            </div>
 
-  <div class="form-submit">
-    <button type="submit" class="submit-button">Invia Richiesta</button>
-  </div>
-
-  <div id="formResponse" class="form-response" style="display: none;"></div>
-</form>
-
-
-
+            <div id="formResponse" class="form-response" style="display: none;"></div>
+          </form>
         </div>
       </div>
     </div>
   </main>
 
   <!-- Footer Component -->
-   
   <footer class="footer">
-  <div class="footerContent">
-    <div class="footerColumn">
-      <div class="footerLogo">
-        <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+    <div class="footerContent">
+      <div class="footerColumn">
+        <div class="footerLogo">
+          <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+        </div>
+        <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
       </div>
-      <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Contatti</h3>
+        <div class="footerInfo">
+          <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+          <p><strong>Email:</strong> info@studicabragadin.it</p>
+          <p><strong>Tel:</strong> +39 049 1234567</p>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Link</h3>
+        <div class="footerLinks">
+          <a href="chi-siamo.html">Chi siamo</a>
+          <a href="servizi.html">Servizi/Settori</a>
+          <a href="contatti.html">Contatti</a>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Legale</h3>
+        <div class="footerLinks">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Termini</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
     </div>
 
-    <div class="footerColumn">
-      <h3 class="footerHeading">Contatti</h3>
-      <div class="footerInfo">
-        <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-        <p><strong>Email:</strong> info@studicabragadin.it</p>
-        <p><strong>Tel:</strong> +39 049 1234567</p>
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
       </div>
     </div>
-
-    <div class="footerColumn">
-      <h3 class="footerHeading">Link</h3>
-      <div class="footerLinks">
-        <a href="chi-siamo.html">Chi siamo</a>
-        <a href="servizi.html">Servizi/Settori</a>
-        <a href="contatti.html">Contatti</a>
-      </div>
-    </div>
-
-    <div class="footerColumn">
-      <h3 class="footerHeading">Legale</h3>
-      <div class="footerLinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Termini</a>
-        <a href="cookies.html">Cookies</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Developer credit -->
-
-<div class="footer-bottom">
-  <div class="footer-copyright">
-    <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
-  </div>
-  
-  <div class="footer-developer">
-    <p>Sviluppato da <a href="https://www.luigimaretto.com" target="_blank" rel="noopener noreferrer" aria-label="Luigi Maretto - Sviluppatore Web">Luigi Maretto</a></p>
-  </div>
-</div>
-</footer>
-
+  </footer>
 
   <div class="gototop js-top">
     <a href="#" class="js-gotop" title="Torna a inizio pagina">
@@ -304,246 +287,244 @@
     </a>
   </div>
 
+  <!-- Scripts -->
+  <script src="js/navbar.js" defer></script>
+  <script src="js/navbar-scroll.js" defer></script>
 
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set current year in footer
+      document.querySelectorAll('.current-year').forEach(el => {
+        el.textContent = new Date().getFullYear();
+      });
 
-<!-- Scripts -->
+      // Contact form handling
+      const serviceOptions = {
+        avv_lenzi: [
+          { value: "contrattualistica_aziendale", text: "Contrattualistica Aziendale" },
+          { value: "recupero_crediti", text: "Recupero Crediti" },
+          { value: "ecommerce", text: "E-commerce" },
+          { value: "contenzioso_civile", text: "Contenzioso Civile" },
+          { value: "diritto_bancario", text: "Diritto Bancario" },
+          { value: "diritto_fallimentare", text: "Diritto Fallimentare" },
+          { value: "proprieta_industriale", text: "Proprietà Industriale" },
+          { value: "diritto_societario", text: "Diritto Societario" },
+          { value: "altro_legale", text: "Altro (specificare nel messaggio)" }
+        ],
+        dott_maretto: [
+          { value: "contabilita_bilanci", text: "Contabilità e Bilanci" },
+          { value: "servizi_fiscali", text: "Servizi Fiscali" },
+          { value: "contrattualistica_aziendale", text: "Contrattualistica Aziendale" },
+          { value: "consulenza_bancaria_finanziaria", text: "Consulenza Bancaria e Finanziaria" },
+          { value: "consulenza_aziendale_controllo_gestione", text: "Consulenza Aziendale e Controllo di Gestione" },
+          { value: "consulenza_enti_pubblici", text: "Consulenza per Enti Pubblici" },
+          { value: "altro_commerciale", text: "Altro (specificare nel messaggio)" }
+        ],
+        dott_cecolin: [
+          { value: "contabilita_bilanci", text: "Contabilità e Bilanci" },
+          { value: "fiscalita_dichiarazioni", text: "Fiscalità e Dichiarazioni" },
+          { value: "controllo_gestione_pianificazione", text: "Controllo di Gestione e Pianificazione" },
+          { value: "contrattualistica_impresa", text: "Contrattualistica d'Impresa" },
+          { value: "operazioni_straordinarie", text: "Operazioni Straordinarie" },
+          { value: "revisione_governance", text: "Revisione e Governance Societaria" },
+          { value: "altro_societario", text: "Altro (specificare nel messaggio)" }
+        ]
+      };
 
-<script src="js/navbar.js" defer></script>
-<script src="js/navbar-scroll.js" defer></script>
+      const professionalSelect = document.getElementById('professional');
+      const serviceSelect = document.getElementById('service');
+      const form = document.getElementById('professionalContactForm');
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Set current year in footer
-  document.querySelectorAll('.current-year').forEach(el => {
-    el.textContent = new Date().getFullYear();
-  });
+      // Dynamic service options
+      if (professionalSelect && serviceSelect) {
+        professionalSelect.addEventListener('change', function() {
+          const selectedProfessional = this.value;
+          serviceSelect.innerHTML = '<option value="">Seleziona un servizio</option>';
 
-  // Contact form handling
-  const serviceOptions = {
-    avv_lenzi: [
-      { value: "consulenza_legale", text: "Consulenza Legale" },
-      { value: "contratti", text: "Redazione Contratti" },
-      { value: "diritto_societario", text: "Diritto Societario" },
-      { value: "diritto_lavoro", text: "Diritto del Lavoro" },
-      { value: "tutela_privati", text: "Tutela Privati" },
-      { value: "altro_legale", text: "Altro (specificare nel messaggio)" }
-    ],
-    dott_maretto: [
-      { value: "consulenza_fiscale", text: "Consulenza Fiscale" },
-      { value: "contabilita", text: "Contabilità" },
-      { value: "bilanci", text: "Redazione Bilanci" },
-      { value: "fisco_internazionale", text: "Fisco Internazionale" },
-      { value: "pianificazione_fiscale", text: "Pianificazione Fiscale" },
-      { value: "altro_commerciale", text: "Altro (specificare nel messaggio)" }
-    ],
-    dott_cecolin: [
-      { value: "consulenza_societaria", text: "Consulenza Societaria" },
-      { value: "costituzione_societa", text: "Costituzione Società" },
-      { value: "fisco_societario", text: "Fisco Societario" },
-      { value: "revisione_contabile", text: "Revisione Contabile" },
-      { value: "consulenza_strategica", text: "Consulenza Strategica" },
-      { value: "altro_societario", text: "Altro (specificare nel messaggio)" }
-    ]
-  };
-
-  const professionalSelect = document.getElementById('professional');
-  const serviceSelect = document.getElementById('service');
-  const form = document.getElementById('professionalContactForm');
-
-  // Dynamic service options
-  if (professionalSelect && serviceSelect) {
-    professionalSelect.addEventListener('change', function() {
-      const selectedProfessional = this.value;
-      serviceSelect.innerHTML = '<option value="">Seleziona un servizio</option>';
-
-      if (selectedProfessional && serviceOptions[selectedProfessional]) {
-        serviceOptions[selectedProfessional].forEach(option => {
-          const opt = document.createElement('option');
-          opt.value = option.value;
-          opt.textContent = option.text;
-          serviceSelect.appendChild(opt);
+          if (selectedProfessional && serviceOptions[selectedProfessional]) {
+            serviceOptions[selectedProfessional].forEach(option => {
+              const opt = document.createElement('option');
+              opt.value = option.value;
+              opt.textContent = option.text;
+              serviceSelect.appendChild(opt);
+            });
+          }
         });
       }
-    });
-  }
 
-  // Create modal element
-  const modal = document.createElement('div');
-  modal.className = 'form-modal';
-  modal.style.display = 'none';
-  modal.style.position = 'fixed';
-  modal.style.top = '0';
-  modal.style.left = '0';
-  modal.style.width = '100%';
-  modal.style.height = '100%';
-  modal.style.backgroundColor = 'rgba(0,0,0,0.7)';
-  modal.style.zIndex = '1000';
-  modal.style.justifyContent = 'center';
-  modal.style.alignItems = 'center';
-  modal.style.opacity = '0';
-  modal.style.transition = 'opacity 0.3s ease';
-
-  const modalContent = document.createElement('div');
-  modalContent.style.backgroundColor = 'white';
-  modalContent.style.padding = '30px';
-  modalContent.style.borderRadius = '8px';
-  modalContent.style.maxWidth = '500px';
-  modalContent.style.width = '90%';
-  modalContent.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
-  modalContent.style.position = 'relative';
-
-  const closeButton = document.createElement('button');
-  closeButton.innerHTML = '&times;';
-  closeButton.style.position = 'absolute';
-  closeButton.style.top = '10px';
-  closeButton.style.right = '10px';
-  closeButton.style.background = 'none';
-  closeButton.style.border = 'none';
-  closeButton.style.fontSize = '24px';
-  closeButton.style.cursor = 'pointer';
-  closeButton.style.color = '#666';
-
-  const modalMessage = document.createElement('p');
-  modalMessage.style.margin = '20px 0';
-  modalMessage.style.fontSize = '16px';
-  modalMessage.style.lineHeight = '1.6';
-  modalMessage.style.color = '#333';
-
-  modalContent.appendChild(closeButton);
-  modalContent.appendChild(modalMessage);
-  modal.appendChild(modalContent);
-  document.body.appendChild(modal);
-
-  closeButton.addEventListener('click', function() {
-    modal.style.opacity = '0';
-    setTimeout(() => {
+      // Create modal element
+      const modal = document.createElement('div');
+      modal.className = 'form-modal';
       modal.style.display = 'none';
-    }, 300);
-  });
-
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
+      modal.style.position = 'fixed';
+      modal.style.top = '0';
+      modal.style.left = '0';
+      modal.style.width = '100%';
+      modal.style.height = '100%';
+      modal.style.backgroundColor = 'rgba(0,0,0,0.7)';
+      modal.style.zIndex = '1000';
+      modal.style.justifyContent = 'center';
+      modal.style.alignItems = 'center';
       modal.style.opacity = '0';
-      setTimeout(() => {
-        modal.style.display = 'none';
-      }, 300);
-    }
-  });
+      modal.style.transition = 'opacity 0.3s ease';
 
-  // Form submission
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
+      const modalContent = document.createElement('div');
+      modalContent.style.backgroundColor = 'white';
+      modalContent.style.padding = '30px';
+      modalContent.style.borderRadius = '8px';
+      modalContent.style.maxWidth = '500px';
+      modalContent.style.width = '90%';
+      modalContent.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
+      modalContent.style.position = 'relative';
 
-      // Show loading state
-      const submitButton = form.querySelector('.submit-button');
-      const originalButtonText = submitButton.textContent;
-      submitButton.disabled = true;
-      submitButton.textContent = 'Invio in corso...';
+      const closeButton = document.createElement('button');
+      closeButton.innerHTML = '&times;';
+      closeButton.style.position = 'absolute';
+      closeButton.style.top = '10px';
+      closeButton.style.right = '10px';
+      closeButton.style.background = 'none';
+      closeButton.style.border = 'none';
+      closeButton.style.fontSize = '24px';
+      closeButton.style.cursor = 'pointer';
+      closeButton.style.color = '#666';
 
-      // Validate required fields
-      const requiredFields = form.querySelectorAll('[required]');
-      let isValid = true;
-      
-      requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-          field.classList.add('error');
-          isValid = false;
-        } else {
-          field.classList.remove('error');
+      const modalMessage = document.createElement('p');
+      modalMessage.style.margin = '20px 0';
+      modalMessage.style.fontSize = '16px';
+      modalMessage.style.lineHeight = '1.6';
+      modalMessage.style.color = '#333';
+
+      modalContent.appendChild(closeButton);
+      modalContent.appendChild(modalMessage);
+      modal.appendChild(modalContent);
+      document.body.appendChild(modal);
+
+      closeButton.addEventListener('click', function() {
+        modal.style.opacity = '0';
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 300);
+      });
+
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.opacity = '0';
+          setTimeout(() => {
+            modal.style.display = 'none';
+          }, 300);
         }
       });
 
-      if (!isValid) {
-        modalMessage.textContent = 'Per favore, compila tutti i campi obbligatori (*)';
-        modal.style.display = 'flex';
-        setTimeout(() => { modal.style.opacity = '1'; }, 10);
-        submitButton.disabled = false;
-        submitButton.textContent = originalButtonText;
-        return;
+      // Form submission
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          // Show loading state
+          const submitButton = form.querySelector('.submit-button');
+          const originalButtonText = submitButton.textContent;
+          submitButton.disabled = true;
+          submitButton.textContent = 'Invio in corso...';
+
+          // Validate required fields
+          const requiredFields = form.querySelectorAll('[required]');
+          let isValid = true;
+          
+          requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+              field.classList.add('error');
+              isValid = false;
+            } else {
+              field.classList.remove('error');
+            }
+          });
+
+          if (!isValid) {
+            modalMessage.textContent = 'Per favore, compila tutti i campi obbligatori (*)';
+            modal.style.display = 'flex';
+            setTimeout(() => { modal.style.opacity = '1'; }, 10);
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+            return;
+          }
+
+          // Get form data
+          const formData = new FormData(form);
+
+          // Send AJAX request
+          fetch('process_contact.php', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          })
+          .then(response => {
+            if (!response.ok) {
+              // Try to parse the error response as JSON
+              return response.json().then(err => {
+                throw new Error(err.message || 'Errore del server');
+              }).catch(() => {
+                // If JSON parsing fails, throw with status text
+                throw new Error(response.statusText || 'Errore di rete');
+              });
+            }
+            return response.json();
+          })
+          .then(data => {
+            if (data.success) {
+              modalMessage.innerHTML = data.message || "La sua richiesta è stata inviata correttamente. Riceverà una risposta al più presto. Se la richiesta è urgente o non dovesse ricevere risposta entro 48 ore, la invitiamo a contattare telefonicamente il professionista al numero indicato nella sua pagina profilo o nell'email di conferma ricevuta.";
+              modal.style.display = 'flex';
+              setTimeout(() => { modal.style.opacity = '1'; }, 10);
+              form.reset();
+              serviceSelect.innerHTML = '<option value="">Seleziona un servizio</option>';
+            } else {
+              throw new Error(data.message || 'Errore sconosciuto');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            modalMessage.textContent = error.message || 'Si è verificato un errore durante l\'invio del messaggio. Si prega di riprovare più tardi.';
+            modal.style.display = 'flex';
+            setTimeout(() => { modal.style.opacity = '1'; }, 10);
+          })
+          .finally(() => {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+          });
+        });
+
+        // Add input validation styling
+        const inputs = form.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+          input.addEventListener('input', function() {
+            if (this.hasAttribute('required') && !this.value.trim()) {
+              this.classList.add('error');
+            } else {
+              this.classList.remove('error');
+            }
+          });
+        });
       }
 
-      // Get form data
-      const formData = new FormData(form);
-
-      // Send AJAX request
-      fetch('process_contact.php', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => {
-        if (!response.ok) {
-          // Try to parse the error response as JSON
-          return response.json().then(err => {
-            throw new Error(err.message || 'Errore del server');
-          }).catch(() => {
-            // If JSON parsing fails, throw with status text
-            throw new Error(response.statusText || 'Errore di rete');
-          });
-        }
-        return response.json();
-      })
-      .then(data => {
-        if (data.success) {
-          modalMessage.innerHTML = data.message || "La sua richiesta è stata inviata correttamente. Riceverà una risposta al più presto. Se la richiesta è urgente o non dovesse ricevere risposta entro 48 ore, la invitiamo a contattare telefonicamente il professionista al numero indicato nella sua pagina profilo o nell'email di conferma ricevuta.";
-          modal.style.display = 'flex';
-          setTimeout(() => { modal.style.opacity = '1'; }, 10);
-          form.reset();
-          serviceSelect.innerHTML = '<option value="">Seleziona un servizio</option>';
+      // Scroll to top button functionality
+      window.addEventListener("scroll", function() {
+        const scrollBtn = document.querySelector(".js-top");
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add("active");
         } else {
-          throw new Error(data.message || 'Errore sconosciuto');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        modalMessage.textContent = error.message || 'Si è verificato un errore durante l\'invio del messaggio. Si prega di riprovare più tardi.';
-        modal.style.display = 'flex';
-        setTimeout(() => { modal.style.opacity = '1'; }, 10);
-      })
-      .finally(() => {
-        submitButton.disabled = false;
-        submitButton.textContent = originalButtonText;
-      });
-    });
-
-    // Add input validation styling
-    const inputs = form.querySelectorAll('input, textarea, select');
-    inputs.forEach(input => {
-      input.addEventListener('input', function() {
-        if (this.hasAttribute('required') && !this.value.trim()) {
-          this.classList.add('error');
-        } else {
-          this.classList.remove('error');
+          scrollBtn.classList.remove("active");
         }
       });
+
+      document.querySelector(".js-gotop").addEventListener("click", function(e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
     });
-  }
-
-  // Scroll to top button functionality
-  window.addEventListener("scroll", function() {
-    const scrollBtn = document.querySelector(".js-top");
-    if (window.scrollY > 300) {
-      scrollBtn.classList.add("active");
-    } else {
-      scrollBtn.classList.remove("active");
-    }
-  });
-
-  document.querySelector(".js-gotop").addEventListener("click", function(e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-});
-</script>
-
-
-
+  </script>
 </body>
 </html>

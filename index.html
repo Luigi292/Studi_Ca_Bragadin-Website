@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
- 
 
+<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,22 +18,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Fonts with font-display: swap -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+  <!-- Optimized Font Loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <!-- CSS -->
+   
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/fade-animation.css">
+
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/index.css">
-
 
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
   <link rel="shortcut icon" href="images/favicon-logo.png" type="image/png">
 </head>
+
+
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
+<!-- Navbar -->
+ <nav class="navbar">
     <div class="logo">
       <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
         <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
@@ -43,6 +47,7 @@
 
     <div class="languageToggle">
       <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+      <span>|</span>
     </div>
 
     <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
@@ -92,7 +97,7 @@
           <p class="hero-subtitle">Consulenza legale e fiscale integrata per imprese e professionisti</p>
           <div class="hero-cta">
             <a href="contatti.html" class="ctaButton">Richiedi consulenza</a>
-            <a href="chi-siamo.html" class="secondaryButton">Conosci il team</a>
+
           </div>
         </div>
       </div>
@@ -106,60 +111,68 @@
 
 
 
-  <!-- Studio About Section -->
 
-  <section class="studios">
-    <div class="container">
-      <div class="sectionHeader">
-        <h2>I Nostri Studi Professionali</h2>
-        <p class="sectionSubtitle">Eccellenza e competenza multidisciplinare a Padova</p>
-      </div>
 
-          <!-- Modified address section with first-person language -->
-    <div class="professional-address">
-      <p>Riceviamo i nostri clienti presso:</p>
-      <p><strong>Via G. Belzoni 180, 35121 Padova</strong></p>
+
+<!-- Studio About Section -->
+<section class="studios">
+  <div class="studios-container-wide">
+    <div class="section-header-wide">
+      <h2>I Nostri Studi Professionali</h2>
+      <p class="section-subtitle-wide">Eccellenza e competenza multidisciplinare a Padova</p>
     </div>
+
+
+  <!-- Clickable address section -->
+    <a href="https://www.google.com/maps?q=Via+G.+Belzoni+180,+35121+Padova"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="address-link-block">
+      <div class="professional-address-wide">
+        <p>Riceviamo i nostri clienti presso:</p>
+        <p><strong>Via G. Belzoni 180, 35121 Padova</strong></p>
+      </div>
+    </a>
     
 
-    
-      <div class="studiosContainer">
-        <div class="studio">
-          <div class="studioImageWrapper">
-            <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
+
+    <div class="studios-grid">
+        <div class="professional-card">
+          <div class="card-image-wrapper">
+            <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
           </div>
-          <div class="studioContent">
+          <div class="card-content">
             <h3>Avv. Maximiliano Lenzi</h3>
-            <p class="studio-specialty">Consulenza legale e assistenza alle imprese</p>
-            <div class="contactInfo">
+            <p class="card-specialty">Consulenza legale e assistenza alle imprese</p>
+            <div class="card-contact">
               <p><strong>Telefono:</strong> <a href="tel:0498751356">049-8751356</a></p>
               <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
               <a href="avv-maximiliano-lenzi.html" class="ctaButton small">Profilo completo</a>
             </div>
           </div>
         </div>
-        <div class="studio">
-          <div class="studioImageWrapper">
-            <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto - Commercialista Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
+        <div class="professional-card">
+          <div class="card-image-wrapper">
+            <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
           </div>
-          <div class="studioContent">
+          <div class="card-content">
             <h3>Dott. Andrea Maretto</h3>
-            <p class="studio-specialty">Consulenza fiscale e societaria avanzata</p>
-            <div class="contactInfo">
+            <p class="card-specialty">Consulenza fiscale e societaria avanzata</p>
+            <div class="card-contact">
               <p><strong>Telefono:</strong> <a href="tel:0499562428">049-9562428</a></p>
               <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
               <a href="andrea-maretto.html" class="ctaButton small">Profilo completo</a>
             </div>
           </div>
         </div>
-        <div class="studio">
-          <div class="studioImageWrapper">
-            <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin - Commercialista Padova" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
+        <div class="professional-card">
+          <div class="card-image-wrapper">
+            <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
           </div>
-          <div class="studioContent">
+          <div class="card-content">
             <h3>Dott. Alberto Cecolin</h3>
-            <p class="studio-specialty">Pianificazione fiscale e strategie societarie</p>
-            <div class="contactInfo">
+            <p class="card-specialty">Pianificazione fiscale e strategie societarie</p>
+            <div class="card-contact">
               <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
               <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
               <a href="alberto-cecolin.html" class="ctaButton small">Profilo completo</a>
@@ -170,7 +183,7 @@
     </div>
   </section>
 
-
+  
 
   <!-- Collaboration Section -->
   <section class="collaboration-section" id="collaboration-section">
@@ -178,7 +191,7 @@
     <div class="collaboration-content">
       <div class="container">
         <span class="section-subtitle">I Nostri Valori</span>
-        <h2>L'Approccio di Studio Ca' Bragadin</h2>
+        <h2>L'Approccio di Studi Ca' Bragadin</h2>
         <p class="collaboration-intro">La nostra filosofia professionale si basa su quattro pilastri fondamentali</p>
         
         <div class="collaboration-grid">
@@ -292,9 +305,9 @@
     <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
   </div>
   
-  <div class="footer-developer">
+  <!-- <div class="footer-developer">
     <p>Sviluppato da <a href="https://www.luigimaretto.com" target="_blank" rel="noopener noreferrer" aria-label="Luigi Maretto - Sviluppatore Web">Luigi Maretto</a></p>
-  </div>
+  </div> -->
 </div>
 </footer>
 
@@ -315,400 +328,11 @@
 
 <script src="js/navbar.js" defer></script>
 <script src="js/navbar-scroll.js" defer></script>
+<script src="js/fade-animation.js" defer></script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Remove any existing parallax code
-  
-  // Add this if you need to ensure the background covers the section
-  function adjustBackground() {
-    const section = document.querySelector('.collaboration-section');
-    const bg = document.querySelector('.collaboration-bg');
-    if (!section || !bg) return;
-    
-    // Set background height to match section
-    bg.style.height = section.offsetHeight + 'px';
-  }
-
-  // Run on load and resize
-  window.addEventListener('load', adjustBackground);
-  window.addEventListener('resize', adjustBackground);
-  adjustBackground();
-
-  // Initialize carousel
-  function initCarousel() {
-    const carousel = document.getElementById('carousel');
-    if (!carousel) return;
-    
-    const slides = carousel.querySelectorAll('.slide');
-    let current = 0;
-
-    function show(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-      });
-    }
-
-    function next() {
-      current = (current + 1) % slides.length;
-      show(current);
-    }
-
-    show(0);
-    setInterval(next, 5000);
-  }
-
-  function loadNewsPreviews() {
-    const newsGrid = document.getElementById('newsPreviewGrid');
-    if (!newsGrid) return;
-
-    newsGrid.innerHTML = '<div class="news-loading"><div class="news-loading-spinner"></div></div>';
-
-    fetch('news-data.json')
-      .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.json();
-      })
-      .then(newsData => {
-        if (!newsData || !newsData.length) {
-          throw new Error('No news data available');
-        }
-
-        // Sort by most recent first
-        const sortedNews = [...newsData].sort((a, b) => 
-          new Date(b.fullDate || b.date) - new Date(a.fullDate || a.date)
-        );
-
-        // Take top 3
-        const topNews = sortedNews.slice(0, 3);
-        
-        renderNewsPreview(topNews);
-      })
-      .catch(error => {
-        console.error('Error loading news:', error);
-        showNewsError();
-      });
-
-    function renderNewsPreview(newsItems) {
-      newsGrid.innerHTML = '';
-      
-      newsItems.forEach(news => {
-        const card = document.createElement('div');
-        card.className = 'news-preview-card';
-        card.innerHTML = `
-          <div class="news-preview-card-header">
-            <span class="news-preview-date">${news.date}</span>
-            <span class="news-preview-category">${news.category}</span>
-          </div>
-          <div class="news-preview-content">
-            <h3>${news.title}</h3>
-            <p>${news.preview}</p>
-            <div class="news-preview-actions">
-              <a href="news.html#news-${news.id}" class="news-preview-more">Leggi tutto</a>
-              <a href="${news.pdf}" class="news-preview-download" download>PDF</a>
-            </div>
-          </div>
-        `;
-        newsGrid.appendChild(card);
-      });
-    }
-
-    function showNewsError() {
-      newsGrid.innerHTML = `
-        <div class="news-error">
-          <p>Impossibile caricare le news al momento.</p>
-          <a href="news.html">Vai alla pagina news</a>
-        </div>`;
-    }
-  }
-
-  // Initialize functions
-  initCarousel();
-  loadNewsPreviews();
-  
-  // Back to top button
-  const backToTop = document.querySelector('.js-top');
-  if (backToTop) {
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('active', window.scrollY > 300);
-    });
-    backToTop.addEventListener('click', e => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-});
-</script>
-
-  <style>
-    .news-preview-section {
-      padding: 80px 0;
-      background-color: #f9f9f9;
-    }
-    
-    .news-preview-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    .news-preview-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    
-    .news-preview-header h2 {
-      font-size: 2.5rem;
-      color: #1a2a4a;
-      margin-bottom: 15px;
-    }
-    
-    .news-preview-header .subtitle {
-      font-size: 1.2rem;
-      color: #666;
-    }
-    
-    .news-preview-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-bottom: 40px;
-    }
-
-  .news-preview-card .news-preview-category {
-  display: inline-block;
-  font-size: 0.8rem;
-  background-color: rgba(194, 154, 91, 0.1);
-  color: var(--secondary-color);
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-    
-    .news-preview-card {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .news-preview-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-    
-    .news-preview-card-header {
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 20px;
-      background: #1a2a4a;
-      color: white;
-    }
-    
-    .news-preview-date {
-      font-weight: 500;
-    }
-    
-    .news-preview-category {
-      background: rgba(255,255,255,0.2);
-      padding: 3px 10px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-    }
-    
-    .news-preview-content {
-      padding: 20px;
-    }
-    
-    .news-preview-content h3 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-      color: #1a2a4a;
-    }
-    
-    .news-preview-content p {
-      color: #555;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-    
-    .news-preview-actions {
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    .news-preview-more {
-      color: #1a2a4a;
-      font-weight: 600;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    .news-preview-more:hover {
-      color: #3a5a8a;
-      text-decoration: underline;
-    }
-    
-    .news-preview-download {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      color: #1a2a4a;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    
-    .news-preview-download:hover {
-      text-decoration: underline;
-    }
-    
-    .news-preview-button {
-      text-align: center;
-      margin-top: 30px;
-    }
-    
-    .news-loading {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 40px 0;
-    }
-    
-    .news-loading-spinner {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      border: 5px solid rgba(26, 42, 74, 0.2);
-      border-radius: 50%;
-      border-top-color: #1a2a4a;
-      animation: spin 1s ease-in-out infinite;
-    }
-    
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    
-    .news-error {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 40px 20px;
-      color: #666;
-    }
-    
-    .news-error a {
-      color: #1a2a4a;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    
-    .news-error a:hover {
-      text-decoration: underline;
-    }
-
-/* News Section Media Queries */
-@media (max-width: 992px) {
-  .news-preview-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .news-preview-section {
-    padding: 60px 0;
-  }
-  
-  .news-preview-header {
-    margin-bottom: 40px;
-  }
-  
-  .news-preview-header h2 {
-    font-size: 2rem;
-  }
-  
-  .news-preview-header .subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .news-preview-grid {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-    padding: 0 15px;
-    margin: 0 auto 30px;
-  }
-  
-  .news-preview-card {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 400px;
-  }
-}
-
-@media (max-width: 480px) {
-  .news-preview-section {
-    padding: 50px 0;
-  }
-  
-  .news-preview-header h2 {
-    font-size: 1.8rem;
-  }
-  
-  .news-preview-header .subtitle {
-    font-size: 1rem;
-  }
-  
-  .news-preview-grid {
-    padding: 0 10px;
-  }
-  
-  .news-preview-card {
-    max-width: 100%;
-  }
-  
-  .news-preview-card-header {
-    padding: 12px 15px;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .news-preview-content {
-    padding: 15px;
-  }
-  
-  .news-preview-content h3 {
-    font-size: 1.2rem;
-  }
-}
-
-/* Special adjustments for very small phones */
-@media (max-width: 360px) {
-  .news-preview-section {
-    padding: 40px 0;
-  }
-  
-  .news-preview-header h2 {
-    font-size: 1.6rem;
-  }
-  
-  .news-preview-content h3 {
-    font-size: 1.1rem;
-  }
-  
-  .news-preview-actions {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .news-preview-more,
-  .news-preview-download {
-    width: 100%;
-    text-align: center;
-  }
-}
+<script src="js/index.js" defer></script>
 
 
-  </style>
 
 
 </body>

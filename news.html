@@ -20,8 +20,13 @@
   <link rel="preload" href="images/logo.jpg.avif" as="image" fetchpriority="high">
 
   <!-- Fonts with font-display: swap -->
+<!-- Fonts with font-display: swap - UPDATED TO MATCH OTHER PAGES -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/fade-animation.css">
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/news.css">
@@ -29,6 +34,10 @@
 
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
   <link rel="shortcut icon" href="images/favicon-logo.png" type="image/png">
+
+
+  
+  
 </head>
 <body class="news-page">
   
@@ -185,9 +194,9 @@
     <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
   </div>
   
-  <div class="footer-developer">
+  <!-- <div class="footer-developer">
     <p>Sviluppato da <a href="https://www.luigimaretto.com" target="_blank" rel="noopener noreferrer" aria-label="Luigi Maretto - Sviluppatore Web">Luigi Maretto</a></p>
-  </div>
+  </div> -->
 </div>
 </footer>
 
@@ -216,6 +225,9 @@
 
 <script src="js/navbar.js" defer></script>
 <script src="js/navbar-scroll.js" defer></script>
+<!-- Fade Animation JS -->
+<script src="js/fade-animation.js" defer></script>
+
 
 <script>
 // Global variables
@@ -504,6 +516,31 @@ function showError(message) {
   document.getElementById('retryButton').addEventListener('click', initializePage);
 }
 
+// Function to show no news message
+function showNoNewsMessage() {
+  const newsList = document.getElementById('newsList');
+  const pagination = document.getElementById('newsPagination');
+  const sortSection = document.querySelector('.news-sort');
+  
+  newsList.innerHTML = `
+    <div class="no-news-message">
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="16" y1="13" x2="8" y2="13"></line>
+        <line x1="16" y1="17" x2="8" y2="17"></line>
+        <polyline points="10 9 9 9 8 9"></polyline>
+      </svg>
+      <h2>Nessuna news pubblicata al momento</h2>
+      <p>I nostri professionisti stanno preparando nuovi contenuti. Torna a controllare presto!</p>
+    </div>
+  `;
+  
+  // Hide pagination and sort options
+  pagination.style.display = 'none';
+  sortSection.style.display = 'none';
+}
+
 // Initialize the page
 async function initializePage() {
   try {
@@ -517,8 +554,10 @@ async function initializePage() {
     // Fetch news data
     await fetchNewsData();
     
-    if (newsData.length === 0) {
-      showError('Nessuna news disponibile al momento.');
+    // Check if newsData is empty or invalid
+    if (!newsData || !newsData.length || newsData.length === 0) {
+      showNoNewsMessage();
+      document.getElementById('popularNewsBox').innerHTML = '<h3>News Popolari</h3><p>Nessuna news al momento</p>';
       return;
     }
     
@@ -611,6 +650,32 @@ document.addEventListener('DOMContentLoaded', initializePage);
   background-color: var(--secondary-color-dark);
 }
 
+/* No news message styles */
+.no-news-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.no-news-message svg {
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.no-news-message h2 {
+  margin-bottom: 1rem;
+  color: #444;
+  font-size: 1.8rem;
+}
+
+.no-news-message p {
+  color: #888;
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
 /* Additional CSS for pagination */
 .news-pagination {
   margin-top: 40px;
@@ -670,5 +735,7 @@ document.addEventListener('DOMContentLoaded', initializePage);
   }
 }
 </style>
+
+
 </body>
 </html>

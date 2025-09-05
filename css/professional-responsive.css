@@ -1,0 +1,1087 @@
+/* professional-responsive.css - Optimized responsive styles for professional pages */
+/* Enhanced timeline responsiveness for all devices */
+@import url('text-standards.css');
+
+/* ===== GLOBAL RESPONSIVE STYLES ===== */
+@media (max-width: 1440px) {
+  .content-block {
+    max-width: 90%;
+  }
+}
+
+/* Large Desktop Breakpoint (1200px) */
+@media (max-width: 1200px) {
+  .qualifications-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .andrea-maretto-page .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .alberto-cecolin-page .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .andrea-maretto-page .services-overview,
+  .alberto-cecolin-page .services-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Timeline adjustments */
+  .timeline-content {
+    flex: 0 0 50%;
+  }
+}
+
+/* Tablet Breakpoint (1024px) - iPad Pro, etc. */
+@media (max-width: 1024px) {
+  .content-block {
+    padding: 50px 30px;
+  }
+  
+  .profile-block {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 30px;
+  }
+  
+  .profile-image {
+    height: 350px;
+  }
+  
+  .qualifications-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .andrea-maretto-page .skills-grid,
+  .andrea-maretto-page .services-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .services-overview {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  /* Timeline Responsive - PERFECTLY ALIGNED */
+  .modern-timeline {
+    padding: 50px 0;
+  }
+  
+  .timeline-content {
+    flex: 0 0 50%;
+    margin: 0 15px;
+  }
+  
+  .mission-block,
+  .andrea-maretto-page .mission-block,
+  .alberto-cecolin-page .mission-block {
+    width: 80%;
+  }
+}
+
+/* Tablet Breakpoint (991px) - CRITICAL BREAKPOINT */
+@media (max-width: 991px) {
+  .content-block {
+    max-width: 95%;
+    padding: 50px 25px;
+  }
+  
+  .profile-block {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 25px;
+    margin-top: 20px;
+  }
+  
+  .profile-image {
+    height: 320px;
+    order: -1;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .profile-text {
+    text-align: center;
+  }
+  
+  .profile-text h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .qualifications-block {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  
+  .qualification-card {
+    padding: 25px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .andrea-maretto-page .skills-grid,
+  .alberto-cecolin-page .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .services-overview {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .andrea-maretto-page .services-overview,
+  .alberto-cecolin-page .services-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .maximiliano-lenzi-page .qualifications-block,
+  .maximiliano-lenzi-page .services-overview {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-block,
+  .andrea-maretto-page .mission-block,
+  .alberto-cecolin-page .mission-block {
+    width: 90%;
+    padding: 25px;
+  }
+  
+  /* Timeline adjustments for tablet */
+  .timeline-path {
+    left: 40px;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    padding-left: 80px;
+    padding-right: 0;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .timeline-content {
+    flex: 0 0 100%;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .timeline-content::before {
+    display: none;
+  }
+}
+
+/* Tablet Breakpoint (768px) - iPad, etc. */
+@media (max-width: 768px) {
+  .content-block {
+    padding: 45px 20px;
+  }
+  
+  .andrea-maretto-page .content-block,
+  .maximiliano-lenzi-page .content-block,
+  .alberto-cecolin-page .content-block {
+    padding: 40px 20px;
+  }
+  
+  .profile-block {
+    padding: 25px 20px;
+    gap: 30px;
+  }
+  
+  .profile-image {
+    height: 280px;
+  }
+  
+  .qualifications-block {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .andrea-maretto-page .skills-grid,
+  .alberto-cecolin-page .skills-grid,
+  .maximiliano-lenzi-page .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .services-overview {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .andrea-maretto-page .services-overview,
+  .alberto-cecolin-page .services-overview,
+  .maximiliano-lenzi-page .services-overview {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-block,
+  .andrea-maretto-page .mission-block,
+  .alberto-cecolin-page .mission-block {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-path {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    padding-left: 60px;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-marker {
+    flex: 0 0 60px;
+  }
+  
+  .marker-dot {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .timeline-content {
+    padding: 25px;
+  }
+  
+  .service-modal-content {
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .feature-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* Mobile Breakpoint (600px) - Large phones */
+@media (max-width: 600px) {
+  .content-block {
+    padding: 40px 15px;
+  }
+  
+  .profile-block {
+    padding: 20px 15px;
+    gap: 25px;
+  }
+  
+  .profile-image {
+    height: 250px;
+  }
+  
+  .qualification-card {
+    padding: 20px;
+  }
+  
+  .qualification-icon {
+    font-size: 2rem;
+  }
+  
+  .skill-item {
+    padding: 20px;
+  }
+  
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .service-card-header {
+    padding: 15px;
+  }
+  
+  .service-card-body {
+    padding: 20px;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-path {
+    left: 25px;
+  }
+  
+  .timeline-item {
+    padding-left: 50px;
+    margin-bottom: 35px;
+  }
+  
+  .timeline-marker {
+    flex: 0 0 50px;
+    height: 50px;
+  }
+  
+  .marker-dot {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .marker-icon {
+    font-size: 14px;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+  }
+  
+  .timeline-date {
+    font-size: var(--text-sm);
+    padding: 6px 15px;
+  }
+}
+
+/* Mobile Breakpoint (480px) - Galaxy Note, etc. */
+@media (max-width: 480px) {
+  .content-block {
+    padding: 35px 12px;
+  }
+  
+  .profile-block {
+    padding: 18px 12px;
+    gap: 20px;
+  }
+  
+  .profile-image {
+    height: 220px;
+  }
+  
+  .block-header {
+    margin-bottom: 25px;
+  }
+  
+  .block-header h2::after {
+    width: 60px;
+    height: 2px;
+  }
+  
+  .qualification-card {
+    padding: 18px;
+  }
+  
+  .qualification-icon {
+    font-size: 1.8rem;
+  }
+  
+  .skill-item {
+    padding: 18px;
+  }
+  
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  
+  .mission-block,
+  .andrea-maretto-page .mission-block,
+  .alberto-cecolin-page .mission-block {
+    padding: 18px;
+    width: 100%;
+  }
+  
+  .service-card-header {
+    padding: 12px 15px;
+  }
+  
+  .service-card-header i {
+    font-size: 2rem;
+  }
+  
+  .service-card-body {
+    padding: 18px;
+  }
+  
+  .service-card-features {
+    margin: 15px 0;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-path {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    padding-left: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-marker {
+    flex: 0 0 40px;
+    height: 40px;
+  }
+  
+  .marker-dot {
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+    box-shadow: 0 0 0 6px rgba(194, 154, 91, 0.2);
+  }
+  
+  .marker-icon {
+    font-size: 12px;
+  }
+  
+  .timeline-content {
+    padding: 18px;
+  }
+  
+  .service-modal-content {
+    margin: 15px auto;
+    padding: 18px;
+  }
+  
+  .close-modal {
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+  }
+  
+  .feature-item {
+    gap: 10px;
+  }
+  
+  .feature-icon {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile Breakpoint (414px) - iPhone XR, 11, etc. */
+@media (max-width: 414px) {
+  .content-block {
+    padding: 30px 10px;
+  }
+  
+  .profile-block {
+    padding: 15px 10px;
+    gap: 18px;
+  }
+  
+  .profile-image {
+    height: 200px;
+  }
+  
+  .qualification-card {
+    padding: 15px;
+  }
+  
+  .skill-item {
+    padding: 15px;
+  }
+  
+  .service-card-header {
+    padding: 10px 12px;
+  }
+  
+  .service-card-body {
+    padding: 15px;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-path {
+    left: 18px;
+  }
+  
+  .timeline-item {
+    padding-left: 35px;
+    margin-bottom: 25px;
+  }
+  
+  .timeline-content {
+    padding: 15px;
+  }
+  
+  .timeline-date {
+    font-size: var(--text-sm);
+    padding: 5px 12px;
+  }
+}
+
+/* Mobile Breakpoint (375px) - iPhone X, 8, etc. */
+@media (max-width: 375px) {
+  .content-block {
+    padding: 25px 8px;
+  }
+  
+  .profile-block {
+    padding: 12px 8px;
+    gap: 15px;
+  }
+  
+  .profile-image {
+    height: 180px;
+  }
+  
+  .qualification-icon {
+    font-size: 1.6rem;
+  }
+  
+  .skill-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  
+  .service-card-header i {
+    font-size: 1.8rem;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-path {
+    left: 15px;
+  }
+  
+  .timeline-item {
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-marker {
+    flex: 0 0 35px;
+    height: 35px;
+  }
+  
+  .marker-dot {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .marker-icon {
+    font-size: 10px;
+  }
+  
+  .timeline-content {
+    padding: 12px;
+  }
+}
+
+/* Mobile Breakpoint (320px) - iPhone 4, 5, etc. */
+@media (max-width: 320px) {
+  .content-block {
+    padding: 20px 5px;
+  }
+  
+  .profile-block {
+    padding: 10px 5px;
+    gap: 12px;
+  }
+  
+  .profile-image {
+    height: 160px;
+  }
+  
+  .qualification-card {
+    padding: 12px;
+  }
+  
+  .qualification-icon {
+    font-size: 1.5rem;
+  }
+  
+  .skill-item {
+    padding: 12px;
+  }
+  
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .service-card-header {
+    padding: 8px 10px;
+  }
+  
+  .service-card-body {
+    padding: 12px;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-path {
+    left: 12px;
+  }
+  
+  .timeline-item {
+    padding-left: 25px;
+    margin-bottom: 15px;
+  }
+  
+  .timeline-marker {
+    flex: 0 0 30px;
+    height: 30px;
+  }
+  
+  .marker-dot {
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+    box-shadow: 0 0 0 4px rgba(194, 154, 91, 0.2);
+  }
+  
+  .marker-icon {
+    font-size: 9px;
+  }
+  
+  .timeline-content {
+    padding: 10px;
+  }
+}
+
+/* ===== PAGE-SPECIFIC RESPONSIVE ADJUSTMENTS ===== */
+
+/* Andrea Maretto Page */
+@media (max-width: 991px) {
+  .andrea-maretto-page .skills-grid,
+  .andrea-maretto-page .services-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Alberto Cecolin Page */
+@media (max-width: 991px) {
+  .alberto-cecolin-page .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .alberto-cecolin-page .services-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Maximiliano Lenzi Page */
+@media (max-width: 1024px) {
+  .maximiliano-lenzi-page .qualifications-block {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .maximiliano-lenzi-page .services-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Orientation-specific adjustments */
+@media (max-width: 991px) and (orientation: landscape) {
+  .profile-block {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .profile-image {
+    order: 0;
+    height: 250px;
+  }
+  
+  .profile-text {
+    text-align: left;
+  }
+  
+  .profile-text h2::after {
+    left: 0;
+    transform: none;
+  }
+  
+  /* Timeline adjustments for landscape */
+  .timeline-path {
+    left: 50%;
+  }
+  
+  .timeline-item {
+    flex-direction: row;
+    padding-left: 0;
+    justify-content: center;
+  }
+  
+  .timeline-marker {
+    position: relative;
+    left: auto;
+  }
+  
+  .timeline-content {
+    flex: 0 0 45%;
+    margin: 0 20px;
+  }
+}
+
+/* High-resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .timeline-content {
+    border: 0.5px solid rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Print styles */
+@media print {
+  .service-card-link {
+    display: none !important;
+  }
+  
+  .content-block {
+    page-break-inside: avoid;
+  }
+  
+  .profile-block {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-image {
+    max-height: 300px;
+  }
+  
+  .service-overview-card {
+    break-inside: avoid;
+  }
+  
+  /* Hide timeline path for printing */
+  .timeline-path {
+    display: none;
+  }
+  
+  .timeline-item {
+    padding-left: 0 !important;
+  }
+  
+  .timeline-marker {
+    display: none;
+  }
+}
+
+/* Special device-specific optimizations */
+/* Samsung Galaxy Fold */
+@media (max-width: 280px) {
+  .content-block {
+    padding: 15px 3px;
+  }
+  
+  .profile-block {
+    padding: 8px 3px;
+  }
+  
+  .profile-image {
+    height: 140px;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-path {
+    left: 10px;
+  }
+  
+  .timeline-item {
+    padding-left: 20px;
+  }
+  
+  .timeline-marker {
+    flex: 0 0 25px;
+    height: 25px;
+  }
+  
+  .timeline-content {
+    padding: 8px;
+  }
+}
+
+/* Surface Duo */
+@media (max-width: 540px) and (max-height: 720px) {
+  .profile-block {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-image {
+    height: 200px;
+  }
+}
+
+/* iPad Pro specific */
+@media (width: 1024px) and (height: 1366px) {
+  .profile-block {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  
+  .profile-image {
+    height: 400px;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-content {
+    flex: 0 0 45%;
+  }
+}
+
+/* Galaxy Tab specific */
+@media (width: 800px) and (height: 1280px) {
+  .profile-block {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  
+  .profile-image {
+    height: 350px;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-content {
+    flex: 0 0 48%;
+  }
+}
+
+/* Honor 70 specific */
+@media (width: 384px) and (height: 832px) {
+  .timeline-path {
+    left: 17px;
+  }
+  
+  .timeline-item {
+    padding-left: 37px;
+  }
+}
+
+/* Specific adjustments for various iPhones */
+@media (width: 375px) and (height: 812px) {
+  /* iPhone X, XS, 11 Pro */
+}
+
+@media (width: 414px) and (height: 896px) {
+  /* iPhone XR, 11, 11 Pro Max */
+  .timeline-content {
+    padding: 16px;
+  }
+}
+
+@media (width: 414px) and (height: 736px) {
+  /* iPhone 8 Plus, 7 Plus, 6s Plus */
+  .timeline-item {
+    margin-bottom: 25px;
+  }
+}
+
+/* Specific adjustments for various Android devices */
+@media (width: 360px) and (height: 740px) {
+  /* Galaxy S8, S9, S10, etc. */
+  .timeline-path {
+    left: 16px;
+  }
+  
+  .timeline-item {
+    padding-left: 32px;
+  }
+}
+
+@media (width: 412px) and (height: 915px) {
+  /* Pixel 6 Pro, etc. */
+  .timeline-content {
+    padding: 18px;
+  }
+}
+
+/* ===== HONOR 70 LANDSCAPE SPECIFIC STYLES ===== */
+@media (max-width: 915px) and (max-height: 412px) and (orientation: landscape) {
+  .content-block {
+    padding: 30px 20px;
+  }
+  
+  .profile-block {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .profile-image {
+    height: 250px;
+    order: 0;
+  }
+  
+  .profile-text {
+    text-align: left;
+  }
+  
+  .profile-text h2::after {
+    left: 0;
+    transform: none;
+  }
+  
+  .qualifications-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .services-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Timeline adjustments for landscape */
+  .timeline-path {
+    left: 50%;
+  }
+  
+  .timeline-item {
+    flex-direction: row;
+    padding-left: 0;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-marker {
+    position: relative;
+    left: auto;
+  }
+  
+  .timeline-content {
+    flex: 0 0 45%;
+    margin: 0 20px;
+  }
+  
+  .mission-block {
+    width: 80%;
+  }
+}
+
+/* Landscape orientation for all devices */
+@media (max-width: 991px) and (orientation: landscape) {
+  .content-block {
+    padding: 40px 25px;
+  }
+  
+  .profile-block {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .profile-image {
+    order: 0;
+    height: 280px;
+  }
+  
+  .profile-text {
+    text-align: left;
+  }
+  
+  .profile-text h2::after {
+    left: 0;
+    transform: none;
+  }
+  
+  .qualifications-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .services-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Timeline adjustments */
+  .timeline-path {
+    left: 50%;
+  }
+  
+  .timeline-item {
+    flex-direction: row;
+    padding-left: 0;
+    justify-content: center;
+  }
+  
+  .timeline-marker {
+    position: relative;
+    left: auto;
+  }
+  
+  .timeline-content {
+    flex: 0 0 45%;
+    margin: 0 20px;
+  }
+  
+  .mission-block {
+    width: 80%;
+  }
+}
+
+/* Small landscape devices */
+@media (max-width: 667px) and (orientation: landscape) {
+  .content-block {
+    padding: 30px 20px;
+  }
+  
+  .profile-block {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .profile-image {
+    order: -1;
+    height: 220px;
+  }
+  
+  .profile-text {
+    text-align: center;
+  }
+  
+  .profile-text h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .qualifications-block {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .services-overview {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-path {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    padding-left: 60px;
+    justify-content: flex-start;
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    left: 0;
+  }
+  
+  .timeline-content {
+    flex: 0 0 100%;
+    margin: 0;
+  }
+}

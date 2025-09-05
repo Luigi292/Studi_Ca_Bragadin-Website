@@ -1,29 +1,3 @@
-/* ===== MODERN BASE STYLES ===== */
-:root {
-  --primary-color: #1a2a4a;
-  --primary-light: #2c3e66;
-  --secondary-color: #bca454;
-  --secondary-light: #e8c874;
-  --accent-color: #4a6fa5;
-  --dark-color: #222222;
-  --light-color: #f8f9fa;
-  --gray-color: #6c757d;
-  --white-color: #ffffff;
-  --overlay-color: rgba(0, 0, 0, 0.7);
-  --font-main: 'Plus Jakarta Sans', sans-serif;
-  --font-heading: 'Playfair Display', serif;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
-  --border-radius: 6px;
-  --container-width: 1320px;
-}
-
-
-
-
-
 /* ===== NEWS PAGE STYLES ===== */
 .news-page {
   background-color: var(--light-color);
@@ -805,20 +779,35 @@ input:invalid {
   text-decoration: underline;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .newsletter-cta-box {
-    padding: 30px;
-  }
-  
-  .form-row {
-    flex-direction: column;
-  }
-  
-  .form-row button {
-    width: 100%;
-  }
+
+
+.no-news-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
 }
+
+.no-news-message svg {
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.no-news-message h2 {
+  margin-bottom: 1rem;
+  color: #444;
+  font-size: 1.8rem;
+}
+
+.no-news-message p {
+  color: #888;
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+
 
 
 
@@ -866,17 +855,8 @@ input:invalid {
 }
 
 @media (max-width: 768px) {
-  .news-hero {
-    height: 50vh;
-    min-height: 400px;
-  }
-  
-  .news-hero h1 {
-    font-size: 2.5rem;
-  }
-  
-  .news-hero p {
-    font-size: 1.1rem;
+  .news-archive {
+    grid-template-columns: 1fr;
   }
   
   .news-actions {
@@ -894,26 +874,21 @@ input:invalid {
   }
   
   .modal-title {
-    font-size: 1.5rem;
+    font-size: var(--text-xl);
+  }
+  
+  .modal-text {
+    font-size: var(--text-sm);
   }
 }
 
 @media (max-width: 576px) {
-  .news-hero {
-    height: 40vh;
-    min-height: 350px;
-  }
-  
-  .news-hero h1 {
-    font-size: 2rem;
-  }
-  
   .news-image {
     height: 180px;
   }
   
   .news-content h3 {
-    font-size: 1.3rem;
+    font-size: var(--text-base);
   }
   
   .newsletter-cta-box {
@@ -921,7 +896,7 @@ input:invalid {
   }
   
   .cta-content h3 {
-    font-size: 1.5rem;
+    font-size: var(--text-xl);
   }
   
   .cta-form {
@@ -936,5 +911,147 @@ input:invalid {
   .cta-form button {
     border-radius: var(--border-radius);
     width: 100%;
+  }
+}
+
+/* Device-specific adjustments */
+/* iPhone X, XS, 11 Pro */
+@media (width: 375px) and (height: 812px) {
+  .news-content h3 {
+    font-size: var(--text-base);
+  }
+}
+
+/* iPhone XR, 11, 11 Pro Max */
+@media (width: 414px) and (height: 896px) {
+  .news-content h3 {
+    font-size: var(--text-lg);
+  }
+}
+
+/* iPhone 8 Plus, 7 Plus, 6s Plus */
+@media (width: 414px) and (height: 736px) {
+  .news-content h3 {
+    font-size: var(--text-base);
+  }
+}
+
+/* Galaxy S8, S9, S10, etc. */
+@media (width: 360px) and (height: 740px) {
+  .news-content h3 {
+    font-size: var(--text-base);
+  }
+}
+
+/* Honor 70 specific */
+@media (width: 384px) and (height: 832px) {
+  .news-content h3 {
+    font-size: var(--text-lg);
+  }
+}
+
+/* iPad Pro specific */
+@media (width: 1024px) and (height: 1366px) {
+  .news-archive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Galaxy Tab specific */
+@media (width: 800px) and (height: 1280px) {
+  .news-archive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Landscape orientation styles */
+@media (max-width: 991px) and (orientation: landscape) {
+  .archive-grid {
+    grid-template-columns: 250px 1fr;
+  }
+  
+  .news-archive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .archive-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .news-sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .newsletter-form-box {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+  .news-sidebar {
+    grid-template-columns: 1fr;
+  }
+  
+  .news-archive {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Special adjustments for very short landscape screens */
+@media (max-width: 991px) and (orientation: landscape) and (max-height: 450px) {
+  .news-content {
+    padding: 15px;
+  }
+  
+  .news-content h3 {
+    font-size: var(--text-sm);
+  }
+  
+  .news-excerpt {
+    font-size: var(--text-xs);
+  }
+  
+  .news-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .news-sidebar {
+    display: none;
+  }
+  
+  .archive-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .news-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .news-actions {
+    display: none;
+  }
+  
+  /* Standardized print text sizes */
+  .news-content h3 {
+    font-size: 12pt !important;
+  }
+  
+  .news-excerpt {
+    font-size: 10pt !important;
+  }
+  
+  .news-meta {
+    font-size: 9pt !important;
   }
 }

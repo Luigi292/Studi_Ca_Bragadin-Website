@@ -27,96 +27,87 @@
 
   <!-- Fonts with font-display: swap -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
+  <link rel="stylesheet" href="css/globals.css">
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/chi-siamo.css">
   <link rel="stylesheet" href="css/hero.css">
-
- 
+  <!-- Animation CSS should be loaded last to prevent conflicts -->
+  <link rel="stylesheet" href="css/fade-animation.css">
 
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
   <link rel="shortcut icon" href="images/favicon-logo.png" type="image/png">
-  
-  <!-- Animate on Scroll -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
- 
-
-
   <!-- Navbar Component -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+      </a>
+    </div>
 
-<nav class="navbar">
-  <div class="logo">
-    <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
-      <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
-    </a>
-  </div>
+    <div class="languageToggle">
+      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+      <!--<span>|</span> <a href="en/index.html" class="languageButton" aria-label="English">EN</a> -->
+    </div>
 
-  <div class="languageToggle">
-    <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <div></div><div></div><div></div>
+    </div>
 
-<!--<span>|</span> <a href="en/index.html" class="languageButton" aria-label="English">EN</a> -->   </div>
-
-  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-    <div></div><div></div><div></div>
-  </div>
-
-  <ul class="navMenu" id="navMenu">
-    <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
-    <li class="dropdown">
-      <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
+    <ul class="navMenu" id="navMenu">
+      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+      <li class="dropdown">
+        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
+        
+        <!-- Dropdown arrow shown next to "Chi Siamo" -->
       
-      <!-- Dropdown arrow shown next to "Chi Siamo" -->
-    
-      <ul class="dropdown-menu">
-        <li><a href="chi-siamo.html">Il Nostro Team</a></li>
-        <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
-        <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
-        <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
-      </ul>
-    </li>
-    <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
-    <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
-    <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
-  </ul>
-</nav>
+        <ul class="dropdown-menu">
+          <li><a href="chi-siamo.html">Il Nostro Team</a></li>
+          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+        </ul>
+      </li>
+      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+      <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
+    </ul>
+  </nav>
 
-
-
-<!-- About Hero Section -->
-<section class="hero-section">
-  <div class="hero-overlay"></div>
-  <img src="images/team-glass-room.jpg.avif" alt="Team Studi Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
-  <div class="hero-content">
-    <h1>Il Nostro Team</h1>
-    <p>Dove competenza e passione si incontrano per creare valore</p>
-    
-  </div>
-  <div class="hero-scroll-indicator">
-    <span>Scorri</span>
-    <div class="hero-mouse"></div>
-  </div>
-</section>
-
+  <!-- About Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <img src="images/team-glass-room.jpg.avif" alt="Team Studi Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
+    <div class="hero-content">
+      <h1>Il Nostro Team</h1>
+      <p>Dove competenza e passione si incontrano per creare valore</p>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scorri</span>
+      <div class="hero-mouse"></div>
+    </div>
+  </section>
 
   <!-- About Studio Section -->
   <section class="about-studio">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
+      <div class="section-header">
         <h2>Studi Ca' Bragadin</h2>
         <p class="section-subtitle">Un nuovo approccio alla consulenza d'impresa</p>
       </div>
       
       <div class="about-container">
-        <div class="about-text" data-aos="fade-right">
+        <div class="about-text">
           <p>Gli Studi Ca' Bragadin nascono come l'ambizioso progetto, fondato da tre professionisti operativi su Padova già da diversi decenni, di far confluire in un unico spazio tutte le professionalità necessarie per la consulenza d'impresa. Fondati nell'aprile 2024 nella prestigiosa location di Palazzo Bragadin, gli Studi rappresentano un contenitore multidisciplinare di dottori commercialisti, esperti contabili ed avvocati d'impresa che, già forti delle loro esperienze e dei risultati raggiunti in campo economico, finanziario, fiscale e giuridico negli anni, hanno deciso di consolidare ed incrementare il loro network professionale creando un nuovo spazio condiviso a disposizione della comunità degli imprenditori e degli enti istituzionali della provincia e non solo.</p>
         </div>
-        <div class="about-image" data-aos="fade-left">
+        <div class="about-image">
           <img src="images/hall.jpg.avif" alt="Palazzo Bragadin" loading="lazy">
         </div>
       </div>
@@ -127,65 +118,65 @@
   <section class="activities-section">
     <div class="container">
       <div class="activities-container">
-        <div class="activities-image" data-aos="fade-right">
+        <div class="activities-image">
           <img src="images/team2.jpg.avif" alt="Riunione di lavoro" loading="lazy">
         </div>
-        <div class="activities-content" data-aos="fade-left">
+        <div class="activities-content">
           <div class="section-header">
-            <h2>Le Nostre Aree di Intervento</h2>
+            <h2>Le Nostre Aree de Intervento</h2>
             <p class="section-subtitle">Soluzioni integrate per ogni esigenza aziendale</p>
           </div>
           
           <div class="activities-grid">
-            <div class="activity-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="activity-item">
               <div class="activity-icon">
                 <i class="fas fa-briefcase"></i>
               </div>
               <h4>Diritto Societario e Commerciale</h4>
             </div>
-            <div class="activity-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="activity-item">
               <div class="activity-icon">
                 <i class="fas fa-gavel"></i>
               </div>
               <h4>Contenzioso Civile</h4>
             </div>
-            <div class="activity-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="activity-item">
               <div class="activity-icon">
                 <i class="fas fa-file-invoice-dollar"></i>
               </div>
               <h4>Contenzioso Tributario</h4>
             </div>
-            <div class="activity-item" data-aos="fade-up" data-aos-delay="250">
+            <div class="activity-item">
               <div class="activity-icon">
                 <i class="fas fa-balance-scale"></i>
               </div>
               <h4>Diritto Tributario</h4>
             </div>
-            <div class="activity-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="activity-item">
               <div class="activity-icon">
                 <i class="fas fa-tasks"></i>
               </div>
               <h4>Adempimenti civilistici e fiscali</h4>
             </div>
-            <div class="activity-item" data-aos="fade-up" data-aos-delay="350">
+            <div class="activity-item">
               <div class="activity-icon">
                 <i class="fas fa-exchange-alt"></i>
               </div>
               <h4>Operazioni Straordinarie d'impresa</h4>
             </div>
-            <div class="activity-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="activity-item">
               <div class="activity-icon">
                 <i class="fas fa-chart-line"></i>
               </div>
               <h4>Controllo di Gestione</h4>
             </div>
-            <div class="activity-item" data-aos="fade-up" data-aos-delay="450">
+            <div class="activity-item">
               <div class="activity-icon">
                 <i class="fas fa-university"></i>
               </div>
               <h4>Legislazione Bancaria e Finanziamenti</h4>
             </div>
-            <div class="activity-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="activity-item">
               <div class="activity-icon">
                 <i class="fas fa-search-dollar"></i>
               </div>
@@ -198,73 +189,76 @@
   </section>
 
   <!-- Team Section -->
-  <section class="team-section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
+  <section class="studios">
+    <div class="studios-container-wide">
+      <div class="section-header-wide">
         <h2>I Professionisti</h2>
-        <p class="section-subtitle">Conosci il nostro team</p>
+        <p class="section-subtitle-wide">Conosci il nostro team</p>
       </div>
 
-      <div class="team-cards">
+      <div class="studios-grid">
         <!-- Avv. Lenzi -->
-        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="card-image">
-            <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi" loading="lazy">
-            <div class="card-overlay">
-              <a href="avv-maximiliano-lenzi.html" class="discover-more">Scopri di più</a>
-            </div>
+        <div class="professional-card">
+          <div class="card-image-wrapper">
+            <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
           </div>
           <div class="card-content">
             <h3>Avv. Maximiliano Lenzi</h3>
-            <p class="card-role">Consulenza Legale d'Impresa</p>
+            <p class="card-specialty">Consulenza Legale d'Impresa</p>
             <div class="card-excerpt">
               <p>Avvocato specializzato in diritto commerciale e societario con oltre 18 anni di esperienza.</p>
             </div>
-            <div class="card-cta">
-              <a href="mailto:avvocatolenzi@studicabragadin.it" class="contact-button">Contatta</a>
-              <a href="avv-maximiliano-lenzi.html" class="contact-button profile">Profilo Completo</a>
+            <div class="card-contact">
+              <p><strong>Telefono:</strong> <a href="tel:0498751356">049-8751356</a></p>
+              <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
+              <div class="card-cta">
+                <a href="mailto:avvocatolenzi@studicabragadin.it" class="ctaButton small">Contatta</a>
+                <a href="avv-maximiliano-lenzi.html" class="ctaButton small profile">Profilo Completo</a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Dott. Maretto -->
-        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-image">
-            <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto" loading="lazy">
-            <div class="card-overlay">
-              <a href="andrea-maretto.html" class="discover-more">Scopri di più</a>
-            </div>
+        <div class="professional-card">
+          <div class="card-image-wrapper">
+            <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
           </div>
           <div class="card-content">
             <h3>Dott. Andrea Maretto</h3>
-            <p class="card-role">Consulenza Fiscale e Societaria</p>
+            <p class="card-specialty">Consulenza Fiscale e Societaria</p>
             <div class="card-excerpt">
               <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza</p>
             </div>
-            <div class="card-cta">
-              <a href="mailto:andrea.maretto@studicabragadin.it" class="contact-button">Contatta</a>
-              <a href="andrea-maretto.html" class="contact-button profile">Profilo Completo</a>
+            <div class="card-contact">
+              <p><strong>Telefono:</strong> <a href="tel:0499562428">049-9562428</a></p>
+              <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
+              <div class="card-cta">
+                <a href="mailto:andrea.maretto@studicabragadin.it" class="ctaButton small">Contatta</a>
+                <a href="andrea-maretto.html" class="ctaButton small profile">Profilo Completo</a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Dott. Cecolin -->
-        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="card-image">
-            <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin" loading="lazy">
-            <div class="card-overlay">
-              <a href="alberto-cecolin.html" class="discover-more">Scopri di più</a>
-            </div>
+        <div class="professional-card">
+          <div class="card-image-wrapper">
+            <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
           </div>
           <div class="card-content">
             <h3>Dott. Alberto Cecolin</h3>
-            <p class="card-role">Consulenza Contabile e Fiscale</p>
+            <p class="card-specialty">Consulenza Contabile e Fiscale</p>
             <div class="card-excerpt">
-              <p>Dottore Commercialista con 15 anni di esperienza</p>
+              <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza</p>
             </div>
-            <div class="card-cta">
-              <a href="mailto:studio@studiocecolin.com" class="contact-button">Contatta</a>
-              <a href="alberto-cecolin.html" class="contact-button profile">Profilo Completo</a>
+            <div class="card-contact">
+              <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
+              <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
+              <div class="card-cta">
+                <a href="mailto:studio@studiocecolin.com" class="ctaButton small">Contatta</a>
+                <a href="alberto-cecolin.html" class="ctaButton small profile">Profilo Completo</a>
+              </div>
             </div>
           </div>
         </div>
@@ -272,45 +266,43 @@
     </div>
   </section>
 
-
-  <!-- Missioni Values Section -->
-   
+  <!-- Missione e Valori Section -->
   <section class="values-section">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
+      <div class="section-header">
         <h2>Missione e Valori</h2>
         <p class="section-subtitle">Ciò che ci guida ogni giorno</p>
       </div>
       
       <div class="mission-container">
-        <div class="mission-content" data-aos="fade-up">
-          <p>Eccellenza professionale, etica ed affiancamento alle imprese in tutte le fasi, ordinarie e straordinarie, della loro esistenza: gli Studi Ca' Bragadin nascono con il preciso obiettivo di essere molto di più che un semplice consulente esterno per imprese, quanto piuttosto un partner in grado di creare un tangibile valore aggiunto per i propri clienti grazie alla combinazione delle competenze in ambito legale, tributario e societario e all'assiduo impegno e dedizione dei professionisti che vi convivono.</p>
+        <div class="mission-content">
+          <p>Eccellenza professionale, etica ed affiancamento alle imprese in tutte le fasi, ordinarie e straordinarie, della loro esistenza: gli Studi Ca' Bragadin nascono con il preciso obiettivo di essere molto di più che un semplice consulente esterno per imprese, quanto piuttosto a partner in grado di creare un tangibile valore aggiunto per i propri clienti grazie alla combinazione delle competenze in ambito legale, tributario e societario e all'assiduo impegno e dedizione dei professionisti che vi collaborano.</p>
         </div>
       </div>
       
       <div class="values-grid">
-        <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="value-card">
           <div class="value-icon">
             <i class="fas fa-handshake"></i>
           </div>
           <h3>Etica Professionale</h3>
           <p>Rispettiamo i più alti standard deontologici, ponendo l'interesse del cliente al centro di ogni nostra attività.</p>
         </div>
-        <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="value-card">
           <div class="value-icon">
             <i class="fas fa-lightbulb"></i>
           </div>
           <h3>Innovazione</h3>
           <p>Adottiamo tecnologie avanzate e metodologie aggiornate per offrire servizi efficienti e moderni.</p>
         </div>
-        <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="value-card">
           <div class="value-icon">
             <i class="fas fa-users"></i>
           </div>
           <h3>Approccio Multidisciplinare</h3>
-          <p>La collaborazione tra i nostri professionisti garantisce soluzioni complete che considerano tutti gli aspetti.</p>
+          <p>La collaboratione tra i nostri professionisti garantisce soluzioni complete che considerano tutti gli aspetti.</p>
         </div>
-        <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="value-card">
           <div class="value-icon">
             <i class="fas fa-chart-bar"></i>
           </div>
@@ -324,96 +316,72 @@
   <!-- Network Section -->
   <section class="network-section">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
+      <div class="section-header">
         <h2>Il Nostro Network</h2>
         <p class="section-subtitle">Collaborazioni e partnership di eccellenza</p>
       </div>
       
       <div class="network-container">
-        <div class="network-content" data-aos="fade-right">
+        <div class="network-content">
           <p>Per offrire un servizio completo ai nostri clienti, collaboriamo con una rete selezionata di professionisti specializzati:</p>
           <ul class="network-list">
-            <li data-aos="fade-right" data-aos-delay="100">Notai per operazioni immobiliari e societarie complesse</li>
-            <li data-aos="fade-right" data-aos-delay="150">Banche e Finanziarie per soluzioni di finanziamento e investimento</li>
-            <li data-aos="fade-right" data-aos-delay="200">Consulenti del Lavoro per adempimenti previdenziali e contrattualistica</li>
-            <li data-aos="fade-right" data-aos-delay="250">Specialisti IT per digitalizzazione e sistemi gestionali</li>
+            <li>Notai per operazioni immobiliari e societarie complesse</li>
+            <li>Banche e Finanziarie per soluzioni di finanziamento e investimento</li>
+            <li>Consulenti del Lavoro per adempimenti previdenziali e contrattualistica</li>
+            <li>Specialisti IT per digitalizzazione e sistemi gestionali</li>
           </ul>
         </div>
-        <div class="network-image" data-aos="fade-left">
+        <div class="network-image">
           <img src="images/mid-hall.avif" alt="Network di collaborazioni" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="about-cta" data-aos="fade-up">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Pronto a lavorare con noi?</h2>
-        <p>Il primo incontro è senza impegno. Raccontaci le tue esigenze e scopri come possiamo aiutarti.</p>
-        <div class="cta-buttons">
-          <a href="contatti.html" class="cta-button primary">Prenota una Consulenza</a>
-          <a href="servizi.html" class="cta-button secondary">Scopri i Servizi</a>
+  <!-- Footer Component -->
+  <footer class="footer">
+    <div class="footerContent">
+      <div class="footerColumn">
+        <div class="footerLogo">
+          <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+        </div>
+        <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Contatti</h3>
+        <div class="footerInfo">
+          <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+          <p><strong>Email:</strong> info@studicabragadin.it</p>
+          <p><strong>Tel:</strong> +39 049 1234567</p>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Link</h3>
+        <div class="footerLinks">
+          <a href="chi-siamo.html">Chi siamo</a>
+          <a href="servizi.html">Servizi/Settori</a>
+          <a href="contatti.html">Contatti</a>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Legale</h3>
+        <div class="footerLinks">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Termini</a>
+          <a href="cookies.html">Cookies</a>
         </div>
       </div>
     </div>
-  </section>
 
-
-  <!-- Footer Component -->
-
-  <footer class="footer">
-  <div class="footerContent">
-    <div class="footerColumn">
-      <div class="footerLogo">
-        <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
-      </div>
-      <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
-    </div>
-
-    <div class="footerColumn">
-      <h3 class="footerHeading">Contatti</h3>
-      <div class="footerInfo">
-        <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-        <p><strong>Email:</strong> info@studicabragadin.it</p>
-        <p><strong>Tel:</strong> +39 049 1234567</p>
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
       </div>
     </div>
-
-    <div class="footerColumn">
-      <h3 class="footerHeading">Link</h3>
-      <div class="footerLinks">
-        <a href="chi-siamo.html">Chi siamo</a>
-        <a href="servizi.html">Servizi/Settori</a>
-        <a href="contatti.html">Contatti</a>
-      </div>
-    </div>
-
-    <div class="footerColumn">
-      <h3 class="footerHeading">Legale</h3>
-      <div class="footerLinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Termini</a>
-        <a href="cookies.html">Cookies</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Developer credit -->
-
-<div class="footer-bottom">
-  <div class="footer-copyright">
-    <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
-  </div>
-  
-  <div class="footer-developer">
-    <p>Sviluppato da <a href="https://www.luigimaretto.com" target="_blank" rel="noopener noreferrer" aria-label="Luigi Maretto - Sviluppatore Web">Luigi Maretto</a></p>
-  </div>
-</div>
-</footer>
-
-
+  </footer>
 
   <div class="gototop js-top">
     <a href="#" class="js-gotop" title="Torna a inizio pagina">
@@ -423,53 +391,38 @@
     </a>
   </div>
 
+  <!-- Scripts - Load order is important -->
+  <script src="js/navbar.js" defer></script>
+  <script src="js/navbar-scroll.js" defer></script>
+  <!-- Fade Animation JS -->
+  <script src="js/fade-animation.js" defer></script>
 
+  <!-- Main script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set current year in footer
+      document.querySelectorAll('.current-year').forEach(el => {
+        el.textContent = new Date().getFullYear();
+      });
 
+      // Scroll to top button functionality
+      window.addEventListener("scroll", function() {
+        const scrollBtn = document.querySelector(".js-top");
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add("active");
+        } else {
+          scrollBtn.classList.remove("active");
+        }
+      });
 
-
-<!-- Scripts -->
-
-
-<script src="js/navbar.js" defer></script>
-<script src="js/navbar-scroll.js" defer></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Set current year in footer
-  document.querySelectorAll('.current-year').forEach(el => {
-    el.textContent = new Date().getFullYear();
-  });
-
-  // Initialize AOS animation
-  AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true,
-    offset: 100
-  });
-
-  // Scroll to top button functionality
-  window.addEventListener("scroll", function() {
-    const scrollBtn = document.querySelector(".js-top");
-    if (window.scrollY > 300) {
-      scrollBtn.classList.add("active");
-    } else {
-      scrollBtn.classList.remove("active");
-    }
-  });
-
-  document.querySelector(".js-gotop").addEventListener("click", function(e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+      document.querySelector(".js-gotop").addEventListener("click", function(e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
     });
-  });
-});
-</script>
-
-
-
+  </script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -6,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dott. Andrea Maretto | Studio Commercialista Padova | Studio Ca' Bragadin</title>
-  <meta name="description" content="Dott. Andrea Maretto - Commercialista e Revisore Legale a Padova. Esperto in contabilità, bilancio, fiscalità e consulenza aziendale.">
-  <meta name="keywords" content="commercialista padova, maretto padova, studio commercialista padova, revisore legale, fiscalità">
+  <meta name="description" content="Dott. Andrea Maretto - Commercialista ed Esperto Contabile a Padova. Esperto in contabilità, bilancio, fiscalità e consulenza aziendale.">
+  <meta name="keywords" content="commercialista padova, maretto padova, studio commercialista padova, consulenza fiscale, fiscalità">
 
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -15,17 +14,27 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Fonts with font-display: swap - UPDATED TO MATCH OTHER PAGES -->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/globals.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/fade-animation.css">
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/professional.css">
+  <link rel="stylesheet" href="css/professional-responsive.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/hero.css">
 
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
+
+
+  
 </head>
-<body>
+<body class="andrea-maretto-page">
   
   <nav class="navbar">
     <div class="logo">
@@ -60,12 +69,12 @@
     </ul>
   </nav>
 
-  <section class="hero-section professional-hero">
+  <section class="hero-section">
     <div class="hero-overlay"></div>
     <img src="images/maretto-hero-bg.jpg.avif" alt="Dott. Andrea Maretto" class="hero-image" loading="eager" fetchpriority="high">
     <div class="hero-content">
       <h1>Dott. Andrea Maretto</h1>
-      <p class="professional-title">Commercialista e Revisore Legale - Consulenza Aziendale e Fiscale</p>
+      <p class="professional-title">Studio Commercialisti ed Esperti Contabili – Consulenza fiscale e societaria</p>
     </div>
     <div class="hero-decor decor-1">
       <i class="fas fa-calculator"></i>
@@ -79,10 +88,11 @@
     <div class="content-block profile-block">
       <div class="profile-text">
         <h2>Profilo Professionale</h2>
-        <p>Commercialista con oltre 10 anni di esperienza nella gestione amministrativa, finanziaria e fiscale di società di capitali e di persone, enti pubblici economici ed imprese individuali. Attualmente titolare di studio professionale in Padova presso gli Studi Ca' Bragadin.</p>
-        <p>Ho sviluppato le competenze acquisite nel corso di laurea in Economia e Finanza con specializzazione in Legislazione Bancaria per affiancare ai tradizionali servizi commercialistici specifiche consulenze per l'accesso al credito bancario e la cura dei rapporti con le banche per conto dei clienti.</p>
-        <p>Mi occupo, inoltre, di contrattualistica aziendale, gestione economico‑finanziaria prospettica per società assegnatarie di appalti pubblici e gestione delle crisi d'impresa. Possiedo ottime capacità di problem solving nei tempi rapidi richiesti dalle sempre più veloci dinamiche aziendali.</p>
+        <p>Commercialista con oltre 10 anni di esperienza nella consulenza e gestione amministrativa, finanziaria e fiscale di società, enti pubblici, imprese individuali e professionisti, opero con un approccio strategico personalizzato. Attualmente titolare dello studio professionale a Padova presso gli Studi Ca' Bragadin.</p>
+        <p>Le competenze acquisite con la laurea in Economia e Finanza, specializzazione in Legislazione Bancaria, mi permettono di affiancare ai servizi commercialistici tradizionali consulenze su accesso al credito e gestione dei rapporti con le banche. L'attività di docente in istituti secondari e universitari ha inoltre rafforzato la mia capacità di rendere comprensibili anche tematiche complesse.</p>
+        <p>Mi occupo anche di contrattualistica aziendale, gestione economico-finanziaria per società con appalti pubblici e crisi d'impresa, sviluppando solide capacità di problem solving nei tempi rapidi delle dinamiche aziendali.</p>
       </div>
+
       <div class="profile-image">
         <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto">
       </div>
@@ -99,721 +109,302 @@
             <i class="fas fa-graduation-cap"></i>
           </div>
           <h3>Laurea in Economia e Finanza</h3>
-          <p>Università Ca' Foscari Venezia<br>Specializzazione in Legislazione Bancaria</p>
+          <p>Università Ca' Foscari di Venezia<br>Specializzazione in diritto bancario</p>
         </div>
         <div class="qualification-card">
           <div class="qualification-icon">
             <i class="fas fa-user-tie"></i>
           </div>
-          <h3>Dottore Commercialista</h3>
-          <p>Iscritto all'Albo di Padova n. 1531/A dal 2020</p>
-        </div>
-        <div class="qualification-card">
-          <div class="qualification-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <h3>Professionista Revisione Contabile</h3>
-          <p>Iscritto al Registro n. 159679 dal 2010</p>
+          <h3>Iscrizione ODCEC di Padova</h3>
+          <p>Dal 2022</p>
         </div>
         <div class="qualification-card">
           <div class="qualification-icon">
             <i class="fas fa-chalkboard-teacher"></i>
           </div>
           <h3>Docente</h3>
-          <p>Discipline economico-aziendali e diritto commerciale presso scuole secondarie superiori</p>
+          <p>Discipline economico-aziendali e giuridiche presso scuole secondarie di secondo grado ed università</p>
         </div>
       </div>
     </div>
 
-
-
-    
+    <div class="content-block">
+      <div class="block-header">
+        <h2>Capacità e Competenze</h2>
+        <p>Le principali aree di specializzazione professionale</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-icon">
+            <i class="fas fa-file-invoice"></i>
+          </div>
+          <h3>Contabilità</h3>
+          <p>Contabilità ordinaria e semplificata, bilanci ordinari, abbreviati e per microimprese</p>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3>Dichiarativi fiscali e pianificazione tributaria</h3>
+          <p>Modello Redditi, Dichiarazione IRAP, Dichiarazione IVA, Modello 770, Certificazioni Uniche. Individuazione di strategie per una gestione efficiente e sostenibile del carico fiscale</p>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Controllo di gestione</h3>
+          <p>Con specifico riferimento ad aziende nel settore costruzioni immobiliari e appalti pubblici</p>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <h3>Consulenza in materia bancaria e finanziaria</h3>
+          <p>Assistenza nella richiesta di finanziamenti e relazioni con il sistema creditizio</p>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-icon">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h3>Contrattualistica aziendale</h3>
+          <p>Predisposizione di contratti d'impresa e contratti d'appalto. Assistenza nel corso delle trattative con controparti</p>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3>Consulenza ad enti pubblici economici</h3>
+          <p>Supporto tecnico in materia economico-finanziaria e di bilancio</p>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-icon">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h3>Appalti pubblici</h3>
+          <p>Gestione economico-finanziaria di società appaltatrici di opere pubbliche pluriennali</p>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-icon">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+          <h3>Operazioni Straordinarie</h3>
+          <p>Assistenza in trasformazioni, fusiones, scissioni, cessioni ed affitti d'azienda, nonché riorganizzazioni aziendali</p>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3>Crisi d'Impresa</h3>
+          <p>Composizione della crisi d'impresa e procedure concorsuali</p>
+        </div>
+      </div>
+    </div>
 
     <div class="content-block">
+      <div class="block-header">
+        <h2>Mission e Valori Personali</h2>
+        <p>I principi che guidano l'attività professionale</p>
+      </div>
+      <div class="mission-block">
+        <p>I valori che guidano l'attività professionale dello Studio sono efficienza, affidabilità, etica e rapidità d'intervento accompagnati dalla costante disponibilità a fornire chiarezza e trasparenza in un panorama normativo sempre più complesso ed in continua evoluzione.</p>
+        <p>Grazie a queste caratteristiche, il mio ruolo si è via via attestato come quello di interlocutore qualificato ed affidabile per chi cerca non solo un supporto tecnico, ma anche un punto di riferimento capace di orientare con sicurezza e competenza all'interno delle innumerevoli regole che governano la vita economica e fiscale di imprese e istituzioni.</p>
+      </div>
+    </div>
+
+
+    
+ <!-- Timeline section-->
+
+<div class="content-block timeline-section">
   <div class="block-header">
-    <h2>Capacità e Competenze</h2>
-    <p>Le principali aree di specializzazione professionale</p>
+    <h2>Esperienze Professionali</h2>
+    <p>I principali incarichi e posizioni ricoperte dal Dott. Maretto</p>
   </div>
-  <div class="skills-grid">
-    <div class="skill-item">
-      <div class="skill-icon">
-        <i class="fas fa-file-invoice"></i>
-      </div>
-      <h3>Contabilità</h3>
-      <p>Contabilità ordinaria e semplificata, bilanci ordinari, abbreviati e per microimprese</p>
+  
+  <div class="modern-timeline">
+    <div class="timeline-path">
+      <div class="path-line"></div>
     </div>
     
-    <div class="skill-item">
-      <div class="skill-icon">
-        <i class="fas fa-file-alt"></i>
+    <div class="timeline-items">
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-date">Febbraio 2022 - Attuale</div>
+          <h3>Titolare dello Studio Commercialisti ed Esperti Contabili Dott. Andrea Maretto</h3>
+          <p>Studio specializzato nella gestione contabile e fiscale di società, enti pubblici economici, imprese individuali e professionisti. Professionista incaricato del Consorzio Zona Industriale e Porto Fluviale di Padova, di cui ho gestito sotto l'aspetto contabile e fiscale anche la procedura liquidatoria. Consulenza a numerose imprese del territorio assegnatarie di appalti pubblici, con servizi nella fase di aggiudicazione/consegna dei lavori, stipula dei contratti d'appalto e programmazione economico-finanziaria delle operazioni.</p>
+        </div>
       </div>
-      <h3>Dichiarazioni Fiscali</h3>
-      <p>Modello Redditi, Dichiarazione IRAP, Dichiarazione IVA, Modello 770, Certificazioni Uniche</p>
-    </div>
-    
-    <div class="skill-item">
-      <div class="skill-icon">
-        <i class="fas fa-chart-line"></i>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-date">Settembre 2013 – Gennaio 2022</div>
+          <h3>Collaboratore presso Studio Commercialista Rampazzo & Associati</h3>
+          <p>Tirocinio professionale di durata triennale e gestione di portafoglio clienti. Sviluppo competenze specialistiche in contabilità, fiscalità e consulenza aziendale con particolare riferimento al settore degli appalti pubblici e delle costruzioni.</p>
+        </div>
       </div>
-      <h3>Controllo di Gestione</h3>
-      <p>Con specifico riferimento ad aziende nel settore costruzioni immobiliari e appalti pubblici</p>
-    </div>
-    
-    <div class="skill-item">
-      <div class="skill-icon">
-        <i class="fas fa-university"></i>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-date">Gennaio 2008 – Luglio 2016</div>
+          <h3>Teaching assistant e docente</h3>
+          <p>Università Ca' Foscari di Venezia / Scuole secondarie superiori in Padova, Venezia e Treviso. Attività di teaching assistant e predisposizione di pubblicazioni di settore per docenti del Dipartimento di Scienze Giuridiche presso Università Ca' Foscari di Venezia, specializzazione in Diritto Bancario. Docente di economia aziendale, economia politica, finanza aziendale e diritto commerciale presso diverse scuole secondarie superiori private in Padova, Venezia e Treviso.</p>
+        </div>
       </div>
-      <h3>Rapporti con Banche</h3>
-      <p>Consulenza su contratti di finanziamento e loro gestione nel tempo</p>
-    </div>
-    
-    <div class="skill-item">
-      <div class="skill-icon">
-        <i class="fas fa-file-contract"></i>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-date">2005 – 2007</div>
+          <h3>Formazione Universitaria e Primi Approcci Professionali</h3>
+          <p>Laurea in Economia e Finanza presso Università Ca' Foscari di Venezia con specializzazione in diritto bancario. Stage formativi presso studi professionali del territorio per l'acquisizione delle prime competenze pratiche in materia contabile e fiscale.</p>
+        </div>
       </div>
-      <h3>Contrattualistica</h3>
-      <p>Predisposizione di contratti d'impresa e contratti d'appalto</p>
-    </div>
-    
-    <div class="skill-item">
-      <div class="skill-icon">
-        <i class="fas fa-hard-hat"></i>
-      </div>
-      <h3>Appalti Pubblici</h3>
-      <p>Gestione economico-finanziaria di società appaltatrici di opere pubbliche ultrannuali</p>
-    </div>
-    
-    <div class="skill-item">
-      <div class="skill-icon">
-        <i class="fas fa-balance-scale"></i>
-      </div>
-      <h3>Crisi d'Impresa</h3>
-      <p>Composizione della crisi d'impresa e procedure concorsuali</p>
-    </div>
-    
-    <div class="skill-item">
-      <div class="skill-icon">
-        <i class="fas fa-building"></i>
-      </div>
-      <h3>Operazioni Straordinarie</h3>
-      <p>Assistenza in trasformazioni, fusioni, scissioni, cessioni ed affitti d'azienda</p>
     </div>
   </div>
 </div>
 
 
-
-
-
-
-    <div class="content-block">
-      <div class="block-header">
-        <h2>Esperienze Professionali</h2>
-        <p>I principali incarichi e posizioni ricoperte dal Dott. Maretto</p>
-      </div>
-      <div class="timeline-block">
-        <div class="timeline-item">
-          <span class="timeline-date">Settembre 2013 – Attuale</span>
-          <div class="timeline-content">
-            <h3>Titolare Studio Commercialisti ed Esperti Contabili</h3>
-            <p>Padova - Consulenza societaria</p>
-            <p>Studio specializzato nella gestione contabile e fiscale di società, enti pubblici economici, imprese individuali e professionisti. Professionista incaricato del Consorzio Zona Industriale e Porto Fluviale di Padova, di cui ho gestito sotto l'aspetto contabile e fiscale la procedura liquidatoria. Consulenza a numerose imprese del territorio assegnatarie di appalti pubblici, con servizi nella fase di aggiudicazione/consegna dei lavori, stipula dei contratti d'appalto e programmazione economico-finanziaria delle operazioni.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Gennaio 2008 – Luglio 2016</span>
-          <div class="timeline-content">
-            <h3>Teaching Assistant e Docente</h3>
-            <p>Università Ca' Foscari Venezia / Scuole secondarie superiori</p>
-            <p>Attività di teaching assistant e predisposizione di pubblicazioni di settore per docenti del Dipartimento di Scienze Giuridiche presso Università Ca' Foscari di Venezia, specializzazione in Diritto Bancario. Docente di economia aziendale, economia politica, finanza aziendale e diritto commerciale presso diverse scuole secondarie superiori in Padova e Venezia (Istituto della Tecnica, Cesd).</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Dal 2024</span>
-          <div class="timeline-content">
-            <h3>Associato</h3>
-            <p>Studio associato a Ca' Bragadin, Padova</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2022 - 2024</span>
-          <div class="timeline-content">
-            <h3>Commercialista Senior</h3>
-            <p>Studi Fontolan, Padova</p>
-            <p>Studi ragionieri commercialisti e periti commerciali</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2010 - 2022</span>
-          <div class="timeline-content">
-            <h3>Commercialista Studio Rampazzo</h3>
-            <p>Studio commercialista, Padova</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Rest of the content blocks (Services sections) remain unchanged -->
     <!-- Services Overview Section -->
     <div class="content-block" id="servizi">
       <div class="block-header">
-        <h2>Servizi Professionali</h2>
-        <p>Scopri l'ampia gamma di servizi contabili e fiscali offerti dal Dott. Andrea Maretto</p>
+        <h2>Servizi Professionali Core</h2>
+        <p>Scopri l'ampia gamma di servizi contabili e fiscali offerti dallo Studio Commercialisti ed Esperti Contabili Dott. Andrea Maretto</p>
       </div>
       
       <div class="services-overview">
         <div class="service-overview-card">
           <div class="service-card-header">
-            <h3>Contabilità e Bilancio</h3>
-            <i class="fas fa-calculator"></i>
+            <h3>Contabilità e Bilanci</h3>
+         
           </div>
           <div class="service-card-body">
-            <p>Gestione completa della contabilità ordinaria e semplificata, con redazione del bilancio civilistico e fiscale conforme alle normative vigenti.</p>
+            <p>Gestione completa di contabilità ordinarie e semplificate, con redazione di bilanci analitici, del bilancio civilistico conforme alle norme vigenti e di bilanci riclassificati</p>
             <ul class="service-card-features">
-              <li>Contabilità ordinaria e semplificata</li>
-              <li>Redazione bilanci</li>
-              <li>Consolidamento di gruppo</li>
-              <li>Analisi di bilancio</li>
+              <li>Contabilità ordinarie e semplificate</li>
+              <li>Redazione bilanci e adempimenti civilistici</li>
+              <li>Analisi di bilancio per indici e per flussi</li>
+              <li>Consulenze contabili in continuum</li>
             </ul>
-            <a href="#contabilita" class="service-card-link">Scopri di più <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="service-card-link scopri-di-piu" data-service="contabilita">Scopri di più <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
         
         <div class="service-overview-card">
           <div class="service-card-header">
-            <h3>Fiscalità</h3>
-            <i class="fas fa-file-invoice-dollar"></i>
+            <h3>Servizi fiscali</h3>
+         
           </div>
           <div class="service-card-body">
-            <p>Consulenza fiscale completa con pianificazione strategica per ottimizzare il carico tributario nel rispetto della normativa.</p>
+            <p>Consulenza fiscale completa in continuum con pianificazione strategica finalizzata all'ottimizzazione del carico tributario nel rispetto della normativa vigente.</p>
             <ul class="service-card-features">
-              <li>Dichiarazioni IVA e redditi</li>
+              <li>Dichiarazioni fiscali complete</li>
               <li>Pianificazione fiscale</li>
               <li>Accertamenti e contenzioso</li>
               <li>Adempimenti fiscali</li>
             </ul>
-            <a href="#fiscalita" class="service-card-link">Scopri di più <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="service-card-link scopri-di-piu" data-service="fiscalita">Scopri di più <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-        
+
         <div class="service-overview-card">
           <div class="service-card-header">
-            <h3>Revisione Legale</h3>
-            <i class="fas fa-search"></i>
+            <h3>Contrattualistica aziendale</h3>
+           
           </div>
           <div class="service-card-body">
-            <p>Servizi di revisione legale dei conti per società obbligate, con verifica della corretta rappresentazione della situazione patrimoniale e finanziaria.</p>
+            <p>Servizio altamente qualificato di redazione, revisione e assistenza nella contrattualistica aziendale per supportare le imprese nelle relazioni commerciali.</p>
             <ul class="service-card-features">
-              <li>Revisione legale dei conti</li>
-              <li>Due diligence</li>
-              <li>Controlli interni</li>
-              <li>Certificazioni</li>
+              <li>Predisposizione contratti</li>
+              <li>Analisi tipologie contrattuali</li>
+              <li>Monitoraggio esecuzione</li>
+              <li>Gestione relazioni negoziali</li>
             </ul>
-            <a href="#revisione" class="service-card-link">Scopri di più <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="service-card-link scopri-di-piu" data-service="contrattualistica">Scopri di più <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
         
         <div class="service-overview-card">
           <div class="service-card-header">
-            <h3>Consulenza Aziendale</h3>
-            <i class="fas fa-briefcase"></i>
+            <h3>Consulenza in materia bancaria e finanziaria</h3>
+       
           </div>
           <div class="service-card-body">
-            <p>Supporto strategico alla gestione aziendale con analisi di performance e indicatori per migliorare l'efficienza e la redditività.</p>
+            <p>Supporto qualificato e personalizzato per affiancare aziende, professionisti e imprenditori nella gestione dei rapporti con il sistema bancario e finanziario.</p>
             <ul class="service-card-features">
-              <li>Business planning</li>
+              <li>Analisi del fabbisogno finanziario</li>
+              <li>Assistenza nella richiesta di finanziamenti</li>
+              <li>Business Plan per accesso al credito</li>
+              <li>Gestione rapporti con banche</li>
+            </ul>
+            <a href="#" class="service-card-link scopri-di-piu" data-service="bancaria">Scopri di più <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <div class="service-overview-card">
+          <div class="service-card-header">
+            <h3>Consulenza aziendale e controllo di gestione</h3>
+   
+          </div>
+          <div class="service-card-body">
+            <p>Supporto strategico alla gestione aziendale con analisi di performance e indicatori volte al miglioramento dell'efficienza e della redditività.</p>
+            <ul class="service-card-features">
+              <li>Business Plan</li>
               <li>Analisi di performance</li>
-              <li>Budget e previsioni</li>
+              <li>Budget e Forecast aziendali</li>
               <li>Controllo di gestione</li>
             </ul>
-            <a href="#consulenza" class="service-card-link">Scopri di più <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="service-card-link scopri-di-piu" data-service="consulenza">Scopri di più <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
         
+        <!-- New 6th Service Card -->
         <div class="service-overview-card">
           <div class="service-card-header">
-            <h3>Internazionalizzazione</h3>
-            <i class="fas fa-globe-europe"></i>
+            <h3>Consulenza per Enti Pubblici</h3>
+     
           </div>
           <div class="service-card-body">
-            <p>Supporto alle imprese nell'espansione internazionale con particolare attenzione agli aspetti fiscali e contabili cross-border.</p>
+            <p>Supporto specializzato per enti pubblici e istituzioni nella gestione contabile, fiscale e amministrativa, con particolare attenzione alla normativa di settore.</p>
             <ul class="service-card-features">
-              <li>Fiscalità internazionale</li>
-              <li>Transfer pricing</li>
-              <li>Contabilità estero</li>
-              <li>Pianificazione cross-border</li>
+              <li>Gestione contabile enti pubblici</li>
+              <li>Adempimenti fiscali specifici</li>
+              <li>Bilanci e rendicontazione</li>
+              <li>Consulenza normativa</li>
             </ul>
-            <a href="#internazionalizzazione" class="service-card-link">Scopri di più <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="service-card-link scopri-di-piu" data-service="enti-pubblici">Scopri di più <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-        
-        <div class="service-overview-card">
-          <div class="service-card-header">
-            <h3>Società e Start-up</h3>
-            <i class="fas fa-lightbulb"></i>
-          </div>
-          <div class="service-card-body">
-            <p>Assistenza completa dalla costituzione alla gestione per start-up innovative e PMI, con particolare attenzione agli incentivi fiscali.</p>
-            <ul class="service-card-features">
-              <li>Costituzione società</li>
-              <li>Start-up innovative</li>
-              <li>Incentivi fiscali</li>
-              <li>Corporate governance</li>
-            </ul>
-            <a href="#startup" class="service-card-link">Scopri di più <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Service Details Sections -->
-    <div class="content-block" id="contabilita">
-      <div class="service-detail">
-        <h3>Contabilità e Bilancio</h3>
-        <p>Gestione completa della contabilità ordinaria e semplificata, con redazione del bilancio civilistico e fiscale conforme alle normative vigenti e alle esigenze aziendali.</p>
-        <p>Il Dott. Maretto offre un servizio completo di tenuta contabile, dalla registrazione delle operazioni alla redazione del bilancio, con particolare attenzione alla corretta rappresentazione della situazione economica, patrimoniale e finanziaria dell'impresa. Ogni cliente beneficia di un approccio personalizzato che tiene conto delle specificità del settore e delle dimensioni aziendali.</p>
-        
-        <div class="service-features">
-          <h4>Servizi Principali</h4>
-          <div class="feature-list">
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-book"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Contabilità Ordinaria</h5>
-                <p>Tenuta completa della contabilità con registrazione di tutte le operazioni e adempimenti correlati, per società e imprese individuali.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-book-open"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Contabilità Semplificata</h5>
-                <p>Gestione della contabilità per piccole imprese e professionisti che possono avvalersi del regime semplificato.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-balance-scale"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Redazione Bilancio</h5>
-                <p>Preparazione del bilancio civilistico e fiscale conforme alle normative vigenti, con note integrative e relazione sulla gestione.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-chart-pie"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Analisi di Bilancio</h5>
-                <p>Analisi degli indici e dei flussi per valutare la performance aziendale e individuare aree di miglioramento.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-project-diagram"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Consolidamento</h5>
-                <p>Redazione del bilancio consolidato per gruppi aziendali, con eliminazioni e rettifiche intercompany.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-file-export"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Adempimenti</h5>
-                <p>Deposito bilanci presso il Registro Imprese e altri adempimenti connessi alla chiusura dell'esercizio.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <a href="#servizi" class="back-to-services"><i class="fas fa-arrow-left"></i> Torna all'elenco dei servizi</a>
-      </div>
-    </div>
-
-    <div class="content-block" id="fiscalita">
-      <div class="service-detail">
-        <h3>Fiscalità</h3>
-        <p>Consulenza fiscale completa con pianificazione strategica per ottimizzare il carico tributario nel pieno rispetto della normativa vigente, sia per imprese che per privati.</p>
-        <p>Il Dott. Maretto sviluppa strategie fiscali personalizzate che tengono conto delle specificità di ogni cliente e delle evoluzioni normative. L'obiettivo è garantire la massima ottimizzazione del carico fiscale nel rispetto della legalità, prevenendo contestazioni e riducendo i rischi di accertamento.</p>
-        
-        <div class="service-features">
-          <h4>Servizi Principali</h4>
-          <div class="feature-list">
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-file-alt"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Dichiarazioni Fiscali</h5>
-                <p>Redazione e presentazione di dichiarazioni IVA, IRAP, IRES e IRPEF, con analisi preventiva per ottimizzare il carico fiscale.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-chess"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Pianificazione Fiscale</h5>
-                <p>Strategie per la riduzione legale del carico fiscale, con valutazione dei diversi regimi e opzioni disponibili.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-gavel"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Accertamenti</h5>
-                <p>Assistenza in tutte le fasi degli accertamenti tributari, dalla fase istruttoria al contenzioso.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-handshake"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Ravvedimento Operoso</h5>
-                <p>Regolarizzazione di omessi versamenti con riduzione delle sanzioni, attraverso l'istituto del ravvedimento operoso.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-euro-sign"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Agevolazioni Fiscali</h5>
-                <p>Consulenza sull'accesso a crediti d'imposta, superammortamento e altre agevolazioni fiscali per le imprese.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-balance-scale"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Contenzioso Tributario</h5>
-                <p>Assistenza in tutte le fasi del contenzioso tributario, dall'opposizione agli avvisi di accertamento alla difesa in Commissione Tributaria.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <a href="#servizi" class="back-to-services"><i class="fas fa-arrow-left"></i> Torna all'elenco dei servizi</a>
-      </div>
-    </div>
-
-    <div class="content-block" id="revisione">
-      <div class="service-detail">
-        <h3>Revisione Legale</h3>
-        <p>Servizi di revisione legale dei conti per società obbligate, con verifica della corretta rappresentazione della situazione patrimoniale e finanziaria e della conformità alle norme civilistiche e fiscali.</p>
-        <p>In qualità di revisore legale, il Dott. Maretto offre un servizio professionale di controllo e certificazione del bilancio, garantendo l'affidabilità delle informazioni contabili e la corretta applicazione dei principi contabili nazionali e internazionali. L'attività di revisione è condotta con metodologie rigorose e nel rispetto degli standard professionali.</p>
-        
-        <div class="service-features">
-          <h4>Servizi Principali</h4>
-          <div class="feature-list">
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-search"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Revisione Legale</h5>
-                <p>Verifica e certificazione del bilancio di esercizio e consolidato, con espressione del giudizio di revisione.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-clipboard-check"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Due Diligence</h5>
-                <p>Analisi contabile e finanziaria in operazioni straordinarie come fusioni, acquisizioni e cessioni d'azienda.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-cogs"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Controlli Interni</h5>
-                <p>Valutazione dell'efficacia dei sistemi di controllo interno e suggerimenti per il miglioramento dei processi.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Certificazioni</h5>
-                <p>Certificazione di bilanci, prospetti contabili e altre situazioni patrimoniali per finalità varie.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-exclamation-triangle"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Segnalazione Anomalie</h5>
-                <p>Identificazione e segnalazione di irregolarità contabili, con suggerimenti per le opportune rettifiche.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Analisi di Rischio</h5>
-                <p>Valutazione dei rischi contabili e finanziari con indicazioni per la loro mitigazione.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <a href="#servizi" class="back-to-services"><i class="fas fa-arrow-left"></i> Torna all'elenco dei servizi</a>
-      </div>
-    </div>
-
-    <div class="content-block" id="consulenza">
-      <div class="service-detail">
-        <h3>Consulenza Aziendale</h3>
-        <p>Supporto strategico alla gestione aziendale con analisi di performance e indicatori per migliorare l'efficienza e la redditività, attraverso strumenti di controllo di gestione avanzati.</p>
-        <p>Il Dott. Maretto affianca le imprese nella definizione di strategie di crescita e miglioramento, attraverso l'analisi dei dati economici e finanziari e la predisposizione di strumenti di pianificazione e controllo. L'obiettivo è fornire al management gli strumenti conoscitivi per prendere decisioni informate e migliorare i risultati aziendali.</p>
-        
-        <div class="service-features">
-          <h4>Servizi Principali</h4>
-          <div class="feature-list">
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-project-diagram"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Business Planning</h5>
-                <p>Elaborazione di piani industriali e finanziari per lo sviluppo aziendale, con proiezioni e scenari.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Analisi di Performance</h5>
-                <p>Monitoraggio degli indicatori economico-finanziari con benchmark di settore e analisi degli scostamenti.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-file-invoice-dollar"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Budget e Previsioni</h5>
-                <p>Preparazione di budget annuali e piani pluriennali, con analisi degli scostamenti e azioni correttive.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-tachometer-alt"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Controllo di Gestione</h5>
-                <p>Implementazione di sistemi di controllo di gestione con reportistica periodica e indicatori KPI.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-money-bill-wave"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Analisi di Redditività</h5>
-                <p>Valutazione della redditività per linea di prodotto, cliente o area geografica per ottimizzare il portafoglio business.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-search-dollar"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Analisi dei Costi</h5>
-                <p>Metodologie per l'analisi e la riduzione dei costi, con identificazione delle aree di inefficienza.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <a href="#servizi" class="back-to-services"><i class="fas fa-arrow-left"></i> Torna all'elenco dei servizi</a>
-      </div>
-    </div>
-
-    <div class="content-block" id="internazionalizzazione">
-      <div class="service-detail">
-        <h3>Internazionalizzazione</h3>
-        <p>Supporto alle imprese nell'espansione internazionale con particolare attenzione agli aspetti fiscali e contabili cross-border, per operare sui mercati esteri in modo efficiente e conforme.</p>
-        <p>In un contesto globale sempre più complesso, il Dott. Maretto offre una consulenza specializzata per le imprese che operano o intendono operare all'estero, con soluzioni che tengono conto delle normative internazionali, dei trattati contro le doppie imposizioni e delle opportunità di pianificazione fiscale internazionale.</p>
-        
-        <div class="service-features">
-          <h4>Servizi Principali</h4>
-          <div class="feature-list">
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-globe-europe"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Fiscalità Internazionale</h5>
-                <p>Consulenza su imposte dirette e indirette nelle operazioni cross-border, con analisi dei trattati contro le doppie imposizioni.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-exchange-alt"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Transfer Pricing</h5>
-                <p>Pianificazione e documentazione delle politiche di transfer pricing per gruppi multinazionali, in linea con le normative OCSE.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-book"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Contabilità Estero</h5>
-                <p>Assistenza nella tenuta della contabilità per stabilimenti esteri e filiali, con adeguamento ai principi contabili locali.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-chess-board"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Pianificazione Cross-Border</h5>
-                <p>Strutturazione di operazioni internazionali per ottimizzare il carico fiscale complessivo nel rispetto delle normative.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-building"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Strutture Estere</h5>
-                <p>Consulenza sulla costituzione e gestione di società, stabili organizzazioni e branch all'estero.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-file-alt"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Compliance Internazionale</h5>
-                <p>Adempimenti dichiarativi e informativi per operazioni internazionali (Intrastat, Esterometro, etc.).</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <a href="#servizi" class="back-to-services"><i class="fas fa-arrow-left"></i> Torna all'elenco dei servizi</a>
-      </div>
-    </div>
-
-    <div class="content-block" id="startup">
-      <div class="service-detail">
-        <h3>Società e Start-up</h3>
-        <p>Assistenza completa dalla costituzione alla gestione per start-up innovative e PMI, con particolare attenzione agli incentivi fiscali e alle opportunità di finanziamento.</p>
-        <p>Il Dott. Maretto accompagna le nuove imprese in tutte le fasi del loro sviluppo, dalla scelta della forma giuridica più adatta alla gestione quotidiana, con particolare competenza nelle agevolazioni per start-up innovative e nelle modalità di accesso a finanziamenti e contributi.</p>
-        
-        <div class="service-features">
-          <h4>Servizi Principali</h4>
-          <div class="feature-list">
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-building"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Costituzione Società</h5>
-                <p>Assistenza nella scelta della forma giuridica e nella costituzione della società, con redazione dell'atto costitutivo e dello statuto.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-lightbulb"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Start-up Innovative</h5>
-                <p>Consulenza per l'iscrizione al registro delle start-up innovative e accesso ai benefici correlati.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-hand-holding-usd"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Incentivi Fiscali</h5>
-                <p>Accesso a crediti d'imposta, esenzioni e agevolazioni per start-up e PMI innovative.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Corporate Governance</h5>
-                <p>Organizzazione degli organi sociali e definizione dei rapporti tra soci e amministratori.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Business Plan</h5>
-                <p>Elaborazione di business plan per l'avvio dell'attività e l'accesso a finanziamenti.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-search-dollar"></i>
-              </div>
-              <div class="feature-text">
-                <h5>Finanziamenti</h5>
-                <p>Assistenza nella ricerca e accesso a finanziamenti agevolati, contributi a fondo perduto e capitale di rischio.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <a href="#servizi" class="back-to-services"><i class="fas fa-arrow-left"></i> Torna all'elenco dei servizi</a>
       </div>
     </div>
 
@@ -822,62 +413,500 @@
     </div>
   </section>
 
+  <!-- Service Modals -->
+  <div id="contabilita-modal" class="service-modal">
+    <div class="service-modal-content">
+      <button class="close-modal">&times;</button>
+      <h3>Contabilità e Bilanci</h3>
+      <p>Gestione completa di contabilità ordinarie e semplificate, con redazione di bilanci analitici, del bilancio civilistico conforme alle normative vigenti e di bilanci riclassificati.</p>
+      <p>Lo Studio offre un servizio completo di tenuta delle scritture contabili, dalla registrazione delle operazioni alla redazione del bilancio, con particolare attenzione alla corretta rappresentazione della situazione economica, patrimoniale e finanziaria dell'impresa. Ogni cliente beneficia di un approccio personalizzato che tiene conto delle specificità del settore e delle dimensioni aziendali.</p>
+      
+      <div class="service-features">
+        <h4>Servizi Principali</h4>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Contabilità ordinaria</h5>
+              <p>Tenuta completa della contabilità con registrazione di tutte le operazioni e adempimenti correlati, per società e imprese individuali.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Contabilità semplificata</h5>
+              <p>Gestione della contabilità per piccole imprese e professionisti che possono avvalersi del regime semplificato.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Redazione bilanci</h5>
+              <p>Predisposizione di Bilanci civilistici conformi alle normative vigenti, con Note Integrative e Relazioni sulla Gestione.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Analisi di bilancio</h5>
+              <p>Analisi per indici e per flussi per valutare la performance aziendale e individuare aree di miglioramento.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Consolidamento</h5>
+              <p>Redazione del bilancio consolidato per gruppi aziendali, con eliminazioni e rettifiche intercompany.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-file-export"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Adempimenti civilistici</h5>
+              <p>Deposito bilanci presso il Registro delle Imprese e altri adempimenti connessi alla chiusura dell'esercizio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  
+  <div id="fiscalita-modal" class="service-modal">
+    <div class="service-modal-content">
+      <button class="close-modal">&times;</button>
+      <h3>Servizi fiscali</h3>
+      <p>Consulenza fiscale completa in continuum con pianificazione strategica finalizzata all'ottimizzazione del carico tributario nel rispetto della normativa vigente.</p>
+      <p>Lo Studio sviluppa strategie fiscales personalizzate che tengono conto delle specificità di ogni cliente e delle evoluzioni normative. L'obiettivo è garantire l'ottimizzazione del carico fiscale nel rispetto della legalità, prevenendo contestazioni e riducendo i rischi di accertamento.</p>
+      
+      <div class="service-features">
+        <h4>Servizi Principali</h4>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Dichiarativi fiscali</h5>
+              <p>Redazione e presentazione di Dichiarazioni dei Redditi (IRES/IRPEF), IRAP, IVA, IMU, con analisi preventiva finalizzata all'ottimizzazione del carico fiscale.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-chess"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Pianificazione fiscale</h5>
+              <p>Strategie per la riduzione legale del carico fiscale, con valutazione dei diversi regimi e opzioni disponibili.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Accertamenti tributari</h5>
+              <p>Assistenza in tutte le fasi degli accertamenti tributari, dalla fase istruttoria al contenzioso.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Ravvedimenti operosi</h5>
+              <p>Regolarizzazione di omessi versamenti con riduzione delle sanzioni, attraverso l'istituto del ravvedimento operoso.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-euro-sign"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Agevolazioni fiscali</h5>
+              <p>Consulenza sull'accesso ai crediti d'imposta, con particolare riferimento a quelli connessi agli investimenti in beni strumentali, e ad altre agevolazioni fiscali per le imprese.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="consulenza-modal" class="service-modal">
+    <div class="service-modal-content">
+      <button class="close-modal">&times;</button>
+      <h3>Consulenza aziendale e controllo di gestione</h3>
+      <p>Supporto strategico alla gestione aziendale con analisi di performance e indicatori volte al miglioramento dell'efficienza e della redditività.</p>
+      <p>Lo Studio affianca le imprese nella definizione di strategie di crescita e miglioramento, attraverso l'analisi dei dati economici e finanziari e la predisposizione di strumenti di pianificazione e controllo. L'obiettivo è fornire al management gli strumenti conoscitivi per prendere decisioni informate e migliorare i risultati aziendali.</p>
+      
+      <div class="service-features">
+        <h4>Servizi Principali</h4>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Business Plan</h5>
+              <p>Elaborazione di piani industriali e finanziari per lo sviluppo aziendale, con proiezioni e scenari.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Analisi di performance</h5>
+              <p>Monitoraggio degli indicatori economico-finanziari con benchmark di settore e analisi degli scostamenti.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Budget e Forecast aziendali</h5>
+              <p>Preparazione de budget annuali e piani pluriennali, con analisi degli scostamenti e azioni correttive.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Controllo di gestione</h5>
+              <p>Implementazione di sistemi di controllo di gestione con reportistica periodica.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Analisi di redditività</h5>
+              <p>Valutazione della redditività per linea di prodotto, cliente o area geografica per ottimizzare il portafoglio business.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-search-dollar"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Analisi della struttura dei costi</h5>
+              <p>Metodologie per l'analisi e la riduzione dei costi, con identificazione delle aree di inefficienza.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bancaria-modal" class="service-modal">
+    <div class="service-modal-content">
+      <button class="close-modal">&times;</button>
+      <h3>Consulenza in materia bancaria e finanziaria</h3>
+      <p>Nel contesto economico attuale, l'accesso al credito rappresenta un elemento strategico para la crescita e la sostenibilità delle imprese. Il nostro studio offre un supporto qualificato e personalizzato per affiancare aziende, professionisti e imprenditori nella gestione dei rapporti con il sistema bancario e finanziario.</p>
+      <p>Lo Studio offre un'esperienza ormai pluriennale nella consulenza alle PMI secondo un approccio integrato tra area contabile, fiscale e finanziaria, essenziale per l'accesso al credito, forte anche di contatti consolidati con il sistema bancario del territorio e sempre nella massima riservatezza e personalizzazione del servizio.</p>
+      
+      <div class="service-features">
+        <h4>Servizi Principali</h4>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-search-dollar"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Analisi del fabbisogno finanziario</h5>
+              <p>Valutazione approfondita della situazione economico-patrimoniale dell'impresa per individuare le reali esigenze di liquidità, investimento o rifinanziamento.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Assistenza nella richiesta di finanziamenti</h5>
+              <p>Supporto completo nella predisposizione della documentazione necessaria per l'accesso a finanziamenti bancari a breve, medio e lungo termine, mutui, leasing, factoring, linee di credito e finanza agevolata.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Redazione di Business Plan e Piani economico-finanziari</h5>
+              <p>Elaborazione di documentazione tecnico-finanziaria a supporto delle richieste di credito, coerente con gli obiettivi aziendali e con le richieste degli istituti di credito.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Gestione dei rapporti con gli istituti bancari</h5>
+              <p>Assistenza diretta nella negoziazione delle condizioni bancarie, nella ristrutturazione del debito e nell'ottimizzazione del portafoglio bancario, anche in ottica di miglioramento del rating creditizio.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Monitoraggio e controllo dell'indebitamento</h5>
+              <p>Analisi periodica dei rapporti bancari e degli strumenti finanziari in essere, con l'obiettivo di garantire la sostenibilità del debito e l'equilibrio finanziario dell'impresa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contrattualistica-modal" class="service-modal">
+    <div class="service-modal-content">
+      <button class="close-modal">&times;</button>
+      <h3>Contrattualistica aziendale</h3>
+      <p>Il nostro Studio offre un servizio altamente qualificato di redazione, revisione e assistenza nella contrattualistica aziendale, volto a supportare le imprese nella gestione delle relazioni commerciali, sia nelle fasi ordinarie dell'attività che in occasione di operazioni straordinarie.</p>
+      <p>Operare con contratti chiari, equilibrati e adeguati al contesto normativo è fondamentale per prevenire controversie, tutelare gli interessi aziendali e garantire la conformità legale delle operazioni. Forte dell'esperienza ultradecennale in questa specifica attività, lo Studio si occupa della redazione, revisione e assistenza nella contrattualistica aziendale sia nelle fasi ordinarie dell'attività che in occasione di operazioni straordinarie e fornisce, inoltre, consulenza contrattuale continuativa, con l'obiettivo di accompagnare l'imprenditore nella corretta impostazione e gestione delle relazioni negoziali, in linea con l'evoluzione normativa e con le dinamiche del mercato.</p>
+      
+      <div class="service-features">
+        <h4>Principali Fattispecie Contrattuali Gestite</h4>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Contratti di affitto d'azienda</h5>
+              <p>Assistenza nella predisposizione e negoziazione di contratti di affitto d'azienda.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Contratti di cessione d'azienda o di rami aziendali</h5>
+              <p>Supporto nella redazione e negoziazione di contratti di cessione.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Contratti con agenti di commercio e rappresentanti</h5>
+              <p>Predisposizione di contratti per la rete commerciale.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Contratti di collaborazione e consulenza</h5>
+              <p>Redazione di accordi per collaboratori e consulenti esterni.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-file-signature"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Lettere di intenti e accordi preliminari</h5>
+              <p>Predisposizione di documenti precontrattuali.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Contratti di fornitura, distribuzione e franchising</h5>
+              <p>Supporto nella definizione di accordi commerciali.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Accordi tra soci e patti parasociali</h5>
+              <p>Redazione di accordi tra soci per la governance aziendale.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-store"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Contratti di locazione commerciale</h5>
+              <p>Assistenza nella predisposizione di contratti di locazione per attività commerciale.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Contratti di appalto e subappalto</h5>
+              <p>Redazione e revisione di contratti di appalto per opere pubbliche e private.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- New Modal for 6th Service -->
+  <div id="enti-pubblici-modal" class="service-modal">
+    <div class="service-modal-content">
+      <button class="close-modal">&times;</button>
+      <h3>Consulenza per Enti Pubblici</h3>
+      <p>Supporto specializzato per enti pubblici e istituzioni nella gestione contabile, fiscale e amministrativa, con particolare attenzione alla normativa di settore e agli adempimenti specifici richiesti dal contesto istituzionale.</p>
+      <p>Lo Studio offre una consulenza altamente qualificata per enti pubblici, amministrazioni locali e istituzioni, con una profonda conoscenza delle normative specifiche e delle procedure contabili e amministrative richieste in questo ambito. L'esperienza maturata consente di affiancare gli enti nella corretta gestione delle risorse e nell'ottemperanza degli obblighi di legge.</p>
+      
+      <div class="service-features">
+        <h4>Servizi Principali</h4>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Gestione contabile specifica</h5>
+              <p>Tenuta della contabilità conforme alle normative degli enti pubblici, con particolare attenzione ai principi contabili e alla rendicontazione.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-file-invoice"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Adempimenti fiscali dedicati</h5>
+              <p>Gestione completa degli adempimenti fiscali specifici per enti pubblici, incluse dichiarazioni e comunicazioni obbligatorie.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Bilanci e rendicontazione</h5>
+              <p>Redazione di bilanci, rendiconti gestionali e documenti contabili conformi alla normativa vigente per enti pubblici.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Consulenza normativa</h5>
+              <p>Supporto nell'interpretazione e applicazione della normativa specifica per enti pubblici e amministrazioni.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <div class="feature-text">
+              <h5>Gestione fondi e contributi</h5>
+              <p>Assistenza nella gestione di fondi pubblici, contributi europei e finanziamenti dedicati agli enti pubblici.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
-
   <footer class="footer">
-  <div class="footerContent">
-    <div class="footerColumn">
-      <div class="footerLogo">
-        <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+    <div class="footerContent">
+      <div class="footerColumn">
+        <div class="footerLogo">
+          <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+        </div>
+        <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
       </div>
-      <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Contatti</h3>
+        <div class="footerInfo">
+          <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+          <p><strong>Email:</strong> info@studicabragadin.it</p>
+          <p><strong>Tel:</strong> +39 049 1234567</p>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Link</h3>
+        <div class="footerLinks">
+          <a href="chi-siamo.html">Chi siamo</a>
+          <a href="servizi.html">Servizi/Settori</a>
+          <a href="contatti.html">Contatti</a>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Legale</h3>
+        <div class="footerLinks">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Termini</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
     </div>
 
-    <div class="footerColumn">
-      <h3 class="footerHeading">Contatti</h3>
-      <div class="footerInfo">
-        <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-        <p><strong>Email:</strong> info@studicabragadin.it</p>
-        <p><strong>Tel:</strong> +39 049 1234567</p>
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
       </div>
+      
+      <!-- <div class="footer-developer">
+        <p>Sviluppato da <a href="https://www.luigimaretto.com" target="_blank" rel="noopener noreferrer" aria-label="Luigi Maretto - Sviluppatore Web">Luigi Maretto</a></p>
+      </div> -->
     </div>
-
-    <div class="footerColumn">
-      <h3 class="footerHeading">Link</h3>
-      <div class="footerLinks">
-        <a href="chi-siamo.html">Chi siamo</a>
-        <a href="servizi.html">Servizi/Settori</a>
-        <a href="contatti.html">Contatti</a>
-      </div>
-    </div>
-
-    <div class="footerColumn">
-      <h3 class="footerHeading">Legale</h3>
-      <div class="footerLinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Termini</a>
-        <a href="cookies.html">Cookies</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Developer credit -->
-
-<div class="footer-bottom">
-  <div class="footer-copyright">
-    <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
-  </div>
-  
-  <div class="footer-developer">
-    <p>Sviluppato da <a href="https://www.luigimaretto.com" target="_blank" rel="noopener noreferrer" aria-label="Luigi Maretto - Sviluppatore Web">Luigi Maretto</a></p>
-  </div>
-</div>
-</footer>
-
-
-
+  </footer>
 
   <div class="gototop js-top">
     <a href="#" class="js-gotop" title="Torna a inizio pagina">
@@ -887,50 +916,14 @@
     </a>
   </div>
 
-
-
   <!-- Scripts -->
-
-
   <script src="js/navbar.js" defer></script>
   <script src="js/navbar-scroll.js" defer></script>
+  <!-- Fade Animation JS -->
+<script src="js/fade-animation.js" defer></script>
+  <script src="js/footer.js" defer></script>
+  <script src="js/professional-modal.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.current-year').forEach(el => {
-        el.textContent = new Date().getFullYear();
-      });
-
-      if (typeof AOS !== 'undefined') {
-        AOS.init({
-          duration: 800,
-          easing: 'ease-in-out',
-          once: true,
-          offset: 100
-        });
-      }
-    });
-
-    window.addEventListener("scroll", function () {
-      const scrollBtn = document.querySelector(".js-top");
-      if (window.scrollY > 300) {
-        scrollBtn.classList.add("active");
-      } else {
-        scrollBtn.classList.remove("active");
-      }
-    });
-
-    document.querySelector(".js-gotop").addEventListener("click", function (e) {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
-  </script>
-
-
-
 </body>
 </html>
