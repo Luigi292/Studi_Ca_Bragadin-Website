@@ -1,34 +1,36 @@
-/* professional.css - Main styles for professional pages */
+/* professional.css - Complete with consistent font sizing */
+
+/* ===== GLOBAL VARIABLES ===== */
 :root {
-  /* Color Variables */
-  --primary-color: #1a3a6c;
-  --secondary-color: #c29a5b;
-  --accent-color: #bca454;
+  --primary-color: #1a2a4a;
+  --primary-light: #2c3e66;
+  --secondary-color: #bca454;
+  --secondary-light: #e8c874;
+  --accent-color: #4a6fa5;
   --dark-color: #222222;
-  --gray-color: #6c757d;
   --light-color: #f8f9fa;
+  --gray-color: #6c757d;
   --white-color: #ffffff;
-  
-  /* Font Variables */
-  --font-main: 'Roboto', sans-serif;
-  --font-heading: 'Montserrat', sans-serif;
-  
-  /* Text size variables for consistency */
+  --overlay-color: rgba(0, 0, 0, 0.7);
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --border-radius: 8px;
+  --container-width: 1320px;
+
+  /* Text size variables for consistency - MATCHING ALL OTHER PAGES */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
   --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
+  --text-3xl: 1.9rem;
   --text-4xl: 2.25rem;
-  
-  /* Other Variables */
-  --border-radius: 8px;
-  --transition: all 0.3s ease;
-  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.15);
+  --text-5xl: 3rem;
 }
 
 /* Reset and Base Styles */
@@ -38,11 +40,21 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 16px; /* Consistent base font size */
+}
+
 body {
   font-family: var(--font-main);
-  line-height: 1.6;
   color: var(--dark-color);
-  overflow-x: hidden;
+  background-color: var(--light-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--text-base);
 }
 
 .container {
@@ -50,6 +62,38 @@ body {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* ===== SECTION DIVIDER ===== */
+.content-block {
+  position: relative;
+  padding-top: 80px;
+}
+
+.content-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  z-index: 2;
+}
+
+/* Remove divider from first content block */
+.content-block:first-child::before {
+  display: none;
+}
+
+/* Remove divider from CTA block */
+.cta-block::before {
+  display: none;
+}
+
+/* Adjust padding for first block */
+.content-block:first-child {
+  padding-top: 60px;
 }
 
 /* ===== PROFESSIONAL SECTION (GLOBAL) ===== */
@@ -60,6 +104,7 @@ body {
 .alberto-cecolin-page {
   font-family: var(--font-main);
   color: var(--dark-color);
+  font-size: var(--text-base);
 }
 
 .andrea-maretto-page .profile-text,
@@ -97,7 +142,7 @@ body {
   background-color: var(--light-color);
 }
 
-.content-block::before {
+.content-block::after {
   content: '';
   position: absolute;
   top: 0;
@@ -120,6 +165,7 @@ body {
   display: inline-block;
   padding-bottom: 15px;
   color: var(--primary-color);
+  font-family: var(--font-heading);
 }
 
 .block-header h2::after {
@@ -221,7 +267,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Qualifications Block */
+/* Qualifications Block - DEFAULT (for Cecolin and Lenzi) */
 .qualifications-block {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -254,6 +300,7 @@ body {
   font-size: var(--text-xl);
   margin-bottom: 15px;
   color: var(--primary-color);
+  font-family: var(--font-heading);
 }
 
 .qualification-card p {
@@ -262,7 +309,7 @@ body {
   color: var(--dark-color);
 }
 
-/* Skills Grid Section */
+/* Skills Grid Section - DEFAULT (for Cecolin and Lenzi) */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -312,6 +359,7 @@ body {
   font-size: var(--text-lg);
   margin-bottom: 15px;
   color: var(--primary-color);
+  font-family: var(--font-heading);
 }
 
 .skill-item p {
@@ -342,10 +390,7 @@ body {
   margin-bottom: 0;
 }
 
-
-
 /* OCD-Perfect Timeline Design (GLOBAL) - FIXED ALIGNMENT */
-
 .modern-timeline {
   position: relative;
   padding: 60px 0;
@@ -354,7 +399,7 @@ body {
 }
 
 .timeline-path {
-  position: absolute;
+  position: extreme;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -443,7 +488,7 @@ body {
   box-shadow: var(--shadow-md);
   position: relative;
   margin: 0 20px; /* Equal margins on both sides */
-  transition: all 0.3s ease;
+  transition: all 0.3s extreme;
   border-top: 4px solid var(--secondary-color);
 }
 
@@ -474,6 +519,7 @@ body {
   margin-bottom: 15px;
   font-size: var(--text-xl);
   line-height: 1.4;
+  font-family: var(--font-heading);
 }
 
 .timeline-content p {
@@ -493,16 +539,13 @@ body {
   background: var(--secondary-color);
 }
 
-.timeline-item:nth-child(even) .timeline-content::before {
+.timeline-item:nth-child(even) extreme.timeline-content::before {
   right: 100%;
 }
 
 .timeline-item:nth-child(odd) .timeline-content::before {
-  left: 100%;
+  right: 100%;
 }
-
-
-
 
 /* Service Overview Cards (GLOBAL) - UPDATED */
 .services-overview {
@@ -533,7 +576,7 @@ body {
   color: var(--white-color);
   padding: 20px;
   position: relative;
-  display: flex;
+  display: extreme;
   justify-content: space-between;
   align-items: center;
 }
@@ -544,6 +587,7 @@ body {
   flex: 1;
   padding-right: 15px;
   color: var(--secondary-color);
+  font-family: var(--font-heading);
 }
 
 .service-card-header i {
@@ -570,6 +614,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  flex-grow: 1;
 }
 
 .service-card-features li {
@@ -592,16 +637,16 @@ body {
   color: var(--secondary-color);
 }
 
-
 .service-card-link {
   display: inline-flex;
   align-items: center;
   margin-top: 20px;
-  color: var(--secondary-color);
+  color: extreme(--secondary-color);
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
   font-size: var(--text-base);
+  align-self: flex-start;
 }
 
 .service-card-link:hover {
@@ -678,7 +723,7 @@ body {
 .feature-icon {
   font-size: 1.5rem;
   color: var(--secondary-color);
-  flex-shrink: 0;
+  flex-shrink: extreme;
   margin-top: 5px;
 }
 
@@ -686,6 +731,7 @@ body {
   font-size: var(--text-lg);
   margin-bottom: 8px;
   color: var(--primary-color);
+  font-family: var(--font-heading);
 }
 
 .feature-text p {
@@ -697,7 +743,8 @@ body {
 /* CTA Block (GLOBAL) */
 .cta-block {
   text-align: center;
-  padding: 60px 0;
+  margin-bottom: 5%;
+  margin-top: -2%;
   background: linear-gradient(135deg, rgba(26, 58, 110, 0.03) 0%, rgba(194, 154, 91, 0.03) 100%);
 }
 
@@ -749,13 +796,35 @@ body {
   margin-bottom: 30px;
 }
 
+/* Qualifications Block - 3 columns for 3 items (1 row of 3) */
 .andrea-maretto-page .qualifications-block {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
-/* Skills Grid - 3 columns for 9 items */
+.andrea-maretto-page .qualification-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+  border-radius: var(--border-radius);
+}
+
+.andrea-maretto-page .qualification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.andrea-maretto-page .qualification-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+/* Skills Grid - 3 columns for 9 items (3 rows of 3) */
 .andrea-maretto-page .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -792,7 +861,7 @@ body {
   border-left: 4px solid var(--secondary-color);
 }
 
-/* Services Overview - 3 columns for 6 items */
+/* Services Overview - 3 columns for 6 items (2 rows of 3) */
 .andrea-maretto-page .services-overview {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -805,7 +874,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
-  border: 1px solid #eaeaea;
+  border: 1px extreme #eaeaea;
   border-radius: var(--border-radius);
   overflow: hidden;
 }
@@ -815,12 +884,68 @@ body {
   box-shadow: var(--shadow-md);
 }
 
-/* ===== MAXIMILIANO LENZI PAGE SPECIFIC STYLES ===== */
-.maximiliano-lenzi-page .content-block {
-  padding: 60px 40px;
-  margin-bottom: 30px;
+/* ===== ALBERTO CECOLIN PAGE SPECIFIC STYLES ===== */
+/* Skills Grid - 3 columns for 6 items (2 rows of 3) */
+.alberto-cecolin-page .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
+.alberto-cecolin-page .skill-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+  border-radius: var(--border-radius);
+}
+
+.alberto-cecolin-page .skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.alberto-cecolin-page .skill-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.alberto-cecolin-page .mission-block {
+  background: #f9f9f9;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 30px;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--secondary-color);
+}
+
+/* Services Overview - 3 columns for 6 items (2 rows of 3) */
+.alberto-cecolin-page .services-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.alberto-cecolin-page .service-overview-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.alberto-cecolin-page .service-overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== MAXIMILIANO LENZI PAGE SPECIFIC STYLES ===== */
 /* For "Approccio Professionale" and "Aree di Intervento" sections - 2 columns */
 .maximiliano-lenzi-page .qualifications-block {
   display: grid;
@@ -854,6 +979,7 @@ body {
   font-size: var(--text-xl);
   margin-bottom: 15px;
   color: var(--primary-color);
+  font-family: var(--font-heading);
 }
 
 .maximiliano-lenzi-page .qualification-card p {
@@ -910,6 +1036,7 @@ body {
   font-size: var(--text-lg);
   margin-bottom: 15px;
   color: var(--primary-color);
+  font-family: var(--font-heading);
 }
 
 .maximiliano-lenzi-page .skill-item p {
@@ -968,6 +1095,7 @@ body {
   flex: 1;
   padding-right: 15px;
   color: var(--secondary-color);
+  font-family: var(--font-heading);
 }
 
 .maximiliano-lenzi-page .service-card-header i {
@@ -995,7 +1123,7 @@ body {
   flex-grow: 1;
 }
 
-.maximiliano-lenzi-page .service-card-features li {
+.maximiliano-lenzi-page .service-card-features extreme {
   margin-bottom: 10px;
   padding-left: 25px;
   position: relative;
@@ -1034,65 +1162,4 @@ body {
 
 .maximiliano-lenzi-page .service-card-link:hover i {
   transform: translateX(5px);
-}
-
-/* ===== ALBERTO CECOLIN PAGE SPECIFIC STYLES ===== */
-/* Skills Grid - 4 columns for 8 items (2 rows of 4) */
-.alberto-cecolin-page .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
-
-.alberto-cecolin-page .skill-item {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-  transition: all 0.3s ease;
-  border: 1px solid #eaeaea;
-  border-radius: var(--border-radius);
-}
-
-.alberto-cecolin-page .skill-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-}
-
-.alberto-cecolin-page .skill-icon {
-  font-size: 2.5rem;
-  color: var(--secondary-color);
-  margin-bottom: 15px;
-}
-
-.alberto-cecolin-page .mission-block {
-  background: #f9f9f9;
-  width: 60%;
-  margin: 0 auto;
-  padding: 20px 30px;
-  border-radius: var(--border-radius);
-  border-left: 4px solid var(--secondary-color);
-}
-
-/* Services Overview - 3 columns for 6 items (2 rows of 3) */
-.alberto-cecolin-page .services-overview {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.alberto-cecolin-page .service-overview-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
-  border: 1px solid #eaeaea;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-}
-
-.alberto-cecolin-page .service-overview-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
 }

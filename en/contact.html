@@ -1,158 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Studio Ca' Bragadin | Padova</title>
-  <meta name="description" content="Contact the professionals at Studio Ca' Bragadin in Padova. Lawyer Lenzi, Accountants Maretto and Cecolin. Fill out the form to request a consultation.">
-  <meta name="keywords" content="lawyer lenzi padova, andrea maretto padova, cecolin padova, accountant padova, accounting firm padova, legal services padova">
+  <title>Contact | Studio Ca' Bragadin | Padua</title>
+  <meta name="description" content="Contact the professionals at Studio Ca' Bragadin in Padua. Lawyer Lenzi, Accountants Maretto and Cecolin. Fill out the form to request a consultation.">
+  <meta name="keywords" content="lawyer lenzi padua, andrea maretto padua, cecolin padua, accountant padua, accounting firm padua, legal services padua">
 
+  <!-- Favicon Setup -->
   <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
   <meta name="theme-color" content="#ffffff">
 
+  <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="preload" href="../css/styles.css" as="style">
+  <!-- Preload critical resources -->
+  <link rel="preload" href="../css/index.css" as="style">
   <link rel="preload" href="../images/hall.jpg.avif" as="image" fetchpriority="high">
   <link rel="preload" href="../images/logo.jpg.avif" as="image" fetchpriority="high">
 
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-
+  <!-- Fonts with font-display: swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/globals.css">
+  <link rel="stylesheet" href="../css/fade-animation.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/navbar-footer.css">
+  <link rel="stylesheet" href="../css/contatti.css">
+  <link rel="stylesheet" href="../css/hero.css">
+  <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="../images/favicon-logo.png">
   <link rel="shortcut icon" href="../images/favicon-logo.png" type="image/png">
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
-        <img src="../images/logo.jpg.avif" alt="Studio Ca' Bragadin Accounting Firm Padova - Lawyer Lenzi, Andrea Maretto, and Alberto Cecolin" width="80" height="60" loading="eager" decoding="async" fetchpriority="high">
-      </a>
-    </div>
 
-    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-      <div></div><div></div><div></div>
-    </div>
+  
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html" aria-label="Ca' Bragadin Studios - Home">
+      <img src="../images/logo.jpg.avif" alt="Ca' Bragadin Accountants Studio Padua" width="80" height="60">
+    </a>
+  </div>
 
-    <ul class="navMenu" id="navMenu">
-      <li><a href="index.html" class="navLink">Home</a></li>
-      <li><a href="about.html" class="navLink">About Us</a></li>
-      <li><a href="services.html" class="navLink">Services</a></li>
-      <li><a href="sectors.html" class="navLink">Sectors</a></li>
-      <li><a href="contact.html" class="navLink active">Contact</a></li>
-    </ul>
-
+  <div class="language-container">
     <div class="languageToggle">
-      <a href="../index.html" class="languageButton" aria-label="Italian">IT</a>
-      <span>|</span>
-      <a href="index.html" class="languageButton active" aria-label="English">EN</a>
+      <a href="../chi-siamo.html" class="languageButton" aria-label="Italiano">IT</a>
+      <span class="language-separator">|</span>
+      <a href="about.html" class="languageButton active" aria-label="English">EN</a>
     </div>
-  </nav>
+  </div>
 
-  <section class="contactHero">
-    <div class="contactHeroOverlay"></div>
-    <div class="contactHeroContent">
-      <h1>Contact Our Professionals</h1>
-      <p>Fill out the form to request a personalized consultation</p>
+  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <div></div><div></div><div></div>
+  </div>
+
+  <ul class="navMenu" id="navMenu">
+    <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+    <li class="dropdown">
+      <a href="about.html" class="navLink active" aria-label="About Us">About Us <span class="dropdown-arrow"></span> </a>
+      <ul class="dropdown-menu">
+        <li><a href="about.html">Our Team</a></li>
+        <li><a href="lenzi-page.html">Lawyer Maximiliano Lenzi</a></li>
+        <li><a href="andrea-page.html">Dr. Andrea Maretto</a></li>
+        <li><a href="alberto-page.html">Dr. Alberto Cecolin</a></li>
+      </ul>
+    </li>
+    <li><a href="services.html" class="navLink" aria-label="Services">Services/Sectors</a></li>
+    <li><a href="newspage.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+    <li><a href="contact.html" class="navLink" aria-label="Contacts">Contact Us</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Contact Hero Section -->
+  <section class="hero-section contact-hero">
+    <div class="hero-overlay"></div>
+    <img src="../images/hall.jpg.avif" alt="Team Studi Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
+    <div class="hero-content">
+      <h1>Contact our firm</h1>
+      <p>Professionalism and expertise at the service of your needs</p>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="hero-mouse"></div>
     </div>
   </section>
 
-  <section class="contactFormSection">
-    <div class="container">
-      <div class="contactFormWrapper">
-        <div class="formHeader">
-          <h2>Request a Consultation</h2>
-          <p>Please fill in all the fields to send your request</p>
+  <!-- Contact Main Section -->
+  <main class="contact-main">
+    <div class="contact-container">
+      <!-- Contact Info Column -->
+      <div class="contact-info-column">
+        <div class="contact-info-card">
+          <h2>Contact information</h2>
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path>
+              </svg>
+            </div>
+            <div class="contact-info-text">
+              <h3>Address</h3>
+              <p>Via G. Belzoni 180, 35121 Padua</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-7.19-7.19A19.79 19.79 0 0 1 2 4.26 2 2 0 0 1 4.26 2c1.5 0 3.06.29 4.57.86a15.5 15.5 0 0 1 5.66 5.66c.57 1.51.86 3.07.86 4.57z"></path>
+              </svg>
+            </div>
+            <div class="contact-info-text">
+              <h3>Telephone</h3>
+              <p>+39 049 1234567</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </div>
+            <div class="contact-info-text">
+              <h3>Email</h3>
+              <p>info@studicabragadin.it</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <div class="contact-info-text">
+              <h3>Opening hours</h3>
+              <p>Mon-Fri: 9:00-13:00 / 14:30-18:30</p>
+            </div>
+          </div>
         </div>
-        
-        <form id="professionalContactForm" class="professionalForm">
-          <div class="formRow">
-            <div class="formGroup">
-              <label for="firstName">First Name*</label>
-              <input type="text" id="firstName" name="firstName" required>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2801.099744286783!2d11.886468576270891!3d45.4073281710731!2m3!1f102!2f45!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477f1b5c5c5c5c5c%3A0x5c5c5c5c5c5c5c5c!2sStudio%20Ca'%20Bragadin!5e0!3m2!1sen!2sit!4v1616161616161!5m2!1sen!2sit"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map showing the location of Studio Ca' Bragadin in Padua">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contact Form Column -->
+      <div class="contact-form-column">
+        <div class="contact-form-card">
+          <h2>Request a consultation</h2>
+          <p class="form-subtitle">Fill out the form and you will be contacted within 24 hours</p>
+          
+          <form id="professionalContactForm" class="professional-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First name*</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last name*</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
             </div>
-            <div class="formGroup">
-              <label for="lastName">Last Name*</label>
-              <input type="text" id="lastName" name="lastName" required>
-            </div>
-          </div>
 
-          <div class="formGroup">
-            <label for="email">Email*</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-
-          <div class="formGroup">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone">
-          </div>
-
-          <div class="formRow">
-            <div class="formGroup">
-              <label for="professional">Professional*</label>
-              <select id="professional" name="professional" required>
-                <option value="">Select a professional</option>
-                <option value="avv_lenzi">Lawyer Maximiliano Lenzi</option>
-                <option value="dott_maretto">Dr. Andrea Maretto</option>
-                <option value="dott_cecolin">Dr. Alberto Cecolin</option>
-              </select>
+            <div class="form-group">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" required>
             </div>
 
-            <div class="formGroup">
-              <label for="service">Requested Service*</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option value="consulenza_legale">Legal Consultation</option>
-                <option value="consulenza_fiscale">Tax Consultation</option>
-                <option value="consulenza_societaria">Corporate Consultation</option>
-                <option value="other">Other</option>
-              </select>
+            <div class="form-group">
+              <label for="phone">Telephone</label>
+              <input type="tel" id="phone" name="phone">
             </div>
-          </div>
 
-          <div class="formGroup">
-            <label for="message">Message*</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="professional">Professional*</label>
+                <select id="professional" name="professional" required>
+                  <option value="">Select a professional</option>
+                  <option value="avv_lenzi">Lawyer Maximiliano Lenzi</option>
+                  <option value="dott_maretto">Dr. Andrea Maretto</option>
+                  <option value="dott_cecolin">Dr. Alberto Cecolin</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="service">Requested service*</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                </select>
+              </div>
+            </div>
 
-          <div class="formSubmit">
-            <button type="submit" class="ctaButton">Submit Request</button>
-          </div>
-        </form>
+            <div class="form-group message-group">
+              <label for="message">Message*</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <!-- Privacy Checkbox -->
+            <div class="form-group privacy-group">
+              <input type="checkbox" id="privacyConsent" name="privacyConsent" required>
+              <label for="privacyConsent">
+                I have read and accept the <a href="../privacy.html" target="_blank">Privacy Policy</a> and <a href="../terms.html" target="_blank">Terms and Conditions</a> of the site.
+              </label>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="submit-button">Send Request</button>
+            </div>
+
+            <div id="formResponse" class="form-response" style="display: none;"></div>
+          </form>
+        </div>
       </div>
     </div>
-  </section>
+  </main>
 
- <!-- Map Section -->
- <section class="mapSection">
-    <div class="container">
-      <h2>Where We Are</h2>
-      <div class="mapWrapper">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2801.345476108059!2d11.876111315552865!3d45.40391797910036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaa7b8c5f6a5%3A0x3e9e8a7a8c5f6a5!2sVia%20Giovanni%20Battista%20Belzoni%2C%20180%2C%2035121%20Padova%20PD!5e0!3m2!1sen!2sit!4v1623256789015!5m2!1sen!2sit" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- Footer Component -->
   <footer class="footer">
     <div class="footerContent">
       <div class="footerColumn">
         <div class="footerLogo">
-          <img src="../images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="120" height="40" loading="lazy">
+          <img src="../images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
         </div>
-        <p class="footerTagline">Professionalism and expertise at the service of businesses</p>
+        <p class="footerTagline">Professionalism and expertise <br> at the service of businesses</p>
       </div>
 
       <div class="footerColumn">
-        <h3 class="footerHeading">Contacts</h3>
+        <h3 class="footerHeading">Contact</h3>
         <div class="footerInfo">
-          <p><strong>Address:</strong> Via G. Belzoni 180, 35121 Padova</p>
+          <p><strong>Address:</strong> Via G. Belzoni 180, 35121 Padua</p>
           <p><strong>Email:</strong> info@studicabragadin.it</p>
           <p><strong>Tel:</strong> +39 049 1234567</p>
         </div>
@@ -161,32 +259,45 @@
       <div class="footerColumn">
         <h3 class="footerHeading">Links</h3>
         <div class="footerLinks">
-          <a href="about.html">About Us</a>
-          <a href="services.html">Services</a>
-          <a href="sectors.html">Sectors</a>
+          <a href="about.html">About us</a>
+          <a href="services.html">Services/Sectors</a>
           <a href="contact.html">Contact</a>
         </div>
       </div>
 
-      <div class="footerColumn">
+      <div class="footerLegal">
         <h3 class="footerHeading">Legal</h3>
         <div class="footerLinks">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="cookies.html">Cookies</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../cookies.html">Cookies</a>
         </div>
       </div>
     </div>
 
-    <div class="footerCopyright">
-      <p>&copy; <span id="currentYear"></span> Studio Commercialisti Ca' Bragadin. All rights reserved.</p>
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="../js/main.js"></script>
-  <script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop" title="Return to top of page">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+
+
+  
+  <!-- Scripts -->
+<script src="js/navbar.js" defer></script>
+<script src="js/navbar-scroll.js" defer></script>
+<script src="js/footer.js" defer></script>
+<script src="js/contact.js" defer></script>
+
 
 </body>
 </html>

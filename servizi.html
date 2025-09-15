@@ -18,26 +18,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Fonts with font-display: swap -->
-<!-- Fonts with font-display: swap - UPDATED TO MATCH OTHER PAGES -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  
   <!-- CSS -->
-  <link rel="stylesheet" href="css/globals.css">
-  <link rel="stylesheet" href="css/fade-animation.css">
   <link rel="stylesheet" href="css/navbar-footer.css">
-  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/servizi.css">
+  <link rel="stylesheet" href="css/servizi-responsive.css">
   <link rel="stylesheet" href="css/hero.css">
+ 
+  <link rel="stylesheet" href="css/fade-animation.css">
 
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
   <link rel="shortcut icon" href="images/favicon-logo.png" type="image/png">
 </head>
 <body>
-  
-  <!-- Navbar Component -->
+
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
       <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
@@ -45,8 +43,13 @@
       </a>
     </div>
 
-    <div class="languageToggle">
-      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+    <!-- Updated Language Toggle -->
+    <div class="language-container">
+      <div class="languageToggle">
+        <a href="servizi.html" class="languageButton active" aria-label="Italiano">IT</a>
+        <span class="language-separator">|</span>
+        <a href="en/services.html" class="languageButton" aria-label="English">EN</a>
+      </div>
     </div>
 
     <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
@@ -56,7 +59,7 @@
     <ul class="navMenu" id="navMenu">
       <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
       <li class="dropdown">
-        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span></a>
+        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
         <ul class="dropdown-menu">
           <li><a href="chi-siamo.html">Il Nostro Team</a></li>
           <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
@@ -64,7 +67,7 @@
           <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
         </ul>
       </li>
-      <li><a href="servizi.html" class="navLink active" aria-label="Servizi">Servizi/Settori</a></li>
+      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
       <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
       <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
     </ul>
@@ -73,7 +76,7 @@
   <!-- Services Hero Section -->
   <section class="hero-section">
     <div class="hero-overlay"></div>
-    <img src="images/team-glass-room.jpg.avif" alt="Servizi Professionali Studio Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
+    <img src="images/glass-room.jpg" alt="Servizi Professionali Studio Ca' Bragadin" class="hero-image" loading="eager">
     <div class="hero-content">
       <h1>I Nostri Servizi Professionali</h1>
       <p>Soluzioni integrate per imprese e professionisti</p>
@@ -84,7 +87,7 @@
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Main Services Section -->
   <section class="services-section" id="services">
     <div class="section-header">
       <h2>Servizi di Consulenza Legale e Fiscale</h2>
@@ -95,15 +98,7 @@
       <!-- Legal Services -->
       <div class="service-category">
         <div class="category-header">
-          <div class="category-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-          </div>
+   
           <div class="category-header-content">
             <h3>Servizi Legali</h3>
             <p>Avv. Maximiliano Lenzi</p>
@@ -136,7 +131,7 @@
             </div>
             <div class="service-item-content">
               <h4>Recupero Crediti</h4>
-              <p>Strategie per il recupero di crediti commerciali, diffide stragiudiziali, procedure giudiziali e piani di riscossione.</p>
+              <p>Strategie per il recupero di crediti commerciali, diffide stragiudiziali, procedure giudiziali e piani di cessione.</p>
             </div>
           </div>
           <div class="service-item">
@@ -217,15 +212,11 @@
         </div>
       </div>
 
+
       <!-- Accounting Services -->
       <div class="service-category">
         <div class="category-header">
-          <div class="category-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="1" x2="12" y2="23"></line>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-            </svg>
-          </div>
+      
           <div class="category-header-content">
             <h3>Servizi Contabili e Fiscali</h3>
             <p>Dott. Andrea Maretto e Dott. Alberto Cecolin</p>
@@ -277,7 +268,7 @@
           <div class="service-item">
             <div class="service-item-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <path d="M17 1v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                 <circle cx="9" cy="7" r="4"></circle>
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
@@ -343,16 +334,12 @@
         </div>
       </div>
 
+
+
       <!-- Specialized Services -->
       <div class="service-category">
         <div class="category-header">
-          <div class="category-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="12"></line>
-              <line x1="12" y1="16" x2="12.01" y2="16"></line>
-            </svg>
-          </div>
+  
           <div class="category-header-content">
             <h3>Servizi Specializzati</h3>
             <p>Team Multidisciplinare</p>
@@ -413,7 +400,7 @@
           <div class="service-item">
             <div class="service-item-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79"></path>
               </svg>
             </div>
             <div class="service-item-content">
@@ -448,130 +435,134 @@
               <p>Pianificazione successoria, dichiarazioni di successione, aspetti fiscali delle donazioni.</p>
             </div>
           </div>
+          <!-- Added an extra service item to make it 8 -->
+          <div class="service-item">
+            <div class="service-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                <path d="M2 2l7.586 7.586"></path>
+                <circle cx="11" cy="11" r="2"></circle>
+              </svg>
+            </div>
+            <div class="service-item-content">
+              <h4>Consulenza Strategica</h4>
+              <p>Analisi del business model, pianificazione strategica a lungo termine, ottimizzazione dei processi aziendali.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Collaboration Banner -->
+  <!-- Collaboration Banner Section -->
+  <section class="collaboration-section">
     <div class="collaboration-banner">
       <h3>Un Approccio Integrato</h3>
       <p>Presso Studio Ca' Bragadin, i nostri professionisti collaborano per offrirti una consulenza completa che copre tutti gli aspetti legali, fiscali e gestionali della tua attività. La sinergia tra le nostre competenze garantisce soluzioni coerenti e ottimizzate per le tue esigenze.</p>
       <a href="contatti.html" class="cta-button primary">Parla con i Nostri Esperti</a>
     </div>
   </section>
-  
 
   <!-- Approach Section -->
-<section class="approach-section">
-  <div class="section-header">
-    <h2>Il Nostro Approccio</h2>
-    <p class="section-subtitle">Metodologia e valore aggiunto</p>
-  </div>
-  <div class="approach-container">
-    <div class="approach-item">
-      <div class="approach-icon">
-        <svg viewBox="0 0 24 24">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
-        </svg>
-      </div>
-      <h3>Personalizzato</h3>
-      <p>Ogni cliente è unico: sviluppiamo soluzioni su misura dopo un'attenta analisi delle specifiche esigenze.</p>
+  <section class="approach-section">
+    <div class="section-header">
+      <h2>Il Nostro Approccio</h2>
+      <p class="section-subtitle">Metodologia e valore aggiunto</p>
     </div>
-    <div class="approach-item">
-      <div class="approach-icon">
-        <svg viewBox="0 0 24 24">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-          <circle cx="9" cy="7" r="4"></circle>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-        </svg>
+    <div class="approach-container">
+      <div class="approach-item">
+        <div class="approach-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <h3>Personalizzato</h3>
+        <p>Ogni cliente è unico: sviluppiamo soluzioni su misura dopo un'attenta analisi delle specifiche esigenze.</p>
       </div>
-      <h3>Integrato</h3>
-      <p>Offriamo una consulenza a 360° che combina competenze legali, fiscali e societarie in un unico team.</p>
-    </div>
-    <div class="approach-item">
-      <div class="approach-icon">
-        <svg viewBox="0 0 24 24">
-          <polyline points="23 4 23 10 17 10"></polyline>
-          <polyline points="1 20 1 14 7 14"></polyline>
-          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-        </svg>
+      <div class="approach-item">
+        <div class="approach-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h3>Integrato</h3>
+        <p>Offriamo una consulenza a 360° che combina competenze legali, fiscali e societarie in un unico team.</p>
       </div>
-      <h3>Proattivo</h3>
-      <p>Non ci limitiamo a risolvere problemi, ma anticipiamo le criticità e suggeriamo opportunità.</p>
-    </div>
-    <div class="approach-item">
-      <div class="approach-icon">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
+      <div class="approach-item">
+        <div class="approach-icon">
+          <svg viewBox="0 0 24 24">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+        </div>
+        <h3>Proattivo</h3>
+        <p>Non ci limitiamo a risolvere problemi, ma anticipiamo le criticità e suggeriamo opportunità.</p>
       </div>
-      <h3>Trasparente</h3>
-      <p>Chiarezza nei costi, nei tempi e nelle soluzioni proposte, con report periodici sull'avanzamento.</p>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-  <!-- Footer Component -->
-   
-<footer class="footer">
-  <div class="footerContent">
-    <div class="footerColumn">
-      <div class="footerLogo">
-        <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
-      </div>
-      <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
-    </div>
-
-    <div class="footerColumn">
-      <h3 class="footerHeading">Contatti</h3>
-      <div class="footerInfo">
-        <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
-        <p><strong>Email:</strong> info@studicabragadin.it</p>
-        <p><strong>Tel:</strong> +39 049 1234567</p>
+      <div class="approach-item">
+        <div class="approach-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h3>Trasparente</h3>
+        <p>Chiarezza nei costi, nei tempi e nelle soluzioni proposte, con report periodici sull'avanzamento.</p>
       </div>
     </div>
+  </section>
 
-    <div class="footerColumn">
-      <h3 class="footerHeading">Link</h3>
-      <div class="footerLinks">
-        <a href="chi-siamo.html">Chi siamo</a>
-        <a href="servizi.html">Servizi/Settori</a>
-        <a href="contatti.html">Contatti</a>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footerContent">
+      <div class="footerColumn">
+        <div class="footerLogo">
+          <img src="images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+        </div>
+        <p class="footerTagline">Professionalità e competenza <br> al servizio delle aziende</p>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Contatti</h3>
+        <div class="footerInfo">
+          <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
+          <p><strong>Email:</strong> info@studicabragadin.it</p>
+          <p><strong>Tel:</strong> +39 049 1234567</p>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Link</h3>
+        <div class="footerLinks">
+          <a href="chi-siamo.html">Chi siamo</a>
+          <a href="servizi.html">Servizi/Settori</a>
+          <a href="contatti.html">Contatti</a>
+        </div>
+      </div>
+
+      <div class="footerColumn">
+        <h3 class="footerHeading">Legale</h3>
+        <div class="footerLinks">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Termini</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
       </div>
     </div>
 
-    <div class="footerColumn">
-      <h3 class="footerHeading">Legale</h3>
-      <div class="footerLinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Termini</a>
-        <a href="cookies.html">Cookies</a>
+    <!-- Developer credit -->
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
       </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- Developer credit -->
-
-<div class="footer-bottom">
-  <div class="footer-copyright">
-    <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
-  </div>
-  
-  <!-- <div class="footer-developer">
-    <p>Sviluppato da <a href="https://www.luigimaretto.com" target="_blank" rel="noopener noreferrer" aria-label="Luigi Maretto - Sviluppatore Web">Luigi Maretto</a></p>
-  </div> -->
-</div>
-</footer>
-
-
-
-  <div class="gototop js-top active">
+  <div class="gototop js-top">
     <a href="#" class="js-gotop" title="Torna a inizio pagina">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -579,37 +570,12 @@
     </a>
   </div>
 
-
-
-
   <!-- Scripts -->
-
-  <!-- Scripts -->
-<script src="js/navbar.js" defer></script>
-<script src="js/navbar-scroll.js" defer></script>
-<!-- Fade Animation JS -->
-<script src="js/fade-animation.js" defer></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Set current year in footer
-  document.querySelectorAll('.current-year').forEach(el => {
-    el.textContent = new Date().getFullYear();
-  });
-
-  // Back to top button
-  const backToTop = document.querySelector('.js-top');
-  if (backToTop) {
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('active', window.scrollY > 300);
-    });
-    backToTop.addEventListener('click', e => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-});
-</script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/footer.js" defer></script>
+ 
+  <script src="js/servizi.js" defer></script>
+  <script src="js/fade-animation.js" defer></script>
 
 
 </body>

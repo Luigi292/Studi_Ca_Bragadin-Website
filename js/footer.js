@@ -1,5 +1,4 @@
-// footer.js - Footer and general site functionality
-
+// footer.js - Footer and general site functionality (updated for compatibility)
 document.addEventListener('DOMContentLoaded', function() {
     // Set current year in footer
     document.querySelectorAll('.current-year').forEach(el => {
@@ -16,21 +15,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Scroll to top functionality
-    window.addEventListener("scroll", function () {
+    // Scroll to top functionality - store as a named function
+    function handleScrollToTop() {
         const scrollBtn = document.querySelector(".js-top");
-        if (window.scrollY > 300) {
+        if (scrollBtn && window.scrollY > 300) {
             scrollBtn.classList.add("active");
-        } else {
+        } else if (scrollBtn) {
             scrollBtn.classList.remove("active");
         }
-    });
+    }
 
-    document.querySelector(".js-gotop").addEventListener("click", function (e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+    // Set up scroll event
+    window.addEventListener("scroll", handleScrollToTop);
+
+    // Set up click event
+    const goTopButton = document.querySelector(".js-gotop");
+    if (goTopButton) {
+        goTopButton.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
+    }
+    
+    // Make the scroll handler available globally for navbar compatibility
+    window.footerScrollHandler = handleScrollToTop;
 });

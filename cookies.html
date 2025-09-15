@@ -26,8 +26,7 @@
 <body>
 
 
-  <!-- Navbar Component -->
-
+<!-- Navbar -->
 <nav class="navbar">
   <div class="logo">
     <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
@@ -35,10 +34,13 @@
     </a>
   </div>
 
-  <div class="languageToggle">
-    <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-    <span>|</span>
-    <!--<a href="en/index.html" class="languageButton" aria-label="English">EN</a> <!-->
+  <!-- Updated Language Toggle -->
+  <div class="language-container">
+    <div class="languageToggle">
+      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
+      <span class="language-separator">|</span>
+       <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
+    </div>
   </div>
 
   <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
@@ -49,9 +51,6 @@
     <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
     <li class="dropdown">
       <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
-      
-      <!-- Dropdown arrow shown next to "Chi Siamo" -->
-    
       <ul class="dropdown-menu">
         <li><a href="chi-siamo.html">Il Nostro Team</a></li>
         <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>

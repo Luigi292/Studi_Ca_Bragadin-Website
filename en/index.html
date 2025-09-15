@@ -1,180 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ca' Bragadin Accountants | Lawyer Lenzi Padua | Andrea Maretto Accountant | Alberto Cecolin</title>
-  <meta name="description" content="Ca' Bragadin Accountants Firm in Padua. Lawyer Maximiliano Lenzi for legal consulting, Dr. Andrea Maretto and Dr. Alberto Cecolin for tax and corporate services. Contact us at Via Belzoni 180.">
-  <meta name="keywords" content="lawyer lenzi padua, andrea maretto padua, cecolin padua, accountant padua, accounting firm padua, legal services padua">
+  <title>Ca' Bragadin Studios | Lawyer Lenzi Padua | Andrea Maretto Accountant | Alberto Cecolin</title>
+  <meta name="description" content="Ca' Bragadin Accountants Studio in Padua. Lawyer Maximiliano Lenzi for legal consultations, Dr. Andrea Maretto and Dr. Alberto Cecolin for tax and corporate services. Contact us at Via Belzoni 180.">
+  <meta name="keywords" content="lawyer lenzi padua, andrea maretto padua, cecolin padua, accountant padua, accountants studio padua, legal services padua">
 
   <!-- Favicon Setup -->
   <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#1a2a4a">
 
   <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Preload critical resources -->
-  <link rel="preload" href="../css/styles.css" as="style">
-  <link rel="preload" href="../images/hall.jpg.avif" as="image" fetchpriority="high">
-  <link rel="preload" href="../images/logo.jpg.avif" as="image" fetchpriority="high">
-
-  <!-- Fonts with font-display: swap -->
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <!-- Optimized Font Loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <!-- CSS -->
+  <link rel="stylesheet" href="../css/navbar-footer.css">
   <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/responsive.css">
+  
+  <!-- Animation CSS should be loaded last to prevent conflicts -->
+  <link rel="stylesheet" href="../css/fade-animation.css">
 
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="../images/favicon-logo.png">
   <link rel="shortcut icon" href="../images/favicon-logo.png" type="image/png">
-  
 </head>
+
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <a href="../index.html" aria-label="Ca' Bragadin - Home">
-        <img src="../images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm Padua - Lawyer Lenzi, Andrea Maretto and Alberto Cecolin" width="80" height="60" loading="eager" decoding="async" fetchpriority="high">
-      </a>
-    </div>
 
-    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-      <div></div><div></div><div></div>
-    </div>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html" aria-label="Ca' Bragadin Studios - Home">
+      <img src="../images/logo.jpg.avif" alt="Ca' Bragadin Accountants Studio Padua" width="80" height="60">
+    </a>
+  </div>
 
-    <ul class="navMenu" id="navMenu">
-      <li><a href="index.html" class="navLink active" aria-label="Home">Home</a></li>
-      <li><a href="about.html" class="navLink" aria-label="About Us">About Us</a></li>
-      <li><a href="services.html" class="navLink" aria-label="Services">Services</a></li>
-      <li><a href="sector.html" class="navLink" aria-label="Our Sectors">Our Sectors</a></li>
-      <li><a href="contact.html" class="navLink" aria-label="Contact">Contact</a></li>
-    </ul>
-
+  <!-- Updated Language Toggle -->
+  <div class="language-container">
     <div class="languageToggle">
       <a href="../index.html" class="languageButton" aria-label="Italiano">IT</a>
-      <span>|</span>
+      <span class="language-separator">|</span>
       <a href="index.html" class="languageButton active" aria-label="English">EN</a>
     </div>
-  </nav>
+  </div>
+
+  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <div></div><div></div><div></div>
+  </div>
+
+  <ul class="navMenu" id="navMenu">
+    <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+    <li class="dropdown">
+      <a href="about.html" class="navLink" aria-label="About Us">About Us <span class="dropdown-arrow"></span> </a>
+      <ul class="dropdown-menu">
+        <li><a href="about.html">Our Team</a></li>
+        <li><a href="lenzi-page.html">Lawyer Maximiliano Lenzi</a></li>
+        <li><a href="andrea-page.html">Dr. Andrea Maretto</a></li>
+        <li><a href="alberto-page.html">Dr. Alberto Cecolin</a></li>
+      </ul>
+    </li>
+    <li><a href="services.html" class="navLink" aria-label="Services">Services/Sectors</a></li>
+    <li><a href="newspage.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+    <li><a href="contact.html" class="navLink" aria-label="Contacts">Contact</a></li>
+  </ul>
+</nav>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="carousel" id="carousel">
-      <div class="slide active" aria-label="Ca' Bragadin Professional Firm - Elegant office reception area">
-        <div class="slideOverlay"></div>
-        <img src="../images/hall.jpg.avif" alt="Slide 1" class="heroImage" loading="eager" fetchpriority="high">
-      </div>
-      <div class="slide" aria-label="Ca' Bragadin Professional Firm - Modern meeting room">
-        <div class="slideOverlay"></div>
-        <img src="../images/hall2.jpg.avif" alt="Slide 2" class="heroImage">
-      </div>
-      <div class="slide" aria-label="Ca' Bragadin Professional Firm - Professional workspace">
-        <div class="slideOverlay"></div>
-        <img src="../images/mid-hall.avif" alt="Slide 3" class="heroImage">
+    <div class="hero-background">
+      <div class="carousel" id="carousel">
+        <div class="slide active" aria-label="Ca' Bragadin Accountants Studio - Elegant office reception area">
+          <div class="slideOverlay"></div>
+          <img src="../images/hall.jpg.avif" alt="Slide 1" class="heroImage" loading="eager" fetchpriority="high">
+        </div>
+        <div class="slide" aria-label="Ca' Bragadin Accountants Studio - Modern meeting room">
+          <div class="slideOverlay"></div>
+          <img src="../images/hall2.jpg.avif" alt="Slide 2" class="heroImage">
+        </div>
+        <div class="slide" aria-label="Ca' Bragadin Accountants Studio - Professional workspace">
+          <div class="slideOverlay"></div>
+          <img src="../images/mid-hall.avif" alt="Slide 3" class="heroImage">
+        </div>
       </div>
     </div>
-    <div class="heroContent">
-      <h1>Ca' Bragadin Professional Firm</h1>
-      <p>Tailored tax and legal solutions for your business</p>
-      <a href="contact.html" class="ctaButton">Contact Us</a>
+    
+    <div class="hero-content-wrapper">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Professional Studios <br> <span>Ca' Bragadin</span></h1>
+          <p class="hero-subtitle">Integrated legal and tax consultancy for businesses and professionals</p>
+          <div class="hero-cta">
+            <a href="contact.html" class="ctaButton">Request consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="mouse"></div>
     </div>
   </section>
-  
 
-  <!-- Studios Section -->
+  <!-- Studio About Section -->
   <section class="studios">
-    <div class="sectionHeader">
-      <h2>Our Professional Studios in Padua</h2>
-      <p class="sectionSubtitle subtitle">Professionalism and expertise at the service of businesses</p>
-    </div>
-    <div class="studiosContainer">
-      <div class="studio">
-        <div class="studioImageWrapper">
-          <img src="../images/lenzi.jpg.avif" alt="Lawyer Maximiliano Lenzi - Law Firm Padua" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
+    <div class="studios-container-wide">
+      <div class="section-header-wide">
+        <h2>Our Professional Studios</h2>
+        <p class="section-subtitle-wide">Excellence and multidisciplinary expertise in Padua</p>
+      </div>
+
+      <!-- Clickable address section -->
+      <a href="https://www.google.com/maps?q=Via+G.+Belzoni+180,+35121+Padova"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="address-link-block">
+        <div class="professional-address-wide">
+          <p>We receive our clients at:</p>
+          <p><strong>Via G. Belzoni 180, 35121 Padua</strong></p>
         </div>
-        <div class="studioContent">
-          <h3>Lawyer Maximiliano Lenzi</h3>
-          <p>Law Firm for Legal Consulting and Business Assistance</p>
-          <div class="contactInfo">
-            <p><strong>Phone:</strong> <a href="tel:0498751356">049-8751356</a></p>
-            <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
-            <p><strong>Address:</strong> Via G. Belzoni 180, 35121 Padua</p>
+      </a>
+
+      <div class="studios-grid">
+        <!-- Lawyer Lenzi -->
+        <div class="professional-card">
+          <div class="card-image-wrapper">
+            <img src="../images/lenzi.jpg.avif" alt="Lawyer Maximiliano Lenzi - Legal Studio Padua" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+          </div>
+          <div class="card-content">
+            <h3>Lawyer Maximiliano Lenzi</h3>
+            <p class="card-specialty">Legal consultancy and business assistance</p>
+            <div class="card-excerpt">
+              <p>Lawyer specialising in commercial and corporate law with over 18 years of experience.</p>
+            </div>
+            <div class="card-contact">
+              <p><strong>Phone:</strong> <a href="tel:0498751356">049-8751356</a></p>
+              <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
+              <div class="card-cta">
+                <a href="mailto:avvocatolenzi@studicabragadin.it" class="ctaButton small">Contact</a>
+                <a href="lenzi-page.html" class="ctaButton small profile">Full Profile</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="studio">
-        <div class="studioImageWrapper">
-          <img src="../images/andre.jpg.avif" alt="Dr. Andrea Maretto - Accountant Padua" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
-        </div>
-        <div class="studioContent">
-          <h3>Dr. Andrea Maretto</h3>
-          <p>Accountants and Accounting Experts Tax and Corporate Consulting in Padua</p>
-          <div class="contactInfo">
-            <p><strong>Phone:</strong> <a href="tel:0499562428">049-9562428</a></p>
-            <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
-            <p><strong>Address:</strong> Via G. Belzoni 180, 35121 Padua</p>
+
+        <!-- Dr. Maretto -->
+        <div class="professional-card">
+          <div class="card-image-wrapper">
+            <img src="../images/andre.jpg.avif" alt="Dr. Andrea Maretto - Accountant Padua" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+          </div>
+          <div class="card-content">
+            <h3>Dr. Andrea Maretto</h3>
+            <p class="card-specialty">Advanced tax and corporate consultancy</p>
+            <div class="card-excerpt">
+              <p>Chartered Accountant and Legal Auditor with 13 years of experience.</p>
+            </div>
+            <div class="card-contact">
+              <p><strong>Phone:</strong> <a href="tel:0499562428">049-9562428</a></p>
+              <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
+              <div class="card-cta">
+                <a href="mailto:andrea.maretto@studicabragadin.it" class="ctaButton small">Contact</a>
+                <a href="andrea-page.html" class="ctaButton small profile">Full Profile</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="studio">
-        <div class="studioImageWrapper">
-          <img src="../images/alberto.jpg.avif" alt="Dr. Alberto Cecolin - Accountant Padua" width="300" height="300" loading="lazy" decoding="async" class="studioImage">
-        </div>
-        <div class="studioContent">
-          <h3>Dr. Alberto Cecolin</h3>
-          <p>Accountant Tax and Corporate Consulting in Padua</p>
-          <div class="contactInfo">
-            <p><strong>Phone:</strong> <a href="tel:0497851468">049-7851468</a></p>
-            <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
-            <p><strong>Address:</strong> Via G. Belzoni 180, 35121 Padua</p>
+
+        <!-- Dr. Cecolin -->
+        <div class="professional-card">
+          <div class="card-image-wrapper">
+            <img src="../images/alberto.jpg.avif" alt="Dr. Alberto Cecolin - Accountant Padua" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+          </div>
+          <div class="card-content">
+            <h3>Dr. Alberto Cecolin</h3>
+            <p class="card-specialty">Tax planning and corporate strategies</p>
+            <div class="card-excerpt">
+              <p>Chartered Accountant and Legal Auditor with 13 years of experience.</p>
+            </div>
+            <div class="card-contact">
+              <p><strong>Phone:</strong> <a href="tel:0497851468">049-7851468</a></p>
+              <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
+              <div class="card-cta">
+                <a href="mailto:studio@studiocecolin.com" class="ctaButton small">Contact</a>
+                <a href="alberto-page.html" class="ctaButton small profile">Full Profile</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <h2>What our clients say</h2>
-    <div class="testimonialsContainer">
-      <div class="testimonial">
-        <div class="testimonialContent">
-          <p>"Exceptional professionalism and expertise. They successfully guided us through a complex acquisition."</p>
-        </div>
-        <div class="testimonialAuthor">
-          <img src="../images/client1.jpg" alt="Client testimonial" class="testimonialImage">
-          <div>
-            <h4>Marco Rossi</h4>
-            <p>CEO, TechSolutions</p>
+  <!-- Collaboration Section -->
+  <section class="collaboration-section" id="collaboration-section">
+    <div class="collaboration-bg"></div>
+    <div class="collaboration-content">
+      <div class="container">
+        <span class="section-subtitle">Our Values</span>
+        <h2>The Ca' Bragadin Studios Approach</h2>
+        <p class="collaboration-intro">Our professional philosophy is based on four fundamental pillars</p>
+        
+        <div class="collaboration-grid">
+          <div class="collaboration-item">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Professional Ethics</h3>
+            <p>We respect the highest deontological standards, placing the client's interest at the centre of all our activities.</p>
           </div>
-        </div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonialContent">
-          <p>"Their tax consulting allowed us to significantly optimize our costs."</p>
-        </div>
-        <div class="testimonialAuthor">
-          <img src="../images/client2.jpg" alt="Client testimonial" class="testimonialImage">
-          <div>
-            <h4>Laura Bianchi</h4>
-            <p>Financial Director, RetailGroup</p>
+          
+          <div class="collaboration-item">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 18V12M12 12V6M12 12H18M12 12H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Innovation</h3>
+            <p>We adopt advanced technologies and updated methodologies to offer efficient and modern services.</p>
+          </div>
+          
+          <div class="collaboration-item">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Multidisciplinary Approach</h3>
+            <p>The collaboration between our professionals guarantees complete solutions that consider all aspects.</p>
+          </div>
+          
+          <div class="collaboration-item">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.86" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Results Orientation</h3>
+            <p>We develop concrete strategies to achieve business objectives, always measuring effectiveness.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact CTA Section -->
-  <section class="contactCTA">
-    <div class="contactContent">
-      <h2>Ready to speak with an expert?</h2>
-      <p>Schedule a free consultation with one of our professionals.</p>
-      <a href="contact.html" class="ctaButton">Book Now</a>
+  <!-- News Preview Section -->
+  <section class="news-preview-section">
+    <div class="news-preview-container">
+      <div class="news-preview-header">
+        <h2>Latest Professional News</h2>
+        <p class="subtitle">Stay updated on the latest legal and tax news</p>
+      </div>
+      
+      <div class="news-preview-grid" id="newsPreviewGrid">
+        <div class="news-loading">
+          <div class="news-loading-spinner"></div>
+        </div>
+      </div>
+      
+      <div class="news-preview-button">
+        <a href="newspage.html" class="ctaButton">View All News and Subscribe</a>
+      </div>
     </div>
   </section>
 
@@ -183,54 +276,57 @@
     <div class="footerContent">
       <div class="footerColumn">
         <div class="footerLogo">
-          <img src="../images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="120" height="90" loading="lazy">
+          <img src="../images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
         </div>
-        <p class="footerTagline">Professionalism and expertise at the service of companies</p>
+        <p class="footerTagline">Professionalism and expertise <br> at the service of businesses</p>
       </div>
-  
+
       <div class="footerColumn">
-        <h3 class="footerHeading">Contacts</h3>
+        <h3 class="footerHeading">Contact</h3>
         <div class="footerInfo">
           <p><strong>Address:</strong> Via G. Belzoni 180, 35121 Padua</p>
           <p><strong>Email:</strong> info@studicabragadin.it</p>
-          <p><strong>Phone:</strong> +39 049 1234567</p>
+          <p><strong>Tel:</strong> +39 049 1234567</p>
         </div>
       </div>
-  
+
       <div class="footerColumn">
         <h3 class="footerHeading">Links</h3>
         <div class="footerLinks">
-          <a href="chi-siamo.html">About Us</a>
-          <a href="servizi.html">Services</a>
-          <a href="settori.html">Sectors</a>
-          <a href="contatti.html">Contacts</a>
+          <a href="about.html">About us</a>
+          <a href="services.html">Services/Sectors</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
-  
+
       <div class="footerColumn">
         <h3 class="footerHeading">Legal</h3>
         <div class="footerLinks">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="cookies.html">Cookies</a>
-          <a href="#" aria-label="Link placeholder"></a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../cookies.html">Cookies</a>
         </div>
       </div>
     </div>
-  
-    <div class="footerCopyright">
-      <p>&copy; <span id="currentYear"></span> Ca' Bragadin Accountants Firm. All rights reserved.</p>
+
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <p>&copy; <span class="current-year"></span> Ca' Bragadin Studios. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop" title="Back to top of page">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
 
-  <!-- JavaScript -->
-
-  <script src="../js/carousel.js"></script>
-  <script src="../js/main.js"></script>
-  <script>
-    // Set current year in footer
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
+  <!-- Scripts -->
+  <script src="../js/navbar.js" defer></script>
+  <script src="../js/index.js" defer></script>
+  <script src="../js/fade-animation.js" defer></script>
 </body>
 </html>

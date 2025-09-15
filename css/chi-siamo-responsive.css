@@ -1,0 +1,1986 @@
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Large tablets and small laptops (991px and below) */
+@media screen and (max-width: 991px) {
+  .about-container,
+  .activities-container,
+  .network-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .activities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .mission-content p {
+    max-width: 90%;
+    font-size: 1.1rem;
+  }
+
+  /* Make images appear first on mobile */
+  .about-image,
+  .activities-image,
+  .network-image {
+    order: -1;
+    width: 100%;
+    
+    margin-bottom: 2rem;
+  }
+  
+  /* Standardized text sizes for mobile */
+  .section-header h2,
+  .section-header-wide h2 {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 1.1rem;
+  }
+  
+  .about-text p,
+  .activities-content p,
+  .network-content p,
+  .mission-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .activity-item h4 {
+    font-size: 1rem;
+  }
+  
+  .activities-content h3,
+  .value-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  /* Studios section adjustments */
+  .studios {
+    padding: 80px 0;
+  }
+  
+  .section-header-wide h2 {
+    font-size: 2.1rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 1.1rem;
+  }
+  
+  .studios-container-wide {
+    max-width: 90%;
+  }
+  
+  .studios-grid {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .professional-card {
+    flex: 0 0 calc(50% - 15px);
+    min-width: auto;
+  }
+  
+  .card-image-wrapper {
+    height: 240px;
+  }
+  
+  .card-content {
+    padding: 22px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .card-specialty {
+    font-size: 1rem;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.95rem;
+  }
+  
+  .card-contact {
+    font-size: 0.95rem;
+  }
+  
+  .card-cta {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .ctaButton.small {
+    min-width: 120px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+  .section-header {
+    margin-bottom: 3rem;
+  }
+  
+  .section-header h2,
+  .section-header-wide h2 {
+    font-size: 1.7rem;
+  }
+  
+  .about-studio,
+  .activities-section,
+  .values-section,
+  .network-section,
+  .about-cta {
+    padding: 4rem 0;
+  }
+  
+  .studios {
+    padding: 80px 0;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 1.1rem;
+  }
+
+  .about-image,
+  .activities-image,
+  .network-image {
+    margin-bottom: 2rem;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-content {
+    padding: 2rem;
+  }
+
+  .mission-content p {
+    font-size: 1.1rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-content p {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    min-width: 200px;
+    padding: 0.9rem 1.8rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Standardized text sizes */
+  .about-text p,
+  .activities-content p,
+  .network-content p,
+  .value-card p {
+    font-size: 1.1rem;
+  }
+  
+  .activity-item h4 {
+    font-size: 1rem;
+  }
+  
+  .activities-content h3,
+  .value-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Studios section adjustments */
+  .studios-container-wide {
+    max-width: 90%;
+  }
+  
+  .studios-grid {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .professional-card {
+    flex: 0 0 calc(50% - 15px);
+    min-width: auto;
+  }
+  
+  .card-image-wrapper {
+    height: 240px;
+  }
+  
+  .card-content {
+    padding: 22px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .card-specialty {
+    font-size: 1rem;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.95rem;
+  }
+  
+  .card-contact {
+    font-size: 0.95rem;
+  }
+  
+  .card-cta {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .ctaButton.small {
+    min-width: 120px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile devices (480px to 767px) */
+@media screen and (max-width: 767px) {
+  .studios {
+    padding: 60px 20px;
+  }
+  
+  .section-header-wide {
+    margin-bottom: 40px;
+  }
+  
+  .section-header-wide h2 {
+    font-size: 1.9rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 1rem;
+  }
+  
+  .studios-container-wide {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  .studios-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .professional-card {
+    flex: 0 0 100%;
+  }
+  
+  .card-image-wrapper {
+    height: 220px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.35rem;
+  }
+  
+  .card-specialty {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.9rem;
+  }
+  
+  .card-contact {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+  
+  .card-cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .ctaButton.small {
+    width: 100%;
+    min-width: auto;
+    font-size: 0.9rem;
+  }
+}
+
+/* Large smartphones (600px and below) */
+@media screen and (max-width: 600px) {
+  .about-studio,
+  .activities-section,
+  .values-section,
+  .network-section,
+  .about-cta {
+    padding: 3rem 0;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-container {
+    max-width: 100%;
+  }
+  
+  .mission-content {
+    padding: 1.5rem;
+  }
+
+  .mission-content p {
+    font-size: 1rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Standardized text sizes */
+  .section-header h2,
+  .section-header-wide h2 {
+    font-size: 1.6rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 1rem;
+  }
+  
+  .about-text p,
+  .activities-content p,
+  .network-content p,
+  .value-card p {
+    font-size: 1rem;
+  }
+  
+  .activity-item h4 {
+    font-size: 0.95rem;
+  }
+  
+  .activities-content h3,
+  .value-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.4rem;
+  }
+  
+  .cta-content p {
+    font-size: 1rem;
+  }
+  
+  /* Studios section adjustments */
+  .studios {
+    padding: 60px 20px;
+  }
+  
+  .section-header-wide {
+    margin-bottom: 40px;
+  }
+  
+  .section-header-wide h2 {
+    font-size: 1.9rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 1rem;
+  }
+  
+  .studios-container-wide {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  .studios-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .professional-card {
+    flex: 0 0 100%;
+  }
+  
+  .card-image-wrapper {
+    height: 220px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.35rem;
+  }
+  
+  .card-specialty {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.9rem;
+  }
+  
+  .card-contact {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+  
+  .card-cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .ctaButton.small {
+    width: 100%;
+    min-width: auto;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile devices (320px to 479px) */
+@media screen and (max-width: 479px) {
+  .studios {
+    padding: 60px 18px;
+  }
+  
+  .section-header-wide {
+    margin-bottom: 35px;
+  }
+  
+  .section-header-wide h2 {
+    font-size: 1.7rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 0.95rem;
+  }
+  
+  .studios-container-wide {
+    padding: 0 12px;
+  }
+  
+  .studios-grid {
+    gap: 20px;
+  }
+  
+  .card-image-wrapper {
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 18px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+  }
+  
+  .card-specialty {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.9rem;
+  }
+  
+  .card-contact {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+  
+  .card-contact p {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .card-contact p strong {
+    margin-bottom: 4px;
+    margin-right: 0;
+    font-size: 0.9rem;
+  }
+  
+  .ctaButton.small {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Small smartphones (480px and below) */
+@media screen and (max-width: 480px) {
+  .section-header h2,
+  .section-header-wide h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 0.95rem;
+  }
+  
+  .about-container,
+  .activities-container,
+  .network-container {
+    padding: 0 1rem;
+  }
+  
+  .about-text p,
+  .network-content p,
+  .activities-content p,
+  .value-card p,
+  .mission-content p {
+    font-size: 0.95rem;
+  }
+
+  .mission-content {
+    padding: 1.2rem;
+  }
+
+  .mission-content p {
+    font-size: 0.95rem;
+  }
+  
+  .activity-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+  
+  .activity-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .activity-item h4 {
+    font-size: 0.9rem;
+  }
+  
+  .value-card {
+    padding: 1.5rem;
+  }
+  
+  .value-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.25rem;
+  }
+  
+  .value-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .cta-content {
+    padding: 0 1rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .cta-content p {
+    font-size: 0.95rem;
+  }
+  
+  .cta-button {
+    min-width: 180px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Studios section adjustments */
+  .studios {
+    padding: 60px 18px;
+  }
+  
+  .section-header-wide {
+    margin-bottom: 35px;
+  }
+  
+  .section-header-wide h2 {
+    font-size: 1.7rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 0.95rem;
+  }
+  
+  .studios-container-wide {
+    padding: 0 12px;
+  }
+  
+  .studios-grid {
+    gap: 20px;
+  }
+  
+  .card-image-wrapper {
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 18px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+  }
+  
+  .card-specialty {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.9rem;
+  }
+  
+  .card-contact {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+  
+  .card-contact p {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .card-contact p strong {
+    margin-bottom: 4px;
+    margin-right: 0;
+    font-size: 0.9rem;
+  }
+  
+  .ctaButton.small {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Extra small devices (below 320px) */
+@media screen and (max-width: 319px) {
+  .section-header-wide h2 {
+    font-size: 1.5rem;
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .card-specialty {
+    font-size: 0.9rem;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.85rem;
+  }
+  
+  .card-contact {
+    font-size: 0.9rem;
+  }
+  
+  .ctaButton.small {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+  
+  .activity-item h4 {
+    font-size: 0.85rem;
+  }
+  
+  .value-card h3 {
+    font-size: 1rem;
+  }
+  
+  .value-card p {
+    font-size: 0.85rem;
+  }
+  
+  /* Standardized text sizes */
+  .about-text p,
+  .activities-content p,
+  .network-content p,
+  .mission-content p {
+    font-size: 0.85rem;
+  }
+  
+  .section-header h2,
+  .section-header-wide h2 {
+    font-size: 1.3rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 0.85rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .cta-content p {
+    font-size: 0.85rem;
+  }
+  
+  .cta-button {
+    font-size: 0.9rem;
+  }
+}
+
+/* High-resolution devices */
+@media screen and (min-resolution: 2dppx) {
+  .section-header h2::after {
+    height: 2px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .about-cta {
+    height: auto;
+    min-height: auto;
+  }
+  
+  .about-text,
+  .activities-content,
+  .card-content,
+  .network-content,
+  .cta-content {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+  
+  .about-image,
+  .activities-image,
+  .network-image {
+    box-shadow: none;
+  }
+  
+  .professional-card:hover,
+  .value-card:hover,
+  .about-image:hover,
+  .network-image:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .cta-button {
+    border: 1px solid #000;
+    color: #000 !important;
+    background: none !important;
+  }
+  
+  /* Standardized print text sizes */
+  .about-text p,
+  .activities-content p,
+  .network-content p,
+  .value-card p,
+  .mission-content p,
+  .card-contact,
+  .card-specialty {
+    font-size: 11pt !important;
+    line-height: 1.4;
+  }
+  
+  .section-header h2,
+  .section-header-wide h2,
+  .cta-content h2 {
+    font-size: 16pt !important;
+  }
+  
+  .activities-content h3,
+  .value-card h3,
+  .card-content h3 {
+    font-size: 12pt !important;
+  }
+  
+  .section-subtitle-wide,
+  .cta-content p {
+    font-size: 11pt !important;
+  }
+  
+  .activity-item h4 {
+    font-size: 10pt !important;
+  }
+}
+
+/* ===== LANDSCAPE/HORIZONTAL ORIENTATION STYLES ===== */
+
+/* General landscape mode adjustments */
+@media (max-width: 991px) and (orientation: landscape) {
+  /* About studio section */
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .about-image {
+    order: 0;
+    max-height: 320px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Activities section */
+  .activities-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .activities-image {
+    order: 0;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .activity-item {
+    min-height: 80px;
+    padding: 15px;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .activity-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+  
+  .activity-item h4 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  /* Values section */
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .value-card {
+    padding: 25px 20px;
+    height: auto;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .value-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .value-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .value-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Network section */
+  .network-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .network-image {
+    order: 0;
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .network-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .network-list {
+    margin-top: 20px;
+  }
+  
+  .network-list li {
+    font-size: 1rem !important;
+    margin-bottom: 12px;
+    padding-left: 25px;
+  }
+  
+  .network-list li::before {
+    width: 8px;
+    height: 8px;
+    top: 8px;
+  }
+
+  /* Mission section */
+  .mission-container {
+    max-width: 90%;
+  }
+  
+  .mission-content {
+    padding: 30px;
+  }
+
+  .mission-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+  
+  /* CTA section */
+  .about-cta {
+    padding: 60px 0;
+  }
+  
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .cta-button {
+    min-width: 180px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Studios section landscape adjustments - ENHANCED */
+  .studios {
+    padding: 80px 0;
+  }
+  
+  .section-header-wide {
+    margin-bottom: 50px;
+  }
+  
+  .section-header-wide h2 {
+    font-size: 2.2rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 1.2rem;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .studios-container-wide {
+    max-width: 95%;
+  }
+  
+  .studios-grid {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 25px;
+    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+  }
+  
+  .studios-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .studios-grid::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+  }
+  
+  .professional-card {
+    flex: 0 0 380px;
+    min-width: 380px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .card-image-wrapper {
+    height: 240px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    flex-shrink: 0;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .professional-card:hover .card-image {
+    transform: scale(1.05);
+  }
+  
+  .card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  
+  .card-content h3 {
+    font-size: 1.4rem;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgba(194, 154, 91, 0.3);
+  }
+  
+  .card-specialty {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .card-contact {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .card-contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .card-contact p strong {
+    margin-right: 8px;
+    min-width: 80px;
+    color: var(--dark-color);
+  }
+  
+  .card-cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+  }
+  
+  .ctaButton.small {
+    min-width: 130px;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Section headers consistency */
+  .section-header h2,
+  .section-header-wide h2 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .section-header h2::after,
+  .section-header-wide h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--secondary-light));
+  }
+  
+  /* Ensure images don't get cut off */
+  .about-image,
+  .activities-image,
+  .network-image,
+  .card-image-wrapper {
+    overflow: hidden;
+   
+  }
+  
+  .about-image img,
+  .activities-image img,
+  .network-image img,
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+  }
+}
+
+/* Medium landscape devices (768px to 991px landscape) */
+@media (max-width: 991px) and (orientation: landscape) and (min-width: 768px) {
+  .professional-card {
+    flex: 0 0 350px;
+    min-width: 350px;
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .mission-content {
+    padding: 35px;
+  }
+  
+  .mission-content p {
+    font-size: 1.15rem;
+  }
+}
+
+/* Small landscape devices (767px and below landscape) */
+@media (max-width: 767px) and (orientation: landscape) {
+  .about-container,
+  .activities-container,
+  .network-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .about-image,
+  .activities-image,
+  .network-image {
+    order: -1;
+    max-height: 280px;
+  
+  }
+  
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-content p {
+    font-size: 1rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  /* Standardized text sizes */
+  .about-text p,
+  .activities-content p,
+  .network-content p,
+  .value-card p {
+    font-size: 0.95rem;
+  }
+  
+  .section-header h2,
+  .section-header-wide h2 {
+    font-size: 1.6rem;
+  }
+  
+  .activities-content h3,
+  .value-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Studios section landscape mobile */
+  .studios-grid {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+  
+  .professional-card {
+    flex: 0 0 320px;
+    min-width: 320px;
+  }
+  
+  .card-image-wrapper {
+    height: 220px;
+  }
+}
+
+/* Very small landscape devices (600px and below landscape) */
+@media (max-width: 600px) and (orientation: landscape) {
+  .about-image,
+  .activities-image,
+  .network-image {
+    max-height: 220px;
+    height: auto;
+   
+  }
+  
+  .value-card {
+    padding: 20px;
+  }
+  
+  .value-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.3rem;
+  }
+  
+  .value-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .value-card p {
+    font-size: 0.95rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.4rem;
+  }
+  
+  .cta-content p {
+    font-size: 1rem;
+  }
+  
+  /* Studios section small landscape */
+  .professional-card {
+    flex: 0 0 300px;
+    min-width: 300px;
+  }
+  
+  .card-image-wrapper {
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .card-specialty {
+    font-size: 0.95rem;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.9rem;
+  }
+  
+  .card-contact {
+    font-size: 0.9rem;
+  }
+  
+  .ctaButton.small {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Special adjustments for very short landscape screens */
+@media (max-width: 991px) and (orientation: landscape) and (max-height: 450px) {
+  .about-studio,
+  .activities-section,
+  .values-section,
+  .network-section,
+  .about-cta {
+    padding: 40px 0;
+  }
+  
+  .about-image,
+  .activities-image,
+  .network-image {
+    max-height: 180px;
+  }
+  
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .activity-item {
+    min-height: 70px;
+    padding: 12px;
+  }
+  
+  .activity-item h4 {
+    font-size: 0.9rem;
+  }
+  
+  .values-grid {
+    gap: 15px;
+  }
+  
+  .value-card {
+    padding: 18px;
+    min-height: 240px;
+  }
+  
+  .value-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .value-card p {
+    font-size: 0.9rem;
+  }
+  
+  .mission-content {
+    padding: 20px;
+  }
+  
+  .mission-content p {
+    font-size: 0.95rem;
+  }
+  
+  /* Standardized text sizes */
+  .about-text p,
+  .activities-content p,
+  .network-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .section-header h2,
+  .section-header-wide h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 1rem;
+  }
+  
+  .activities-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .cta-content p {
+    font-size: 0.95rem;
+  }
+  
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 0.9rem 1.5rem;
+  }
+  
+  /* Studios section very short landscape */
+  .studios {
+    padding: 60px 0;
+  }
+  
+  .studios-grid {
+    gap: 20px;
+  }
+  
+  .professional-card {
+    flex: 0 0 280px;
+    min-width: 280px;
+  }
+  
+  .card-image-wrapper {
+    height: 180px;
+  }
+  
+  .card-content {
+    padding: 18px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .card-specialty {
+    font-size: 0.9rem;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.85rem;
+  }
+  
+  .card-contact {
+    font-size: 0.85rem;
+  }
+  
+  .card-cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .ctaButton.small {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Device-specific landscape adjustments */
+/* iPhone X, XS, 11 Pro landscape */
+@media (width: 812px) and (height: 375px) and (orientation: landscape) {
+  .professional-card {
+    flex: 0 0 300px;
+    min-width: 300px;
+  }
+  
+  .card-image-wrapper {
+    height: 200px;
+  }
+}
+
+/* iPhone XR, 11, 11 Pro Max landscape */
+@media (width: 896px) and (height: 414px) and (orientation: landscape) {
+  .professional-card {
+    flex: 0 0 320px;
+    min-width: 320px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* iPhone 8 Plus, 7 Plus, 6s Plus landscape */
+@media (width: 736px) and (height: 414px) and (orientation: landscape) {
+  .studios-grid {
+    gap: 20px;
+  }
+  
+  .professional-card {
+    flex: 0 0 300px;
+    min-width: 300px;
+  }
+}
+
+/* Galaxy S8, S9, S10, etc. landscape */
+@media (width: 740px) and (height: 360px) and (orientation: landscape) {
+  .card-image-wrapper {
+    height: 180px;
+  }
+  
+  .card-content {
+    padding: 18px;
+  }
+  
+  .professional-card {
+    flex: 0 0 280px;
+    min-width: 280px;
+  }
+}
+
+/* Honor 70 specific landscape */
+@media (width: 832px) and (height: 384px) and (orientation: landscape) {
+  .studios-grid {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+  
+  .professional-card {
+    flex: 0 0 320px;
+    min-width: 320px;
+  }
+  
+  .card-image-wrapper {
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .card-specialty {
+    font-size: 0.95rem;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.9rem;
+  }
+  
+  .card-contact {
+    font-size: 0.9rem;
+  }
+  
+  .card-cta {
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .ctaButton.small {
+    min-width: 110px;
+    font-size: 0.9rem;
+  }
+  
+  /* Fix header sizes for Honor 70 landscape */
+  .section-header-wide h2 {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 1.05rem;
+  }
+}
+
+/* iPad landscape specific fixes */
+@media (width: 1024px) and (height: 768px) and (orientation: landscape) {
+  .studios-grid {
+    flex-wrap: nowrap;
+    gap: 25px;
+  }
+  
+  .professional-card {
+    flex: 0 0 380px;
+    min-width: 380px;
+  }
+  
+  .card-image-wrapper {
+    height: 240px;
+  }
+  
+  .card-content {
+    padding: 22px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .card-specialty {
+    font-size: 1.05rem;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.95rem;
+  }
+  
+  .card-contact {
+    font-size: 0.95rem;
+  }
+  
+  .card-cta {
+    flex-direction: row;
+    gap: 12px;
+  }
+  
+  .ctaButton.small {
+    min-width: 120px;
+    font-size: 0.95rem;
+  }
+  
+  /* Ensure header consistency on iPad landscape */
+  .section-header-wide h2 {
+    font-size: 2.1rem;
+  }
+  
+  .section-subtitle-wide {
+    font-size: 1.15rem;
+  }
+}
+
+/* iPad Pro landscape specific */
+@media (width: 1366px) and (height: 1024px) and (orientation: landscape) {
+  .studios-grid {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  .professional-card {
+    flex: 0 0 calc(33.333% - 20px);
+    min-width: auto;
+  }
+  
+  .card-image-wrapper {
+    height: 280px;
+  }
+  
+  .card-content {
+    padding: 25px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .card-specialty {
+    font-size: 1.1rem;
+  }
+  
+  .card-excerpt p {
+    font-size: 1rem;
+  }
+  
+  .card-contact {
+    font-size: 1rem;
+  }
+}
+
+/* Galaxy Tab landscape specific */
+@media (width: 1280px) and (height: 800px) and (orientation: landscape) {
+  .studios-grid {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  .professional-card {
+    flex: 0 0 calc(33.333% - 18px);
+    min-width: auto;
+  }
+  
+  .card-image-wrapper {
+    height: 260px;
+  }
+  
+  .card-content {
+    padding: 24px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .card-specialty {
+    font-size: 1.05rem;
+  }
+  
+  .card-excerpt p {
+    font-size: 0.98rem;
+  }
+}
+
+/* Responsive adjustments for network list in landscape */
+@media (max-width: 991px) and (orientation: landscape) {
+  .network-list li {
+    font-size: 1.05rem !important;
+  }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+  .network-list li {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) and (orientation: landscape) {
+  .network-list li {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Additional touch feedback for mobile devices in landscape */
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  .professional-card:hover {
+    transform: none;
+  }
+  
+  .ctaButton:hover, .secondaryButton:hover {
+    transform: none;
+  }
+}
+
+/* High-resolution displays in landscape */
+@media (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), 
+       (min-resolution: 192dpi) and (orientation: landscape) {
+  .section-header h2,
+  .section-header-wide h2 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Reduced motion for accessibility in landscape */
+@media (prefers-reduced-motion: reduce) and (orientation: landscape) {
+  .professional-card,
+  .value-card,
+  .about-image,
+  .network-image {
+    transition: none;
+  }
+  
+  .professional-card:hover,
+  .value-card:hover,
+  .about-image:hover,
+  .network-image:hover {
+    transform: none;
+  }
+  
+  .card-image {
+    transition: none;
+  }
+  
+  .professional-card:hover .card-image {
+    transform: none;
+  }
+}
+
+/* Special fix for very wide screens in landscape */
+@media (min-width: 992px) and (orientation: landscape) and (max-height: 500px) {
+  .about-container,
+  .activities-container,
+  .network-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .about-image,
+  .activities-image,
+  .network-image {
+    max-height: 280px;
+  }
+  
+  .studios-grid {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  .professional-card {
+    flex: 0 0 calc(50% - 15px);
+    min-width: auto;
+  }
+}
+
+/* Extreme landscape ratio fix (very wide, very short) */
+@media (min-width: 768px) and (orientation: landscape) and (max-height: 400px) {
+  .about-studio,
+  .activities-section,
+  .values-section,
+  .network-section {
+    padding: 30px 0;
+  }
+  
+  .studios {
+    padding: 50px 0;
+  }
+  
+  .section-header-wide {
+    margin-bottom: 30px;
+  }
+  
+  .about-image,
+  .activities-image,
+  .network-image {
+    max-height: 200px;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .value-card {
+    padding: 15px;
+    min-height: auto;
+  }
+  
+  .studios-grid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .professional-card {
+    flex: 0 0 300px;
+    min-width: 300px;
+  }
+  
+  .card-image-wrapper {
+    height: 160px;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .card-excerpt p {
+    display: block;
+    font-size: 0.85rem;
+  }
+  
+  .card-cta {
+    flex-direction: row;
+  }
+}
+
+/* Ensure all images maintain aspect ratio and don't get cut off */
+.about-image,
+.activities-image,
+.network-image,
+.card-image-wrapper {
+  overflow: hidden;
+}
+
+
+.about-image {
+  
+  height: 105%;
+
+}
+
+.about-image img,
+.activities-image img,
+.network-image img,
+.card-image {
+  min-width: 350px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Prevent text from overflowing containers in landscape */
+.about-text p,
+.activities-content p,
+.network-content p,
+.value-card p,
+.mission-content p,
+.card-excerpt p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Fine-tune line heights for better readability in landscape */
+@media (orientation: landscape) {
+  .about-text p,
+  .activities-content p,
+  .network-content p,
+  .value-card p,
+  .mission-content p {
+    line-height: 1.6;
+  }
+  
+  .card-excerpt p {
+    line-height: 1.5;
+  }
+}
+
+/* Final OCD-level adjustments for perfect alignment in landscape */
+@media (orientation: landscape) {
+  .section-header,
+  .section-header-wide {
+    text-align: center;
+  }
+  
+  .section-header h2::after,
+  .section-header-wide h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .activity-item,
+  .value-card,
+  .professional-card {
+    transition: all 0.3s ease;
+  }
+  
+  .activity-item:hover,
+  .value-card:hover,
+  .professional-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ensure all buttons have consistent styling */
+  .ctaButton,
+  .cta-button,
+  .secondaryButton {
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    transition: all 0.3s ease;
+  }
+  
+  .ctaButton:hover,
+  .cta-button:hover,
+  .secondaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(194, 154, 91, 0.3);
+  }
+  
+  /* Perfect spacing for all sections */
+  .about-studio,
+  .activities-section,
+  .values-section,
+  .network-section,
+  .mission-section,
+  .studios,
+  .about-cta {
+    box-sizing: border-box;
+  }
+}

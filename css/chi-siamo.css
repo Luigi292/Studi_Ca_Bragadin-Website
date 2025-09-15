@@ -20,6 +20,8 @@
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
   --border-radius: 8px;
   --container-width: 1320px;
+
+  /* Text size variables for consistency */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -27,65 +29,34 @@
   --text-xl: 1.25rem;
   --text-2xl: 1.5rem;
   --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
 }
 
-/* ===== BASE STYLES ===== */
-* {
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 16px; /* Consistent base font size */
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  line-height: 1.6;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: var(--font-main);
-  line-height: 1.7;
-  color: var(--dark-color);
-  background-color: var(--white-color);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: var(--transition);
-}
-
-ul {
-  list-style: none;
-}
-
-.container {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  line-height: 1.3;
-  color: var(--primary-color);
-}
 
 /* ===== GLOBAL SECTION STYLES ===== */
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
+  position: relative;
 }
 
 .section-header h2 {
@@ -108,16 +79,29 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--secondary-color);
 }
 
-.section-subtitle {
+.section-subtitle-wide {
   font-size: var(--text-lg);
   color: var(--gray-color);
   font-weight: 400;
   font-family: var(--font-main);
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   margin-top: 1.5rem;
-  font-style: normal;
+}
+
+/* Section divider */
+.about-studio::before,
+.activities-section::before,
+.values-section::before,
+.network-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--section-divider);
 }
 
 /* ===== ABOUT STUDIO SECTION ===== */
@@ -173,6 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 .activities-section {
   padding: 6rem 0;
   background-color: var(--light-color);
+  position: relative;
 }
 
 .activities-container {
@@ -201,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .activities-content h3 {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   color: var(--primary-color);
   margin-bottom: 1.8rem;
   font-family: var(--font-heading);
@@ -241,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--primary-color);
   border-radius: 50%;
   color: var(--white-color);
-  font-size: var(--text-xl);
+  font-size: 1.25rem;
 }
 
 .activity-item h4 {
@@ -252,12 +237,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   flex-grow: 1;
 }
-
-
-
-
-
-/* ===== TEAM SECTION (UPDATED TO MATCH INDEX.HTML) ===== */
 
 /* ===== TEAM SECTION (UPDATED TO MATCH INDEX.HTML) ===== */
 .studios {
@@ -275,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: var(--section-divider);
 }
 
 .studios-container-wide {
@@ -292,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-header-wide h2 {
   font-family: var(--font-heading);
-  font-size: 2.4rem;
+  font-size: var(--text-3xl);
   color: var(--primary-color);
   margin-bottom: 18px;
   position: relative;
@@ -310,16 +289,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 3px;
   background-color: var(--secondary-color);
   border-radius: 2px;
-}
-
-.section-subtitle-wide {
-  font-size: 1.2rem;
-  color: var(--primary-color);
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-  font-weight: 400;
-  opacity: 0.9;
 }
 
 .studios-grid {
@@ -373,7 +342,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-content h3 {
-  font-size: 1.5rem;
+  font-size: var(--text-xl);
   margin-bottom: 12px;
   color: var(--primary-color);
   font-family: var(--font-heading);
@@ -393,9 +362,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-specialty {
-  font-size: 1.05rem;
+  font-size: var(--text-base);
   margin-bottom: 15px;
-  color: var(--gray-color);
+  color: var(--secondary-color);
   line-height: 1.6;
   font-weight: 500;
 }
@@ -405,14 +374,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-excerpt p {
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   line-height: 1.6;
   color: var(--gray-color);
   margin-bottom: 0;
 }
 
 .card-contact {
-  font-size: 1rem;
+  font-size: var(--text-base);
   margin-bottom: 22px;
   margin-top: auto;
 }
@@ -455,7 +424,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ctaButton.small {
   padding: 12px 24px;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   display: inline-block;
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -488,429 +457,122 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--white-color);
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS FOR PROFESSIONAL CARDS ===== */
-
-/* Large devices (desktops, 1200px and up) */
-@media (min-width: 1600px) {
-  .studios-container-wide {
-    max-width: 1320px;
-  }
-}
-
-/* For screens between 1200px and 1600px (typical for 15" laptops) */
-@media (min-width: 1200px) and (max-width: 1600px) {
-  .studios-container-wide {
-    max-width: 90%;
-  }
-  
-  .studios-grid {
-    gap: 30px;
-  }
-  
-  .card-image-wrapper {
-    height: 240px;
-  }
-  
-  .card-content {
-    padding: 22px;
-  }
-  
-  .card-content h3 {
-    font-size: 1.4rem;
-  }
-  
-  .card-specialty {
-    font-size: 1rem;
-  }
-  
-  .ctaButton.small {
-    min-width: 120px;
-    font-size: 0.85rem;
-  }
-}
-
-/* For screens between 991px and 1199px (smaller laptops/tablets in landscape) */
-@media (max-width: 1199px) and (min-width: 992px) {
-  .studios-container-wide {
-    max-width: 95%;
-  }
-  
-  .studios-grid {
-    flex-wrap: wrap;
-    gap: 25px;
-  }
-  
-  .professional-card {
-    flex: 0 0 calc(50% - 12.5px);
-    min-width: auto;
-  }
-  
-  .card-image-wrapper {
-    height: 220px;
-  }
-  
-  .card-content {
-    padding: 20px;
-  }
-  
-  .card-content h3 {
-    font-size: 1.35rem;
-  }
-  
-  .card-specialty {
-    font-size: 0.98rem;
-  }
-  
-  .card-cta {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .ctaButton.small {
-    width: 100%;
-    min-width: auto;
-  }
-}
-
-/* Tablets and small devices (768px to 991px) */
-@media (max-width: 991px) {
-  .studios {
-    padding: 80px 0;
-  }
-  
-  .section-header-wide h2 {
-    font-size: 2.1rem;
-  }
-  
-  .section-subtitle-wide {
-    font-size: 1.1rem;
-  }
-  
-  .studios-container-wide {
-    max-width: 90%;
-  }
-  
-  .studios-grid {
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  
-  .professional-card {
-    flex: 0 0 calc(50% - 15px);
-    min-width: auto;
-  }
-  
-  .card-image-wrapper {
-    height: 240px;
-  }
-  
-  .card-content {
-    padding: 22px;
-  }
-  
-  .card-content h3 {
-    font-size: 1.4rem;
-  }
-  
-  .card-specialty {
-    font-size: 1rem;
-  }
-  
-  .card-cta {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .ctaButton.small {
-    min-width: 120px;
-    font-size: 0.85rem;
-  }
-}
-
-/* Mobile devices (480px to 767px) */
-@media (max-width: 767px) {
-  .studios {
-    padding: 60px 20px;
-  }
-  
-  .section-header-wide {
-    margin-bottom: 40px;
-  }
-  
-  .section-header-wide h2 {
-    font-size: 1.9rem;
-  }
-  
-  .section-subtitle-wide {
-    font-size: 1rem;
-  }
-  
-  .studios-container-wide {
-    max-width: 100%;
-    padding: 0 15px;
-  }
-  
-  .studios-grid {
-    flex-direction: column;
-    gap: 25px;
-  }
-  
-  .professional-card {
-    flex: 0 0 100%;
-  }
-  
-  .card-image-wrapper {
-    height: 220px;
-  }
-  
-  .card-content {
-    padding: 20px;
-  }
-  
-  .card-content h3 {
-    font-size: 1.35rem;
-  }
-  
-  .card-specialty {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  .card-excerpt p {
-    font-size: 0.9rem;
-  }
-  
-  .card-contact {
-    font-size: 0.95rem;
-    margin-bottom: 18px;
-  }
-  
-  .card-cta {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .ctaButton.small {
-    width: 100%;
-    min-width: auto;
-    font-size: 0.9rem;
-  }
-}
-
-/* Small mobile devices (320px to 479px) */
-@media (max-width: 479px) {
-  .studios {
-    padding: 60px 18px;
-  }
-  
-  .section-header-wide {
-    margin-bottom: 35px;
-  }
-  
-  .section-header-wide h2 {
-    font-size: 1.7rem;
-  }
-  
-  .section-subtitle-wide {
-    font-size: 0.95rem;
-  }
-  
-  .studios-container-wide {
-    padding: 0 12px;
-  }
-  
-  .studios-grid {
-    gap: 20px;
-  }
-  
-  .card-image-wrapper {
-    height: 200px;
-  }
-  
-  .card-content {
-    padding: 18px;
-  }
-  
-  .card-content h3 {
-    font-size: 1.25rem;
-    padding-bottom: 10px;
-  }
-  
-  .card-specialty {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-  }
-  
-  .card-excerpt p {
-    font-size: 0.85rem;
-  }
-  
-  .card-contact {
-    font-size: 0.95rem;
-    margin-bottom: 18px;
-  }
-  
-  .card-contact p {
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  
-  .card-contact p strong {
-    margin-bottom: 4px;
-    margin-right: 0;
-    font-size: 0.9rem;
-  }
-  
-  .ctaButton.small {
-    font-size: 0.85rem;
-    padding: 10px 20px;
-  }
-}
-
-/* Extra small devices (below 320px) */
-@media (max-width: 319px) {
-  .section-header-wide h2 {
-    font-size: 1.5rem;
-  }
-  
-  .card-content h3 {
-    font-size: 1.2rem;
-  }
-  
-  .card-specialty,
-  .card-excerpt p,
-  .card-contact {
-    font-size: 0.85rem;
-  }
-  
-  .ctaButton.small {
-    font-size: 0.8rem;
-    padding: 8px 16px;
-  }
-}
-
-/* Landscape orientation adjustments */
-@media (max-width: 991px) and (orientation: landscape) {
-  .studios-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .professional-card {
-    flex: 0 0 calc(50% - 10px);
-  }
-  
-  .card-image-wrapper {
-    height: 200px;
-  }
-  
-  .card-content h3 {
-    font-size: 1.3rem;
-  }
-  
-  .card-specialty,
-  .card-contact,
-  .card-excerpt p {
-    font-size: 0.95rem;
-  }
-  
-  .card-cta {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .ctaButton.small {
-    min-width: 120px;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 768px) and (orientation: landscape) {
-  .studios-grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 600px) and (orientation: landscape) {
-  .card-image-wrapper {
-    height: 180px;
-  }
-  
-  .card-content {
-    padding: 1.2rem;
-  }
-  
-  .card-content h3 {
-    font-size: 1.1rem;
-  }
-  
-  .card-specialty,
-  .card-contact,
-  .card-excerpt p {
-    font-size: 0.9rem;
-  }
-  
-  .ctaButton.small {
-    font-size: 0.8rem;
-  }
-}
 
 
 
-
-
-
-/* ===== VALUES SECTION ===== */
+/* ===== MISSION SECTION ENHANCEMENTS ===== */
 .values-section {
   padding: 6rem 0;
-  background-color: var(--light-color);
+  background: var(--light-color);
+  position: relative;
+}
+
+.values-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--section-divider);
 }
 
 .mission-container {
-  max-width: 80%;
-  margin: 0 auto 4rem;
+  max-width: 1000px;
+  margin: 0 auto 5rem;
   padding: 0 2rem;
+  position: relative;
 }
 
 .mission-content {
   width: 100%;
   background: var(--white-color);
-  padding: 3rem;
+  padding: 3.5rem;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   text-align: center;
-  margin-bottom: 5%;
-  margin-top: -3%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(188, 164, 84, 0.1);
+}
+
+.mission-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--section-divider);
 }
 
 .mission-content p {
   font-size: var(--text-base);
   line-height: 1.7;
   color: var(--dark-color);
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
   font-family: var(--font-main);
+  position: relative;
 }
 
+.mission-content p::before,
+.mission-content p::after {
+  content: '"';
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--secondary-light);
+  position: absolute;
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.mission-content p::before {
+  top: -1.2rem;
+  left: -1.8rem;
+}
+
+.mission-content p::after {
+  bottom: -2rem;
+  right: -1.8rem;
+}
+
+/* ===== VALUES GRID ENHANCEMENTS ===== */
 .values-grid {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .value-card {
   background: var(--white-color);
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   border-radius: var(--border-radius);
   text-align: center;
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--section-divider);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.value-card:hover::before {
+  opacity: 1;
 }
 
 .value-card:hover {
@@ -922,32 +584,68 @@ h1, h2, h3, h4, h5, h6 {
   width: 70px;
   height: 70px;
   margin: 0 auto 1.5rem;
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--white-color);
-  font-size: var(--text-2xl);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.05);
+  background: var(--primary-light);
 }
 
 .value-card h3 {
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   margin-bottom: 1rem;
   color: var(--primary-color);
   font-family: var(--font-heading);
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.value-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: var(--transition);
+}
+
+.value-card:hover h3::after {
+  width: 50px;
 }
 
 .value-card p {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--gray-color);
   font-family: var(--font-main);
+  line-height: 1.6;
 }
 
-/* ===== NETWORK SECTION ===== */
+/* ===== NETWORK SECTION ENHANCEMENTS ===== */
 .network-section {
   padding: 6rem 0;
   background-color: var(--white-color);
+  position: relative;
+}
+
+.network-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--section-divider);
 }
 
 .network-container {
@@ -972,8 +670,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-main);
 }
 
-
-
 .network-list {
   list-style: none;
   margin: 0;
@@ -982,24 +678,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .network-list li {
   position: relative;
-  padding-left: 1.2rem; /* keeps space for the dash */
+  padding-left: 1.8rem;
   margin-bottom: 1rem;
   font-size: var(--text-base);
   font-family: var(--font-main);
 }
 
 .network-list li::before {
-  content: '-'; /* use a dash instead of a line */
+  content: '';
   position: absolute;
-  left: 0; /* exactly where the paragraph text starts */
-  top: 0;
-  color: var(--secondary-color);
+  left: 0;
+  top: 0.6rem;
+  width: 12px;
+  height: 12px;
+  background-color: var(--secondary-color);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background-color: var(--secondary-color);
 }
-
-
-
-
-
 
 .network-image {
   border-radius: var(--border-radius);
@@ -1014,1168 +712,13 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
 }
 
 .network-image:hover {
   transform: translateY(-5px);
 }
 
-/* ===== CTA SECTION ===== */
-.about-cta {
-  padding: 6rem 0;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-  position: relative;
-  overflow: hidden;
-  color: var(--white-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-}
-
-.about-cta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../images/pattern-light.png') center/cover;
-  opacity: 0.05;
-  z-index: 0;
-}
-
-.cta-content {
-  max-width: 800px;
-  padding: 0 2rem;
-  position: relative;
-  z-index: 1;
-  color: var(--white-color) !important;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.cta-content h2 {
-  font-size: var(--text-3xl);
-  margin-bottom: 1.5rem;
-  font-family: var(--font-heading);
-  color: var(--white-color);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.cta-content p {
-  font-size: var(--text-xl);
-  margin-bottom: 2.5rem;
-  line-height: 1.7;
-  font-family: var(--font-main);
-  color: var(--white-color) !important;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  z-index: 1;
-}
-
-.cta-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
-  font-size: var(--text-base);
-  font-weight: 600;
-  border-radius: var(--border-radius);
-  transition: var(--transition);
-  text-decoration: none;
-  min-width: 220px;
-  font-family: var(--font-main);
-}
-
-.cta-button.primary {
-  background: var(--white-color);
-  color: var(--primary-color);
-}
-
-.cta-button.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.cta-button.secondary {
-  background: transparent;
-  color: var(--white-color);
-  border: 2px solid var(--white-color);
-}
-
-.cta-button.secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
-}
-
-/* ===== RESPONSIVE MEDIA QUERIES ===== */
-
-/* Large tablets and small laptops (991px and below) */
-@media screen and (max-width: 991px) {
-  .about-container,
-  .activities-container,
-  .network-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .activities-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .values-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .mission-content p {
-    max-width: 90%;
-    font-size: var(--text-base);
-    line-height: 1.6;
-  }
-
-  /* Professional cards responsive */
-  .studios-grid {
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  
-  .professional-card {
-    flex: 0 0 calc(50% - 15px);
-    min-width: auto;
-  }
-  
-  .card-content h3 {
-    font-size: 1.4rem;
-  }
-  
-  .ctaButton.small {
-    width: 100%;
-    min-width: auto;
-    font-size: var(--text-base);
-  }
-
-  /* Target all section images */
-  .about-studio,
-  .activities-section,
-  .values-section,
-  .network-section {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Make images appear first */
-  .about-image,
-  .activities-image,
-  .network-image {
-    order: -1;
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  
-  /* Standardized text sizes */
-  .section-header h2,
-  .section-header-wide h2 {
-    font-size: var(--text-2xl);
-  }
-  
-  .section-subtitle,
-  .section-subtitle-wide {
-    font-size: var(--text-base);
-  }
-  
-  .about-text p,
-  .activities-content p,
-  .network-content p,
-  .card-contact,
-  .card-specialty,
-  .value-card p,
-  .mission-content p {
-    font-size: var(--text-base);
-    line-height: 1.6;
-  }
-  
-  .activity-item h4 {
-    font-size: var(--text-sm);
-  }
-  
-  .activities-content h3,
-  .value-card h3,
-  .card-content h3 {
-    font-size: var(--text-lg);
-  }
-}
-
-/* Tablets (768px and below) */
-@media screen and (max-width: 768px) {
-  .section-header {
-    margin-bottom: 3rem;
-  }
-  
-  .section-header h2,
-  .section-header-wide h2 {
-    font-size: var(--text-xl);
-  }
-  
-  .about-studio,
-  .activities-section,
-  .values-section,
-  .network-section,
-  .about-cta {
-    padding: 4rem 0;
-  }
-  
-  .studios {
-    padding: 80px 0;
-  }
-  
-  .section-subtitle,
-  .section-subtitle-wide {
-    font-size: var(--text-base);
-  }
-
-  .about-image,
-  .activities-image,
-  .network-image {
-    display: block;
-    width: 100%;
-    margin-bottom: 1.5rem;
-    order: -1;
-  }
-
-  .activities-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .mission-content {
-    padding: 1rem 1.5rem;
-    margin: 0 auto;
-    max-width: 100%;
-  }
-
-  .mission-content p {
-    max-width: 100%;
-    font-size: var(--text-base);
-    line-height: 1.6;
-  }
-  
-  .cta-content h2 {
-    font-size: var(--text-xl);
-  }
-  
-  .cta-content p {
-    font-size: var(--text-base);
-  }
-  
-  .cta-button {
-    min-width: 200px;
-    padding: 0.9rem 1.8rem;
-    font-size: var(--text-base);
-  }
-  
-  /* Professional cards tablet adjustments */
-  .studios-container-wide {
-    max-width: 90%;
-  }
-  
-  .studios-grid {
-    gap: 30px;
-  }
-  
-  .card-image-wrapper {
-    height: 240px;
-  }
-  
-  .card-content {
-    padding: 22px;
-  }
-  
-  .card-content h3 {
-    font-size: var(--text-lg);
-  }
-  
-  .card-specialty,
-  .card-contact {
-    font-size: var(--text-base);
-  }
-  
-  .ctaButton.small {
-    min-width: 120px;
-    font-size: var(--text-base);
-  }
-  
-  /* Standardized text sizes */
-  .about-text p,
-  .activities-content p,
-  .network-content p,
-  .value-card p {
-    font-size: var(--text-base);
-    line-height: 1.6;
-  }
-  
-  .activity-item h4 {
-    font-size: var(--text-sm);
-  }
-  
-  .activities-content h3,
-  .value-card h3 {
-    font-size: var(--text-lg);
-  }
-}
-
-/* Large smartphones (600px and below) */
-@media screen and (max-width: 600px) {
-  .about-studio,
-  .activities-section,
-  .values-section,
-  .network-section,
-  .about-cta {
-    padding: 3rem 0;
-  }
-  
-  .values-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .mission-container {
-    max-width: 100%;
-  }
-  
-  .mission-content {
-    padding: 1rem 1rem;
-    max-width: 100%;
-  }
-
-  .mission-content p {
-    max-width: 100%;
-    font-size: var(--text-base);
-    line-height: 1.6;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Professional cards mobile adjustments */
-  .studios {
-    padding: 60px 20px;
-  }
-  
-  .section-header-wide {
-    margin-bottom: 40px;
-  }
-  
-  .section-header h2,
-  .section-header-wide h2 {
-    font-size: var(--text-xl);
-  }
-  
-  .section-subtitle,
-  .section-subtitle-wide {
-    font-size: var(--text-base);
-  }
-  
-  .studios-container-wide {
-    max-width: 100%;
-    padding: 0 15px;
-  }
-  
-  .studios-grid {
-    flex-direction: column;
-    gap: 25px;
-  }
-  
-  .professional-card {
-    flex: 0 0 100%;
-  }
-  
-  .card-image-wrapper {
-    height: 220px;
-  }
-  
-  .card-content {
-    padding: 20px;
-  }
-  
-  .card-content h3 {
-    font-size: var(--text-lg);
-  }
-  
-  .card-specialty,
-  .card-contact {
-    font-size: var(--text-base);
-    margin-bottom: 15px;
-  }
-  
-  .ctaButton.small {
-    width: 100%;
-    min-width: auto;
-    font-size: var(--text-base);
-  }
-  
-  /* Standardized text sizes */
-  .about-text p,
-  .activities-content p,
-  .network-content p,
-  .value-card p {
-    font-size: var(--text-base);
-    line-height: 1.6;
-  }
-  
-  .activity-item h4 {
-    font-size: var(--text-sm);
-  }
-  
-  .activities-content h3,
-  .value-card h3 {
-    font-size: var(--text-lg);
-  }
-  
-  .cta-content h2 {
-    font-size: var(--text-xl);
-  }
-  
-  .cta-content p {
-    font-size: var(--text-base);
-  }
-}
-
-/* Small smartphones (480px and below) */
-@media screen and (max-width: 480px) {
-  .section-header h2,
-  .section-header-wide h2 {
-    font-size: var(--text-lg);
-  }
-  
-  .section-subtitle,
-  .section-subtitle-wide {
-    font-size: var(--text-sm);
-    padding: 0 1rem;
-  }
-  
-  .about-container,
-  .activities-container,
-  .network-container {
-    padding: 0 1rem;
-  }
-  
-  .about-text p,
-  .network-content p,
-  .activities-content p,
-  .value-card p,
-  .mission-content p {
-    font-size: var(--text-sm);
-    line-height: 1.6;
-  }
-
-  .mission-content {
-    padding: 1rem 1rem;
-    max-width: 100%;
-  }
-
-  .mission-content p {
-    max-width: 100%;
-    font-size: var(--text-sm);
-    line-height: 1.6;
-  }
-  
-  .activity-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
-    padding: 1rem 0.5rem;
-  }
-  
-  .activity-icon {
-    width: 40px;
-    height: 40px;
-    font-size: var(--text-base);
-  }
-  
-  .activity-item h4 {
-    font-size: var(--text-xs);
-  }
-  
-  .value-card {
-    padding: 1.5rem;
-  }
-  
-  .value-icon {
-    width: 60px;
-    height: 60px;
-    font-size: var(--text-xl);
-  }
-  
-  .value-card h3 {
-    font-size: var(--text-base);
-  }
-  
-  .cta-content {
-    padding: 0 1rem;
-  }
-  
-  .cta-content h2 {
-    font-size: var(--text-lg);
-  }
-  
-  .cta-content p {
-    font-size: var(--text-sm);
-  }
-  
-  .cta-button {
-    min-width: 180px;
-    padding: 0.8rem 1.5rem;
-    font-size: var(--text-sm);
-  }
-  
-  /* Professional cards small mobile adjustments */
-  .studios {
-    padding: 60px 18px;
-  }
-  
-  .section-header-wide {
-    margin-bottom: 35px;
-  }
-  
-  .section-header-wide h2 {
-    font-size: var(--text-lg);
-  }
-  
-  .section-subtitle-wide {
-    font-size: var(--text-sm);
-  }
-  
-  .studios-container-wide {
-    padding: 0 12px;
-  }
-  
-  .studios-grid {
-    gap: 20px;
-  }
-  
-  .card-image-wrapper {
-    height: 200px;
-  }
-  
-  .card-content {
-    padding: 18px;
-  }
-  
-  .card-content h3 {
-    font-size: var(--text-base);
-    padding-bottom: 10px;
-  }
-  
-  .card-specialty,
-  .card-contact {
-    font-size: var(--text-sm);
-    margin-bottom: 15px;
-  }
-  
-  .card-contact {
-    font-size: var(--text-sm);
-    margin-bottom: 18px;
-  }
-  
-  .card-contact p {
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  
-  .card-contact p strong {
-    margin-bottom: 4px;
-    margin-right: 0;
-    font-size: var(--text-sm);
-  }
-  
-  .ctaButton.small {
-    font-size: var(--text-sm);
-  }
-}
-
-/* Extra small devices (320px and below) */
-@media screen and (max-width: 320px) {
-  .activity-item h4 {
-    font-size: var(--text-xs);
-  }
-  
-  .value-card h3 {
-    font-size: var(--text-sm);
-  }
-  
-  .value-card p {
-    font-size: var(--text-xs);
-  }
-  
-  /* Professional cards extra small adjustments */
-  .card-content h3 {
-    font-size: var(--text-sm);
-  }
-  
-  .card-specialty,
-  .card-contact {
-    font-size: var(--text-xs);
-  }
-  
-  .ctaButton.small {
-    padding: 10px 20px;
-    font-size: var(--text-xs);
-  }
-  
-  /* Standardized text sizes */
-  .about-text p,
-  .activities-content p,
-  .network-content p,
-  .mission-content p {
-    font-size: var(--text-xs);
-    line-height: 1.5;
-  }
-  
-  .section-header h2,
-  .section-header-wide h2 {
-    font-size: var(--text-base);
-  }
-  
-  .section-subtitle,
-  .section-subtitle-wide {
-    font-size: var(--text-xs);
-  }
-  
-  .cta-content h2 {
-    font-size: var(--text-base);
-  }
-  
-  .cta-content p {
-    font-size: var(--text-xs);
-  }
-  
-  .cta-button {
-    font-size: var(--text-xs);
-  }
-}
-
-/* High-resolution devices */
-@media screen and (min-resolution: 2dppx) {
-  .section-header h2::after {
-    height: 2px;
-  }
-}
-
-/* Print styles */
-@media print {
-  .about-cta {
-    height: auto;
-    min-height: auto;
-  }
-  
-  .about-text,
-  .activities-content,
-  .card-content,
-  .network-content,
-  .cta-content {
-    color: #000 !important;
-    text-shadow: none !important;
-  }
-  
-  .about-image,
-  .activities-image,
-  .network-image {
-    box-shadow: none;
-  }
-  
-  .professional-card:hover,
-  .value-card:hover,
-  .about-image:hover,
-  .network-image:hover {
-    transform: none;
-    box-shadow: none;
-  }
-  
-  .cta-button {
-    border: 1px solid #000;
-    color: #000 !important;
-    background: none !important;
-  }
-  
-  /* Standardized print text sizes */
-  .about-text p,
-  .activities-content p,
-  .network-content p,
-  .value-card p,
-  .mission-content p,
-  .card-contact,
-  .card-specialty {
-    font-size: 10pt !important;
-    line-height: 1.4;
-  }
-  
-  .section-header h2,
-  .section-header-wide h2,
-  .cta-content h2 {
-    font-size: 14pt !important;
-  }
-  
-  .activities-content h3,
-  .value-card h3,
-  .card-content h3 {
-    font-size: 12pt !important;
-  }
-  
-  .section-subtitle,
-  .section-subtitle-wide,
-  .cta-content p {
-    font-size: 11pt !important;
-  }
-  
-  .activity-item h4 {
-    font-size: 9pt !important;
-  }
-}
-
-/* ===== LANDSCAPE/HORIZONTAL ORIENTATION STYLES ===== */
-
-@media (max-width: 991px) and (orientation: landscape) {
-  /* About studio section */
-  .about-container {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  
-  .about-image {
-    order: -1;
-    max-height: 350px;
-  }
-  
-  .about-text p {
-    font-size: var(--text-base);
-  }
-  
-  /* Activities section */
-  .activities-container {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  
-  .activities-image {
-    order: -1;
-    height: 300px;
-  }
-  
-  .activities-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  
-  .activity-item {
-    min-height: 70px;
-    padding: 12px;
-  }
-  
-  .activity-icon {
-    width: 45px;
-    height: 45px;
-    font-size: var(--text-lg);
-  }
-  
-  .activity-item h4 {
-    font-size: var(--text-sm);
-  }
-  
-  /* Values section */
-  .values-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .value-card {
-    padding: 1.8rem;
-  }
-  
-  .value-icon {
-    width: 60px;
-    height: 60px;
-    font-size: var(--text-xl);
-  }
-  
-  .value-card h3 {
-    font-size: var(--text-lg);
-  }
-  
-  .value-card p {
-    font-size: var(--text-base);
-  }
-  
-  /* Network section */
-  .network-container {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  
-  .network-image {
-    order: -1;
-    height: 300px;
-  }
-  
-  .network-content p {
-    font-size: var(--text-base);
-  }
-  
-  /* Professional cards landscape */
-  .studios-grid {
-    flex-wrap: wrap;
-    gap: 25px;
-  }
-  
-  .professional-card {
-    flex: 0 0 calc(50% - 12.5px);
-  }
-  
-  .card-image-wrapper {
-    height: 200px;
-  }
-  
-  .card-content h3 {
-    font-size: var(--text-lg);
-  }
-  
-  .card-specialty,
-  .card-contact {
-    font-size: var(--text-base);
-  }
-  
-  .ctaButton.small {
-    min-width: 120px;
-    font-size: var(--text-base);
-  }
-  
-  .network-list li {
-    font-size: var(--text-base) !important;
-    line-height: 1.6;
-    font-family: var(--font-main);
-    color: var(--dark-color);
-  }
-
-  /* CTA section */
-  .cta-content h2 {
-    font-size: var(--text-xl);
-  }
-  
-  .cta-content p {
-    font-size: var(--text-base);
-  }
-  
-  .cta-buttons {
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .cta-button {
-    font-size: var(--text-base);
-  }
-}
-
-@media (max-width: 768px) and (orientation: landscape) {
-  .activities-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .values-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .mission-content p {
-    max-width: 100%;
-    font-size: var(--text-base);
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cta-button {
-    width: 100%;
-    max-width: 250px;
-    font-size: var(--text-base);
-  }
-  
-  /* Professional cards landscape mobile */
-  .studios-grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  /* Standardized text sizes */
-  .about-text p,
-  .activities-content p,
-  .network-content p,
-  .value-card p {
-    font-size: var(--text-sm);
-  }
-  
-  .section-header h2,
-  .section-header-wide h2 {
-    font-size: var(--text-lg);
-  }
-  
-  .activities-content h3,
-  .value-card h3,
-  .card-content h3 {
-    font-size: var(--text-base);
-  }
-}
-
-@media (max-width: 600px) and (orientation: landscape) {
-  .about-image,
-  .activities-image,
-  .network-image {
-    max-height: 250px;
-  }
-  
-  .value-card {
-    padding: 1.5rem;
-  }
-  
-  .value-icon {
-    width: 50px;
-    height: 50px;
-    font-size: var(--text-lg);
-  }
-  
-  .value-card h3 {
-    font-size: var(--text-base);
-  }
-  
-  .value-card p {
-    font-size: var(--text-sm);
-  }
-  
-  .cta-content h2 {
-    font-size: var(--text-lg);
-  }
-  
-  .cta-content p {
-    font-size: var(--text-sm);
-  }
-  
-  /* Professional cards small landscape */
-  .card-image-wrapper {
-    height: 180px;
-  }
-  
-  .card-content {
-    padding: 1.2rem;
-  }
-  
-  .card-content h3 {
-    font-size: var(--text-base);
-  }
-  
-  .card-specialty,
-  .card-contact {
-    font-size: var(--text-sm);
-  }
-  
-  .ctaButton.small {
-    font-size: var(--text-sm);
-  }
-}
-
-/* Special adjustments for very short landscape screens */
-@media (max-width: 991px) and (orientation: landscape) and (max-height: 450px) {
-  .about-studio,
-  .activities-section,
-  .values-section,
-  .network-section,
-  .about-cta {
-    padding: 3rem 0;
-  }
-  
-  .about-image,
-  .activities-image,
-  .network-image {
-    max-height: 220px;
-  }
-  
-  .activities-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  
-  .activity-item {
-    min-height: 60px;
-    padding: 10px;
-  }
-  
-  .activity-item h4 {
-    font-size: var(--text-xs);
-  }
-  
-  .values-grid {
-    gap: 15px;
-  }
-  
-  .value-card {
-    padding: 1.2rem;
-  }
-  
-  .value-card h3 {
-    font-size: var(--text-sm);
-  }
-  
-  .value-card p {
-    font-size: var(--text-xs);
-  }
-  
-  .mission-content {
-    padding: 1.5rem;
-  }
-  
-  .mission-content p {
-    font-size: var(--text-sm);
-  }
-  
-  /* Professional cards very short landscape */
-  .studios-grid {
-    gap: 20px;
-  }
-  
-  .card-image-wrapper {
-    height: 160px;
-  }
-  
-  .card-content {
-    padding: 1rem;
-  }
-  
-  .card-content h3 {
-    font-size: var(--text-sm);
-  }
-  
-  .card-specialty,
-  .card-contact {
-    font-size: var(--text-xs);
-  }
-  
-  .ctaButton.small {
-    padding: 8px 16px;
-    font-size: var(--text-xs);
-  }
-  
-  /* Standardized text sizes */
-  .about-text p,
-  .activities-content p,
-  .network-content p {
-    font-size: var(--text-xs);
-    line-height: 1.4;
-  }
-  
-  .section-header h2,
-  .section-header-wide h2 {
-    font-size: var(--text-base);
-  }
-  
-  .section-subtitle,
-  .section-subtitle-wide {
-    font-size: var(--text-xs);
-  }
-  
-  .activities-content h3 {
-    font-size: var(--text-sm);
-  }
-  
-  .cta-content h2 {
-    font-size: var(--text-base);
-  }
-  
-  .cta-content p {
-    font-size: var(--text-xs);
-  }
-  
-  .cta-button {
-    font-size: var(--text-xs);
-  }
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-  .network-list li {
-    font-size: var(--text-base) !important;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .network-list li {
-    font-size: var(--text-sm) !important;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .network-list li {
-    font-size: var(--text-xs) !important;
-  }
-}
-
-/* Device-specific adjustments */
-/* iPhone X, XS, 11 Pro */
-@media (width: 375px) and (height: 812px) {
-  .section-header h2 {
-    font-size: var(--text-xl);
-  }
-}
-
-/* iPhone XR, 11, 11 Pro Max */
-@media (width: 414px) and (height: 896px) {
-  .section-header h2 {
-    font-size: var(--text-xl);
-  }
-}
-
-/* iPhone 8 Plus, 7 Plus, 6s Plus */
-@media (width: 414px) and (height: 736px) {
-  .section-header h2 {
-    font-size: var(--text-lg);
-  }
-}
-
-/* Galaxy S8, S9, S10, etc. */
-@media (width: 360px) and (height: 740px) {
-  .section-header h2 {
-    font-size: var(--text-lg);
-  }
-}
-
-/* Honor 70 specific */
-@media (width: 384px) and (height: 832px) {
-  .section-header h2 {
-    font-size: var(--text-xl);
-  }
-}
-
-/* iPad Pro specific */
-@media (width: 1024px) and (height: 1366px) {
-  .studios-grid {
-    flex-wrap: nowrap;
-  }
-}
-
-/* Galaxy Tab specific */
-@media (width: 800px) and (height: 1280px) {
-  .studios-grid {
-    flex-wrap: nowrap;
-  }
+.network-image:hover img {
+  transform: scale(1.05);
 }

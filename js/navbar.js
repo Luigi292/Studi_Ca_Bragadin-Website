@@ -1,4 +1,4 @@
-// navbar.js - Enhanced navbar functionality with better dropdown and active state management
+// navbar.js - Complete navbar functionality with scroll behavior, dropdowns, mobile menu, and copyright
 document.addEventListener('DOMContentLoaded', function() {
   // Navbar elements
   const navbar = document.querySelector('.navbar');
@@ -9,7 +9,35 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize navbar state
   let isMobileMenuOpen = false;
-  
+  let lastScrollTop = 0;
+  const scrollThreshold = 100;
+  const scrollHideDistance = 30;
+
+  // Check if device is mobile (hamburger visible)
+  function isMobileDevice() {
+    return hamburger && window.getComputedStyle(hamburger).display !== 'none';
+  }
+
+  // Set current year for copyright
+  function setCopyrightYear() {
+    const currentYearElement = document.querySelector('.current-year');
+    if (currentYearElement) {
+      currentYearElement.textContent = new Date().getFullYear();
+    }
+  }
+
+  // Add dropdown arrows if they don't exist
+  function addDropdownArrows() {
+    dropdowns.forEach(dropdown => {
+      const link = dropdown.querySelector('.navLink');
+      if (link && !link.querySelector('.dropdown-arrow')) {
+        const dropdownArrow = document.createElement('span');
+        dropdownArrow.className = 'dropdown-arrow';
+        link.appendChild(dropdownArrow);
+      }
+    });
+  }
+
   // Mobile menu toggle function with scroll lock
   function toggleMobileMenu() {
     isMobileMenuOpen = !isMobileMenuOpen;
@@ -22,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Calculate and set menu height for proper scrolling
       const viewportHeight = window.innerHeight;
       navMenu.style.maxHeight = `${viewportHeight}px`;
+      // Show navbar when menu is open
+      navbar.classList.remove('hide');
     } else {
       body.classList.remove('body-no-scroll');
       navMenu.style.maxHeight = '';
@@ -42,6 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
       const items = menu.querySelectorAll('li');
       const itemHeight = items.length > 0 ? items[0].offsetHeight : 0;
       menu.style.maxHeight = `${items.length * itemHeight}px`;
+    } else {
+      // Desktop styles
+      menu.style.opacity = '1';
+      menu.style.pointerEvents = 'auto';
+      menu.style.transform = 'translateY(0)';
     }
   }
 
@@ -49,8 +84,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const menu = dropdown.querySelector('.dropdown-menu');
     dropdown.classList.remove('active');
     menu.classList.remove('active');
+    
     if (window.innerWidth <= 992) {
       menu.style.maxHeight = '0';
+    } else {
+      menu.style.opacity = '0';
+      menu.style.pointerEvents = 'none';
+      menu.style.transform = 'translateY(10px)';
     }
   }
 
@@ -97,17 +137,34 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         }
       });
+      
+      // Keep dropdown open when hovering over it (desktop)
+      if (menu) {
+        menu.addEventListener('mouseenter', () => {
+          if (window.innerWidth > 992) {
+            openDropdown(dropdown);
+          }
+        });
+
+        menu.addEventListener('mouseleave', () => {
+          if (window.innerWidth > 992) {
+            closeDropdown(dropdown);
+          }
+        });
+      }
     });
   }
 
   // Close menu when clicking regular links (mobile)
-  document.querySelectorAll('.navMenu .navLink:not(.dropdown .navLink)').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 992 && isMobileMenuOpen) {
-        toggleMobileMenu();
-      }
+  function setupRegularLinks() {
+    document.querySelectorAll('.navMenu .navLink:not(.dropdown .navLink)').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 992 && isMobileMenuOpen) {
+          toggleMobileMenu();
+        }
+      });
     });
-  });
+  }
 
   // Enhanced active link highlighting
   function highlightActiveLink() {
@@ -151,6 +208,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Scroll behavior for navbar - MOBILE ONLY
+  function setupScrollBehavior() {
+    if (!navbar) return;
+
+    // Store the original scroll handler
+    const originalScrollHandler = window.onscroll;
+    
+    window.addEventListener('scroll', function() {
+      // Call original scroll handler if it exists (for footer.js functionality)
+      if (typeof originalScrollHandler === 'function') {
+        originalScrollHandler();
+      }
+      
+      // Don't hide navbar if mobile menu is open or not on mobile device
+      if (document.body.classList.contains('body-no-scroll') || !isMobileDevice()) return;
+      
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (currentScroll > scrollThreshold) {
+        if (Math.abs(currentScroll - lastScrollTop) > scrollHideDistance) {
+          // Scrolling down - hide navbar
+          if (currentScroll > lastScrollTop) {
+            navbar.classList.add('hide');
+            closeAllDropdowns();
+          } 
+          // Scrolling up - show navbar
+          else {
+            navbar.classList.remove('hide');
+          }
+          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }
+      } else {
+        // At top of page - always show navbar
+        navbar.classList.remove('hide');
+      }
+    }, { passive: true });
+  }
+
+  // Handle resize events
   function handleResize() {
     if (window.innerWidth > 992) {
       // Desktop view
@@ -159,6 +255,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       closeAllDropdowns();
       body.classList.remove('body-no-scroll');
+      // Always show navbar on desktop
+      navbar.classList.remove('hide');
     } else {
       // Mobile view - reset dropdown heights
       dropdowns.forEach(dropdown => {
@@ -172,10 +270,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }
+    
+    // Reset scroll position tracking on resize
+    lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Ensure navbar is visible after resize if not scrolling
+    if (!document.body.classList.contains('body-no-scroll')) {
+      navbar.classList.remove('hide');
+    }
+  }
+
+  // Close dropdown when clicking outside (desktop)
+  function setupOutsideClickHandler() {
+    document.addEventListener('click', function(e) {
+      // Close mobile menu when clicking outside navbar
+      if (!e.target.closest('.navbar')) {
+        if (window.innerWidth <= 992 && isMobileMenuOpen) {
+          toggleMobileMenu();
+        }
+      }
+      
+      // Close desktop dropdowns when clicking outside
+      if (window.innerWidth > 992) {
+        if (!e.target.closest('.dropdown')) {
+          closeAllDropdowns();
+        }
+      }
+    });
   }
 
   // Initialize everything
   function initNavbar() {
+    if (!navbar) return;
+    
+    setCopyrightYear();
+    addDropdownArrows();
+    
     // Mobile menu toggle
     if (hamburger && navMenu) {
       hamburger.addEventListener('click', function(e) {
@@ -184,19 +314,15 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    // Close menu when clicking outside (mobile)
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.navbar')) {
-        if (window.innerWidth <= 992 && isMobileMenuOpen) {
-          toggleMobileMenu();
-        }
-      }
-    });
-
     setupDropdowns();
+    setupRegularLinks();
     highlightActiveLink();
+    setupScrollBehavior();
+    setupOutsideClickHandler();
+    
     window.addEventListener('resize', handleResize);
   }
 
+  // Initialize the navbar
   initNavbar();
 });

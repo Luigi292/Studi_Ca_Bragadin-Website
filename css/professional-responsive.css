@@ -1,6 +1,5 @@
 /* professional-responsive.css - Optimized responsive styles for professional pages */
-/* Enhanced timeline responsiveness for all devices */
-@import url('text-standards.css');
+/* Enhanced font size consistency across all devices */
 
 /* ===== GLOBAL RESPONSIVE STYLES ===== */
 @media (max-width: 1440px) {
@@ -368,9 +367,17 @@
     margin-bottom: 25px;
   }
   
+  .block-header h2 {
+    font-size: var(--text-2xl);
+  }
+  
   .block-header h2::after {
     width: 60px;
     height: 2px;
+  }
+  
+  .block-header p {
+    font-size: var(--text-base);
   }
   
   .qualification-card {
@@ -379,6 +386,14 @@
   
   .qualification-icon {
     font-size: 1.8rem;
+  }
+  
+  .qualification-card h3 {
+    font-size: var(--text-lg);
+  }
+  
+  .qualification-card p {
+    font-size: var(--text-base);
   }
   
   .skill-item {
@@ -391,6 +406,14 @@
     font-size: 1.3rem;
   }
   
+  .skill-item h3 {
+    font-size: var(--text-lg);
+  }
+  
+  .skill-item p {
+    font-size: var(--text-base);
+  }
+  
   .mission-block,
   .andrea-maretto-page .mission-block,
   .alberto-cecolin-page .mission-block {
@@ -398,8 +421,16 @@
     width: 100%;
   }
   
+  .mission-block p {
+    font-size: var(--text-base);
+  }
+  
   .service-card-header {
     padding: 12px 15px;
+  }
+  
+  .service-card-header h3 {
+    font-size: var(--text-lg);
   }
   
   .service-card-header i {
@@ -410,8 +441,20 @@
     padding: 18px;
   }
   
+  .service-card-body p {
+    font-size: var(--text-base);
+  }
+  
   .service-card-features {
     margin: 15px 0;
+  }
+  
+  .service-card-features li {
+    font-size: var(--text-base);
+  }
+  
+  .service-card-link {
+    font-size: var(--text-base);
   }
   
   /* Timeline adjustments */
@@ -444,6 +487,18 @@
     padding: 18px;
   }
   
+  .timeline-date {
+    font-size: var(--text-sm);
+  }
+  
+  .timeline-content h3 {
+    font-size: var(--text-lg);
+  }
+  
+  .timeline-content p {
+    font-size: var(--text-base);
+  }
+  
   .service-modal-content {
     margin: 15px auto;
     padding: 18px;
@@ -461,6 +516,18 @@
   
   .feature-icon {
     font-size: 1.3rem;
+  }
+  
+  .feature-text h5 {
+    font-size: var(--text-lg);
+  }
+  
+  .feature-text p {
+    font-size: var(--text-base);
+  }
+  
+  .ctaButton {
+    font-size: var(--text-base);
   }
 }
 
@@ -681,7 +748,31 @@
   }
 }
 
-/* Orientation-specific adjustments */
+/* ===== ANDREA MARETTO QUALIFICATION CARDS FIX ===== */
+.andrea-maretto-page .qualifications-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Fix for qualification cards on small screens */
+@media (max-width: 768px) {
+  .andrea-maretto-page .qualifications-block {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .andrea-maretto-page .qualification-card {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* ===== LANDSCAPE MODE FIXES ===== */
 @media (max-width: 991px) and (orientation: landscape) {
   .profile-block {
     grid-template-columns: 1fr 1fr;
@@ -1083,5 +1174,102 @@
   .timeline-content {
     flex: 0 0 100%;
     margin: 0;
+  }
+}
+
+/* ===== HAMBURGER MENU FIXES FOR LANDSCAPE ===== */
+@media (max-width: 992px) and (orientation: landscape) {
+  .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    padding: 1rem 0;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+
+  .navMenu.active {
+    left: 0;
+  }
+
+  .navLink {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 0;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Additional landscape optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 60vh;
+  }
+  
+  .hero-content {
+    padding-top: 2rem;
+  }
+  
+  .navMenu {
+    top: 60px;
+    max-height: calc(100vh - 60px);
+  }
+  
+  .content-block {
+    padding: 1rem;
+  }
+  
+  .profile-block {
+    gap: 1rem;
+  }
+}
+
+/* Fix for timeline in landscape on medium devices */
+@media (max-width: 992px) and (orientation: landscape) and (min-width: 768px) {
+  .modern-timeline {
+    padding: 0 2rem;
+  }
+  
+  .timeline-items {
+    padding-left: 2rem;
+  }
+  
+  .timeline-marker {
+    left: -2rem;
   }
 }

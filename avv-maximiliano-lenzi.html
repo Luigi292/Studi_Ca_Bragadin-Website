@@ -14,28 +14,32 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Fonts with font-display: swap - UPDATED TO MATCH OTHER PAGES -->
+  <!-- Fonts with font-display: swap - UPDATED TO MATCH OTHER PAGES -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   
   <!-- CSS -->
 
-  <link rel="stylesheet" href="css/globals.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="css/fade-animation.css">
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/professional.css">
   <link rel="stylesheet" href="css/professional-responsive.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/hero.css">
 
+  <!-- Animation CSS should be loaded last to prevent conflicts -->
+  <link rel="stylesheet" href="css/fade-animation.css">
+
+  <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
 
-  
 </head>
 <body class="maximiliano-lenzi-page">
   
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
       <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
@@ -43,9 +47,13 @@
       </a>
     </div>
 
-    <div class="languageToggle">
-      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-      <span>|</span>
+    <!-- Updated Language Toggle -->
+    <div class="language-container">
+      <div class="languageToggle">
+        <a href="avv-maximiliano-lenzi.html" class="languageButton active" aria-label="Italiano">IT</a>
+        <span class="language-separator">|</span>
+        <a href="en/lenzi-page.html" class="languageButton" aria-label="English">EN</a>
+      </div>
     </div>
 
     <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
@@ -84,17 +92,19 @@
     </div>
   </section>
 
-  <section class="professional-content">
-    <div class="content-block profile-block">
-      <div class="profile-text">
-        <h2>Profilo Professionale</h2>
-        <p>Fondato dall'Avv. Maximiliano Lenzi nel 1998 - esperto in ambito civilistico, specializzatosi nella consulenza alle imprese - lo Studio Lenzi affianca i propri clienti, assistendoli quotidianamente, con l'obiettivo di rendere più efficiente ed agevole la gestione d'impresa.</p>
-        <p>La tempestività degli interventi e la massima disponibilità nel risolvere sia piccole che grandi questioni rappresentano il valore aggiunto del servizio offerto. La forza dello Studio è quella di saper cogliere le reali necessità del cliente, offrendo a servizio personalizzato mirato ad ottenere il miglior risultato nel rispetto delle necessità e del budget a disposizione del cliente stesso.</p>
-      </div>
-      <div class="profile-image">
-        <img src="images/lenzi.jpg.avif" alt="Avv. Maximiliano Lenzi">
-      </div>
+<section class="professional-content">
+  <div class="content-block profile-block">
+    <div class="profile-text">
+      <h2>Profilo Professionale</h2>
+      <p>Fondato dall'Avv. Maximiliano Lenzi nel 1998, esperto civilista specializzato nella consulenza alle imprese, lo Studio conta oggi collaboratori con competenze specifiche per assistere in ogni necessità aziendale.</p>
+      <p>Affianca quotidianamente i clienti per rendere più efficiente la gestione d'impresa: tempestività e disponibilità nel risolvere questioni di ogni portata sono il valore aggiunto del servizio.</p>
+      <p>La forza dello Studio è offrire soluzioni personalizzate, mirate al miglior risultato nel rispetto delle esigenze e del budget del cliente. Particolare attenzione è rivolta alle piccole e medie imprese di Padova e del Nord Est.</p>
+
     </div>
+    <div class="profile-image">
+      <img src="images/lenzi.jpg" alt="Avv. Maximiliano Lenzi">
+    </div>
+  </div>
 
     <div class="content-block">
       <div class="block-header">
@@ -128,7 +138,7 @@
             <i class="fas fa-euro-sign"></i>
           </div>
           <h3>Tariffazione Trasparente</h3>
-          <p>Onorari chiari, con possibilità di tariffe agevolate a forfait per le imprese</p>
+          <p>Onorari chiari, con possibilità di tariffe agevolate a forfait per le imprese e collegamento degli onorari al risultato concretamente ottenuto</p>
         </div>
       </div>
     </div>
@@ -136,7 +146,7 @@
     <div class="content-block">
       <div class="block-header">
         <h2>Aree di Intervento</h2>
-        <p>I settori e tipologie de clienti seguiti dall'Avv. Lenzi</p>
+        <p>I settori e tipologie dei clienti seguiti dall'Avv. Lenzi</p>
       </div>
       <div class="qualifications-block">
         <div class="qualification-card">
@@ -170,12 +180,7 @@
       </div>
     </div>
 
-
-
-
-    
-<!-- Professional Experience Timeline Section - UPDATED -->
- 
+    <!-- Professional Experience Timeline Section - UPDATED -->
     <div class="content-block timeline-section">
       <div class="block-header">
         <h2>Esperienze Professionali</h2>
@@ -234,8 +239,6 @@
       </div>
     </div>
 
-
-
     <!-- Services Overview Section -->
     <div class="content-block" id="servizi">
       <div class="block-header">
@@ -247,7 +250,6 @@
         <div class="service-overview-card">
           <div class="service-card-header">
             <h3>Contrattualistica Aziendale</h3>
-       
           </div>
           <div class="service-card-body">
             <p>Servizi completi per la gestione dei contratti commerciali, dalla redazione alla negoziazione, garantendo la massima tutela degli interessi aziendali</p>
@@ -264,7 +266,6 @@
         <div class="service-overview-card">
           <div class="service-card-header">
             <h3>Recupero Crediti</h3>
-     
           </div>
           <div class="service-card-body">
             <p>Strategie efficaci per il recupero di crediti commerciali, dalla fase stragiudiziale fino alle procedure giudiziali, con approcci mirati e personalizzati</p>
@@ -281,7 +282,6 @@
         <div class="service-overview-card">
           <div class="service-card-header">
             <h3>E-commerce</h3>
-       
           </div>
           <div class="service-card-body">
             <p>Consulenza completa per attività di commercio elettronico, dalla contrattualistica specifica alla tutela contro pratiche commerciali sleali</p>
@@ -298,7 +298,6 @@
         <div class="service-overview-card">
           <div class="service-card-header">
             <h3>Contenzioso Civile</h3>
-    
           </div>
           <div class="service-card-body">
             <p>Rappresentanza in controversie civili e commerciali, con approcci che spaziano dalla mediazione all'arbitrato fino al contenzioso giudiziale</p>
@@ -315,7 +314,6 @@
         <div class="service-overview-card">
           <div class="service-card-header">
             <h3>Diritto Bancario</h3>
-
           </div>
           <div class="service-card-body">
             <p>Assistenza in operazioni finanziarie e controversie bancarie, con particolare attenzione alla tutela del cliente contro pratiche scorrette</p>
@@ -332,10 +330,9 @@
         <div class="service-overview-card">
           <div class="service-card-header">
             <h3>Diritto Fallimentare</h3>
-
           </div>
           <div class="service-card-body">
-            <p>Assistenza in procedures concorsuali e crisi d'impresa, con soluciones mirate al risanamento e alla continuità aziendale</p>
+            <p>Assistenza in procedure concorsuali e crisi d'impresa, con soluzioni mirate al risanamento e alla continuità aziendale</p>
             <ul class="service-card-features">
               <li>Procedure concorsuali</li>
               <li>Ristrutturazioni aziendali</li>
@@ -349,7 +346,6 @@
         <div class="service-overview-card">
           <div class="service-card-header">
             <h3>Proprietà Industriale</h3>
-
           </div>
           <div class="service-card-body">
             <p>Protezione di marchi, brevetti e diritti intellettuali, con servizi che vanno dalla registrazione alla tutela giudiziale</p>
@@ -366,7 +362,6 @@
         <div class="service-overview-card">
           <div class="service-card-header">
             <h3>Diritto Societario</h3>
-
           </div>
           <div class="service-card-body">
             <p>Servizi completi per la gestione e organizzazione societaria, dalla costituzione alle operazioni straordinarie</p>
@@ -393,7 +388,8 @@
       <button class="close-modal">&times;</button>
       <h3>Contrattualistica Aziendale</h3>
       <p>Servizi completi per la gestione dei contratti commerciali, dalla redazione alla negoziazione, garantendo la massima tutela degli interessi aziendali in ogni fase del rapporto contrattuale.</p>
-      <p>L'Avv. Lenzi offre un supporto completo nella gestione della contrattualistica aziendale, con particolare attenzione alla prevenzione delle controversie e alla protezione degli interessi del cliente. Ogni contratto viene studiato su misura per rispondere alle specifiche esigenze dell'impresa, con un approccio che coniuga competenza tecnica e pragmatismo</p>
+      <p>Lo Studio Lenzi offre un servizio completo di consulenza alle aziende per la redazione di contratti commerciali, sia di diritto italiano che di diritto internazionale e la stipula e revisione di tutta la contrattualistica aziendale.</p>
+      <p>L'Avv. Lenzi offre un supporto completo nella gestione della contrattualistica aziendale, con particolare attenzione alla prevenzione delle controversie e alla protezione degli interessi del cliente. Ogni contratto viene studiato su misura per rispondere alle specifiche esigenze dell'impresa, con un approccio che coniuga competenza tecnica e pragmatismo.</p>
       
       <div class="service-features">
         <h4>Servizi Principali</h4>
@@ -414,7 +410,7 @@
             </div>
             <div class="feature-text">
               <h5>Revisione Contratti</h5>
-              <p>Analisi approfondita e modifica di contratti esistenti per garantire la massima tutela, identificando potenziali rischi e clausole svantaggiose</p>
+              <p>Analisi approfondita e modifica di contratti esistenti per garantire la massima tutela, identificando potenziali rischi e clausole svantaggiose.</p>
             </div>
           </div>
           
@@ -424,7 +420,7 @@
             </div>
             <div class="feature-text">
               <h5>Negoziazione</h5>
-              <p>Assistenza nella trattativa contrattuale per ottenere le migliori condizioni, con strategie mirate a massimizzare i vantaggi per il cliente</p>
+              <p>Assistenza nella trattativa contrattuale per ottenere le migliori condizioni, con strategie mirate a massimizzare i vantaggi per il cliente.</p>
             </div>
           </div>
           
@@ -434,7 +430,7 @@
             </div>
             <div class="feature-text">
               <h5>Contratti di Collaborazione</h5>
-              <p>Redazione di accordi con collaboratori, agenti e rappresentanti commerciali, bilanciando gli interessi delle parti e prevenendo future controversie</p>
+              <p>Redazione di accordi con collaboratori, agenti e rappresentanti commerciali, bilanciando gli interessi delle parti e prevenendo future controversie.</p>
             </div>
           </div>
           
@@ -444,7 +440,7 @@
             </div>
             <div class="feature-text">
               <h5>Contratti di Fornitura</h5>
-              <p>Preparazione di accordi con fornitori e subfornitori, con particolare attenzione alle clausole di qualità, consegna e pagamento</p>
+              <p>Preparazione di accordi con fornitori e subfornitori, con particolare attenzione alle clausole di qualità, consegna e pagamento.</p>
             </div>
           </div>
           
@@ -454,7 +450,7 @@
             </div>
             <div class="feature-text">
               <h5>Clausole di Salvaguardia</h5>
-              <p>Inserimento di clausole protettive e penali nei contratti, per garantire il rispetto degli obblighi e la tutela in caso di inadempimento</p>
+              <p>Inserimento di clausole protettive e penali nei contratti, per garantire il rispetto degli obblighi e la tutela in caso di inadempimento.</p>
             </div>
           </div>
         </div>
@@ -467,7 +463,8 @@
       <button class="close-modal">&times;</button>
       <h3>Recupero Crediti</h3>
       <p>Strategie efficaci per il recupero di crediti commerciali, dalla fase stragiudiziale fino alle procedure giudiziali, con approcci mirati e personalizzati per ogni situazione.</p>
-      <p>L'Avv. Lenzi sviluppa piani di recupero crediti su misura, valutando caso per caso la strategia più efficace ed efficiente. L'obiettivo è massimizzare le possibilità di recupero minimizzando i costi e i tempi, attraverso un approccio che combina competenza legale e conoscenza delle dinamiche aziendali.</p>
+      <p>L'attività di recupero crediti, soprattutto alla luce della dilagante crisi economica, è un servizio di fondamentale importanza per l'impresa, dal quale talvolta può dipendere anche la sopravvivenza dell'azienda stessa.</p>
+      <p>L'Avv. Lenzi sviluppa piani di recupero crediti su misura, valutando caso per caso la strategia più efficace ed efficiente. Ogni credito dell'azienda viene valutato attentamente al fine di scegliere l'azione più opportuna ed efficace per ottenere il pagamento di beni o il recupero dei servizi erogati.</p>
       
       <div class="service-features">
         <h4>Servizi Principali</h4>
@@ -478,7 +475,7 @@
             </div>
             <div class="feature-text">
               <h5>Analisi Creditizia</h5>
-              <p>Valutazione della solvibilità del debitore e analisi della documentazione per definire la strategia di recupero più appropriata.</p>
+              <p>Valutazione della solvibilità del debitore e analisi della documentazione per definire la strategia di recupero più appropriata, accedendo a banche dati e registri pubblici.</p>
             </div>
           </div>
           
@@ -498,7 +495,7 @@
             </div>
             <div class="feature-text">
               <h5>Procedure Giudiziali</h5>
-              <p>Avvio di procedimenti per ingiunzione di pagamento, decreto ingiuntivo e altre azioni esecutive quando necessario.</p>
+              <p>Avvio di procedimenti per ingiunzione di pagamento, decreto ingiuntivo, atti di precetto su cambiali o assegni e altre azioni esecutive quando necessario.</p>
             </div>
           </div>
           
@@ -528,7 +525,7 @@
             </div>
             <div class="feature-text">
               <h5>Esecuzioni Forzate</h5>
-              <p>Assistenza in tutte le fasi delle procedure esecutive, dal pignoramento all'espropriazione dei beni del debitore.</p>
+              <p>Assistenza in tutte le fasi delle procedure esecutive, dal pignoramento mobiliare, immobiliare, presso terzi all'espropriazione dei beni del debitore.</p>
             </div>
           </div>
         </div>
@@ -541,7 +538,8 @@
       <button class="close-modal">&times;</button>
       <h3>E-commerce</h3>
       <p>Consulenza completa per attività di commercio elettronico, dalla contrattualistica specifica alla tutela contro pratiche commerciali sleali, con un approccio che tiene conto delle specificità del digitale.</p>
-      <p>L'Avv. Lenzi offre una consulenza specialistica per le imprese che operano online, aiutandole a navigare nel complesso panorama normativo del commercio elettronico. L'obiettivo è creare un framework legale solido che protegga l'impresa e garantisca la conformità alle normative vigenti.</p>
+      <p>L'attività di commercio elettronico (e-commerce) riguarda sempre più aziende che si possono trovare nella difficoltà di dover rispondere all'Autorità garante o ai propri Clienti di vari contenziosi legati sia all'attività stessa di vendita online, sia al rapporto con fornitori o provider dei servizi di e-commerce.</p>
+      <p>L'Avv. Lenzi offre una consulenza specialistica per le imprese che operano online, sia per Aziende in fase di startup, sia per un supporto continuativo all'attività, aiutandole a navigare nel complesso panorama normativo del commercio elettronico.</p>
       
       <div class="service-features">
         <h4>Servizi Principali</h4>
@@ -552,7 +550,7 @@
             </div>
             <div class="feature-text">
               <h5>Contrattualistica E-commerce</h5>
-              <p>Redazione di condizioni generali di vendita, termini e condizioni d'uso, policy sulla privacy e tutti i documenti contrattuali necessari.</p>
+              <p>Contrattualistica relativa all'apertura di un'attività di commercio elettronico, preparazione dei contratti con fornitori, condizioni di vendita.</p>
             </div>
           </div>
           
@@ -572,7 +570,7 @@
             </div>
             <div class="feature-text">
               <h5>Diritto al Recesso</h5>
-              <p>Gestione delle procedure di recesso e dei diritti di ripensamento, con particolare attenzione alle normative di protezione dei consumatori.</p>
+              <p>Clausole per il diritto al recesso e politica dei resi, gestione delle procedure di recesso e dei diritti di ripensamento.</p>
             </div>
           </div>
           
@@ -582,7 +580,7 @@
             </div>
             <div class="feature-text">
               <h5>Tutela Contro Illeciti</h5>
-              <p>Difesa contro pratiche commerciali sleali, concorrenza illecita e violazioni della proprietà intellettuale nel contesto digitale.</p>
+              <p>Difesa contro pratiche commerciali sleali, illeciti concorrenziali, tutela dei marchi in Rete, violazioni della proprietà intellettuale nel contesto digitale.</p>
             </div>
           </div>
           
@@ -602,7 +600,7 @@
             </div>
             <div class="feature-text">
               <h5>Vendite Transfrontaliere</h5>
-              <p>Supporto per le vendite internazionali, con attenzione alle normative dei diversi paesi e alle questioni doganali e fiscali.</p>
+              <p>Supporto per le vendite internazionali, con attenzione alle normative dei diversi paesi e alle questioni doganali e fiscali, consulenza per il drop shipping.</p>
             </div>
           </div>
         </div>
@@ -615,6 +613,7 @@
       <button class="close-modal">&times;</button>
       <h3>Contenzioso Civile</h3>
       <p>Rappresentanza in controversie civili e commerciali, con approcci che spaziano dalla mediazione all'arbitrato fino al contenzioso giudiziale, sempre con l'obiettivo di trovare la soluzione più vantaggiosa per il cliente.</p>
+      <p>In virtù dell'esperienza professionale maturata, lo Studio Lenzi è in grado di risolvere le questioni legali dei propri assistiti in modo rapido ed efficace, valutando insieme a loro il dispendio in termini di tempo e risorse, in base alle probabilità di successo nel contenzioso giudiziario.</p>
       <p>L'Avv. Lenzi gestisce il contenzioso con un approccio strategico, valutando caso per caso se perseguire una soluzione negoziale o procedere per via giudiziale. La priorità è sempre proteggere gli interessi del cliente, minimizzando costi e tempi di risoluzione delle controversie.</p>
       
       <div class="service-features">
@@ -636,7 +635,7 @@
             </div>
             <div class="feature-text">
               <h5>Mediazione Civile</h5>
-              <p>Gestione di procedimenti di mediazione come alternativa al contenzioso tradizionale, spesso più rapida ed economica.</p>
+              <p>Gestione di procedimenti di mediazione civile e commerciale come alternativa al contenzioso tradizionale, spesso più rapida ed economica.</p>
             </div>
           </div>
           
@@ -646,7 +645,7 @@
             </div>
             <div class="feature-text">
               <h5>Arbitrato</h5>
-              <p>Partecipazione a procedimenti arbitrali, sia come arbitro che come rappresentante di parte, per una risoluzione più celere delle controversie.</p>
+              <p>Partecipazione a procedimenti arbitrali (ex art. 806 cpc) che, grazie alle peculiarità di rapidità, efficienza e riservatezza, risultano preferibili al contenzioso giudiziale.</p>
             </div>
           </div>
           
@@ -675,7 +674,7 @@
               <i class="fas fa-book"></i>
             </div>
             <div class="feature-text">
-              <h5>Consulenza in Course di Cause</h5>
+              <h5>Consulenza in corso di cause</h5>
               <p>Supporto continuativo durante tutto l'iter processuale, con costante aggiornamento sull'andamento della causa.</p>
             </div>
           </div>
@@ -687,8 +686,9 @@
   <div id="diritto-bancario-modal" class="service-modal">
     <div class="service-modal-content">
       <button class="close-modal">&times;</button>
-      <h3>Diritto Bancario</h3>
+      <h3>Diritto Bancario e Finanziario</h3>
       <p>Assistenza in operazioni finanziarie e controversie bancarie, con particolare attenzione alla tutela del cliente contro pratiche scorrette e clausole abusive nei contratti con gli istituti di credito.</p>
+      <p>La tutela dell'azienda non può prescindere da una competente assistenza tecnica nelle operazioni bancarie e finanziarie, sia nazionali che cross-border. Lo Studio Lenzi affianca le imprese clienti nella gestione del contenzioso verso banche e altri soggetti finanziari sia in sede giudiziale che stragiudiziale.</p>
       <p>L'Avv. Lenzi offre una consulenza specializzata in materia bancaria e finanziaria, aiutando imprese e privati a navigare nella complessa relazione con gli istituti di credito. L'obiettivo è garantire trasparenza, correttezza e tutela dei diritti del cliente in ogni operazione bancaria.</p>
       
       <div class="service-features">
@@ -720,7 +720,7 @@
             </div>
             <div class="feature-text">
               <h5>Piani di Rientro</h5>
-              <p>Negoziazione di piani di rientro e rinegoziazione di condizioni di finanziamento in difficoltà economica.</p>
+              <p>Negoziazione di piani di rientro e rinegoziazione dei tassi d'interesse, ristrutturazione del debito in difficoltà economica.</p>
             </div>
           </div>
           
@@ -750,7 +750,7 @@
             </div>
             <div class="feature-text">
               <h5>Consulenza Operativa</h5>
-              <p>Supporto nella scelta dei prodotti finanziari più adatti e nella negoziazione delle condizioni con gli istituti bancari.</p>
+              <p>Supporto nella scelta dei prodotti finanziari più adatti, negoziazione di linee di finanziamento, consulenza per attività di cessione crediti, factoring e leasing.</p>
             </div>
           </div>
         </div>
@@ -761,8 +761,9 @@
   <div id="diritto-fallimentare-modal" class="service-modal">
     <div class="service-modal-content">
       <button class="close-modal">&times;</button>
-      <h3>Diritto Fallimentare</h3>
+      <h3>Diritto Fallimentare e Procedure Concorsuali</h3>
       <p>Assistenza in procedure concorsuali e crisi d'impresa, con soluzioni mirate al risanamento e alla continuità aziendale, nell'ottica di preservare il valore dell'impresa e salvaguardare i posti di lavoro.</p>
+      <p>La crisi d'impresa è un evento estremamente critico nella vita di un'azienda, che la situazione economica attuale ha reso purtroppo sempre più frequente. Tuttavia, un intervento tempestivo ed appropriato, può risultare fondamentale per evitare il peggio.</p>
       <p>L'Avv. Lenzi accompagna le imprese in difficoltà attraverso le complesse procedure del diritto fallimentare, con l'obiettivo di trovare soluzioni che consentano il risanamento e la prosecuzione dell'attività. L'approccio è sempre volto a minimizzare l'impatto della crisi su dipendenti, creditori e sul tessuto economico del territorio.</p>
       
       <div class="service-features">
@@ -774,7 +775,7 @@
             </div>
             <div class="feature-text">
               <h5>Procedure Concorsuali</h5>
-              <p>Assistenza in fallimenti, concordati preventivi, accordi di ristrutturazione e tutte le procedure previste dal codice della crisi d'impresa.</p>
+              <p>Assistenza in fallimenti, concordati preventivi, accordi di ristrutturazione dei debiti (art. 182-bis), transazione fiscale (art. 182-ter), piani di risanamento (art. 67 comma 3 lett. d) e tutte le procedure previste dal codice della crisi d'impresa.</p>
             </div>
           </div>
           
@@ -794,7 +795,7 @@
             </div>
             <div class="feature-text">
               <h5>Composizione delle Crisi</h5>
-              <p>Negoziazione con i creditori per la definizione di piani di rientro e accordi che evitino il fallimento.</p>
+              <p>Negoziazione con i creditori per la definizione di piani di rientro e accordi che evitino il fallimento, esaminando la situazione finanziaria dell'azienda per valutare la gravità della crisi.</p>
             </div>
           </div>
           
@@ -824,7 +825,7 @@
             </div>
             <div class="feature-text">
               <h5>Risanamento e Turnaround</h5>
-              <p>Piani di risanamento e operazioni di turnaround per rilanciare imprese in difficoltà.</p>
+              <p>Piani di risanamento e operazioni di turnaround per rilanciare imprese in difficoltà, affiancando l'azienda nelle procedure di liquidazione volontaria.</p>
             </div>
           </div>
         </div>
@@ -835,8 +836,9 @@
   <div id="proprieta-industriale-modal" class="service-modal">
     <div class="service-modal-content">
       <button class="close-modal">&times;</button>
-      <h3>Proprietà Industriale</h3>
+      <h3>Proprietà Industriale e Intellettuale</h3>
       <p>Protezione di marchi, brevetti e diritti intellettuali, con servizi che vanno dalla registrazione alla tutela giudiziale, per preservare il valore immateriale delle imprese e contrastare fenomeni di contraffazione.</p>
+      <p>Lo Studio Lenzi si occupa della tutela dei diritti di proprietà intellettuale e di tutela della proprietà industriale e delle opere dell'ingegno, sia sul territorio nazionale che estero, secondo quanto previsto dal "Codice dei diritti di proprietà industriale" (CPI), disciplinato dal D.Lgs. n.30 del 10/02/05, e dalle omologhe leggi comunitarie ed internazionali.</p>
       <p>L'Avv. Lenzi assiste le imprese nella protezione e valorizzazione dei loro asset immateriali, riconoscendo che marchi, brevetti e know-how rappresentano spesso il vero valore competitivo di un'azienda. L'approccio combina competenza legale e comprensione delle dinamiche di mercato.</p>
       
       <div class="service-features">
@@ -888,7 +890,7 @@
             </div>
             <div class="feature-text">
               <h5>Licenze e Trasferimenti</h5>
-              <p>Redazione di contratti di licenza, cessione e trasferimento di diritti di proprietà intellettuale.</p>
+              <p>Redazione di contratti di licenza, cessione e trasferimento di diritti di proprietà intellettuale, gestione del trasferimento di tecnologia a soggetti terzi.</p>
             </div>
           </div>
           
@@ -898,7 +900,7 @@
             </div>
             <div class="feature-text">
               <h5>Due Diligence</h5>
-              <p>Analisi degli asset di proprietà intellettuale in operazioni societarie, fusioni e acquisizioni.</p>
+              <p>Analisi degli asset di proprietà intellettuale in operazioni societarie, fusioni e acquisizioni, monitoraggio e verifica delle attività di violazione e contraffazione.</p>
             </div>
           </div>
         </div>
@@ -911,6 +913,7 @@
       <button class="close-modal">&times;</button>
       <h3>Diritto Societario</h3>
       <p>Servizi completi per la gestione e organizzazione societaria, dalla costituzione alle operazioni straordinarie, con l'obiettivo di creare strutture societarie solide, efficienti e conformi alla normativa vigente.</p>
+      <p>Lo Studio Legale Lenzi nel corso degli anni ha potuto approfondire varie tematiche anche nel campo del diritto societario e nelle operazioni finanziarie di merger & acquisitions. L'attività consulenziale, in ambito societario, non è tuttavia appannaggio esclusivo della grande industria.</p>
       <p>L'Avv. Lenzi accompagna le imprese in tutte le fasi della vita societaria, dalla nascita alla possibile trasformazione o cessazione, con un approccio che coniuga competenza tecnica e comprensione delle esigenze concrete del business. L'obiettivo è costruire framework giuridici che supportino la crescita e proteggano gli interessi di soci e terzi.</p>
       
       <div class="service-features">
@@ -952,7 +955,7 @@
             </div>
             <div class="feature-text">
               <h5>Fusioni e Acquisizioni</h5>
-              <p>Assistenza in operazioni straordinarie come fusioni, scissioni, acquisizioni e cessioni di partecipazioni.</p>
+              <p>Assistenza in operazioni straordinarie come fusioni, scissioni, acquisizioni, cessioni di partecipazioni, joint venture e spin-off.</p>
             </div>
           </div>
           
@@ -1022,10 +1025,6 @@
       <div class="footer-copyright">
         <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. Tutti i diritti riservati.</p>
       </div>
-      
-      <!-- <div class="footer-developer">
-        <p>Sviluppato da <a href="https://www.luigimaretto.com" target="_blank" rel="noopener noreferrer" aria-label="Luigi Maretto - Sviluppatore Web">Luigi Maretto</a></p>
-      </div> -->
     </div>
   </footer>
 
@@ -1041,10 +1040,9 @@
   <script src="js/navbar.js" defer></script>
   <script src="js/navbar-scroll.js" defer></script>
   <!-- Fade Animation JS -->
-<script src="js/fade-animation.js" defer></script>
+  <script src="js/fade-animation.js" defer></script>
   <script src="js/footer.js" defer></script>
   <script src="js/professional-modal.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
 </body>
 </html>

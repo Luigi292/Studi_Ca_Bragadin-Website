@@ -30,11 +30,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/globals.css">
+
   <link rel="stylesheet" href="css/navbar-footer.css">
-  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/chi-siamo.css">
+  <link rel="stylesheet" href="css/chi-siamo-responsive.css">
   <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/index.css">
+
   <!-- Animation CSS should be loaded last to prevent conflicts -->
   <link rel="stylesheet" href="css/fade-animation.css">
 
@@ -44,47 +46,53 @@
 </head>
 <body>
 
-  <!-- Navbar Component -->
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
-        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
-      </a>
-    </div>
 
+  
+
+  <!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+      <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+    </a>
+  </div>
+
+  <!-- Updated Language Toggle -->
+  <div class="language-container">
     <div class="languageToggle">
-      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-      <!--<span>|</span> <a href="en/index.html" class="languageButton" aria-label="English">EN</a> -->
+      <a href="chi-siamo.html" class="languageButton active" aria-label="Italiano">IT</a>
+      <span class="language-separator">|</span>
+       <a href="en/about.html" class="languageButton" aria-label="English">EN</a>
     </div>
+  </div>
 
-    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-      <div></div><div></div><div></div>
-    </div>
+  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <div></div><div></div><div></div>
+  </div>
 
-    <ul class="navMenu" id="navMenu">
-      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
-      <li class="dropdown">
-        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
-        
-        <!-- Dropdown arrow shown next to "Chi Siamo" -->
-      
-        <ul class="dropdown-menu">
-          <li><a href="chi-siamo.html">Il Nostro Team</a></li>
-          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
-          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
-          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
-        </ul>
-      </li>
-      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
-      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
-      <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
-    </ul>
-  </nav>
+  <ul class="navMenu" id="navMenu">
+    <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+    <li class="dropdown">
+      <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
+      <ul class="dropdown-menu">
+        <li><a href="chi-siamo.html">Il Nostro Team</a></li>
+        <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+        <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+        <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+      </ul>
+    </li>
+    <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+    <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+    <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
+  </ul>
+</nav>
+
+
 
   <!-- About Hero Section -->
   <section class="hero-section">
     <div class="hero-overlay"></div>
-    <img src="images/team-glass-room.jpg.avif" alt="Team Studi Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
+    <img src="images/team-glass-room.jpg" alt="Team Studi Ca' Bragadin" class="hero-image" loading="eager" fetchpriority="high">
     <div class="hero-content">
       <h1>Il Nostro Team</h1>
       <p>Dove competenza e passione si incontrano per creare valore</p>
@@ -95,36 +103,40 @@
     </div>
   </section>
 
+
   <!-- About Studio Section -->
-  <section class="about-studio">
-    <div class="container">
-      <div class="section-header">
-        <h2>Studi Ca' Bragadin</h2>
-        <p class="section-subtitle">Un nuovo approccio alla consulenza d'impresa</p>
+<section class="about-studio">
+  <div class="container">
+    <div class="section-header">
+      <h2>Studi Ca' Bragadin</h2>
+      <p class="section-subtitle-wide">Un nuovo approccio alla consulenza d'impresa</p>
+    </div>
+    
+    <div class="about-container">
+      <div class="about-text">
+        <p>Gli Studi Ca' Bragadin nascono come progetto ambizioso, fondato da tre professionisti attivi a Padova da diversi decenni, con l'obiettivo di riunire in un unico spazio tutte le competenze necessarie per la consulenza d'impresa.</p>
+
+        <p>Inaugurati a Dicembre 2024 nella prestigiosa cornice di Palazzo Bragadin, gli Studi rappresentano un polo multidisciplinare che integra dottori commercialisti, esperti contabili e avvocati d'impresa. Grazie alle consolidate esperienze e ai risultati ottenuti nei settori economico, finanziario, fiscale e giuridico, i fondatori hanno scelto di consolidare e ampliare il loro network professionale, creando uno spazio condiviso a disposizione della comunità imprenditoriale e degli enti istituzionali della provincia e oltre.</p>
       </div>
-      
-      <div class="about-container">
-        <div class="about-text">
-          <p>Gli Studi Ca' Bragadin nascono come l'ambizioso progetto, fondato da tre professionisti operativi su Padova già da diversi decenni, di far confluire in un unico spazio tutte le professionalità necessarie per la consulenza d'impresa. Fondati nell'aprile 2024 nella prestigiosa location di Palazzo Bragadin, gli Studi rappresentano un contenitore multidisciplinare di dottori commercialisti, esperti contabili ed avvocati d'impresa che, già forti delle loro esperienze e dei risultati raggiunti in campo economico, finanziario, fiscale e giuridico negli anni, hanno deciso di consolidare ed incrementare il loro network professionale creando un nuovo spazio condiviso a disposizione della comunità degli imprenditori e degli enti istituzionali della provincia e non solo.</p>
-        </div>
-        <div class="about-image">
-          <img src="images/hall.jpg.avif" alt="Palazzo Bragadin" loading="lazy">
-        </div>
+      <div class="about-image">
+        <img src="images/logo2.jpg" alt="Palazzo Bragadin" loading="lazy">
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Activities Section -->
   <section class="activities-section">
     <div class="container">
       <div class="activities-container">
         <div class="activities-image">
-          <img src="images/team2.jpg.avif" alt="Riunione di lavoro" loading="lazy">
+          <img src="images/team2.jpg" alt="Riunione di lavoro" loading="lazy">
         </div>
         <div class="activities-content">
           <div class="section-header">
-            <h2>Le Nostre Aree de Intervento</h2>
-            <p class="section-subtitle">Soluzioni integrate per ogni esigenza aziendale</p>
+            <h2>Le Nostre Aree di Intervento</h2>
+            <p class="section-subtitle-wide">Soluzioni integrate per ogni esigenza aziendale</p>
           </div>
           
           <div class="activities-grid">
@@ -200,7 +212,7 @@
         <!-- Avv. Lenzi -->
         <div class="professional-card">
           <div class="card-image-wrapper">
-            <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+            <img src="images/lenzi.jpg" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
           </div>
           <div class="card-content">
             <h3>Avv. Maximiliano Lenzi</h3>
@@ -222,7 +234,7 @@
         <!-- Dott. Maretto -->
         <div class="professional-card">
           <div class="card-image-wrapper">
-            <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+            <img src="images/andrea.jpg" alt="Dott. Andrea Maretto - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
           </div>
           <div class="card-content">
             <h3>Dott. Andrea Maretto</h3>
@@ -244,7 +256,7 @@
         <!-- Dott. Cecolin -->
         <div class="professional-card">
           <div class="card-image-wrapper">
-            <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+            <img src="images/alberto.jpg" alt="Dott. Alberto Cecolin - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
           </div>
           <div class="card-content">
             <h3>Dott. Alberto Cecolin</h3>
@@ -271,12 +283,12 @@
     <div class="container">
       <div class="section-header">
         <h2>Missione e Valori</h2>
-        <p class="section-subtitle">Ciò che ci guida ogni giorno</p>
+        <p class="section-subtitle-wide">Ciò che ci guida ogni giorno</p>
       </div>
       
       <div class="mission-container">
         <div class="mission-content">
-          <p>Eccellenza professionale, etica ed affiancamento alle imprese in tutte le fasi, ordinarie e straordinarie, della loro esistenza: gli Studi Ca' Bragadin nascono con il preciso obiettivo di essere molto di più che un semplice consulente esterno per imprese, quanto piuttosto a partner in grado di creare un tangibile valore aggiunto per i propri clienti grazie alla combinazione delle competenze in ambito legale, tributario e societario e all'assiduo impegno e dedizione dei professionisti che vi collaborano.</p>
+          <p>Eccellenza professionale, etica e supporto alle imprese in tutte le fasi, ordinarie e straordinarie, della loro esistenza: gli Studi Ca' Bragadin nascono con il preciso obiettivo di essere molto di più che un semplice consulente esterno per imprese, quanto piuttosto partner in grado di creare un tangibile valore aggiunto per i propri clienti grazie alla combinazione delle competenze in ambito legale, tributario e societario e all'assiduo impegno e dedizione dei professionisti che vi collaborano.</p>
         </div>
       </div>
       
@@ -300,7 +312,7 @@
             <i class="fas fa-users"></i>
           </div>
           <h3>Approccio Multidisciplinare</h3>
-          <p>La collaboratione tra i nostri professionisti garantisce soluzioni complete che considerano tutti gli aspetti.</p>
+          <p>La collaborazione tra i nostri professionisti garantisce soluzioni complete che considerano tutti gli aspetti.</p>
         </div>
         <div class="value-card">
           <div class="value-icon">
@@ -318,21 +330,22 @@
     <div class="container">
       <div class="section-header">
         <h2>Il Nostro Network</h2>
-        <p class="section-subtitle">Collaborazioni e partnership di eccellenza</p>
+        <p class="section-subtitle-wide">Collaborazioni e partnership di eccellenza</p>
       </div>
       
       <div class="network-container">
         <div class="network-content">
           <p>Per offrire un servizio completo ai nostri clienti, collaboriamo con una rete selezionata di professionisti specializzati:</p>
-          <ul class="network-list">
-            <li>Notai per operazioni immobiliari e societarie complesse</li>
-            <li>Banche e Finanziarie per soluzioni di finanziamento e investimento</li>
-            <li>Consulenti del Lavoro per adempimenti previdenziali e contrattualistica</li>
-            <li>Specialisti IT per digitalizzazione e sistemi gestionali</li>
-          </ul>
+        <ul class="network-list">
+          <li>Notai per operazioni immobiliari e societarie complesse</li>
+          <li>Banche e Finanziarie per soluzioni di finanziamento e investimento</li>
+          <li>Consulenti del Lavoro per adempimenti previdenziali e contrattualistica</li>
+          <li>Specialisti IT per digitalizzazione e sistemi gestionali</li>
+        </ul>
+
         </div>
         <div class="network-image">
-          <img src="images/mid-hall.avif" alt="Network di collaborazioni" loading="lazy">
+          <img src="images/ufficio-lenzi.jpg" alt="Network di collaborazioni" loading="lazy">
         </div>
       </div>
     </div>
@@ -393,36 +406,9 @@
 
   <!-- Scripts - Load order is important -->
   <script src="js/navbar.js" defer></script>
-  <script src="js/navbar-scroll.js" defer></script>
+  <script src="js/footer.js" defer></script>
   <!-- Fade Animation JS -->
   <script src="js/fade-animation.js" defer></script>
 
-  <!-- Main script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Set current year in footer
-      document.querySelectorAll('.current-year').forEach(el => {
-        el.textContent = new Date().getFullYear();
-      });
-
-      // Scroll to top button functionality
-      window.addEventListener("scroll", function() {
-        const scrollBtn = document.querySelector(".js-top");
-        if (window.scrollY > 300) {
-          scrollBtn.classList.add("active");
-        } else {
-          scrollBtn.classList.remove("active");
-        }
-      });
-
-      document.querySelector(".js-gotop").addEventListener("click", function(e) {
-        e.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
-      });
-    });
-  </script>
 </body>
 </html>

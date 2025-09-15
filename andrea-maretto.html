@@ -18,60 +18,78 @@
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  
   <!-- CSS -->
-  <link rel="stylesheet" href="css/globals.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="css/fade-animation.css">
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/professional.css">
   <link rel="stylesheet" href="css/professional-responsive.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/hero.css">
 
-  <link rel="icon" type="image/png" href="images/favicon-logo.png">
+  <!-- Animation CSS should be loaded last to prevent conflicts -->
+  <link rel="stylesheet" href="css/fade-animation.css">
 
+  <!-- Primary favicon -->
+  <link rel="icon" type="image/png" href="images/favicon-logo.png">
 
   
 </head>
 <body class="andrea-maretto-page">
   
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
-        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
-      </a>
-    </div>
 
+  
+
+  <!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+      <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+    </a>
+  </div>
+
+  <!-- Updated Language Toggle -->
+  <div class="language-container">
     <div class="languageToggle">
-      <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-      <span>|</span>
+      <a href="andrea-maretto.html" class="languageButton active" aria-label="Italiano">IT</a>
+      <span class="language-separator">|</span>
+       <a href="en/andrea-page.html" class="languageButton" aria-label="English">EN</a>
     </div>
+  </div>
 
-    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-      <div></div><div></div><div></div>
-    </div>
+  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <div></div><div></div><div></div>
+  </div>
 
-    <ul class="navMenu" id="navMenu">
-      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
-      <li class="dropdown">
-        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
-        <ul class="dropdown-menu">
-          <li><a href="chi-siamo.html">Il Nostro Team</a></li>
-          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
-          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
-          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
-        </ul>
-      </li>
-      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
-      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
-      <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
-    </ul>
-  </nav>
+  <ul class="navMenu" id="navMenu">
+    <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+    <li class="dropdown">
+      <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
+      <ul class="dropdown-menu">
+        <li><a href="chi-siamo.html">Il Nostro Team</a></li>
+        <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+        <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+        <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+      </ul>
+    </li>
+    <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+    <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+    <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
+  </ul>
+</nav>
+
+
+
+
+
 
   <section class="hero-section">
     <div class="hero-overlay"></div>
-    <img src="images/maretto-hero-bg.jpg.avif" alt="Dott. Andrea Maretto" class="hero-image" loading="eager" fetchpriority="high">
+    <img src="" alt="Dott. Andrea Maretto" class="hero-image" loading="eager" fetchpriority="high">
     <div class="hero-content">
       <h1>Dott. Andrea Maretto</h1>
       <p class="professional-title">Studio Commercialisti ed Esperti Contabili – Consulenza fiscale e societaria</p>
@@ -84,19 +102,23 @@
     </div>
   </section>
 
-  <section class="professional-content">
-    <div class="content-block profile-block">
-      <div class="profile-text">
-        <h2>Profilo Professionale</h2>
-        <p>Commercialista con oltre 10 anni di esperienza nella consulenza e gestione amministrativa, finanziaria e fiscale di società, enti pubblici, imprese individuali e professionisti, opero con un approccio strategico personalizzato. Attualmente titolare dello studio professionale a Padova presso gli Studi Ca' Bragadin.</p>
-        <p>Le competenze acquisite con la laurea in Economia e Finanza, specializzazione in Legislazione Bancaria, mi permettono di affiancare ai servizi commercialistici tradizionali consulenze su accesso al credito e gestione dei rapporti con le banche. L'attività di docente in istituti secondari e universitari ha inoltre rafforzato la mia capacità di rendere comprensibili anche tematiche complesse.</p>
-        <p>Mi occupo anche di contrattualistica aziendale, gestione economico-finanziaria per società con appalti pubblici e crisi d'impresa, sviluppando solide capacità di problem solving nei tempi rapidi delle dinamiche aziendali.</p>
-      </div>
-
-      <div class="profile-image">
-        <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto">
-      </div>
+<section class="professional-content">
+  <div class="content-block profile-block">
+    <div class="profile-text">
+      <h2>Profilo Professionale</h2>
+      <p>Commercialista con oltre 10 anni di esperienza nella consulenza e gestione amministrativa, finanziaria e fiscale di società, enti pubblici, imprese individuali e professionisti, opero con un approccio strategico personalizzato. Sono titolare di uno studio a Padova presso gli Studi Ca' Bragadin. <br> Laureato in Economia e Finanza con specializzazione in Legislazione Bancaria, affianco ai servizi tradizionali consulenze su accesso al credito e rapporti con le banche. L’attività di docente in istituti secondari e universitari ha rafforzato la capacità di spiegare con chiarezza anche temi complessi.</p>
+      <p>Mi occupo inoltre di contrattualistica aziendale, gestione economico-finanziaria per società con appalti pubblici e crisi d'impresa, sviluppando solide capacità di problem solving nei tempi rapidi delle dinamiche aziendali.</p>
     </div>
+
+    <div class="profile-image">
+      <img src="images/andrea.jpg" alt="Dott. Andrea Maretto">
+    </div>
+  </div>
+
+
+ 
+  
+
 
     <div class="content-block">
       <div class="block-header">
@@ -195,7 +217,7 @@
             <i class="fas fa-exchange-alt"></i>
           </div>
           <h3>Operazioni Straordinarie</h3>
-          <p>Assistenza in trasformazioni, fusiones, scissioni, cessioni ed affitti d'azienda, nonché riorganizzazioni aziendali</p>
+          <p>Assistenza in trasformazioni, fusioni, scissioni, cessioni ed affitti d'azienda, nonché riorganizzazioni aziendali</p>
         </div>
         
         <div class="skill-item">
@@ -493,7 +515,7 @@
       <button class="close-modal">&times;</button>
       <h3>Servizi fiscali</h3>
       <p>Consulenza fiscale completa in continuum con pianificazione strategica finalizzata all'ottimizzazione del carico tributario nel rispetto della normativa vigente.</p>
-      <p>Lo Studio sviluppa strategie fiscales personalizzate che tengono conto delle specificità di ogni cliente e delle evoluzioni normative. L'obiettivo è garantire l'ottimizzazione del carico fiscale nel rispetto della legalità, prevenendo contestazioni e riducendo i rischi di accertamento.</p>
+      <p>Lo Studio sviluppa strategie fiscali personalizzate che tengono conto delle specificità di ogni cliente e delle evoluzioni normative. L'obiettivo è garantire l'ottimizzazione del carico fiscale nel rispetto della legalità, prevenendo contestazioni e riducendo i rischi di accertamento.</p>
       
       <div class="service-features">
         <h4>Servizi Principali</h4>
@@ -588,7 +610,7 @@
             </div>
             <div class="feature-text">
               <h5>Budget e Forecast aziendali</h5>
-              <p>Preparazione de budget annuali e piani pluriennali, con analisi degli scostamenti e azioni correttive.</p>
+              <p>Preparazione dei budget annuali e piani pluriennali, con analisi degli scostamenti e azioni correttive.</p>
             </div>
           </div>
           
@@ -630,7 +652,7 @@
     <div class="service-modal-content">
       <button class="close-modal">&times;</button>
       <h3>Consulenza in materia bancaria e finanziaria</h3>
-      <p>Nel contesto economico attuale, l'accesso al credito rappresenta un elemento strategico para la crescita e la sostenibilità delle imprese. Il nostro studio offre un supporto qualificato e personalizzato per affiancare aziende, professionisti e imprenditori nella gestione dei rapporti con il sistema bancario e finanziario.</p>
+      <p>Nel contesto economico attuale, l'accesso al credito rappresenta un elemento strategico per la crescita e la sostenibilità delle imprese. Il nostro studio offre un supporto qualificato e personalizzato per affiancare aziende, professionisti e imprenditori nella gestione dei rapporti con il sistema bancario e finanziario.</p>
       <p>Lo Studio offre un'esperienza ormai pluriennale nella consulenza alle PMI secondo un approccio integrato tra area contabile, fiscale e finanziaria, essenziale per l'accesso al credito, forte anche di contatti consolidati con il sistema bancario del territorio e sempre nella massima riservatezza e personalizzazione del servizio.</p>
       
       <div class="service-features">

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio Ca' Bragadin | Avvocato Lenzi Padova | Andrea Maretto Commercialista | Alberto Cecolin</title>
   <meta name="description" content="Studio Commercialisti Ca' Bragadin a Padova. Avvocato Maximiliano Lenzi per consulenze legali, Dott. Andrea Maretto e Dott. Alberto Cecolin per servizi fiscali e societari. Contattaci in Via Belzoni 180.">
@@ -23,11 +24,14 @@
   
   <!-- CSS -->
    
-  <link rel="stylesheet" href="css/globals.css">
-  <link rel="stylesheet" href="css/fade-animation.css">
-
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/index.css">
+  
+
+
+  <!-- Animation CSS should be loaded last to prevent conflicts -->
+  <link rel="stylesheet" href="css/fade-animation.css">
+
 
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
@@ -37,39 +41,46 @@
 
 <body>
 
-<!-- Navbar -->
- <nav class="navbar">
-    <div class="logo">
-      <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
-        <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
-      </a>
-    </div>
 
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+      <img src="images/logo.jpg.avif" alt="Studio Commercialisti Ca' Bragadin Padova" width="80" height="60">
+    </a>
+  </div>
+
+  <!-- Updated Language Toggle -->
+  <div class="language-container">
     <div class="languageToggle">
       <a href="index.html" class="languageButton active" aria-label="Italiano">IT</a>
-      <span>|</span>
+      <span class="language-separator">|</span>
+       <a href="en/index.html" class="languageButton" aria-label="English">EN</a>
     </div>
+  </div>
 
-    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-      <div></div><div></div><div></div>
-    </div>
+  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <div></div><div></div><div></div>
+  </div>
 
-    <ul class="navMenu" id="navMenu">
-      <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
-      <li class="dropdown">
-        <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
-        <ul class="dropdown-menu">
-          <li><a href="chi-siamo.html">Il Nostro Team</a></li>
-          <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
-          <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
-          <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
-        </ul>
-      </li>
-      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
-      <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
-      <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
-    </ul>
-  </nav>
+  <ul class="navMenu" id="navMenu">
+    <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
+    <li class="dropdown">
+      <a href="chi-siamo.html" class="navLink" aria-label="Chi Siamo">Chi Siamo <span class="dropdown-arrow"></span> </a>
+      <ul class="dropdown-menu">
+        <li><a href="chi-siamo.html">Il Nostro Team</a></li>
+        <li><a href="avv-maximiliano-lenzi.html">Avv. Maximiliano Lenzi</a></li>
+        <li><a href="andrea-maretto.html">Dott. Andrea Maretto</a></li>
+        <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
+      </ul>
+    </li>
+    <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+    <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
+    <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
+  </ul>
+</nav>
+
 
   <!-- Hero Section -->
   <section class="hero">
@@ -77,15 +88,15 @@
       <div class="carousel" id="carousel">
         <div class="slide active" aria-label="Studio Commercialisti Ca' Bragadin - Elegant office reception area">
           <div class="slideOverlay"></div>
-          <img src="images/hall.jpg.avif" alt="Slide 1" class="heroImage" loading="eager" fetchpriority="high">
+          <img src="images/mid-hall.jpg" alt="Slide 1" class="heroImage" loading="eager" fetchpriority="high">
         </div>
         <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Modern meeting room">
           <div class="slideOverlay"></div>
-          <img src="images/hall2.jpg.avif" alt="Slide 2" class="heroImage">
+          <img src="images/glass-room.jpg" alt="Slide 2" class="heroImage">
         </div>
         <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Professional workspace">
           <div class="slideOverlay"></div>
-          <img src="images/mid-hall.avif" alt="Slide 3" class="heroImage">
+          <img src="images/front-hall.jpg" alt="Slide 3" class="heroImage">
         </div>
       </div>
     </div>
@@ -113,7 +124,6 @@
 
 
 
-
 <!-- Studio About Section -->
 <section class="studios">
   <div class="studios-container-wide">
@@ -122,8 +132,7 @@
       <p class="section-subtitle-wide">Eccellenza e competenza multidisciplinare a Padova</p>
     </div>
 
-
-  <!-- Clickable address section -->
+    <!-- Clickable address section -->
     <a href="https://www.google.com/maps?q=Via+G.+Belzoni+180,+35121+Padova"
        target="_blank"
        rel="noopener noreferrer"
@@ -133,55 +142,76 @@
         <p><strong>Via G. Belzoni 180, 35121 Padova</strong></p>
       </div>
     </a>
-    
-
 
     <div class="studios-grid">
-        <div class="professional-card">
-          <div class="card-image-wrapper">
-            <img src="images/lenzi.jpg.avif" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+      <!-- Avv. Lenzi -->
+      <div class="professional-card">
+        <div class="card-image-wrapper">
+          <img src="images/lenzi.jpg" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+        </div>
+        <div class="card-content">
+          <h3>Avv. Maximiliano Lenzi</h3>
+          <p class="card-specialty">Consulenza legale e assistenza alle imprese</p>
+          <div class="card-excerpt">
+            <p>Avvocato specializzato in diritto commerciale e societario con oltre 18 anni di esperienza.</p>
           </div>
-          <div class="card-content">
-            <h3>Avv. Maximiliano Lenzi</h3>
-            <p class="card-specialty">Consulenza legale e assistenza alle imprese</p>
-            <div class="card-contact">
-              <p><strong>Telefono:</strong> <a href="tel:0498751356">049-8751356</a></p>
-              <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
-              <a href="avv-maximiliano-lenzi.html" class="ctaButton small">Profilo completo</a>
+          <div class="card-contact">
+            <p><strong>Telefono:</strong> <a href="tel:0498751356">049-8751356</a></p>
+            <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
+            <div class="card-cta">
+              <a href="mailto:avvocatolenzi@studicabragadin.it" class="ctaButton small">Contatta</a>
+              <a href="avv-maximiliano-lenzi.html" class="ctaButton small profile">Profilo Completo</a>
             </div>
           </div>
         </div>
-        <div class="professional-card">
-          <div class="card-image-wrapper">
-            <img src="images/andre.jpg.avif" alt="Dott. Andrea Maretto - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+      </div>
+
+      <!-- Dott. Maretto -->
+      <div class="professional-card">
+        <div class="card-image-wrapper">
+          <img src="images/andrea.jpg" alt="Dott. Andrea Maretto - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+        </div>
+        <div class="card-content">
+          <h3>Dott. Andrea Maretto</h3>
+          <p class="card-specialty">Consulenza fiscale e societaria avanzata</p>
+          <div class="card-excerpt">
+            <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza.</p>
           </div>
-          <div class="card-content">
-            <h3>Dott. Andrea Maretto</h3>
-            <p class="card-specialty">Consulenza fiscale e societaria avanzata</p>
-            <div class="card-contact">
-              <p><strong>Telefono:</strong> <a href="tel:0499562428">049-9562428</a></p>
-              <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
-              <a href="andrea-maretto.html" class="ctaButton small">Profilo completo</a>
+          <div class="card-contact">
+            <p><strong>Telefono:</strong> <a href="tel:0499562428">049-9562428</a></p>
+            <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
+            <div class="card-cta">
+              <a href="mailto:andrea.maretto@studicabragadin.it" class="ctaButton small">Contatta</a>
+              <a href="andrea-maretto.html" class="ctaButton small profile">Profilo Completo</a>
             </div>
           </div>
         </div>
-        <div class="professional-card">
-          <div class="card-image-wrapper">
-            <img src="images/alberto.jpg.avif" alt="Dott. Alberto Cecolin - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+      </div>
+
+      <!-- Dott. Cecolin -->
+      <div class="professional-card">
+        <div class="card-image-wrapper">
+          <img src="images/alberto.jpg" alt="Dott. Alberto Cecolin - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+        </div>
+        <div class="card-content">
+          <h3>Dott. Alberto Cecolin</h3>
+          <p class="card-specialty">Pianificazione fiscale e strategie societarie</p>
+          <div class="card-excerpt">
+            <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza.</p>
           </div>
-          <div class="card-content">
-            <h3>Dott. Alberto Cecolin</h3>
-            <p class="card-specialty">Pianificazione fiscale e strategie societarie</p>
-            <div class="card-contact">
-              <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
-              <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
-              <a href="alberto-cecolin.html" class="ctaButton small">Profilo completo</a>
+          <div class="card-contact">
+            <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
+            <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
+            <div class="card-cta">
+              <a href="mailto:studio@studiocecolin.com" class="ctaButton small">Contatta</a>
+              <a href="alberto-cecolin.html" class="ctaButton small profile">Profilo Completo</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   
 
@@ -325,12 +355,10 @@
 
 <!-- Scripts -->
 
-
 <script src="js/navbar.js" defer></script>
-<script src="js/navbar-scroll.js" defer></script>
+<script src="js/index.js" defer></script>
 <script src="js/fade-animation.js" defer></script>
 
-<script src="js/index.js" defer></script>
 
 
 
