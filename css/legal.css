@@ -1,3 +1,65 @@
+/* chi-siamo.css - Complete and Integrated */
+
+/* ===== GLOBAL VARIABLES ===== */
+:root {
+  --primary-color: #1a2a4a;
+  --primary-light: #2c3e66;
+  --secondary-color: #bca454;
+  --secondary-light: #e8c874;
+  --accent-color: #4a6fa5;
+  --dark-color: #222222;
+  --light-color: #f8f9fa;
+  --gray-color: #6c757d;
+  --white-color: #ffffff;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --border-radius: 8px;
+  --container-width: 1320px;
+
+  /* Text size variables for consistency */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 16px; /* Consistent base font size */
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+
+
 /* Legal Pages Styling */
 .legal-container {
   max-width: 900px;

@@ -23,7 +23,7 @@
   <!-- Preload critical resources -->
   <link rel="preload" href="css/index.css" as="style">
   <link rel="preload" href="css/chi-siamo.css" as="style">
-  <link rel="preload" href="images/team-glass-room.jpg.avif" as="image" fetchpriority="high">
+  <link rel="preload" href="images/team-glass-room.jpg" as="image" fetchpriority="high">
 
   <!-- Fonts with font-display: swap -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -66,9 +66,9 @@
     </div>
   </div>
 
-  <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" type="button">
     <div></div><div></div><div></div>
-  </div>
+  </button>
 
   <ul class="navMenu" id="navMenu">
     <li><a href="index.html" class="navLink" aria-label="Home">Home</a></li>
@@ -343,13 +343,12 @@
       <div class="network-container">
         <div class="network-content">
           <p>Per offrire un servizio completo ai nostri clienti, collaboriamo con una rete selezionata di professionisti specializzati:</p>
-        <ul class="network-list">
-          <li>Notai per operazioni immobiliari e societarie complesse</li>
-          <li>Banche e Finanziarie per soluzioni di finanziamento e investimento</li>
-          <li>Consulenti del Lavoro per adempimenti previdenziali e contrattualistica</li>
-          <li>Specialisti IT per digitalizzazione e sistemi gestionali</li>
-        </ul>
-
+          <ul class="network-list">
+            <li>Notai per operazioni immobiliari e societarie complesse</li>
+            <li>Banche e Finanziarie per soluzioni di finanziamento e investimento</li>
+            <li>Consulenti del Lavoro per adempimenti previdenziali e contrattualistica</li>
+            <li>Specialisti IT per digitalizzazione e sistemi gestionali</li>
+          </ul>
         </div>
         <div class="network-image">
           <img src="images/ufficio-lenzi.jpg" alt="Network di collaborazioni" loading="lazy">

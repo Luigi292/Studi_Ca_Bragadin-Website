@@ -57,6 +57,9 @@ a {
   text-decoration: none;
   transition: var(--transition);
 }
+
+
+
 /* ===== ELEGANT HERO SECTION ===== */
 .hero {
   position: relative;

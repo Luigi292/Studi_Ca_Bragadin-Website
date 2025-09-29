@@ -1,4 +1,5 @@
 // navbar.js - Complete navbar functionality with scroll behavior, dropdowns, mobile menu, and copyright
+// Updated for multi-language support (Italian/English) and dropdown arrow highlighting
 document.addEventListener('DOMContentLoaded', function() {
   // Navbar elements
   const navbar = document.querySelector('.navbar');
@@ -36,6 +37,50 @@ document.addEventListener('DOMContentLoaded', function() {
         link.appendChild(dropdownArrow);
       }
     });
+  }
+
+  // Add CSS for dropdown arrow highlighting - FIXED ARROW VISIBILITY
+  function addDropdownArrowStyles() {
+    const style = document.createElement('style');
+    style.textContent = `
+      .dropdown .navLink .dropdown-arrow {
+        border-top-color: var(--white-color) !important;
+      }
+      
+      .dropdown .navLink:hover .dropdown-arrow,
+      .dropdown .navLink.active .dropdown-arrow {
+        border-top-color: var(--secondary-color) !important;
+      }
+      
+      .dropdown.active .navLink .dropdown-arrow {
+        transform: rotate(180deg);
+        border-top-color: var(--secondary-color) !important;
+      }
+      
+      .dropdown-arrow {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 8px;
+        vertical-align: middle;
+        border-top: 4px solid;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+      }
+      
+      @media (max-width: 992px) {
+        .dropdown.active .navLink .dropdown-arrow {
+          transform: rotate(0deg);
+          border-top-color: var(--secondary-color) !important;
+        }
+        
+        .dropdown .navLink .dropdown-arrow {
+          border-top-color: var(--white-color) !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
   }
 
   // Mobile menu toggle function with scroll lock
@@ -166,30 +211,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Enhanced active link highlighting
+  // Enhanced active link highlighting with multi-language support
   function highlightActiveLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const allNavLinks = document.querySelectorAll('.navLink, .dropdown-menu a');
-    const chiSiamoPages = ['chi-siamo.html', 'avv-maximiliano-lenzi.html', 'andrea-maretto.html', 'alberto-cecolin.html'];
+    
+    // Define page groups for both languages
+    const aboutPages = {
+      'it': ['chi-siamo.html', 'avv-maximiliano-lenzi.html', 'andrea-maretto.html', 'alberto-cecolin.html'],
+      'en': ['about.html', 'lenzi-page.html', 'andrea-page.html', 'alberto-page.html']
+    };
     
     // First reset all active states
     allNavLinks.forEach(link => {
       link.classList.remove('active');
     });
     
-    // Check if current page is in Chi Siamo dropdown
-    if (chiSiamoPages.includes(currentPage)) {
-      const chiSiamoLink = document.querySelector('.dropdown .navLink[href="chi-siamo.html"]');
-      if (chiSiamoLink) {
-        chiSiamoLink.classList.add('active');
-        const parentDropdown = chiSiamoLink.closest('.dropdown');
+    // Determine current language based on page structure
+    let currentLanguage = 'en';
+    if (currentPage.includes('chi-siamo') || 
+        currentPage.includes('avv-maximiliano-lenzi') || 
+        currentPage.includes('andrea-maretto') || 
+        currentPage.includes('alberto-cecolin')) {
+      currentLanguage = 'it';
+    }
+    
+    // Check if current page is in About/Chi Siamo dropdown
+    if (aboutPages[currentLanguage].includes(currentPage)) {
+      // Find the main dropdown link (either "About" or "Chi Siamo")
+      const aboutLink = document.querySelector('.dropdown .navLink[href*="about"], .dropdown .navLink[href*="chi-siamo"]');
+      if (aboutLink) {
+        aboutLink.classList.add('active');
+        const parentDropdown = aboutLink.closest('.dropdown');
         if (parentDropdown) {
           parentDropdown.classList.add('active');
         }
       }
       
       // Highlight the specific dropdown item
-      const activeDropdownItem = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
+      const activeDropdownItem = document.querySelector(`.dropdown-menu a[href="${currentPage}"], .dropdown-menu a[href*="${currentPage}"]`);
       if (activeDropdownItem) {
         activeDropdownItem.classList.add('active');
       }
@@ -305,6 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setCopyrightYear();
     addDropdownArrows();
+    addDropdownArrowStyles();
     
     // Mobile menu toggle
     if (hamburger && navMenu) {
