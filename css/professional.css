@@ -391,6 +391,11 @@ body {
 }
 
 /* OCD-Perfect Timeline Design (GLOBAL) - FIXED ALIGNMENT */
+.timeline-section {
+  position: relative;
+  overflow: hidden;
+}
+
 .modern-timeline {
   position: relative;
   padding: 60px 0;
@@ -399,7 +404,7 @@ body {
 }
 
 .timeline-path {
-  position: extreme;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -426,7 +431,7 @@ body {
 
 .timeline-item {
   display: flex;
-  justify-content: center; /* Center the content */
+  justify-content: center;
   margin-bottom: 80px;
   position: relative;
   opacity: 1;
@@ -481,14 +486,14 @@ body {
 }
 
 .timeline-content {
-  flex: 0 0 75%; /* Fixed width for consistent sizing */
+  flex: 0 0 75%;
   background: var(--white-color);
   border-radius: var(--border-radius);
   padding: 30px;
   box-shadow: var(--shadow-md);
   position: relative;
-  margin: 0 20px; /* Equal margins on both sides */
-  transition: all 0.3s extreme;
+  margin: 0 20px;
+  transition: all 0.3s ease;
   border-top: 4px solid var(--secondary-color);
 }
 
@@ -497,7 +502,6 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-/* Remove the text-align right for odd items */
 .timeline-item:nth-child(odd) .timeline-content {
   text-align: left;
 }
@@ -539,20 +543,21 @@ body {
   background: var(--secondary-color);
 }
 
-.timeline-item:nth-child(even) extreme.timeline-content::before {
+.timeline-item:nth-child(even) .timeline-content::before {
   right: 100%;
 }
 
 .timeline-item:nth-child(odd) .timeline-content::before {
-  right: 100%;
+  left: 100%;
 }
 
-/* Service Overview Cards (GLOBAL) - UPDATED */
+/* Service Overview Cards (GLOBAL) - FIXED CENTERING */
 .services-overview {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   margin-top: 50px;
+  justify-items: center;
 }
 
 .service-overview-card {
@@ -564,6 +569,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
+  max-width: 350px;
 }
 
 .service-overview-card:hover {
@@ -576,7 +583,7 @@ body {
   color: var(--white-color);
   padding: 20px;
   position: relative;
-  display: extreme;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -624,7 +631,7 @@ body {
   line-height: 1.6;
   font-family: var(--font-main);
   color: var(--dark-color);
-  padding-left: 1.5rem; /* just enough room for icon */
+  padding-left: 1.5rem;
 }
 
 .service-card-features li::before {
@@ -632,8 +639,8 @@ body {
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
   position: absolute;
-  left: 0; /* aligns exactly with paragraph start */
-  top: 0.15em; /* small vertical tweak */
+  left: 0;
+  top: 0.15em;
   color: var(--secondary-color);
 }
 
@@ -641,7 +648,7 @@ body {
   display: inline-flex;
   align-items: center;
   margin-top: 20px;
-  color: extreme(--secondary-color);
+  color: var(--secondary-color);
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -723,7 +730,7 @@ body {
 .feature-icon {
   font-size: 1.5rem;
   color: var(--secondary-color);
-  flex-shrink: extreme;
+  flex-shrink: 0;
   margin-top: 5px;
 }
 
@@ -874,7 +881,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
-  border: 1px extreme #eaeaea;
+  border: 1px solid #eaeaea;
   border-radius: var(--border-radius);
   overflow: hidden;
 }
@@ -946,6 +953,21 @@ body {
 }
 
 /* ===== MAXIMILIANO LENZI PAGE SPECIFIC STYLES ===== */
+
+/* FIX 1: Hero section height - match other pages EXACTLY */
+.maximiliano-lenzi-page .hero-section {
+  height: 70vh;
+  min-height: 500px;
+}
+
+.maximiliano-lenzi-page .hero-decor {
+  display: none !important;
+}
+
+.maximiliano-lenzi-page .hero-content {
+  margin-top: 0;
+}
+
 /* For "Approccio Professionale" and "Aree di Intervento" sections - 2 columns */
 .maximiliano-lenzi-page .qualifications-block {
   display: grid;
@@ -1054,32 +1076,158 @@ body {
   margin: 0 auto;
 }
 
-/* For "Servizi Professionali" section - 2 columns */
-.maximiliano-lenzi-page .services-overview {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 40px;
-}
+/* ===== MAXIMILIANO LENZI PAGE SPECIFIC STYLES - FIXED SERVICE CARDS ===== */
 
-.maximiliano-lenzi-page .service-overview-card {
-  height: 100%;
+/* ===== MAXIMILIANO LENZI PAGE SPECIFIC STYLES - FIXED SERVICE CARDS ===== */
+
+/* FIX 2: Service cards - 3-3-2 LAYOUT WITH PROPER CARD SIZING */
+.maximiliano-lenzi-page .services-overview-best {
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease;
-  border: 1px solid #eaeaea;
+  gap: 30px;
+}
+
+/* First 6 cards in 3-column grid - FIXED WIDTH */
+.maximiliano-lenzi-page .services-grid-first-two-rows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.maximiliano-lenzi-page .services-grid-first-two-rows .service-overview-card {
+  max-width: 350px;
+  min-height: 400px;
+  width: 100%;
+}
+
+/* Last 2 cards in separate grid - SAME WIDTH AS ABOVE */
+.maximiliano-lenzi-page .services-grid-last-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr; /* 4 columns: empty | card | card | empty */
+  gap: 30px;
+  justify-items: center;
+  align-items: start;
+  max-width: 1320px; /* Same as container */
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Last row cards - FORCE SAME WIDTH AS CARDS ABOVE */
+.maximiliano-lenzi-page .services-grid-last-row .service-overview-card {
+  max-width: 350px !important;
+  min-height: 400px;
+  width: 350px !important; /* Force exact same width */
+  min-width: 350px; /* Prevent shrinking */
+}
+
+/* Position the cards in columns 2 and 3 */
+.maximiliano-lenzi-page .services-grid-last-row .service-overview-card:first-child {
+  grid-column: 2; /* Second column */
+  justify-self: end;
+}
+
+.maximiliano-lenzi-page .services-grid-last-row .service-overview-card:last-child {
+  grid-column: 3; /* Third column */
+  justify-self: start;
+}
+
+/* ALTERNATIVE SIMPLER SOLUTION - Using flexbox for last row */
+.maximiliano-lenzi-page .services-grid-last-row-flex {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.maximiliano-lenzi-page .services-grid-last-row-flex .service-overview-card {
+  max-width: 350px;
+  min-height: 400px;
+  width: 350px;
+  flex: 0 0 350px; /* Don't grow or shrink, fixed width */
+}
+
+/* EVEN BETTER: Use CSS grid with fixed column sizes */
+.maximiliano-lenzi-page .services-grid-last-row-perfect {
+  display: grid;
+  grid-template-columns: 
+    1fr 
+    minmax(350px, auto) 
+    minmax(350px, auto) 
+    1fr;
+  gap: 30px;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.maximiliano-lenzi-page .services-grid-last-row-perfect .service-overview-card {
+  width: 350px;
+  min-height: 400px;
+  max-width: 350px;
+}
+
+.maximiliano-lenzi-page .services-grid-last-row-perfect .service-overview-card:first-child {
+  grid-column: 2;
+  justify-self: end;
+}
+
+.maximiliano-lenzi-page .services-grid-last-row-perfect .service-overview-card:last-child {
+  grid-column: 3;
+  justify-self: start;
+}
+
+/* BEST SOLUTION: Calculate exact grid template */
+.maximiliano-lenzi-page .services-grid-last-row-final {
+  display: grid;
+  grid-template-columns: 
+    minmax(0, 1fr) 
+    350px 
+    350px 
+    minmax(0, 1fr);
+  gap: 50px;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.maximiliano-lenzi-page .services-grid-last-row-final .service-overview-card {
+  width: 100%;
+  min-height: 400px;
+  max-width: 350px;
+}
+
+.maximiliano-lenzi-page .services-grid-last-row-final .service-overview-card:first-child {
+  grid-column: 2;
+}
+
+.maximiliano-lenzi-page .services-grid-last-row-final .service-overview-card:last-child {
+  grid-column: 3;
+}
+
+/* Ensure all service cards have consistent styling */
+.maximiliano-lenzi-page .service-overview-card {
+  background: var(--white-color);
   border-radius: var(--border-radius);
   overflow: hidden;
-  background: var(--white-color);
   box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .maximiliano-lenzi-page .service-overview-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   box-shadow: var(--shadow-md);
 }
 
-.maximiliano-lenzi-page .service-card-header {
+.service-card-header {
   background: var(--primary-color);
   color: var(--white-color);
   padding: 20px;
@@ -1089,7 +1237,7 @@ body {
   align-items: center;
 }
 
-.maximiliano-lenzi-page .service-card-header h3 {
+.service-card-header h3 {
   margin: 0;
   font-size: var(--text-xl);
   flex: 1;
@@ -1098,68 +1246,69 @@ body {
   font-family: var(--font-heading);
 }
 
-.maximiliano-lenzi-page .service-card-header i {
-  font-size: 2.5rem;
-  opacity: 0.2;
-  color: var(--white-color);
-}
-
-.maximiliano-lenzi-page .service-card-body {
+.service-card-body {
   padding: 25px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.maximiliano-lenzi-page .service-card-body p {
+.service-card-body p {
   margin-bottom: 20px;
   color: var(--gray-color);
   font-size: var(--text-base);
+  line-height: 1.6;
 }
 
-.maximiliano-lenzi-page .service-card-features {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.service-card-features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   flex-grow: 1;
 }
 
-.maximiliano-lenzi-page .service-card-features extreme {
+.service-card-features li {
   margin-bottom: 10px;
-  padding-left: 25px;
   position: relative;
-  color: var(--dark-color);
   font-size: var(--text-base);
+  line-height: 1.6;
+  font-family: var(--font-main);
+  color: var(--dark-color);
+  padding-left: 1.5rem;
 }
 
-.maximiliano-lenzi-page .service-card-features li::before {
+.service-card-features li::before {
   content: '\f00c';
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
   position: absolute;
   left: 0;
+  top: 0.15em;
   color: var(--secondary-color);
 }
 
-.maximiliano-lenzi-page .service-card-link {
+.service-card-link {
   display: inline-flex;
   align-items: center;
   margin-top: 20px;
   color: var(--secondary-color);
   font-weight: 600;
+  text-decoration: none;
   transition: all 0.3s ease;
   font-size: var(--text-base);
-  text-decoration: none;
+  align-self: flex-start;
 }
 
-.maximiliano-lenzi-page .service-card-link:hover {
+.service-card-link:hover {
   color: var(--primary-color);
 }
 
-.maximiliano-lenzi-page .service-card-link i {
+.service-card-link i {
   margin-left: 8px;
   transition: transform 0.3s ease;
 }
 
-.maximiliano-lenzi-page .service-card-link:hover i {
+.service-card-link:hover i {
   transform: translateX(5px);
 }
+

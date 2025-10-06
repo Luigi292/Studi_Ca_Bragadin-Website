@@ -81,6 +81,17 @@
   .alberto-cecolin-page .mission-block {
     width: 80%;
   }
+  
+  /* Lenzi page services - 2 columns on tablet */
+  .maximiliano-lenzi-page .services-overview,
+  .services-overview.centered-last-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Reset centering for last row on tablet */
+  .services-overview.centered-last-row .service-overview-card:nth-last-child(-n+2) {
+    grid-column: auto;
+  }
 }
 
 /* Tablet Breakpoint (991px) - CRITICAL BREAKPOINT */
@@ -155,9 +166,24 @@
     padding: 25px;
   }
   
-  /* Timeline adjustments for tablet */
+  /* Lenzi page services - single column on mobile */
+  .maximiliano-lenzi-page .services-overview,
+  .services-overview.centered-last-row {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Timeline adjustments for tablet - FIXED TIMELINE HEIGHT */
+  .timeline-section {
+    overflow: visible;
+  }
+  
+  .modern-timeline {
+    padding: 40px 0;
+  }
+  
   .timeline-path {
     left: 40px;
+    height: calc(100% - 40px);
   }
   
   .timeline-item {
@@ -242,6 +268,7 @@
   /* Timeline adjustments */
   .timeline-path {
     left: 30px;
+    height: calc(100% - 30px);
   }
   
   .timeline-item {
@@ -317,6 +344,7 @@
   /* Timeline adjustments */
   .timeline-path {
     left: 25px;
+    height: calc(100% - 25px);
   }
   
   .timeline-item {
@@ -460,6 +488,7 @@
   /* Timeline adjustments */
   .timeline-path {
     left: 20px;
+    height: calc(100% - 20px);
   }
   
   .timeline-item {
@@ -565,6 +594,7 @@
   /* Timeline adjustments */
   .timeline-path {
     left: 18px;
+    height: calc(100% - 18px);
   }
   
   .timeline-item {
@@ -614,6 +644,7 @@
   /* Timeline adjustments */
   .timeline-path {
     left: 15px;
+    height: calc(100% - 15px);
   }
   
   .timeline-item {
@@ -684,6 +715,7 @@
   /* Timeline adjustments */
   .timeline-path {
     left: 12px;
+    height: calc(100% - 12px);
   }
   
   .timeline-item {
@@ -796,6 +828,7 @@
   /* Timeline adjustments for landscape */
   .timeline-path {
     left: 50%;
+    height: calc(100% - 40px);
   }
   
   .timeline-item {
@@ -881,6 +914,7 @@
   /* Timeline adjustments */
   .timeline-path {
     left: 10px;
+    height: calc(100% - 10px);
   }
   
   .timeline-item {
@@ -946,6 +980,7 @@
 @media (width: 384px) and (height: 832px) {
   .timeline-path {
     left: 17px;
+    height: calc(100% - 17px);
   }
   
   .timeline-item {
@@ -977,6 +1012,7 @@
   /* Galaxy S8, S9, S10, etc. */
   .timeline-path {
     left: 16px;
+    height: calc(100% - 16px);
   }
   
   .timeline-item {
@@ -1031,6 +1067,7 @@
   /* Timeline adjustments for landscape */
   .timeline-path {
     left: 50%;
+    height: calc(100% - 30px);
   }
   
   .timeline-item {
@@ -1095,6 +1132,7 @@
   /* Timeline adjustments */
   .timeline-path {
     left: 50%;
+    height: calc(100% - 40px);
   }
   
   .timeline-item {
@@ -1158,6 +1196,7 @@
   /* Timeline adjustments */
   .timeline-path {
     left: 30px;
+    height: calc(100% - 30px);
   }
   
   .timeline-item {

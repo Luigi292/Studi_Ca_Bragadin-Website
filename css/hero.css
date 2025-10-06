@@ -78,9 +78,6 @@ ul {
   padding: 0 20px;
 }
 
-
-
-
 /* ===== BASE HERO STYLES ===== */
 .hero-section {
   position: relative;
@@ -303,6 +300,31 @@ ul {
   animation: floatReverse 8s ease-in-out infinite;
 }
 
+/* ===== PROFESSIONAL PAGES HERO OVERRIDES ===== */
+/* Targets only: avv-maximiliano-lenzi.html, andrea-maretto.html, alberto-cecolin.html */
+
+/* Reduce hero height for professional pages */
+.avv-maximiliano-lenzi-page .hero-section,
+.andrea-maretto-page .hero-section,
+.alberto-cecolin-page .hero-section {
+  height: 70vh;
+  min-height: 500px;
+}
+
+/* Remove decor elements for professional pages */
+.avv-maximiliano-lenzi-page .hero-decor,
+.andrea-maretto-page .hero-decor,
+.alberto-cecolin-page .hero-decor {
+  display: none !important;
+}
+
+/* Adjust content positioning for shorter hero */
+.avv-maximiliano-lenzi-page .hero-content,
+.andrea-maretto-page .hero-content,
+.alberto-cecolin-page .hero-content {
+  margin-top: 0;
+}
+
 /* ===== COMPREHENSIVE RESPONSIVE MEDIA QUERIES ===== */
 
 /* Large Desktop Breakpoint (1440px) */
@@ -440,6 +462,14 @@ ul {
     bottom: 15%;
     right: 20px;
   }
+  
+  /* Professional pages responsive adjustments */
+  .avv-maximiliano-lenzi-page .hero-section,
+  .andrea-maretto-page .hero-section,
+  .alberto-cecolin-page .hero-section {
+    height: 60vh;
+    min-height: 400px;
+  }
 }
 
 /* Medium Tablets and Large Phones (600px) */
@@ -507,6 +537,14 @@ ul {
   .decor-2 {
     bottom: 12%;
     right: 15px;
+  }
+  
+  /* Professional pages responsive adjustments */
+  .avv-maximiliano-lenzi-page .hero-section,
+  .andrea-maretto-page .hero-section,
+  .alberto-cecolin-page .hero-section {
+    height: 55vh;
+    min-height: 350px;
   }
 }
 

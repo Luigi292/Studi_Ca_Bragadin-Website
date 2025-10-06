@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
   // Remove any existing parallax code
   
@@ -146,4 +145,240 @@ document.addEventListener('DOMContentLoaded', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
+
+  // Gallery functionality
+  function initGallery() {
+    const gallerySection = document.querySelector('.studio-gallery-section');
+    if (!gallerySection) return;
+
+    // Define gallery images with descriptions
+    const galleryImages = [
+      { src: 'images/front-hall.jpg', alt: 'Studio Ca Bragadin - Atrio principale' },
+      { src: 'images/mid-hall.jpg', alt: 'Studio Ca Bragadin - Sala d\'attesa' },
+      { src: 'images/glass-room.jpg', alt: 'Studio Ca Bragadin - Sala riunioni vetrata' },
+      { src: 'images/glass-room2.jpg', alt: 'Studio Ca Bragadin - Ambiente di lavoro moderno' },
+      { src: 'images/glass-room3.jpg', alt: 'Studio Ca Bragadin - Spazio collaborativo' },
+      { src: 'images/team-glass-room.jpg', alt: 'Studio Ca Bragadin - Team in sala riunioni' },
+      { src: 'images/team1.jpg', alt: 'Studio Ca Bragadin - Team professionale' },
+      { src: 'images/team2.jpg', alt: 'Studio Ca Bragadin - Collaborazione tra professionisti' },
+      { src: 'images/team-balcony.jpg', alt: 'Studio Ca Bragadin - Team sul balcone' },
+      { src: 'images/ufficio-lenzi.jpg', alt: 'Studio Avv. Lenzi - Ufficio privato' }
+    ];
+
+    const track = document.getElementById('gallery-track');
+    const dotsContainer = document.getElementById('gallery-dots');
+    const fullscreen = document.getElementById('gallery-fullscreen');
+    const fullscreenImage = document.getElementById('fullscreen-image');
+    const closeButton = document.querySelector('.fullscreen-close');
+    const carouselPrevButton = document.querySelector('.carousel-button--prev');
+    const carouselNextButton = document.querySelector('.carousel-button--next');
+
+    let currentIndex = 0;
+    let isTransitioning = false;
+
+    // Create slides and dots
+    function createGallery() {
+      track.innerHTML = '';
+      dotsContainer.innerHTML = '';
+
+      galleryImages.forEach((image, index) => {
+        // Create slide
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+        slide.innerHTML = `
+          <img src="${image.src}" alt="${image.alt}" class="carousel-image" data-index="${index}">
+        `;
+        track.appendChild(slide);
+
+        // Create dot
+        const dot = document.createElement('button');
+        dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Vai all'immagine ${index + 1}`);
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    // Go to specific slide with smooth transition
+    function goToSlide(index) {
+      if (isTransitioning) return;
+      
+      isTransitioning = true;
+      currentIndex = index;
+      updateCarousel();
+      
+      // Reset transition lock after animation completes
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 500);
+    }
+
+    // Update carousel position and active states
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      // Update dots
+      document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    // Next slide with infinite loop (no visual scrolling back)
+    function nextSlide() {
+      if (isTransitioning) return;
+      
+      isTransitioning = true;
+      
+      // If we're at the last image, jump to first without animation
+      if (currentIndex === galleryImages.length - 1) {
+        // Temporarily disable transition
+        track.style.transition = 'none';
+        currentIndex = 0;
+        updateCarousel();
+        
+        // Force reflow
+        track.offsetHeight;
+        
+        // Re-enable transition
+        track.style.transition = 'transform 0.5s ease';
+      } else {
+        currentIndex++;
+        updateCarousel();
+      }
+      
+      // Reset transition lock after animation completes
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 500);
+    }
+
+    // Previous slide with infinite loop (no visual scrolling back)
+    function prevSlide() {
+      if (isTransitioning) return;
+      
+      isTransitioning = true;
+      
+      // If we're at the first image, jump to last without animation
+      if (currentIndex === 0) {
+        // Temporarily disable transition
+        track.style.transition = 'none';
+        currentIndex = galleryImages.length - 1;
+        updateCarousel();
+        
+        // Force reflow
+        track.offsetHeight;
+        
+        // Re-enable transition
+        track.style.transition = 'transform 0.5s ease';
+      } else {
+        currentIndex--;
+        updateCarousel();
+      }
+      
+      // Reset transition lock after animation completes
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 500);
+    }
+
+    // Open fullscreen view (without navigation arrows)
+    function openFullscreen(index) {
+      currentIndex = index;
+      fullscreenImage.src = galleryImages[currentIndex].src;
+      fullscreenImage.alt = galleryImages[currentIndex].alt;
+      fullscreen.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Close fullscreen view
+    function closeFullscreen() {
+      fullscreen.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Initialize event listeners
+    function initEventListeners() {
+      // Carousel navigation
+      if (carouselPrevButton) {
+        carouselPrevButton.addEventListener('click', prevSlide);
+      }
+      
+      if (carouselNextButton) {
+        carouselNextButton.addEventListener('click', nextSlide);
+      }
+
+      // Image click to open fullscreen
+      track.addEventListener('click', (e) => {
+        if (e.target.classList.contains('carousel-image')) {
+          const index = parseInt(e.target.getAttribute('data-index'));
+          openFullscreen(index);
+        }
+      });
+
+      // Fullscreen close
+      closeButton.addEventListener('click', closeFullscreen);
+      
+      // Close fullscreen when clicking outside image
+      fullscreen.addEventListener('click', (e) => {
+        if (e.target === fullscreen) {
+          closeFullscreen();
+        }
+      });
+
+      // Keyboard navigation in fullscreen mode
+      document.addEventListener('keydown', (e) => {
+        if (!fullscreen.classList.contains('active')) return;
+        
+        switch(e.key) {
+          case 'Escape':
+            closeFullscreen();
+            break;
+          // Note: Removed arrow key navigation in fullscreen as requested
+        }
+      });
+
+      // Touch swipe for mobile
+      let startX = 0;
+      let endX = 0;
+
+      track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      });
+
+      track.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+      });
+
+      function handleSwipe() {
+        const diff = startX - endX;
+        const swipeThreshold = 50;
+
+        if (Math.abs(diff) > swipeThreshold && !isTransitioning) {
+          if (diff > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+        }
+      }
+    }
+
+    // Auto-advance carousel
+    function startAutoAdvance() {
+      setInterval(() => {
+        if (!fullscreen.classList.contains('active')) {
+          nextSlide();
+        }
+      }, 6000);
+    }
+
+    // Initialize everything
+    createGallery();
+    initEventListeners();
+    startAutoAdvance();
+  }
+
+  // Initialize gallery
+  initGallery();
 });

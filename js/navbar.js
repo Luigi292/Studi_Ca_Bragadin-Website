@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
   let lastScrollTop = 0;
   const scrollThreshold = 100;
   const scrollHideDistance = 30;
+  
+  // Dropdown state management
+  let dropdownCloseTimeout = null;
+  const DROPDOWN_CLOSE_DELAY = 300; // ms delay before closing dropdown
 
   // Check if device is mobile (hamburger visible)
   function isMobileDevice() {
@@ -108,6 +112,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Enhanced dropdown management functions
   function openDropdown(dropdown) {
+    // Clear any pending close timeout
+    if (dropdownCloseTimeout) {
+      clearTimeout(dropdownCloseTimeout);
+      dropdownCloseTimeout = null;
+    }
+    
     const menu = dropdown.querySelector('.dropdown-menu');
     dropdown.classList.add('active');
     menu.classList.add('active');
@@ -122,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
       menu.style.opacity = '1';
       menu.style.pointerEvents = 'auto';
       menu.style.transform = 'translateY(0)';
+      menu.style.visibility = 'visible';
     }
   }
 
@@ -136,6 +147,12 @@ document.addEventListener('DOMContentLoaded', function() {
       menu.style.opacity = '0';
       menu.style.pointerEvents = 'none';
       menu.style.transform = 'translateY(10px)';
+      // Delay visibility change for smooth transition
+      setTimeout(() => {
+        if (!dropdown.classList.contains('active')) {
+          menu.style.visibility = 'hidden';
+        }
+      }, 300);
     }
   }
 
@@ -155,7 +172,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const link = dropdown.querySelector('.navLink');
       const menu = dropdown.querySelector('.dropdown-menu');
       
-      // Desktop hover behavior
+      // Initialize dropdown menu for desktop
+      if (window.innerWidth > 992 && menu) {
+        menu.style.visibility = 'hidden';
+      }
+      
+      // Desktop hover behavior - ENHANCED WITH DELAY
       dropdown.addEventListener('mouseenter', () => {
         if (window.innerWidth > 992) {
           openDropdown(dropdown);
@@ -163,9 +185,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
       
-      dropdown.addEventListener('mouseleave', () => {
+      dropdown.addEventListener('mouseleave', (e) => {
         if (window.innerWidth > 992) {
-          closeDropdown(dropdown);
+          // Use timeout to allow moving to dropdown menu
+          dropdownCloseTimeout = setTimeout(() => {
+            if (!isMouseOverDropdown(dropdown, e)) {
+              closeDropdown(dropdown);
+            }
+          }, DROPDOWN_CLOSE_DELAY);
         }
       });
       
@@ -183,21 +210,41 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
       
-      // Keep dropdown open when hovering over it (desktop)
+      // Keep dropdown open when hovering over menu (desktop)
       if (menu) {
         menu.addEventListener('mouseenter', () => {
           if (window.innerWidth > 992) {
+            // Clear any pending close timeout when entering menu
+            if (dropdownCloseTimeout) {
+              clearTimeout(dropdownCloseTimeout);
+              dropdownCloseTimeout = null;
+            }
             openDropdown(dropdown);
           }
         });
 
-        menu.addEventListener('mouseleave', () => {
+        menu.addEventListener('mouseleave', (e) => {
           if (window.innerWidth > 992) {
-            closeDropdown(dropdown);
+            // Close dropdown after delay when leaving menu
+            dropdownCloseTimeout = setTimeout(() => {
+              if (!isMouseOverDropdown(dropdown, e)) {
+                closeDropdown(dropdown);
+              }
+            }, DROPDOWN_CLOSE_DELAY);
           }
         });
       }
     });
+  }
+
+  // Helper function to check if mouse is over dropdown or its menu
+  function isMouseOverDropdown(dropdown, event) {
+    const relatedTarget = event.relatedTarget;
+    if (!relatedTarget) return false;
+    
+    return dropdown.contains(relatedTarget) || 
+           relatedTarget === dropdown || 
+           relatedTarget.closest('.dropdown') === dropdown;
   }
 
   // Close menu when clicking regular links (mobile)
@@ -317,10 +364,19 @@ document.addEventListener('DOMContentLoaded', function() {
       body.classList.remove('body-no-scroll');
       // Always show navbar on desktop
       navbar.classList.remove('hide');
-    } else {
-      // Mobile view - reset dropdown heights
+      
+      // Initialize dropdown visibility for desktop
       dropdowns.forEach(dropdown => {
         const menu = dropdown.querySelector('.dropdown-menu');
+        if (menu && !dropdown.classList.contains('active')) {
+          menu.style.visibility = 'hidden';
+        }
+      });
+    } else {
+      // Mobile view - reset dropdown heights and visibility
+      dropdowns.forEach(dropdown => {
+        const menu = dropdown.querySelector('.dropdown-menu');
+        menu.style.visibility = 'visible'; // Always visible on mobile
         if (dropdown.classList.contains('active')) {
           const items = menu.querySelectorAll('li');
           const itemHeight = items.length > 0 ? items[0].offsetHeight : 0;

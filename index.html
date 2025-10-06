@@ -121,6 +121,58 @@
 
 
 
+  <!-- Add this section right after the Hero section, before the Studios section -->
+<section class="studio-gallery-section">
+  <div class="gallery-container">
+    <div class="section-header">
+      <h2>I Nostri Spazi</h2>
+      <p class="section-subtitle">Ambienti professionali e accoglienti per servizi di eccellenza</p>
+    </div>
+    
+    <div class="gallery-carousel">
+      <div class="carousel-track-container">
+        <div class="carousel-track" id="gallery-track">
+          <!-- Images will be loaded dynamically via JavaScript -->
+        </div>
+      </div>
+      
+      <div class="carousel-nav">
+        <button class="carousel-button carousel-button--prev" aria-label="Immagine precedente">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="carousel-button carousel-button--next" aria-label="Immagine successiva">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="carousel-dots" id="gallery-dots">
+
+        <!-- Dots will be generated via JavaScript -->
+      </div>
+    </div>
+    
+    <div class="gallery-fullscreen" id="gallery-fullscreen">
+      <div class="fullscreen-content">
+        <button class="fullscreen-close" aria-label="Chiudi visualizzazione">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="fullscreen-image-container">
+          <img src="" alt="" id="fullscreen-image">
+        </div>
+        <div class="fullscreen-nav">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- Studio About Section -->
@@ -143,71 +195,76 @@
     </a>
 
     <div class="studios-grid">
-      <!-- Avv. Lenzi -->
-      <div class="professional-card">
-        <div class="card-image-wrapper">
-          <img src="images/lenzi.jpg" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3>Avv. Maximiliano Lenzi</h3>
-          <p class="card-specialty">Consulenza legale e assistenza alle imprese</p>
-          <div class="card-excerpt">
-            <p>Avvocato specializzato in diritto commerciale e societario con oltre 18 anni di esperienza.</p>
-          </div>
-          <div class="card-contact">
-            <p><strong>Telefono:</strong> <a href="tel:0498751356">049-8751356</a></p>
-            <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
-            <div class="card-cta">
-              <a href="mailto:avvocatolenzi@studicabragadin.it" class="ctaButton small">Contatta</a>
-              <a href="avv-maximiliano-lenzi.html" class="ctaButton small profile">Profilo Completo</a>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Dott. Maretto -->
-      <div class="professional-card">
-        <div class="card-image-wrapper">
-          <img src="images/andrea.jpg" alt="Dott. Andrea Maretto - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3>Dott. Andrea Maretto</h3>
-          <p class="card-specialty">Consulenza fiscale e societaria avanzata</p>
-          <div class="card-excerpt">
-            <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza.</p>
-          </div>
-          <div class="card-contact">
-            <p><strong>Telefono:</strong> <a href="tel:0499562428">049-9562428</a></p>
-            <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
-            <div class="card-cta">
-              <a href="mailto:andrea.maretto@studicabragadin.it" class="ctaButton small">Contatta</a>
-              <a href="andrea-maretto.html" class="ctaButton small profile">Profilo Completo</a>
-            </div>
-          </div>
-        </div>
+      
+<!-- Avv. Lenzi -->
+<div class="professional-card">
+  <div class="card-image-wrapper">
+    <img src="images/lenzi.jpg" alt="Avvocato Maximiliano Lenzi - Studio Legale Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+  </div>
+  <div class="card-content">
+    <h3>Avv. Maximiliano Lenzi</h3>
+    <p class="card-specialty">Consulenza legale e assistenza alle imprese</p>
+    <div class="card-excerpt">
+      <p>Avvocato specializzato in diritto commerciale e societario con oltre 18 anni di esperienza.</p>
+    </div>
+    <div class="card-contact">
+      <p><strong>Telefono:</strong> <a href="tel:0498751356">049-8751356</a></p>
+      <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
+      <div class="card-cta">
+        <a href="mailto:avvocatolenzi@studicabragadin.it?subject=Richiesta%20di%20consulenza&body=Gentile%20Avvocato%20Lenzi," target="_blank" rel="noopener noreferrer" class="ctaButton small">Contatta</a>
+        <a href="avv-maximiliano-lenzi.html" class="ctaButton small profile">Profilo Completo</a>
       </div>
+    </div>
+  </div>
+</div>
 
-      <!-- Dott. Cecolin -->
-      <div class="professional-card">
-        <div class="card-image-wrapper">
-          <img src="images/alberto.jpg" alt="Dott. Alberto Cecolin - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3>Dott. Alberto Cecolin</h3>
-          <p class="card-specialty">Pianificazione fiscale e strategie societarie</p>
-          <div class="card-excerpt">
-            <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza.</p>
-          </div>
-          <div class="card-contact">
-            <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
-            <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
-            <div class="card-cta">
-              <a href="mailto:studio@studiocecolin.com" class="ctaButton small">Contatta</a>
-              <a href="alberto-cecolin.html" class="ctaButton small profile">Profilo Completo</a>
-            </div>
-          </div>
-        </div>
+<!-- Dott. Maretto -->
+<div class="professional-card">
+  <div class="card-image-wrapper">
+    <img src="images/andrea.jpg" alt="Dott. Andrea Maretto - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+  </div>
+  <div class="card-content">
+    <h3>Dott. Andrea Maretto</h3>
+    <p class="card-specialty">Consulenza fiscale e societaria avanzata</p>
+    <div class="card-excerpt">
+      <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza.</p>
+    </div>
+    <div class="card-contact">
+      <p><strong>Telefono:</strong> <a href="tel:0499562428">049-9562428</a></p>
+      <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
+      <div class="card-cta">
+        <a href="mailto:andrea.maretto@studicabragadin.it?subject=Richiesta%20di%20consulenza&body=Gentile%20Dottore%20Maretto," target="_blank" rel="noopener noreferrer" class="ctaButton small">Contatta</a>
+        <a href="andrea-maretto.html" class="ctaButton small profile">Profilo Completo</a>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dott. Cecolin -->
+<div class="professional-card">
+  <div class="card-image-wrapper">
+    <img src="images/alberto.jpg" alt="Dott. Alberto Cecolin - Commercialista Padova" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+  </div>
+  <div class="card-content">
+    <h3>Dott. Alberto Cecolin</h3>
+    <p class="card-specialty">Pianificazione fiscale e strategie societarie</p>
+    <div class="card-excerpt">
+      <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza.</p>
+    </div>
+    <div class="card-contact">
+      <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
+      <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
+      <div class="card-cta">
+        <a href="mailto:studio@studiocecolin.com?subject=Richiesta%20di%20consulenza&body=Gentile%20Dottore%20Cecolin," target="_blank" rel="noopener noreferrer" class="ctaButton small">Contatta</a>
+        <a href="alberto-cecolin.html" class="ctaButton small profile">Profilo Completo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     </div>
   </div>
 </section>
