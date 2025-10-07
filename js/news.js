@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return newsData;
     } catch (error) {
       console.error('Error fetching news data:', error);
-      showError('Impossibile caricare le news al momento. Riprova più tardi.');
+      showNoNewsMessage(); // CHANGED: This line was updated
       return [];
     }
   }

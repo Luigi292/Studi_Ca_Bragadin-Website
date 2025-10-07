@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     newsGrid.innerHTML = '<div class="news-loading"><div class="news-loading-spinner"></div></div>';
 
+    // Always try to fetch the JSON file
     fetch('news-data.json')
       .then(response => {
         if (!response.ok) {
@@ -73,12 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch(error => {
         console.error('Error loading news:', error);
-        // Show "no news" message instead of error for file not found
-        if (error instanceof TypeError || error.message.includes('Failed to fetch')) {
-          showNoNewsPreview();
-        } else {
-          showNewsError();
-        }
+        // Show "no news" message for any error
+        showNoNewsPreview();
       });
 
     function renderNewsPreview(newsItems) {
@@ -97,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>${news.preview}</p>
             <div class="news-preview-actions">
               <a href="news.html#news-${news.id}" class="news-preview-more">Leggi tutto</a>
-             
             </div>
           </div>
         `;
@@ -108,25 +104,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function showNoNewsPreview() {
       newsGrid.innerHTML = `
         <div class="no-news-message">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
             <line x1="16" y1="13" x2="8" y2="13"></line>
             <line x1="16" y1="17" x2="8" y2="17"></line>
             <polyline points="10 9 9 9 8 9"></polyline>
           </svg>
-          <h3>Nessuna news pubblicata al momento</h3>
+          <h2>Nessuna news pubblicata al momento</h2>
           <p>I nostri professionisti stanno preparando nuovi contenuti. Torna a controllare presto!</p>
         </div>
       `;
-    }
-
-    function showNewsError() {
-      newsGrid.innerHTML = `
-        <div class="news-error">
-          <p>Impossibile caricare le news al momento.</p>
-          <a href="news.html">Vai alla pagina news</a>
-        </div>`;
     }
   }
 
