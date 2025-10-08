@@ -1,5 +1,4 @@
 /* professional-responsive.css - Optimized responsive styles for professional pages */
-/* Enhanced font size consistency across all devices */
 
 /* ===== GLOBAL RESPONSIVE STYLES ===== */
 @media (max-width: 1440px) {
@@ -23,17 +22,17 @@
   }
   
   .andrea-maretto-page .services-overview,
-  .alberto-cecolin-page .services-overview {
+  .alberto-cecolin-page .services-overview,
+  .maximiliano-lenzi-page .services-overview {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  /* Timeline adjustments */
   .timeline-content {
     flex: 0 0 50%;
   }
 }
 
-/* Tablet Breakpoint (1024px) - iPad Pro, etc. */
+/* Tablet Breakpoint (1024px) */
 @media (max-width: 1024px) {
   .content-block {
     padding: 50px 30px;
@@ -66,7 +65,6 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
   
-  /* Timeline Responsive - PERFECTLY ALIGNED */
   .modern-timeline {
     padding: 50px 0;
   }
@@ -82,19 +80,12 @@
     width: 80%;
   }
   
-  /* Lenzi page services - 2 columns on tablet */
-  .maximiliano-lenzi-page .services-overview,
-  .services-overview.centered-last-row {
+  .maximiliano-lenzi-page .services-overview {
     grid-template-columns: repeat(2, 1fr);
-  }
-  
-  /* Reset centering for last row on tablet */
-  .services-overview.centered-last-row .service-overview-card:nth-last-child(-n+2) {
-    grid-column: auto;
   }
 }
 
-/* Tablet Breakpoint (991px) - CRITICAL BREAKPOINT */
+/* Tablet Breakpoint (991px) */
 @media (max-width: 991px) {
   .content-block {
     max-width: 95%;
@@ -154,9 +145,12 @@
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .maximiliano-lenzi-page .qualifications-block,
-  .maximiliano-lenzi-page .services-overview {
+  .maximiliano-lenzi-page .qualifications-block {
     grid-template-columns: 1fr;
+  }
+  
+  .maximiliano-lenzi-page .services-overview {
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .mission-block,
@@ -166,13 +160,6 @@
     padding: 25px;
   }
   
-  /* Lenzi page services - single column on mobile */
-  .maximiliano-lenzi-page .services-overview,
-  .services-overview.centered-last-row {
-    grid-template-columns: 1fr;
-  }
-  
-  /* Timeline adjustments for tablet - FIXED TIMELINE HEIGHT */
   .timeline-section {
     overflow: visible;
   }
@@ -211,7 +198,7 @@
   }
 }
 
-/* Tablet Breakpoint (768px) - iPad, etc. */
+/* Tablet Breakpoint (768px) */
 @media (max-width: 768px) {
   .content-block {
     padding: 45px 20px;
@@ -253,7 +240,10 @@
   }
   
   .andrea-maretto-page .services-overview,
-  .alberto-cecolin-page .services-overview,
+  .alberto-cecolin-page .services-overview {
+    grid-template-columns: 1fr;
+  }
+  
   .maximiliano-lenzi-page .services-overview {
     grid-template-columns: 1fr;
   }
@@ -265,7 +255,6 @@
     padding: 20px;
   }
   
-  /* Timeline adjustments */
   .timeline-path {
     left: 30px;
     height: calc(100% - 30px);
@@ -300,7 +289,7 @@
   }
 }
 
-/* Mobile Breakpoint (600px) - Large phones */
+/* Mobile Breakpoint (600px) */
 @media (max-width: 600px) {
   .content-block {
     padding: 40px 15px;
@@ -341,7 +330,6 @@
     padding: 20px;
   }
   
-  /* Timeline adjustments */
   .timeline-path {
     left: 25px;
     height: calc(100% - 25px);
@@ -376,7 +364,7 @@
   }
 }
 
-/* Mobile Breakpoint (480px) - Galaxy Note, etc. */
+/* Mobile Breakpoint (480px) */
 @media (max-width: 480px) {
   .content-block {
     padding: 35px 12px;
@@ -485,7 +473,6 @@
     font-size: var(--text-base);
   }
   
-  /* Timeline adjustments */
   .timeline-path {
     left: 20px;
     height: calc(100% - 20px);
@@ -560,7 +547,7 @@
   }
 }
 
-/* Mobile Breakpoint (414px) - iPhone XR, 11, etc. */
+/* Mobile Breakpoint (414px) */
 @media (max-width: 414px) {
   .content-block {
     padding: 30px 10px;
@@ -591,7 +578,6 @@
     padding: 15px;
   }
   
-  /* Timeline adjustments */
   .timeline-path {
     left: 18px;
     height: calc(100% - 18px);
@@ -612,7 +598,7 @@
   }
 }
 
-/* Mobile Breakpoint (375px) - iPhone X, 8, etc. */
+/* Mobile Breakpoint (375px) */
 @media (max-width: 375px) {
   .content-block {
     padding: 25px 8px;
@@ -641,7 +627,6 @@
     font-size: 1.8rem;
   }
   
-  /* Timeline adjustments */
   .timeline-path {
     left: 15px;
     height: calc(100% - 15px);
@@ -671,7 +656,7 @@
   }
 }
 
-/* Mobile Breakpoint (320px) - iPhone 4, 5, etc. */
+/* Mobile Breakpoint (320px) */
 @media (max-width: 320px) {
   .content-block {
     padding: 20px 5px;
@@ -712,7 +697,6 @@
     padding: 12px;
   }
   
-  /* Timeline adjustments */
   .timeline-path {
     left: 12px;
     height: calc(100% - 12px);
@@ -745,8 +729,6 @@
 }
 
 /* ===== PAGE-SPECIFIC RESPONSIVE ADJUSTMENTS ===== */
-
-/* Andrea Maretto Page */
 @media (max-width: 991px) {
   .andrea-maretto-page .skills-grid,
   .andrea-maretto-page .services-overview {
@@ -754,7 +736,6 @@
   }
 }
 
-/* Alberto Cecolin Page */
 @media (max-width: 991px) {
   .alberto-cecolin-page .skills-grid {
     grid-template-columns: 1fr;
@@ -767,15 +748,8 @@
   }
 }
 
-/* Maximiliano Lenzi Page */
 @media (max-width: 1024px) {
   .maximiliano-lenzi-page .qualifications-block {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .maximiliano-lenzi-page .services-overview {
     grid-template-columns: 1fr;
   }
 }
@@ -789,7 +763,6 @@
   margin: 0 auto;
 }
 
-/* Fix for qualification cards on small screens */
 @media (max-width: 768px) {
   .andrea-maretto-page .qualifications-block {
     grid-template-columns: 1fr;
@@ -825,7 +798,6 @@
     transform: none;
   }
   
-  /* Timeline adjustments for landscape */
   .timeline-path {
     left: 50%;
     height: calc(100% - 40px);
@@ -882,7 +854,6 @@
     break-inside: avoid;
   }
   
-  /* Hide timeline path for printing */
   .timeline-path {
     display: none;
   }
@@ -897,7 +868,6 @@
 }
 
 /* Special device-specific optimizations */
-/* Samsung Galaxy Fold */
 @media (max-width: 280px) {
   .content-block {
     padding: 15px 3px;
@@ -911,7 +881,6 @@
     height: 140px;
   }
   
-  /* Timeline adjustments */
   .timeline-path {
     left: 10px;
     height: calc(100% - 10px);
@@ -931,7 +900,6 @@
   }
 }
 
-/* Surface Duo */
 @media (max-width: 540px) and (max-height: 720px) {
   .profile-block {
     grid-template-columns: 1fr;
@@ -942,7 +910,6 @@
   }
 }
 
-/* iPad Pro specific */
 @media (width: 1024px) and (height: 1366px) {
   .profile-block {
     grid-template-columns: 1fr 1fr;
@@ -953,13 +920,11 @@
     height: 400px;
   }
   
-  /* Timeline adjustments */
   .timeline-content {
     flex: 0 0 45%;
   }
 }
 
-/* Galaxy Tab specific */
 @media (width: 800px) and (height: 1280px) {
   .profile-block {
     grid-template-columns: 1fr 1fr;
@@ -970,60 +935,8 @@
     height: 350px;
   }
   
-  /* Timeline adjustments */
   .timeline-content {
     flex: 0 0 48%;
-  }
-}
-
-/* Honor 70 specific */
-@media (width: 384px) and (height: 832px) {
-  .timeline-path {
-    left: 17px;
-    height: calc(100% - 17px);
-  }
-  
-  .timeline-item {
-    padding-left: 37px;
-  }
-}
-
-/* Specific adjustments for various iPhones */
-@media (width: 375px) and (height: 812px) {
-  /* iPhone X, XS, 11 Pro */
-}
-
-@media (width: 414px) and (height: 896px) {
-  /* iPhone XR, 11, 11 Pro Max */
-  .timeline-content {
-    padding: 16px;
-  }
-}
-
-@media (width: 414px) and (height: 736px) {
-  /* iPhone 8 Plus, 7 Plus, 6s Plus */
-  .timeline-item {
-    margin-bottom: 25px;
-  }
-}
-
-/* Specific adjustments for various Android devices */
-@media (width: 360px) and (height: 740px) {
-  /* Galaxy S8, S9, S10, etc. */
-  .timeline-path {
-    left: 16px;
-    height: calc(100% - 16px);
-  }
-  
-  .timeline-item {
-    padding-left: 32px;
-  }
-}
-
-@media (width: 412px) and (height: 915px) {
-  /* Pixel 6 Pro, etc. */
-  .timeline-content {
-    padding: 18px;
   }
 }
 
@@ -1064,7 +977,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
   
-  /* Timeline adjustments for landscape */
   .timeline-path {
     left: 50%;
     height: calc(100% - 30px);
@@ -1129,7 +1041,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
   
-  /* Timeline adjustments */
   .timeline-path {
     left: 50%;
     height: calc(100% - 40px);
@@ -1193,7 +1104,6 @@
     grid-template-columns: 1fr;
   }
   
-  /* Timeline adjustments */
   .timeline-path {
     left: 30px;
     height: calc(100% - 30px);
@@ -1216,99 +1126,22 @@
   }
 }
 
-/* ===== HAMBURGER MENU FIXES FOR LANDSCAPE ===== */
-@media (max-width: 992px) and (orientation: landscape) {
-  .navMenu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    flex-direction: column;
-    background-color: #fff;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-    z-index: 1000;
-    padding: 1rem 0;
-    max-height: calc(100vh - 70px);
-    overflow-y: auto;
-  }
-
-  .navMenu.active {
-    left: 0;
-  }
-
-  .navLink {
-    margin: 1rem 0;
-    padding: 0.5rem;
-    display: block;
-  }
-
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    margin-top: 0;
-    display: none;
-  }
-
-  .dropdown.active .dropdown-menu {
-    display: block;
-  }
-
-  .hamburger {
-    display: block;
-    cursor: pointer;
-  }
-
-  .hamburger.active div:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .hamburger.active div:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active div:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+/* ===== MAXIMILIANO LENZI SERVICES FIX - MATCHING OTHER PAGES ===== */
+@media (max-width: 1200px) {
+  .maximiliano-lenzi-page .services-overview {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Additional landscape optimizations */
-@media (max-height: 500px) and (orientation: landscape) {
-  .hero-section {
-    min-height: 60vh;
-  }
-  
-  .hero-content {
-    padding-top: 2rem;
-  }
-  
-  .navMenu {
-    top: 60px;
-    max-height: calc(100vh - 60px);
-  }
-  
-  .content-block {
-    padding: 1rem;
-  }
-  
-  .profile-block {
-    gap: 1rem;
+@media (max-width: 768px) {
+  .maximiliano-lenzi-page .services-overview {
+    grid-template-columns: 1fr;
   }
 }
 
-/* Fix for timeline in landscape on medium devices */
-@media (max-width: 992px) and (orientation: landscape) and (min-width: 768px) {
-  .modern-timeline {
-    padding: 0 2rem;
-  }
-  
-  .timeline-items {
-    padding-left: 2rem;
-  }
-  
-  .timeline-marker {
-    left: -2rem;
+@media (max-width: 480px) {
+  .maximiliano-lenzi-page .service-overview-card {
+    margin: 0 auto;
+    max-width: 100%;
   }
 }

@@ -31,9 +31,7 @@
   --text-3xl: 1.875rem;
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
-
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -50,7 +48,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
 
 /* ===== GLOBAL SECTION STYLES ===== */
 .section-header {
@@ -90,9 +87,18 @@ body {
   margin-top: 1.5rem;
 }
 
-/* Section divider */
+/* Section dividers for all main sections */
+.about-studio,
+.activities-section,
+.studios,
+.values-section,
+.network-section {
+  position: relative;
+}
+
 .about-studio::before,
 .activities-section::before,
+.studios::before,
 .values-section::before,
 .network-section::before {
   content: '';
@@ -101,7 +107,7 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--section-divider);
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
 }
 
 /* ===== ABOUT STUDIO SECTION ===== */
@@ -245,16 +251,6 @@ body {
   background-color: var(--white-color);
   position: relative;
   overflow: hidden;
-}
-
-.studios::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--section-divider);
 }
 
 .studios-container-wide {
@@ -457,24 +453,11 @@ body {
   color: var(--white-color);
 }
 
-
-
-
 /* ===== MISSION SECTION ENHANCEMENTS ===== */
 .values-section {
   padding: 6rem 0;
   background: var(--light-color);
   position: relative;
-}
-
-.values-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--section-divider);
 }
 
 .mission-container {
@@ -494,17 +477,10 @@ body {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(188, 164, 84, 0.1);
+  border-left: 4px solid var(--secondary-color);
 }
 
-.mission-content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--section-divider);
-}
+
 
 .mission-content p {
   font-size: var(--text-base);
@@ -521,7 +497,7 @@ body {
   content: '"';
   font-family: var(--font-heading);
   font-size: 2.5rem;
-  color: var(--secondary-light);
+  color: var(--dark-color);
   position: absolute;
   opacity: 0.3;
   line-height: 1;
@@ -566,7 +542,7 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--section-divider);
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   opacity: 0;
   transition: var(--transition);
 }
@@ -636,16 +612,6 @@ body {
   padding: 6rem 0;
   background-color: var(--white-color);
   position: relative;
-}
-
-.network-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--section-divider);
 }
 
 .network-container {

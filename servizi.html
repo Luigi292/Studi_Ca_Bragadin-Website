@@ -26,7 +26,6 @@
   <link rel="stylesheet" href="css/servizi.css">
   <link rel="stylesheet" href="css/servizi-responsive.css">
   <link rel="stylesheet" href="css/hero.css">
- 
   <link rel="stylesheet" href="css/fade-animation.css">
 
   <!-- Primary favicon -->
@@ -67,7 +66,7 @@
           <li><a href="alberto-cecolin.html">Dott. Alberto Cecolin</a></li>
         </ul>
       </li>
-      <li><a href="servizi.html" class="navLink" aria-label="Servizi">Servizi/Settori</a></li>
+      <li><a href="servizi.html" class="navLink active" aria-label="Servizi">Servizi/Settori</a></li>
       <li><a href="news.html" class="navLink" aria-label="Newsletter">Newsletter</a></li>
       <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
     </ul>
@@ -87,369 +86,86 @@
     </div>
   </section>
 
-  <!-- Main Services Section -->
-  <section class="services-section" id="services">
-    <div class="section-header">
-      <h2>Servizi di Consulenza Legale e Fiscale</h2>
-      <p class="section-subtitle">Professionalità e competenza al servizio del tuo successo</p>
-    </div>
-
-    <div class="services-container">
+  <!-- Services Overview Section -->
+  <section class="services-overview">
+    <div class="container">
+      <div class="section-header">
+        <h2>Servizi di Consulenza Legale e Fiscale</h2>
+        <p class="section-subtitle">Professionalità e competenza al servizio del tuo successo</p>
+      </div>
+      
       <!-- Legal Services -->
-      <div class="service-category">
-        <div class="category-header">
-   
-          <div class="category-header-content">
-            <h3>Servizi Legali</h3>
-            <p>Avv. Maximiliano Lenzi</p>
-          </div>
+      <div class="service-feature service-feature-left" data-category="servizi-legali">
+        <div class="service-feature-content">
+          <div class="service-badge">Servizi Legali</div>
+          <h3>Consulenza Legale Completa</h3>
+          <p class="service-professional">Avv. Maximiliano Lenzi</p>
+          <p class="service-description">Assistenza legale specialistica per imprese e professionisti, dalla contrattualistica al contenzioso civile, con particolare attenzione alle esigenze del business moderno.</p>
+          <ul class="service-highlights">
+            <li>Contrattualistica Aziendale</li>
+            <li>Recupero Crediti</li>
+            <li>Diritto Societario</li>
+            <li>E-commerce e Digitale</li>
+            <li>Contenzioso Civile</li>
+            <li>Proprietà Industriale</li>
+            <li>Diritto Bancario</li>
+            <li>Diritto Fallimentare</li>
+          </ul>
+     
         </div>
-        <div class="service-list">
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Contrattualistica Aziendale</h4>
-              <p>Redazione e revisione di contratti commerciali, assistenza nella negoziazione, contratti di collaborazione e fornitura.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                <path d="M8 12h8"></path>
-                <path d="M8 8h8"></path>
-                <path d="M8 16h8"></path>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Recupero Crediti</h4>
-              <p>Strategie per il recupero di crediti commerciali, diffide stragiudiziali, procedure giudiziali e piani di cessione.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>E-commerce</h4>
-              <p>Consulenza per attività di commercio elettronico, condizioni di vendita, diritto al recesso e tutela contro illeciti.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 19h7a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-7M5 17v2a2 2 0 0 0 2 2h7M9 5h9a2 2 0 0 1 2 2v2"></path>
-                <polyline points="12 7 5 17 12 17"></polyline>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Contenzioso Civile</h4>
-              <p>Rappresentanza in controversie civili e commerciali, mediazione civile, arbitrato e transazioni.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="4 17 10 11 4 5"></polyline>
-                <line x1="12" y1="19" x2="20" y2="19"></line>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Diritto Bancario</h4>
-              <p>Assistenza in controversie bancarie, revisione finanziamenti, piani di rientro e tutela contro clausole abusive.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Diritto Fallimentare</h4>
-              <p>Assistenza in procedure concorsuali, ristrutturazioni aziendali, composizione delle crisi e business continuity.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Proprietà Industriale</h4>
-              <p>Registrazione marchi, diritto d'autore, brevetti e azioni legali contro contraffazione.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="9" x2="21" y2="9"></line>
-                <line x1="9" y1="21" x2="9" y2="9"></line>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Diritto Societario</h4>
-              <p>Costituzione società, modifiche statutarie, governance societaria, fusioni e acquisizioni.</p>
-            </div>
-          </div>
+        <div class="service-feature-image">
+          <img src="images/ufficio-lenzi.jpg" alt="Consulenza Legale Avv. Maximiliano Lenzi" loading="lazy">
+          <div class="image-overlay"></div>
         </div>
       </div>
-
 
       <!-- Accounting Services -->
-      <div class="service-category">
-        <div class="category-header">
-      
-          <div class="category-header-content">
-            <h3>Servizi Contabili e Fiscali</h3>
-            <p>Dott. Andrea Maretto e Dott. Alberto Cecolin</p>
-          </div>
+      <div class="service-feature service-feature-right" data-category="servizi-contabili">
+        <div class="service-feature-image">
+          <img src="images/logo2.jpg" alt="Servizi Contabili Dott. Maretto e Cecolin" loading="lazy">
+          <div class="image-overlay"></div>
         </div>
-        <div class="service-list">
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Contabilità e Bilanci</h4>
-              <p>Contabilità ordinaria e semplificata, bilanci ordinari, abbreviati e per microimprese, adempimenti civilistici.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="8" y1="6" x2="21" y2="6"></line>
-                <line x1="8" y1="12" x2="21" y2="12"></line>
-                <line x1="8" y1="18" x2="21" y2="18"></line>
-                <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                <line x1="3" y1="18" x2="3.01" y2="18"></line>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Servizi Fiscali</h4>
-              <p>Dichiarazioni fiscali complete (Modello Redditi, IRAP, IVA, 770), pianificazione fiscale strategica, accertamenti.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                <path d="M8 12h8"></path>
-                <path d="M8 8h8"></path>
-                <path d="M8 16h8"></path>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Contrattualistica Aziendale</h4>
-              <p>Predisposizione contratti, analisi tipologie contrattuali, monitoraggio esecuzione, gestione relazioni negoziali.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 1v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Consulenza Bancaria e Finanziaria</h4>
-              <p>Analisi fabbisogno finanziario, assistenza richiesta finanziamenti, business plan per accesso al credito.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="12" y1="20" x2="12" y2="10"></line>
-                <line x1="18" y1="20" x2="18" y2="4"></line>
-                <line x1="6" y1="20" x2="6" y2="16"></line>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Controllo di Gestione</h4>
-              <p>Business plan, analisi di performance, budget e forecast aziendali, controllo di gestione.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Consulenza per Enti Pubblici</h4>
-              <p>Gestione contabile enti pubblici, adempimenti fiscali specifici, bilanci e rendicontazione, consulenza normativa.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Operazioni Straordinarie</h4>
-              <p>Trasformazioni societarie, fusioni e scissioni, cessioni d'azienda, due diligence.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Revisione e Governance</h4>
-              <p>Revisione legale dei conti, collegio sindacale, assistenza organi sociali, tenuta libri sociali.</p>
-            </div>
-          </div>
+        <div class="service-feature-content">
+          <div class="service-badge">Servizi Contabili e Fiscali</div>
+          <h3>Gestione Contabile e Fiscale</h3>
+          <p class="service-professional">Dott. Andrea Maretto e Dott. Alberto Cecolin</p>
+          <p class="service-description">Gestione contabile completa, pianificazione fiscale strategica e consulenza finanziaria per ottimizzare le performance aziendali e garantire la compliance normativa.</p>
+          <ul class="service-highlights">
+            <li>Contabilità e Bilanci</li>
+            <li>Pianificazione Fiscale</li>
+            <li>Controllo di Gestione</li>
+            <li>Consulenza Finanziaria</li>
+            <li>Operazioni Straordinarie</li>
+            <li>Revisione e Governance</li>
+            <li>Consulenza per Enti Pubblici</li>
+            <li>Consulenza Bancaria</li>
+          </ul>
+     
         </div>
       </div>
 
-
-
       <!-- Specialized Services -->
-      <div class="service-category">
-        <div class="category-header">
-  
-          <div class="category-header-content">
-            <h3>Servizi Specializzati</h3>
-            <p>Team Multidisciplinare</p>
-          </div>
+      <div class="service-feature service-feature-left" data-category="servizi-specializzati">
+        <div class="service-feature-content">
+          <div class="service-badge">Servizi Specializzati</div>
+          <h3>Soluzioni Avanzate</h3>
+          <p class="service-professional">Team Multidisciplinare</p>
+          <p class="service-description">Approccio integrato per situazioni complesse, crisi aziendali e progetti di innovazione, con competenze specialistiche che coprono tutti gli aspetti del business.</p>
+          <ul class="service-highlights">
+            <li>Due Diligence e M&A</li>
+            <li>Crisi e Ristrutturazione</li>
+            <li>Startup e Innovazione</li>
+            <li>Compliance Normativa</li>
+            <li>Internazionalizzazione</li>
+            <li>Consulenza Strategica</li>
+            <li>Appalti Pubblici</li>
+            <li>Successioni e Donazioni</li>
+          </ul>
+        
         </div>
-        <div class="service-list">
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Due Diligence</h4>
-              <p>Analisi legale, fiscale e contabile in operazioni di acquisizione e fusione.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                <line x1="12" y1="9" x2="12" y2="13"></line>
-                <line x1="12" y1="17" x2="12.01" y2="17"></line>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Crisi d'Impresa</h4>
-              <p>Procedure concorsuali, accordi di ristrutturazione, piani di risanamento.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-                <polyline points="13 2 13 9 20 9"></polyline>
-                <circle cx="12" cy="15" r="2"></circle>
-                <line x1="12" y1="12" x2="12.01" y2="12"></line>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Startup e Innovazione</h4>
-              <p>Incentivi per startup innovative, PMI innovative, agevolazioni per R&S.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="9" x2="21" y2="9"></line>
-                <line x1="9" y1="21" x2="9" y2="9"></line>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Compliance Normativa</h4>
-              <p>Adempimenti privacy (GDPR), antiriciclaggio, sicurezza sul lavoro.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79"></path>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Consulenza Internazionale</h4>
-              <p>Assistenza per clienti esteri che investono in Italia e per imprese italiane all'estero.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Appalti Pubblici</h4>
-              <p>Gestione economico-finanziaria di società appaltatrici di opere pubbliche ultrannuali.</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="23 4 23 10 17 10"></polyline>
-                <polyline points="1 20 1 14 7 14"></polyline>
-                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Successioni e Donazioni</h4>
-              <p>Pianificazione successoria, dichiarazioni di successione, aspetti fiscali delle donazioni.</p>
-            </div>
-          </div>
-          <!-- Added an extra service item to make it 8 -->
-          <div class="service-item">
-            <div class="service-item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                <path d="M2 2l7.586 7.586"></path>
-                <circle cx="11" cy="11" r="2"></circle>
-              </svg>
-            </div>
-            <div class="service-item-content">
-              <h4>Consulenza Strategica</h4>
-              <p>Analisi del business model, pianificazione strategica a lungo termine, ottimizzazione dei processi aziendali.</p>
-            </div>
-          </div>
+        <div class="service-feature-image">
+          <img src="images/team1.jpg" alt="Servizi Specializzati Team Multidisciplinare" loading="lazy">
+          <div class="image-overlay"></div>
         </div>
       </div>
     </div>
@@ -457,61 +173,39 @@
 
   <!-- Collaboration Banner Section -->
   <section class="collaboration-section">
-    <div class="collaboration-banner">
-      <h3>Un Approccio Integrato</h3>
-      <p>Presso Studio Ca' Bragadin, i nostri professionisti collaborano per offrirti una consulenza completa che copre tutti gli aspetti legali, fiscali e gestionali della tua attività. La sinergia tra le nostre competenze garantisce soluzioni coerenti e ottimizzate per le tue esigenze.</p>
-      <a href="contatti.html" class="cta-button primary">Parla con i Nostri Esperti</a>
+    <div class="container">
+      <div class="collaboration-banner">
+        <h3>Un Approccio Integrato</h3>
+        <p>Presso Studio Ca' Bragadin, i nostri professionisti collaborano per offrirti una consulenza completa che copre tutti gli aspetti legali, fiscali e gestionali della tua attività. La sinergia tra le nostre competenze garantisce soluzioni coerenti e ottimizzate per le tue esigenze.</p>
+        <a href="contatti.html" class="cta-button primary">Parla con i Nostri Esperti</a>
+      </div>
     </div>
   </section>
 
   <!-- Approach Section -->
   <section class="approach-section">
-    <div class="section-header">
-      <h2>Il Nostro Approccio</h2>
-      <p class="section-subtitle">Metodologia e valore aggiunto</p>
-    </div>
-    <div class="approach-container">
-      <div class="approach-item">
-        <div class="approach-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-        </div>
-        <h3>Personalizzato</h3>
-        <p>Ogni cliente è unico: sviluppiamo soluzioni su misura dopo un'attenta analisi delle specifiche esigenze.</p>
+    <div class="container">
+      <div class="section-header">
+        <h2>Il Nostro Approccio</h2>
+        <p class="section-subtitle">Metodologia e valore aggiunto</p>
       </div>
-      <div class="approach-item">
-        <div class="approach-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-          </svg>
+      <div class="approach-container">
+        <div class="approach-item">
+          <h3>Personalizzato</h3>
+          <p>Ogni cliente è unico: sviluppiamo soluzioni su misura dopo un'attenta analisi delle specifiche esigenze.</p>
         </div>
-        <h3>Integrato</h3>
-        <p>Offriamo una consulenza a 360° che combina competenze legali, fiscali e societarie in un unico team.</p>
-      </div>
-      <div class="approach-item">
-        <div class="approach-icon">
-          <svg viewBox="0 0 24 24">
-            <polyline points="23 4 23 10 17 10"></polyline>
-            <polyline points="1 20 1 14 7 14"></polyline>
-            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-          </svg>
+        <div class="approach-item">
+          <h3>Integrato</h3>
+          <p>Offriamo una consulenza a 360° che combina competenze legali, fiscali e societarie in un unico team.</p>
         </div>
-        <h3>Proattivo</h3>
-        <p>Non ci limitiamo a risolvere problemi, ma anticipiamo le criticità e suggeriamo opportunità.</p>
-      </div>
-      <div class="approach-item">
-        <div class="approach-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
+        <div class="approach-item">
+          <h3>Proattivo</h3>
+          <p>Non ci limitiamo a risolvere problemi, ma anticipiamo le criticità e suggeriamo opportunità.</p>
         </div>
-        <h3>Trasparente</h3>
-        <p>Chiarezza nei costi, nei tempi e nelle soluzioni proposte, con report periodici sull'avanzamento.</p>
+        <div class="approach-item">
+          <h3>Trasparente</h3>
+          <p>Chiarezza nei costi, nei tempi e nelle soluzioni proposte, con report periodici sull'avanzamento.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -573,10 +267,8 @@
   <!-- Scripts -->
   <script src="js/navbar.js" defer></script>
   <script src="js/footer.js" defer></script>
- 
   <script src="js/servizi.js" defer></script>
   <script src="js/fade-animation.js" defer></script>
-
 
 </body>
 </html>
