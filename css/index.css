@@ -53,6 +53,8 @@ a {
   transition: var(--transition);
 }
 
+
+
 /* Add this to your existing index.css file */
 .navbar .logo {
   display: flex;
@@ -247,6 +249,8 @@ a {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
+
+
 
 .secondaryButton {
   background-color: transparent;
@@ -546,6 +550,9 @@ a {
   color: var(--primary-color);
 }
 
+
+
+
 .card-cta {
   display: flex;
   gap: 12px;
@@ -593,6 +600,7 @@ a {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(32, 55, 61, 0.25);
 }
+
 
 /* ===== COLLABORATION SECTION ===== */
 .collaboration-section {
@@ -2845,60 +2853,5 @@ a {
   .carousel-dot {
     width: 10px;
     height: 10px;
-  }
-}
-
-/* ===== MACBOOK AIR SPECIFIC FIXES (1440px width) ===== */
-@media (min-width: 1440px) and (max-width: 1440px) {
-  /* Hero Section Font Sizes - Matching hero.css */
-  .hero-content h1 {
-    font-size: 2.8rem !important;
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.15rem !important;
-    max-width: 650px;
-    margin: 1.8rem auto;
-    line-height: 1.7;
-  }
-  
-  /* Professional Cards Email Fix - Prevent line breaks */
-  .card-contact a {
-    word-break: keep-all !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    display: block !important;
-  }
-  
-  .card-contact p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-  
-  .card-contact p strong {
-    min-width: 85px;
-    flex-shrink: 0;
-    margin-right: 10px;
-  }
-  
-  /* Ensure email addresses stay on one line */
-  .card-contact a[href^="mailto:"] {
-    word-break: keep-all !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-  }
-  
-  /* Specific card content adjustments for MacBook Air */
-  .card-content {
-    padding: 25px;
-  }
-  
-  .card-contact {
-    font-size: 0.95rem;
   }
 }

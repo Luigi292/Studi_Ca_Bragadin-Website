@@ -31,6 +31,8 @@
   --text-5xl: 3rem;
 }
 
+
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -478,6 +480,8 @@ body {
   border-left: 4px solid var(--secondary-color);
 }
 
+
+
 .mission-content p {
   font-size: var(--text-base);
   line-height: 1.7;
@@ -683,68 +687,4 @@ body {
 
 .network-image:hover img {
   transform: scale(1.05);
-}
-
-/* ===== MACBOOK AIR SPECIFIC FIXES (1440px width) ===== */
-@media (min-width: 1440px) and (max-width: 1440px) {
-  /* Hero Section Font Sizes - Matching hero.css */
-  .hero-content h1 {
-    font-size: 2.8rem !important;
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.15rem !important;
-    max-width: 650px;
-    margin: 1.8rem auto;
-    line-height: 1.7;
-  }
-  
-  /* Professional Cards Email Fix - Prevent line breaks */
-  .card-contact a {
-    word-break: keep-all !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    display: block !important;
-  }
-  
-  .card-contact p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-  
-  .card-contact p strong {
-    min-width: 85px;
-    flex-shrink: 0;
-    margin-right: 10px;
-  }
-  
-  /* Ensure email addresses stay on one line */
-  .card-contact a[href^="mailto:"] {
-    word-break: keep-all !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-  }
-  
-  /* Specific card content adjustments for MacBook Air */
-  .card-content {
-    padding: 25px;
-  }
-  
-  .card-contact {
-    font-size: 0.95rem;
-  }
-  
-  /* Studios grid specific adjustments */
-  .studios-grid {
-    gap: 35px;
-  }
-  
-  .professional-card {
-    flex: 1 1 0;
-  }
 }
