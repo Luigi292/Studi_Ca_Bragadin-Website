@@ -1,10 +1,10 @@
 /* ===== GLOBAL VARIABLES ===== */
 :root {
-  --primary-color: #20373d;        /* Instead of #1a2a4a */
-  --primary-light: #2c4a52;        /* Instead of #2c3e66 */
-  --accent-color: #3a6370; 
+  --primary-color: rgb(32, 55, 61);
+  --primary-light: rgb(52, 75, 81);
   --secondary-color: #bca454;
   --secondary-light: #e8c874;
+  --accent-color: rgb(32, 55, 61);
   --dark-color: #222222;
   --light-color: #f8f9fa;
   --gray-color: #6c757d;
@@ -31,8 +31,6 @@
   --text-5xl: 3rem;
 }
 
-
-
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -48,6 +46,13 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
 
 /* ===== GLOBAL SECTION STYLES ===== */
 .section-header {

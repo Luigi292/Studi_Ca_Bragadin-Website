@@ -1,4 +1,4 @@
-/* ===== ELEGANT PROFESSIONAL STYLING ===== */
+/* ===== GLOBAL VARIABLES ===== */
 :root {
   --primary-color: rgb(32, 55, 61);
   --primary-light: rgb(52, 75, 81);
@@ -19,63 +19,40 @@
   --border-radius: 8px;
   --container-width: 1320px;
 
-  /* Text size variables for consistency - MATCHING CHI-SIAMO.CSS */
+  /* Text size variables for consistency */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
   --text-2xl: 1.5rem;
-  --text-3xl: 1.9rem;
+  --text-3xl: 1.875rem;
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
-}
-
-/* ===== BASE STYLES ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-size: 16px; /* Matching chi-siamo.css */
+  font-size: 16px; /* Consistent base font size */
 }
 
 body {
   font-family: var(--font-main);
-  line-height: 1.7;
-  background-color: var(--white-color);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px; /* Matching chi-siamo.css */
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
+  color: var(--accent-color);
   text-decoration: none;
-  color: inherit;
   transition: var(--transition);
 }
 
-ul {
-  list-style: none;
-}
-
-.container {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 /* ===== BASE HERO STYLES ===== */
 .hero-section {
