@@ -31,7 +31,7 @@
 
   .mission-content p {
     max-width: 100%;
-    font-size: 1.1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
 
   /* Make images appear first on mobile */
@@ -46,28 +46,28 @@
   /* Standardized text sizes for mobile */
   .section-header h2,
   .section-header-wide h2 {
-    font-size: 1.8rem;
+    font-size: var(--text-3xl); /* 30px - Consistent with servizi page */
   }
   
   .section-subtitle-wide {
-    font-size: 1.1rem;
+    font-size: var(--text-lg); /* 18px - Consistent subtitles */
   }
   
   .about-text p,
   .activities-content p,
   .network-content p,
   .mission-content p {
-    font-size: 1.1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     line-height: 1.6;
   }
   
   .activity-item h4 {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .activities-content h3,
   .value-card h3 {
-    font-size: 1.3rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   /* Studios section adjustments */
@@ -76,11 +76,11 @@
   }
   
   .section-header-wide h2 {
-    font-size: 2.1rem;
+    font-size: var(--text-3xl); /* 30px - Consistent main headings */
   }
   
   .section-subtitle-wide {
-    font-size: 1.1rem;
+    font-size: var(--text-lg); /* 18px - Consistent subtitles */
   }
   
   .studios-container-wide {
@@ -111,19 +111,19 @@
   }
   
   .card-content h3 {
-    font-size: 1.4rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .card-specialty {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-excerpt p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-cta {
@@ -134,7 +134,7 @@
   
   .ctaButton.small {
     min-width: 120px;
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
     margin: 5px 0;
   }
 }
@@ -147,7 +147,7 @@
   
   .section-header h2,
   .section-header-wide h2 {
-    font-size: 1.7rem;
+    font-size: var(--text-2xl); /* 24px - Medium headings on tablet */
   }
   
   .about-studio,
@@ -163,7 +163,7 @@
   }
   
   .section-subtitle-wide {
-    font-size: 1.1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
 
   .about-image,
@@ -181,21 +181,21 @@
   }
 
   .mission-content p {
-    font-size: 1.1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .cta-content h2 {
-    font-size: 1.5rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .cta-content p {
-    font-size: 1.1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .cta-button {
     min-width: 200px;
     padding: 0.9rem 1.8rem;
-    font-size: 1.1rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
   }
   
   /* Standardized text sizes */
@@ -203,16 +203,16 @@
   .activities-content p,
   .network-content p,
   .value-card p {
-    font-size: 1.1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .activity-item h4 {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .activities-content h3,
   .value-card h3 {
-    font-size: 1.2rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   /* Studios section adjustments */
@@ -244,19 +244,19 @@
   }
   
   .card-content h3 {
-    font-size: 1.4rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .card-specialty {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-excerpt p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-cta {
@@ -267,7 +267,7 @@
   
   .ctaButton.small {
     min-width: 120px;
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
     margin: 5px 0;
   }
 }
@@ -283,11 +283,11 @@
   }
   
   .section-header-wide h2 {
-    font-size: 1.9rem;
+    font-size: var(--text-2xl); /* 24px - Medium headings on mobile */
   }
   
   .section-subtitle-wide {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .studios-container-wide {
@@ -317,20 +317,20 @@
   }
   
   .card-content h3 {
-    font-size: 1.35rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .card-specialty {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin-bottom: 15px;
   }
   
   .card-excerpt p {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin-bottom: 18px;
   }
   
@@ -342,7 +342,7 @@
   .ctaButton.small {
     width: 100%;
     min-width: auto;
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
   }
 }
 
@@ -371,7 +371,7 @@
   }
 
   .mission-content p {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .cta-buttons {
@@ -382,35 +382,35 @@
   /* Standardized text sizes */
   .section-header h2,
   .section-header-wide h2 {
-    font-size: 1.6rem;
+    font-size: var(--text-2xl); /* 24px - Medium headings */
   }
   
   .section-subtitle-wide {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .about-text p,
   .activities-content p,
   .network-content p,
   .value-card p {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .activity-item h4 {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .activities-content h3,
   .value-card h3 {
-    font-size: 1.1rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   .cta-content h2 {
-    font-size: 1.4rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .cta-content p {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   /* Studios section adjustments */
@@ -423,11 +423,11 @@
   }
   
   .section-header-wide h2 {
-    font-size: 1.9rem;
+    font-size: var(--text-2xl); /* 24px - Medium headings */
   }
   
   .section-subtitle-wide {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .studios-container-wide {
@@ -457,20 +457,20 @@
   }
   
   .card-content h3 {
-    font-size: 1.35rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .card-specialty {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin-bottom: 15px;
   }
   
   .card-excerpt p {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin-bottom: 18px;
   }
   
@@ -482,7 +482,7 @@
   .ctaButton.small {
     width: 100%;
     min-width: auto;
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
   }
 }
 
@@ -516,11 +516,11 @@
   }
   
   .section-header-wide h2 {
-    font-size: 1.7rem;
+    font-size: var(--text-xl); /* 20px - Small headings on very small screens */
   }
   
   .section-subtitle-wide {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .studios-container-wide {
@@ -550,21 +550,21 @@
   }
   
   .card-content h3 {
-    font-size: 1.25rem;
+    font-size: var(--text-lg); /* 18px - Medium text on very small screens */
     padding-bottom: 10px;
   }
   
   .card-specialty {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin-bottom: 15px;
   }
   
   .card-excerpt p {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin-bottom: 18px;
   }
   
@@ -576,11 +576,11 @@
   .card-contact p strong {
     margin-bottom: 4px;
     margin-right: 0;
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .ctaButton.small {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
     padding: 10px 20px;
     width: 100%;
   }
@@ -597,11 +597,11 @@
 @media screen and (max-width: 480px) {
   .section-header h2,
   .section-header-wide h2 {
-    font-size: 1.5rem;
+    font-size: var(--text-xl); /* 20px - Small headings */
   }
   
   .section-subtitle-wide {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .about-container,
@@ -615,7 +615,7 @@
   .activities-content p,
   .value-card p,
   .mission-content p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
 
   .mission-content {
@@ -624,7 +624,7 @@
   }
 
   .mission-content p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .activity-item {
@@ -641,7 +641,7 @@
   }
   
   .activity-item h4 {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .value-card {
@@ -655,7 +655,7 @@
   }
   
   .value-card h3 {
-    font-size: 1.1rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   .cta-content {
@@ -663,17 +663,17 @@
   }
   
   .cta-content h2 {
-    font-size: 1.3rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   .cta-content p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .cta-button {
     min-width: 180px;
     padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
   }
   
   /* Studios section adjustments */
@@ -686,11 +686,11 @@
   }
   
   .section-header-wide h2 {
-    font-size: 1.7rem;
+    font-size: var(--text-xl); /* 20px - Small headings */
   }
   
   .section-subtitle-wide {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .studios-container-wide {
@@ -717,21 +717,21 @@
   }
   
   .card-content h3 {
-    font-size: 1.25rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
     padding-bottom: 10px;
   }
   
   .card-specialty {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin-bottom: 15px;
   }
   
   .card-excerpt p {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin-bottom: 18px;
   }
   
@@ -743,11 +743,11 @@
   .card-contact p strong {
     margin-bottom: 4px;
     margin-right: 0;
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .ctaButton.small {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
     padding: 10px 20px;
     width: 100%;
   }
@@ -760,7 +760,7 @@
   }
   
   .section-header-wide h2 {
-    font-size: 1.5rem;
+    font-size: var(--text-lg); /* 18px - Medium text on extra small screens */
   }
   
   .studios-container-wide {
@@ -773,36 +773,36 @@
   }
   
   .card-content h3 {
-    font-size: 1.2rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-specialty {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-excerpt p {
-    font-size: 0.85rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .ctaButton.small {
-    font-size: 0.85rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
     padding: 8px 16px;
   }
   
   .activity-item h4 {
-    font-size: 0.85rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .value-card h3 {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .value-card p {
-    font-size: 0.85rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   /* Standardized text sizes */
@@ -810,28 +810,28 @@
   .activities-content p,
   .network-content p,
   .mission-content p {
-    font-size: 0.85rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .section-header h2,
   .section-header-wide h2 {
-    font-size: 1.3rem;
+    font-size: var(--text-lg); /* 18px - Medium text */
   }
   
   .section-subtitle-wide {
-    font-size: 0.85rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .cta-content h2 {
-    font-size: 1.2rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .cta-content p {
-    font-size: 0.85rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .cta-button {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
   }
   
   /* Mission section */
@@ -840,7 +840,7 @@
   }
   
   .mission-content p {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
 }
 
@@ -966,7 +966,7 @@
   }
   
   .about-text p {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     line-height: 1.6;
   }
   
@@ -1006,7 +1006,7 @@
   }
   
   .activity-item h4 {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin: 0;
   }
   
@@ -1033,12 +1033,12 @@
   }
   
   .value-card h3 {
-    font-size: 1.3rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
     margin-bottom: 15px;
   }
   
   .value-card p {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     line-height: 1.6;
   }
   
@@ -1058,7 +1058,7 @@
   }
   
   .network-content p {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     line-height: 1.6;
   }
   
@@ -1067,7 +1067,7 @@
   }
   
   .network-list li {
-    font-size: 1rem !important;
+    font-size: var(--text-base) !important; /* 16px - Consistent body text */
     margin-bottom: 12px;
     padding-left: 25px;
   }
@@ -1090,7 +1090,7 @@
   }
 
   .mission-content p {
-    font-size: 1.1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     line-height: 1.7;
     max-width: 100%;
   }
@@ -1107,12 +1107,12 @@
   }
   
   .cta-content h2 {
-    font-size: 1.8rem;
+    font-size: var(--text-2xl); /* 24px - Medium headings */
     margin-bottom: 20px;
   }
   
   .cta-content p {
-    font-size: 1.1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin-bottom: 30px;
     line-height: 1.6;
   }
@@ -1126,7 +1126,7 @@
   .cta-button {
     min-width: 180px;
     padding: 1rem 2rem;
-    font-size: 1.1rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
   }
   
   /* Studios section landscape adjustments - ENHANCED */
@@ -1139,11 +1139,11 @@
   }
   
   .section-header-wide h2 {
-    font-size: 2.2rem;
+    font-size: var(--text-3xl); /* 30px - Large headings */
   }
   
   .section-subtitle-wide {
-    font-size: 1.2rem;
+    font-size: var(--text-lg); /* 18px - Consistent subtitles */
     max-width: 80%;
     margin: 0 auto;
   }
@@ -1210,27 +1210,27 @@
   }
   
   .card-content h3 {
-    font-size: 1.4rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
     padding-bottom: 12px;
     margin-bottom: 12px;
     border-bottom: 2px solid rgba(194, 154, 91, 0.3);
   }
   
   .card-specialty {
-    font-size: 1.05rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin-bottom: 15px;
     color: var(--secondary-color);
     font-weight: 600;
   }
   
   .card-excerpt p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     line-height: 1.6;
     margin-bottom: 20px;
   }
   
   .card-contact {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     margin-bottom: 20px;
   }
   
@@ -1257,7 +1257,7 @@
   
   .ctaButton.small {
     min-width: 130px;
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
     padding: 10px 20px;
     flex: 1;
     text-align: center;
@@ -1319,7 +1319,7 @@
   }
   
   .mission-content p {
-    font-size: 1.15rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
 }
 
@@ -1348,7 +1348,7 @@
   }
   
   .mission-content p {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .cta-buttons {
@@ -1367,17 +1367,17 @@
   .activities-content p,
   .network-content p,
   .value-card p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .section-header h2,
   .section-header-wide h2 {
-    font-size: 1.6rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .activities-content h3,
   .value-card h3 {
-    font-size: 1.2rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   /* Studios section landscape mobile */
@@ -1420,19 +1420,19 @@
   }
   
   .value-card h3 {
-    font-size: 1.1rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   .value-card p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .cta-content h2 {
-    font-size: 1.4rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   .cta-content p {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   /* Studios section small landscape */
@@ -1450,23 +1450,23 @@
   }
   
   .card-content h3 {
-    font-size: 1.2rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   .card-specialty {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-excerpt p {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .ctaButton.small {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
     padding: 8px 16px;
   }
 }
@@ -1498,7 +1498,7 @@
   }
   
   .activity-item h4 {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .values-grid {
@@ -1511,11 +1511,11 @@
   }
   
   .value-card h3 {
-    font-size: 1.1rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   .value-card p {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .mission-content {
@@ -1523,40 +1523,40 @@
   }
   
   .mission-content p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   /* Standardized text sizes */
   .about-text p,
   .activities-content p,
   .network-content p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
     line-height: 1.5;
   }
   
   .section-header h2,
   .section-header-wide h2 {
-    font-size: 1.5rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .section-subtitle-wide {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .activities-content h3 {
-    font-size: 1.1rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   .cta-content h2 {
-    font-size: 1.3rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   .cta-content p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .cta-button {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
     padding: 0.9rem 1.5rem;
   }
   
@@ -1583,19 +1583,19 @@
   }
   
   .card-content h3 {
-    font-size: 1.1rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   .card-specialty {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-excerpt p {
-    font-size: 0.85rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 0.85rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-cta {
@@ -1605,7 +1605,7 @@
   
   .ctaButton.small {
     width: 100%;
-    font-size: 0.85rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
     padding: 8px 16px;
   }
 }
@@ -1631,7 +1631,7 @@
   }
   
   .card-content h3 {
-    font-size: 1.3rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
 }
 
@@ -1685,19 +1685,19 @@
   }
   
   .card-content h3 {
-    font-size: 1.2rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .card-specialty {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-excerpt p {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-cta {
@@ -1707,16 +1707,16 @@
   
   .ctaButton.small {
     min-width: 110px;
-    font-size: 0.9rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
   }
   
   /* Fix header sizes for Honor 70 landscape */
   .section-header-wide h2 {
-    font-size: 1.8rem;
+    font-size: var(--text-2xl); /* 24px - Medium headings */
   }
   
   .section-subtitle-wide {
-    font-size: 1.05rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
 }
 
@@ -1741,19 +1741,19 @@
   }
   
   .card-content h3 {
-    font-size: 1.4rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .card-specialty {
-    font-size: 1.05rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-excerpt p {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-cta {
@@ -1763,16 +1763,16 @@
   
   .ctaButton.small {
     min-width: 120px;
-    font-size: 0.95rem;
+    font-size: var(--text-base); /* 16px - Consistent button text */
   }
   
   /* Ensure header consistency on iPad landscape */
   .section-header-wide h2 {
-    font-size: 2.1rem;
+    font-size: var(--text-3xl); /* 30px - Large headings */
   }
   
   .section-subtitle-wide {
-    font-size: 1.15rem;
+    font-size: var(--text-lg); /* 18px - Consistent subtitles */
   }
 }
 
@@ -1797,19 +1797,19 @@
   }
   
   .card-content h3 {
-    font-size: 1.5rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .card-specialty {
-    font-size: 1.1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-excerpt p {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-contact {
-    font-size: 1rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
 }
 
@@ -1834,34 +1834,34 @@
   }
   
   .card-content h3 {
-    font-size: 1.4rem;
+    font-size: var(--text-xl); /* 20px - Consistent small headings */
   }
   
   .card-specialty {
-    font-size: 1.05rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-excerpt p {
-    font-size: 0.98rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
 }
 
 /* Responsive adjustments for network list in landscape */
 @media (max-width: 991px) and (orientation: landscape) {
   .network-list li {
-    font-size: 1.05rem !important;
+    font-size: var(--text-base) !important; /* 16px - Consistent body text */
   }
 }
 
 @media (max-width: 600px) and (orientation: landscape) {
   .network-list li {
-    font-size: 1rem !important;
+    font-size: var(--text-base) !important; /* 16px - Consistent body text */
   }
 }
 
 @media (max-width: 480px) and (orientation: landscape) {
   .network-list li {
-    font-size: 0.95rem !important;
+    font-size: var(--text-base) !important; /* 16px - Consistent body text */
   }
 }
 
@@ -1989,12 +1989,12 @@
   }
   
   .card-content h3 {
-    font-size: 1.2rem;
+    font-size: var(--text-lg); /* 18px - Consistent medium text */
   }
   
   .card-excerpt p {
     display: block;
-    font-size: 0.85rem;
+    font-size: var(--text-base); /* 16px - Consistent body text */
   }
   
   .card-cta {

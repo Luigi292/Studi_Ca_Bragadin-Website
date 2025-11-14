@@ -1,10 +1,10 @@
 /* ===== ELEGANT PROFESSIONAL STYLING ===== */
 :root {
-  --primary-color: #1a2a4a;
-  --primary-light: #2c3e66;
+  --primary-color: rgb(32, 55, 61);
+  --primary-light: rgb(52, 75, 81);
   --secondary-color: #bca454;
   --secondary-light: #e8c874;
-  --accent-color: #4a6fa5;
+  --accent-color: rgb(32, 55, 61);
   --dark-color: #222222;
   --light-color: #f8f9fa;
   --gray-color: #6c757d;
@@ -47,7 +47,6 @@ html {
 body {
   font-family: var(--font-main);
   line-height: 1.7;
-
   background-color: var(--white-color);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -97,9 +96,9 @@ ul {
   width: 100%;
   height: 100%;
   background: linear-gradient(105deg, 
-    rgba(26, 42, 74, 0.85) 0%, 
-    rgba(26, 42, 74, 0.65) 50%,
-    rgba(26, 42, 74, 0.4) 100%);
+    rgba(32, 55, 61, 0.85) 0%, 
+    rgba(32, 55, 61, 0.65) 50%,
+    rgba(32, 55, 61, 0.4) 100%);
   z-index: 1;
 }
 

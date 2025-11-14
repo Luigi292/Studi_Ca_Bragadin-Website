@@ -1,12 +1,10 @@
-/* chi-siamo.css - Complete and Integrated */
-
 /* ===== GLOBAL VARIABLES ===== */
 :root {
-  --primary-color: #1a2a4a;
-  --primary-light: #2c3e66;
+  --primary-color: #20373d;        /* Instead of #1a2a4a */
+  --primary-light: #2c4a52;        /* Instead of #2c3e66 */
+  --accent-color: #3a6370; 
   --secondary-color: #bca454;
   --secondary-light: #e8c874;
-  --accent-color: #4a6fa5;
   --dark-color: #222222;
   --light-color: #f8f9fa;
   --gray-color: #6c757d;
@@ -32,6 +30,8 @@
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
 }
+
+
 
 /* ===== BASE STYLES ===== */
 * {
@@ -1711,3 +1711,69 @@ nav.navbar {
   }
 }
 
+
+
+
+.gototop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.gototop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gototop a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.gototop a:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.gototop svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Small mobile devices (320px to 479px) */
+@media (max-width: 479px) {
+  .gototop {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .gototop a {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .gototop svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .gototop {
+    display: none !important;
+  }
+}

@@ -27,23 +27,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
  
   <!-- CSS -->
-
   <link rel="stylesheet" href="css/navbar-footer.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/contatti.css">
   <link rel="stylesheet" href="css/hero.css">
-
-   <!-- Animation CSS should be loaded last to prevent conflicts -->
   <link rel="stylesheet" href="css/fade-animation.css">
-
 
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="images/favicon-logo.png">
   <link rel="shortcut icon" href="images/favicon-logo.png" type="image/png">
+  
+  <style>
+    /* Advanced honeypot styles */
+    .hp-field { 
+        display: none !important; 
+        visibility: hidden !important; 
+        opacity: 0 !important; 
+        height: 0 !important; 
+        width: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+        top: -9999px !important;
+        pointer-events: none !important;
+        z-index: -9999 !important;
+    }
+    .hp-field input, .hp-field select, .hp-field textarea {
+        display: none !important;
+    }
+    .form-security-wrapper {
+        position: relative;
+    }
+    .form-response {
+        padding: 15px;
+        border-radius: 4px;
+        margin-top: 20px;
+        display: none;
+    }
+    .form-response.success {
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+    }
+    .form-response.error {
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+    }
+  </style>
 </head>
 <body>
-
-
   
 <!-- Navbar -->
 <nav class="navbar">
@@ -82,7 +114,6 @@
     <li><a href="contatti.html" class="navLink" aria-label="Contatti">Contatti</a></li>
   </ul>
 </nav>
-
 
   <!-- Contact Hero Section -->
   <section class="hero-section contact-hero">
@@ -126,7 +157,7 @@
             </div>
             <div class="contact-info-text">
               <h3>Telefono</h3>
-              <p>+39 049 1234567</p>
+              <p>(+39) 049-8751356</p>
             </div>
           </div>
 
@@ -177,28 +208,68 @@
       <div class="contact-form-column">
         <div class="contact-form-card">
           <h2>Richiedi una consulenza</h2>
-          <p class="form-subtitle">Compila il form e verrai ricontattato entro 24 ore</p>
+          <p class="form-subtitle">La invitiamo a compilare il modulo. Il professionista da Lei selezionato La contatterà quanto prima</p>
           
           <form id="professionalContactForm" class="professional-form">
+            <div class="form-security-wrapper">
+              
+              <!-- Multiple Advanced Honeypot Fields -->
+              <div class="hp-field">
+                <label for="website">Sito Web</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+              
+              <div class="hp-field">
+                <label for="company">Azienda</label>
+                <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+              </div>
+              
+              <div class="hp-field">
+                <label for="url">URL</label>
+                <input type="url" id="url" name="url" tabindex="-1" autocomplete="off">
+              </div>
+              
+              <div class="hp-field">
+                <label for="subject">Oggetto</label>
+                <input type="text" id="subject" name="subject" tabindex="-1" autocomplete="off">
+              </div>
+              
+              <div class="hp-field">
+                <label for="comments">Commenti</label>
+                <textarea id="comments" name="comments" tabindex="-1" autocomplete="off"></textarea>
+              </div>
+              
+              <!-- Hidden security fields -->
+              <input type="hidden" id="timestamp" name="timestamp" value="">
+              <input type="hidden" id="form_load_time" name="form_load_time" value="">
+              <input type="hidden" id="js_validation" name="js_validation" value="">
+              
+              <!-- Fake submit button for bots -->
+              <div class="hp-field">
+                <button type="submit" name="fake_submit">Invia</button>
+              </div>
+            </div>
+
+            <!-- Real Form Fields -->
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">Nome*</label>
-                <input type="text" id="firstName" name="firstName" required>
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
               </div>
               <div class="form-group">
                 <label for="lastName">Cognome*</label>
-                <input type="text" id="lastName" name="lastName" required>
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
               </div>
             </div>
 
             <div class="form-group">
               <label for="email">Email*</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" required autocomplete="email">
             </div>
 
             <div class="form-group">
               <label for="phone">Telefono</label>
-              <input type="tel" id="phone" name="phone">
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
             </div>
 
             <div class="form-row">
@@ -221,7 +292,7 @@
 
             <div class="form-group message-group">
               <label for="message">Messaggio*</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <textarea id="message" name="message" rows="5" required placeholder="Descrivi la tua richiesta in dettaglio..."></textarea>
             </div>
 
             <!-- Privacy Checkbox -->
@@ -233,7 +304,7 @@
             </div>
 
             <div class="form-submit">
-              <button type="submit" class="submit-button">Invia Richiesta</button>
+              <button type="submit" class="submit-button" id="realSubmitButton">Invia Richiesta</button>
             </div>
 
             <div id="formResponse" class="form-response" style="display: none;"></div>
@@ -258,7 +329,7 @@
         <div class="footerInfo">
           <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
           <p><strong>Email:</strong> info@studicabragadin.it</p>
-          <p><strong>Tel:</strong> +39 049 1234567</p>
+          <p><strong>Tel:</strong> (+39) 049-8751356</p>
         </div>
       </div>
 
@@ -297,13 +368,151 @@
   </div>
 
 
+  
 
-<!-- Scripts -->
+  <!-- Scripts -->
 <script src="js/navbar.js" defer></script>
 <script src="js/navbar-scroll.js" defer></script>
 <script src="js/footer.js" defer></script>
-<script src="js/contatti.js" defer></script>
 
+<script>
+// Simple Security Contact Form
+document.addEventListener('DOMContentLoaded', function() {
+    // Security initialization
+    const formLoadTime = Math.floor(Date.now() / 1000);
+    document.getElementById('form_load_time').value = formLoadTime;
+    document.getElementById('js_validation').value = 'verified';
+    
+    // Service options mapping - UPDATED WITH CORRECT SERVICES
+    const serviceOptions = {
+        avv_lenzi: [
+            {value: 'consulenza_aziendale', text: 'Consulenza Aziendale'},
+            {value: 'contrattualistica_aziendale', text: 'Contrattualistica Aziendale'},
+            {value: 'recupero_crediti', text: 'Recupero Crediti'},
+            {value: 'ecommerce', text: 'E-commerce'},
+            {value: 'contenzioso_civile', text: 'Contenzioso Civile'},
+            {value: 'diritto_bancario', text: 'Diritto Bancario'},
+            {value: 'crisi_impresa', text: 'Crisi d\'Impresa'},
+            {value: 'proprieta_industriale', text: 'Proprietà Industriale'},
+            {value: 'diritto_societario', text: 'Diritto Societario'}
+        ],
+        dott_maretto: [
+            {value: 'contabilita_bilanci', text: 'Contabilità e Bilanci'},
+            {value: 'servizi_fiscali', text: 'Servizi fiscali'},
+            {value: 'contrattualistica_aziendale_maretto', text: 'Contrattualistica aziendale'},
+            {value: 'consulenza_bancaria_finanziaria', text: 'Consulenza in materia bancaria e finanziaria'},
+            {value: 'consulenza_controllo_gestione', text: 'Consulenza aziendale e controllo di gestione'},
+            {value: 'consulenza_enti_pubblici', text: 'Consulenza per Enti Pubblici e Istituzioni'}
+        ],
+        dott_cecolin: [
+            {value: 'contabilita_bilanci_cecolin', text: 'Contabilità e Bilanci'},
+            {value: 'fiscalita_dichiarazioni', text: 'Fiscalità e Dichiarazioni'},
+            {value: 'controllo_gestione', text: 'Controllo di Gestione'},
+            {value: 'contrattualistica_impresa', text: 'Contrattualistica d\'impresa'},
+            {value: 'operazioni_straordinarie', text: 'Operazioni Straordinarie'},
+            {value: 'revisione_governance', text: 'Revisione e Governance'}
+        ]
+    };
+
+    const professionalSelect = document.getElementById('professional');
+    const serviceSelect = document.getElementById('service');
+    const contactForm = document.getElementById('professionalContactForm');
+    const formResponse = document.getElementById('formResponse');
+
+    // Update service options when professional changes
+    professionalSelect.addEventListener('change', function() {
+        const selectedProfessional = this.value;
+        
+        serviceSelect.innerHTML = '<option value="">Seleziona un servizio</option>';
+        
+        if (selectedProfessional && serviceOptions[selectedProfessional]) {
+            serviceOptions[selectedProfessional].forEach(service => {
+                const option = document.createElement('option');
+                option.value = service.value;
+                option.textContent = service.text;
+                serviceSelect.appendChild(option);
+            });
+        }
+    });
+
+    // Form submission handler
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Set current timestamp
+        document.getElementById('timestamp').value = Math.floor(Date.now() / 1000);
+        
+        // Check minimum time requirement (5 seconds)
+        const currentTime = Math.floor(Date.now() / 1000);
+        const formLoadTime = parseInt(document.getElementById('form_load_time').value);
+        if ((currentTime - formLoadTime) < 5) {
+            formResponse.className = 'form-response error';
+            formResponse.innerHTML = '<p>Per favore, prenditi almeno 5 secondi per compilare il form.</p>';
+            formResponse.style.display = 'block';
+            formResponse.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            return;
+        }
+
+        // Get submit button and disable it
+        const submitButton = this.querySelector('.submit-button');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Invio in corso...';
+        submitButton.disabled = true;
+        
+        // Hide previous response
+        formResponse.style.display = 'none';
+        formResponse.className = 'form-response';
+        
+        // Prepare form data
+        const formData = new FormData(this);
+        
+        // Send AJAX request
+        fetch('process_contact.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Errore di rete. Riprova più tardi.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                formResponse.className = 'form-response success';
+                formResponse.innerHTML = '<p>' + data.message + '</p>';
+                contactForm.reset();
+                
+                // Clear service options
+                serviceSelect.innerHTML = '<option value="">Seleziona un servizio</option>';
+            } else {
+                throw new Error(data.message);
+            }
+        })
+        .catch(error => {
+            formResponse.className = 'form-response error';
+            formResponse.innerHTML = '<p>' + error.message + '</p>';
+        })
+        .finally(() => {
+            formResponse.style.display = 'block';
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+            
+            // Scroll to response
+            formResponse.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    });
+
+    // Additional security: Prevent form autofill by bots
+    setTimeout(() => {
+        document.querySelectorAll('.hp-field input').forEach(field => {
+            if (field.value) {
+                field.value = '';
+            }
+        });
+    }, 1000);
+});
+</script>
 
 </body>
 </html>

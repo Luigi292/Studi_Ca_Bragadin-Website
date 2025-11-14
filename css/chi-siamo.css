@@ -1,12 +1,10 @@
-/* chi-siamo.css - Complete and Integrated */
-
 /* ===== GLOBAL VARIABLES ===== */
 :root {
-  --primary-color: #1a2a4a;
-  --primary-light: #2c3e66;
+  --primary-color: #20373d;        /* Instead of #1a2a4a */
+  --primary-light: #2c4a52;        /* Instead of #2c3e66 */
+  --accent-color: #3a6370; 
   --secondary-color: #bca454;
   --secondary-light: #e8c874;
-  --accent-color: #4a6fa5;
   --dark-color: #222222;
   --light-color: #f8f9fa;
   --gray-color: #6c757d;
@@ -480,8 +478,6 @@ body {
   border-left: 4px solid var(--secondary-color);
 }
 
-
-
 .mission-content p {
   font-size: var(--text-base);
   line-height: 1.7;
@@ -657,12 +653,12 @@ body {
   top: 0.6rem;
   width: 12px;
   height: 12px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
-  background-color: var(--secondary-color);
+  
 }
 
 .network-image {
@@ -687,4 +683,68 @@ body {
 
 .network-image:hover img {
   transform: scale(1.05);
+}
+
+/* ===== MACBOOK AIR SPECIFIC FIXES (1440px width) ===== */
+@media (min-width: 1440px) and (max-width: 1440px) {
+  /* Hero Section Font Sizes - Matching hero.css */
+  .hero-content h1 {
+    font-size: 2.8rem !important;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.15rem !important;
+    max-width: 650px;
+    margin: 1.8rem auto;
+    line-height: 1.7;
+  }
+  
+  /* Professional Cards Email Fix - Prevent line breaks */
+  .card-contact a {
+    word-break: keep-all !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
+  }
+  
+  .card-contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .card-contact p strong {
+    min-width: 85px;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+  
+  /* Ensure email addresses stay on one line */
+  .card-contact a[href^="mailto:"] {
+    word-break: keep-all !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+  
+  /* Specific card content adjustments for MacBook Air */
+  .card-content {
+    padding: 25px;
+  }
+  
+  .card-contact {
+    font-size: 0.95rem;
+  }
+  
+  /* Studios grid specific adjustments */
+  .studios-grid {
+    gap: 35px;
+  }
+  
+  .professional-card {
+    flex: 1 1 0;
+  }
 }

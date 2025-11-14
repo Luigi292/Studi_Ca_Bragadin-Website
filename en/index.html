@@ -13,7 +13,6 @@
   <!-- Favicon Setup -->
   <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  <link rel="icon" type="image/png" href="../images/favicon-logo.png">
   <meta name="theme-color" content="#1a2a4a">
 
   <!-- Preconnect for fonts -->
@@ -23,10 +22,19 @@
   <!-- Optimized Font Loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   
+  
   <!-- CSS -->
   <link rel="stylesheet" href="../css/navbar-footer.css">
   <link rel="stylesheet" href="../css/index.css">
+
+
+  <!-- Animation CSS should be loaded last to prevent conflicts -->
   <link rel="stylesheet" href="../css/fade-animation.css">
+
+
+  <!-- Primary favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon-logo.png">
+  <link rel="shortcut icon" href="../images/favicon-logo.png" type="image/png">
 </head>
 
 
@@ -52,7 +60,6 @@
   </div>
 
   <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-    <div></div><div></div><div></div>
   </div>
 
   <ul class="navMenu" id="navMenu">
@@ -77,30 +84,29 @@
   <section class="hero">
     <div class="hero-background">
       <div class="carousel" id="carousel">
-        <div class="slide active" aria-label="Ca' Bragadin Accountants Studio - Elegant office reception area">
+        <!-- Critical first image loaded immediately with preload -->
+        <div class="slide" aria-label="Ca' Bragadin Accountants Studio - Elegant office reception area">
           <div class="slideOverlay"></div>
-          <img src="../images/mid-hall.jpg" alt="Slide 1" class="heroImage" loading="eager" fetchpriority="high">
+          <img src="../images/mid-hall.jpg" alt="Ca' Bragadin Accountants Studio - Elegant office reception area" class="heroImage" loading="eager" fetchpriority="high" width="1920" height="1080">
         </div>
+        <!-- Other images with lazy loading -->
         <div class="slide" aria-label="Ca' Bragadin Accountants Studio - Modern meeting room">
           <div class="slideOverlay"></div>
-          <img src="../images/glass-room.jpg" alt="Slide 2" class="heroImage">
+          <img src="../images/glass-room.jpg" alt="Ca' Bragadin Accountants Studio - Modern meeting room" class="heroImage" loading="lazy" width="1920" height="1080">
         </div>
         <div class="slide" aria-label="Ca' Bragadin Accountants Studio - Professional workspace">
           <div class="slideOverlay"></div>
-          <img src="../images/front-hall.jpg" alt="Slide 3" class="heroImage">
+          <img src="../images/front-hall.jpg" alt="Ca' Bragadin Accountants Studio - Professional workspace" class="heroImage" loading="lazy" width="1920" height="1080">
         </div>
       </div>
     </div>
     
     <div class="hero-content-wrapper">
-      <div class="container">
-        <div class="hero-content">
-          <h1>Professional Studios <br> <span>Ca' Bragadin</span></h1>
-          <p class="hero-subtitle">Integrated legal and tax consultancy for businesses and professionals</p>
-          <div class="hero-cta">
-            <a href="contact.html" class="ctaButton">Request consultation</a>
-
-          </div>
+      <div class="hero-content">
+        <h1>Professional Studios <br> <span>Ca' Bragadin</span></h1>
+        <p class="hero-subtitle">Integrated legal and tax consultancy for businesses and professionals</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="ctaButton">Request consultation</a>
         </div>
       </div>
     </div>
@@ -112,6 +118,57 @@
   </section>
 
 
+
+  <!-- Add this section right after the Hero section, before the Studios section -->
+<section class="studio-gallery-section">
+  <div class="gallery-container">
+    <div class="section-header">
+      <h2>Our Spaces</h2>
+      <p class="section-subtitle">Professional and welcoming environments for excellent services</p>
+    </div>
+    
+    <div class="gallery-carousel">
+      <div class="carousel-track-container">
+        <div class="carousel-track" id="gallery-track">
+          <!-- Images will be loaded dynamically via JavaScript -->
+        </div>
+      </div>
+      
+      <div class="carousel-nav">
+        <button class="carousel-button carousel-button--prev" aria-label="Previous image">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="carousel-button carousel-button--next" aria-label="Next image">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="carousel-dots" id="gallery-dots">
+        <!-- Dots will be generated via JavaScript -->
+      </div>
+    </div>
+    
+    <div class="gallery-fullscreen" id="gallery-fullscreen">
+      <div class="fullscreen-content">
+        <button class="fullscreen-close" aria-label="Close view">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="fullscreen-image-container">
+          <img src="" alt="" id="fullscreen-image">
+        </div>
+        <div class="fullscreen-nav">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -135,71 +192,76 @@
     </a>
 
     <div class="studios-grid">
-      <!-- Law. Lenzi -->
-      <div class="professional-card">
-        <div class="card-image-wrapper">
-          <img src="../images/lenzi.jpg" alt="Lawyer Maximiliano Lenzi - Law Firm Padua" width="350" height="350" loading="lazy" decoding="async" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3>Law. Maximiliano Lenzi</h3>
-          <p class="card-specialty">Legal consultancy and business assistance</p>
-          <div class="card-excerpt">
-            <p>Founder of Lenzi Law Firm, expert civil lawyer and business consultant with over 20 years of experience in commercial and corporate law.</p>
-          </div>
-          <div class="card-contact">
-            <p><strong>Phone:</strong> <a href="tel:0498751356">049-8751356</a></p>
-            <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
-            <div class="card-cta">
-              <a href="mailto:avvocatolenzi@studicabragadin.it" class="ctaButton small">Contact</a>
-              <a href="lenzi-page.html" class="ctaButton small profile">Full Profile</a>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Dr. Maretto -->
-      <div class="professional-card">
-        <div class="card-image-wrapper">
-          <img src="../images/andrea.jpg" alt="Dr. Andrea Maretto - Accountant Padua" width="350" height="350" loading="lazy" decoding="async" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3>Dr. Andrea Maretto</h3>
-          <p class="card-specialty">Advanced tax and corporate consultancy</p>
-          <div class="card-excerpt">
-            <p>Accountant with over 10 years of experience in tax consultancy, corporate matters, and economic-financial management and extraordinary operations.</p>
-          </div>
-          <div class="card-contact">
-            <p><strong>Phone:</strong> <a href="tel:0499562428">049-9562428</a></p>
-            <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
-            <div class="card-cta">
-              <a href="mailto:andrea.maretto@studicabragadin.it" class="ctaButton small">Contact</a>
-              <a href="andrea-page.html" class="ctaButton small profile">Full Profile</a>
-            </div>
-          </div>
-        </div>
+      
+<!-- Law. Lenzi -->
+<div class="professional-card">
+  <div class="card-image-wrapper">
+    <img src="../images/lenzi.jpg" alt="Lawyer Maximiliano Lenzi - Law Firm Padua" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+  </div>
+  <div class="card-content">
+    <h3>Law. Maximiliano Lenzi</h3>
+    <p class="card-specialty">Legal consultancy and business assistance</p>
+    <div class="card-excerpt">
+      <p>Lawyer specialised in commercial and corporate law with over 18 years of experience.</p>
+    </div>
+    <div class="card-contact">
+      <p><strong>Phone:</strong> <a href="tel:0498751356">(+39) 049-8751356</a></p>
+      <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
+      <div class="card-cta">
+        <a href="mailto:avvocatolenzi@studicabragadin.it?subject=Consultation%20Request&body=Dear%20Lawyer%20Lenzi," target="_blank" rel="noopener noreferrer" class="ctaButton small">Contact</a>
+        <a href="lenzi-page.html" class="ctaButton small profile">Full Profile</a>
       </div>
+    </div>
+  </div>
+</div>
 
-      <!-- Dr. Cecolin -->
-      <div class="professional-card">
-        <div class="card-image-wrapper">
-          <img src="../images/alberto.jpg" alt="Dr. Alberto Cecolin - Accountant Padua" width="350" height="350" loading="lazy" decoding="async" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3>Dr. Alberto Cecolin</h3>
-          <p class="card-specialty">Tax planning and corporate strategies</p>
-          <div class="card-excerpt">
-            <p>Chartered Accountant and Statutory Auditor, specialised in corporate consultancy, financial planning and extraordinary operations.</p>
-          </div>
-          <div class="card-contact">
-            <p><strong>Phone:</strong> <a href="tel:0497851468">049-7851468</a></p>
-            <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
-            <div class="card-cta">
-              <a href="mailto:studio@studiocecolin.com" class="ctaButton small">Contact</a>
-              <a href="alberto-page.html" class="ctaButton small profile">Full Profile</a>
-            </div>
-          </div>
-        </div>
+<!-- Dr. Maretto -->
+<div class="professional-card">
+  <div class="card-image-wrapper">
+    <img src="../images/andrea.jpg" alt="Dr. Andrea Maretto - Accountant Padua" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+  </div>
+  <div class="card-content">
+    <h3>Dr. Andrea Maretto</h3>
+    <p class="card-specialty">Advanced tax and corporate consultancy</p>
+    <div class="card-excerpt">
+      <p>Chartered Accountant and Statutory Auditor with 13 years of experience.</p>
+    </div>
+    <div class="card-contact">
+      <p><strong>Phone:</strong> <a href="tel:0499562428">(+39) 049-9562428</a></p>
+      <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
+      <div class="card-cta">
+        <a href="mailto:andrea.maretto@studicabragadin.it?subject=Consultation%20Request&body=Dear%20Dr.%20Maretto," target="_blank" rel="noopener noreferrer" class="ctaButton small">Contact</a>
+        <a href="andrea-page.html" class="ctaButton small profile">Full Profile</a>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dr. Cecolin -->
+<div class="professional-card">
+  <div class="card-image-wrapper">
+    <img src="../images/alberto.jpg" alt="Dr. Alberto Cecolin - Accountant Padua" width="350" height="350" loading="lazy" decoding="async" class="card-image">
+  </div>
+  <div class="card-content">
+    <h3>Dr. Alberto Cecolin</h3>
+    <p class="card-specialty">Tax planning and corporate strategies</p>
+    <div class="card-excerpt">
+      <p>Chartered Accountant and Statutory Auditor with 13 years of experience.</p>
+    </div>
+    <div class="card-contact">
+      <p><strong>Phone:</strong> <a href="tel:0497851468">(+39) 049-7851468</a></p>
+      <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
+      <div class="card-cta">
+        <a href="mailto:studio@studiocecolin.com?subject=Consultation%20Request&body=Dear%20Dr.%20Cecolin," target="_blank" rel="noopener noreferrer" class="ctaButton small">Contact</a>
+        <a href="alberto-page.html" class="ctaButton small profile">Full Profile</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     </div>
   </div>
 </section>
@@ -296,7 +358,7 @@
       <div class="footerInfo">
         <p><strong>Address:</strong> Via G. Belzoni 180, 35121 Padua</p>
         <p><strong>Email:</strong> info@studicabragadin.it</p>
-        <p><strong>Tel:</strong> +39 049 1234567</p>
+        <p><strong>Tel:</strong> (+39) 049-8751356</p>
       </div>
     </div>
 
@@ -319,12 +381,11 @@
     </div>
   </div>
 
-
-<!-- Developer credit -->
+  <!-- Developer credit -->
 
 <div class="footer-bottom">
   <div class="footer-copyright">
-    <p>&copy; <span class="current-year"></span> Ca' Bragadin Studios. All rights reserved.</p>
+    <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. All rights reserved.</p>
   </div>
   
   <!-- <div class="footer-developer">
@@ -345,12 +406,12 @@
 
 
 
+
 <!-- Scripts -->
 
 <script src="../js/navbar.js" defer></script>
-<script src="../js/index.js" defer></script>
+<script src="../js/index-en.js" defer></script>
 <script src="../js/fade-animation.js" defer></script>
-
 
 
 

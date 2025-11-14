@@ -2,11 +2,11 @@
 
 /* ===== GLOBAL VARIABLES ===== */
 :root {
-  --primary-color: #1a2a4a;
-  --primary-light: #2c3e66;
+  --primary-color: rgb(32, 55, 61);
+  --primary-light: rgb(52, 75, 81);
   --secondary-color: #bca454;
   --secondary-light: #e8c874;
-  --accent-color: #4a6fa5;
+  --accent-color: rgb(32, 55, 61);
   --dark-color: #222222;
   --light-color: #f8f9fa;
   --gray-color: #6c757d;
@@ -31,9 +31,7 @@
   --text-3xl: 1.875rem;
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
-
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -50,7 +48,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
 
 /* ===== CONTACT PAGE STYLES ===== */
 .contact-main {
@@ -150,7 +147,7 @@ body {
   justify-content: center;
   flex-shrink: 0;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 4px 10px rgba(20, 40, 80, 0.15);
+  box-shadow: 0 4px 10px rgba(32, 55, 61, 0.15);
 }
 
 .contact-icon:hover {
@@ -293,7 +290,7 @@ body {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(20, 40, 80, 0.1);
+  box-shadow: 0 0 0 3px rgba(32, 55, 61, 0.1);
   background: #fff;
 }
 
@@ -329,8 +326,6 @@ body {
   background: #fcfcfc !important;
   box-sizing: border-box !important;
 }
-
-
 
 /* Privacy checkbox styling - FIXED */
 .privacy-group {
@@ -423,9 +418,6 @@ body {
   transition: color 0.3s;
 }
 
-
-
-
 .form-submit {
   margin-top: 4px;
   display: flex;
@@ -444,18 +436,18 @@ body {
   transition: all 0.3s ease;
   width: 100%;
   max-width: 280px;
-  box-shadow: 0 3px 10px rgba(20, 40, 80, 0.15);
+  box-shadow: 0 3px 10px rgba(32, 55, 61, 0.15);
 }
 
 .submit-button:hover {
-  background: #0d1e3d;
+  background: rgb(22, 45, 51);
   transform: translateY(-1px);
-  box-shadow: 0 5px 12px rgba(20, 40, 80, 0.25);
+  box-shadow: 0 5px 12px rgba(32, 55, 61, 0.25);
 }
 
 .submit-button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(20, 40, 80, 0.15);
+  box-shadow: 0 2px 6px rgba(32, 55, 61, 0.15);
 }
 
 /* Form response message */
@@ -466,13 +458,6 @@ body {
   font-size: 0.9rem;
   text-align: center;
 }
-
-
-
-
-
-
-
 
 /* ===== ENHANCED RESPONSIVE STYLES ===== */
 
@@ -486,7 +471,6 @@ body {
   .contact-info-card,
   .contact-form-card {
     padding: 22px 18px;
-   
   }
   
   .map-container {
@@ -505,23 +489,22 @@ body {
     padding: 11px 13px;
   }
 
-
- .form-group.message-group textarea {
-  width: 100% !important;
-  min-height: 200px !important;
-  max-height: 250px;
-  height: 100% !important;
-  flex-grow: 1 !important;
-  padding: 16px !important;
-  border: 1px solid #e1e5e9 !important;
-  border-radius: 8px !important;
-  font-family: inherit !important;
-  font-size: 1rem !important;
-  line-height: 1.5 !important;
-  resize: vertical !important;
-  background: #fcfcfc !important;
-  box-sizing: border-box !important;
-}
+  .form-group.message-group textarea {
+    width: 100% !important;
+    min-height: 200px !important;
+    max-height: 250px;
+    height: 100% !important;
+    flex-grow: 1 !important;
+    padding: 16px !important;
+    border: 1px solid #e1e5e9 !important;
+    border-radius: 8px !important;
+    font-family: inherit !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    resize: vertical !important;
+    background: #fcfcfc !important;
+    box-sizing: border-box !important;
+  }
 }
 
 /* Tablet Breakpoint (991px and below) */

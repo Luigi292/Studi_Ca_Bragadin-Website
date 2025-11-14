@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Ca' Bragadin Studios | Padua</title>
-  <meta name="description" content="Contact the professionals at Ca' Bragadin Studios in Padua. Lawyer Lenzi, Accountants Maretto and Cecolin. Fill out the form to request a consultation.">
+  <title>Contact | Studio Ca' Bragadin | Padua</title>
+  <meta name="description" content="Contact the professionals at Studio Ca' Bragadin in Padua. Lawyer Lenzi, Accountants Maretto and Cecolin. Fill out the form to request a consultation.">
   <meta name="keywords" content="lawyer lenzi padua, andrea maretto padua, cecolin padua, accountant padua, accountants studio padua, legal services padua">
 
   <!-- Favicon Setup -->
@@ -27,29 +27,61 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
  
   <!-- CSS -->
-
   <link rel="stylesheet" href="../css/navbar-footer.css">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/contatti.css">
   <link rel="stylesheet" href="../css/hero.css">
-
-   <!-- Animation CSS should be loaded last to prevent conflicts -->
   <link rel="stylesheet" href="../css/fade-animation.css">
-
 
   <!-- Primary favicon -->
   <link rel="icon" type="image/png" href="../images/favicon-logo.png">
   <link rel="shortcut icon" href="../images/favicon-logo.png" type="image/png">
+  
+  <style>
+    /* Advanced honeypot styles */
+    .hp-field { 
+        display: none !important; 
+        visibility: hidden !important; 
+        opacity: 0 !important; 
+        height: 0 !important; 
+        width: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+        top: -9999px !important;
+        pointer-events: none !important;
+        z-index: -9999 !important;
+    }
+    .hp-field input, .hp-field select, .hp-field textarea {
+        display: none !important;
+    }
+    .form-security-wrapper {
+        position: relative;
+    }
+    .form-response {
+        padding: 15px;
+        border-radius: 4px;
+        margin-top: 20px;
+        display: none;
+    }
+    .form-response.success {
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+    }
+    .form-response.error {
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+    }
+  </style>
 </head>
 <body>
-
-
   
 <!-- Navbar -->
 <nav class="navbar">
   <div class="logo">
-    <a href="index.html" aria-label="Ca' Bragadin Studios - Home">
-      <img src="../images/logo.jpg.avif" alt="Ca' Bragadin Accountants Studio Padua" width="80" height="60">
+    <a href="index.html" aria-label="Studio Ca' Bragadin - Home">
+      <img src="../images/logo.jpg.avif" alt="Studio Ca' Bragadin Accountants Padua" width="80" height="60">
     </a>
   </div>
 
@@ -83,11 +115,10 @@
   </ul>
 </nav>
 
-
   <!-- Contact Hero Section -->
   <section class="hero-section contact-hero">
     <div class="hero-overlay"></div>
-    <img src="../images/hall.jpg.avif" alt="Ca' Bragadin Studios Team" class="hero-image" loading="eager" fetchpriority="high">
+    <img src="../images/hall.jpg.avif" alt="Studio Ca' Bragadin Team" class="hero-image" loading="eager" fetchpriority="high">
     <div class="hero-content">
       <h1>Contact our studio</h1>
       <p>Professionalism and expertise at the service of your needs</p>
@@ -101,6 +132,7 @@
   <!-- Contact Main Section -->
   <main class="contact-main">
     <div class="contact-container">
+      
       <!-- Contact Info Column -->
       <div class="contact-info-column">
         <div class="contact-info-card">
@@ -126,7 +158,7 @@
             </div>
             <div class="contact-info-text">
               <h3>Phone</h3>
-              <p>+39 049 1234567</p>
+              <p>+39 049 8751356</p>
             </div>
           </div>
 
@@ -168,7 +200,7 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Map showing the location of Ca' Bragadin Studios in Padua">
+            title="Map showing the location of Studio Ca' Bragadin in Padua">
           </iframe>
         </div>
       </div>
@@ -177,28 +209,68 @@
       <div class="contact-form-column">
         <div class="contact-form-card">
           <h2>Request a consultation</h2>
-          <p class="form-subtitle">Fill out the form and you will be contacted within 24 hours</p>
+          <p class="form-subtitle">Please fill out the form. The professional you selected will contact you as soon as possible</p>
           
           <form id="professionalContactForm" class="professional-form">
+            <div class="form-security-wrapper">
+              
+              <!-- Multiple Advanced Honeypot Fields -->
+              <div class="hp-field">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+              
+              <div class="hp-field">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+              </div>
+              
+              <div class="hp-field">
+                <label for="url">URL</label>
+                <input type="url" id="url" name="url" tabindex="-1" autocomplete="off">
+              </div>
+              
+              <div class="hp-field">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" tabindex="-1" autocomplete="off">
+              </div>
+              
+              <div class="hp-field">
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments" tabindex="-1" autocomplete="off"></textarea>
+              </div>
+              
+              <!-- Hidden security fields -->
+              <input type="hidden" id="timestamp" name="timestamp" value="">
+              <input type="hidden" id="form_load_time" name="form_load_time" value="">
+              <input type="hidden" id="js_validation" name="js_validation" value="">
+              
+              <!-- Fake submit button for bots -->
+              <div class="hp-field">
+                <button type="submit" name="fake_submit">Send</button>
+              </div>
+            </div>
+
+            <!-- Real Form Fields -->
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">First Name*</label>
-                <input type="text" id="firstName" name="firstName" required>
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
               </div>
               <div class="form-group">
                 <label for="lastName">Last Name*</label>
-                <input type="text" id="lastName" name="lastName" required>
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
               </div>
             </div>
 
             <div class="form-group">
               <label for="email">Email*</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" required autocomplete="email">
             </div>
 
             <div class="form-group">
               <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone">
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
             </div>
 
             <div class="form-row">
@@ -221,7 +293,7 @@
 
             <div class="form-group message-group">
               <label for="message">Message*</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <textarea id="message" name="message" rows="5" required placeholder="Describe your request in detail..."></textarea>
             </div>
 
             <!-- Privacy Checkbox -->
@@ -233,7 +305,7 @@
             </div>
 
             <div class="form-submit">
-              <button type="submit" class="submit-button">Send Request</button>
+              <button type="submit" class="submit-button" id="realSubmitButton">Send Request</button>
             </div>
 
             <div id="formResponse" class="form-response" style="display: none;"></div>
@@ -248,7 +320,7 @@
     <div class="footerContent">
       <div class="footerColumn">
         <div class="footerLogo">
-          <img src="../images/logo.jpg.avif" alt="Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
+          <img src="../images/logo.jpg.avif" alt="Studio Ca' Bragadin Accountants Firm" width="110" height="83" loading="lazy">
         </div>
         <p class="footerTagline">Professionalism and expertise <br> at the service of businesses</p>
       </div>
@@ -258,7 +330,7 @@
         <div class="footerInfo">
           <p><strong>Address:</strong> Via G. Belzoni 180, 35121 Padua</p>
           <p><strong>Email:</strong> info@studicabragadin.it</p>
-          <p><strong>Tel:</strong> +39 049 1234567</p>
+          <p><strong>Tel:</strong>(+39) 049-8751356</p>
         </div>
       </div>
 
@@ -283,7 +355,7 @@
 
     <div class="footer-bottom">
       <div class="footer-copyright">
-        <p>&copy; <span class="current-year"></span> Ca' Bragadin Studios. All rights reserved.</p>
+        <p>&copy; <span class="current-year"></span> Studi Ca' Bragadin. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -297,13 +369,150 @@
   </div>
 
 
-
+  
 <!-- Scripts -->
 <script src="../js/navbar.js" defer></script>
 <script src="../js/navbar-scroll.js" defer></script>
 <script src="../js/footer.js" defer></script>
-<script src="../js/contatti.js" defer></script>
 
+<script>
+// Simple Security Contact Form
+document.addEventListener('DOMContentLoaded', function() {
+    // Security initialization
+    const formLoadTime = Math.floor(Date.now() / 1000);
+    document.getElementById('form_load_time').value = formLoadTime;
+    document.getElementById('js_validation').value = 'verified';
+    
+    // Service options mapping - UPDATED WITH CORRECT SERVICES
+    const serviceOptions = {
+        avv_lenzi: [
+            {value: 'consulenza_aziendale', text: 'Business Consulting'},
+            {value: 'contrattualistica_aziendale', text: 'Corporate Contract Law'},
+            {value: 'recupero_crediti', text: 'Credit Recovery'},
+            {value: 'ecommerce', text: 'E-commerce'},
+            {value: 'contenzioso_civile', text: 'Civil Litigation'},
+            {value: 'diritto_bancario', text: 'Banking Law'},
+            {value: 'crisi_impresa', text: 'Business Crisis'},
+            {value: 'proprieta_industriale', text: 'Industrial Property'},
+            {value: 'diritto_societario', text: 'Corporate Law'}
+        ],
+        dott_maretto: [
+            {value: 'contabilita_bilanci', text: 'Accounting and Financial Statements'},
+            {value: 'servizi_fiscali', text: 'Tax Services'},
+            {value: 'contrattualistica_aziendale_maretto', text: 'Corporate Contract Law'},
+            {value: 'consulenza_bancaria_finanziaria', text: 'Banking and Financial Consulting'},
+            {value: 'consulenza_controllo_gestione', text: 'Business Consulting and Management Control'},
+            {value: 'consulenza_enti_pubblici', text: 'Consulting for Public Entities and Institutions'}
+        ],
+        dott_cecolin: [
+            {value: 'contabilita_bilanci_cecolin', text: 'Accounting and Financial Statements'},
+            {value: 'fiscalita_dichiarazioni', text: 'Taxation and Declarations'},
+            {value: 'controllo_gestione', text: 'Management Control'},
+            {value: 'contrattualistica_impresa', text: 'Corporate Contract Law'},
+            {value: 'operazioni_straordinarie', text: 'Extraordinary Operations'},
+            {value: 'revisione_governance', text: 'Audit and Governance'}
+        ]
+    };
+
+    const professionalSelect = document.getElementById('professional');
+    const serviceSelect = document.getElementById('service');
+    const contactForm = document.getElementById('professionalContactForm');
+    const formResponse = document.getElementById('formResponse');
+
+    // Update service options when professional changes
+    professionalSelect.addEventListener('change', function() {
+        const selectedProfessional = this.value;
+        
+        serviceSelect.innerHTML = '<option value="">Select a service</option>';
+        
+        if (selectedProfessional && serviceOptions[selectedProfessional]) {
+            serviceOptions[selectedProfessional].forEach(service => {
+                const option = document.createElement('option');
+                option.value = service.value;
+                option.textContent = service.text;
+                serviceSelect.appendChild(option);
+            });
+        }
+    });
+
+    // Form submission handler
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Set current timestamp
+        document.getElementById('timestamp').value = Math.floor(Date.now() / 1000);
+        
+        // Check minimum time requirement (5 seconds)
+        const currentTime = Math.floor(Date.now() / 1000);
+        const formLoadTime = parseInt(document.getElementById('form_load_time').value);
+        if ((currentTime - formLoadTime) < 5) {
+            formResponse.className = 'form-response error';
+            formResponse.innerHTML = '<p>Please take at least 5 seconds to complete the form.</p>';
+            formResponse.style.display = 'block';
+            formResponse.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            return;
+        }
+
+        // Get submit button and disable it
+        const submitButton = this.querySelector('.submit-button');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+        
+        // Hide previous response
+        formResponse.style.display = 'none';
+        formResponse.className = 'form-response';
+        
+        // Prepare form data
+        const formData = new FormData(this);
+        
+        // Send AJAX request
+        fetch('../process_contact.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network error. Please try again later.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                formResponse.className = 'form-response success';
+                formResponse.innerHTML = '<p>' + data.message + '</p>';
+                contactForm.reset();
+                
+                // Clear service options
+                serviceSelect.innerHTML = '<option value="">Select a service</option>';
+            } else {
+                throw new Error(data.message);
+            }
+        })
+        .catch(error => {
+            formResponse.className = 'form-response error';
+            formResponse.innerHTML = '<p>' + error.message + '</p>';
+        })
+        .finally(() => {
+            formResponse.style.display = 'block';
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+            
+            // Scroll to response
+            formResponse.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    });
+
+    // Additional security: Prevent form autofill by bots
+    setTimeout(() => {
+        document.querySelectorAll('.hp-field input').forEach(field => {
+            if (field.value) {
+                field.value = '';
+            }
+        });
+    }, 1000);
+});
+</script>
 
 </body>
 </html>

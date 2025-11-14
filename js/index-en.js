@@ -1,3 +1,4 @@
+// js/index-en.js - English version with full functionality matching Italian version
 document.addEventListener('DOMContentLoaded', function() {
   // ===== HERO CAROUSEL =====
   function initHeroCarousel() {
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     slides.forEach((_, index) => {
       const indicator = document.createElement('button');
       indicator.className = `carousel-indicator ${index === 0 ? 'active' : ''}`;
-      indicator.setAttribute('aria-label', `Vai alla slide ${index + 1}`);
+      indicator.setAttribute('aria-label', `Go to slide ${index + 1}`);
       indicator.addEventListener('click', () => goToSlide(index));
       indicatorsContainer.appendChild(indicator);
     });
@@ -119,8 +120,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     newsGrid.innerHTML = '<div class="news-loading"><div class="news-loading-spinner"></div></div>';
 
-    // Always try to fetch the JSON file
-    fetch('news-data.json')
+    // Always try to fetch the JSON file - using ../ for English version
+    fetch('../news-data.json')
       .then(response => {
         if (!response.ok) {
           // If the file doesn't exist or there's a network error
@@ -167,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <h3>${news.title}</h3>
             <p>${news.preview}</p>
             <div class="news-preview-actions">
-              <a href="news.html#news-${news.id}" class="news-preview-more">Leggi tutto</a>
+              <a href="newspage.html#news-${news.id}" class="news-preview-more">Read more</a>
             </div>
           </div>
         `;
@@ -185,8 +186,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <line x1="16" y1="17" x2="8" y2="17"></line>
             <polyline points="10 9 9 9 8 9"></polyline>
           </svg>
-          <h2>Nessuna news pubblicata al momento</h2>
-          <p>I nostri professionisti stanno preparando nuovi contenuti. Torna a controllare presto!</p>
+          <h2>No news published at the moment</h2>
+          <p>Our professionals are preparing new content. Check back soon!</p>
         </div>
       `;
     }
@@ -211,18 +212,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const gallerySection = document.querySelector('.studio-gallery-section');
     if (!gallerySection) return;
 
-    // Define gallery images with descriptions
+    // Define gallery images with descriptions - using ../images/ for English version
     const galleryImages = [
-      { src: 'images/front-hall.jpg', alt: 'Studio Ca Bragadin - Atrio principale' },
-      { src: 'images/mid-hall.jpg', alt: "Studio Ca Bragadin - Sala d'attesa" },
-      { src: 'images/glass-room.jpg', alt: 'Studio Ca Bragadin - Sala riunioni vetrata' },
-      { src: 'images/glass-room2.jpg', alt: 'Studio Ca Bragadin - Ambiente di lavoro moderno' },
-      { src: 'images/glass-room3.jpg', alt: 'Studio Ca Bragadin - Spazio collaborativo' },
-      { src: 'images/team-glass-room.jpg', alt: 'Studio Ca Bragadin - Team in sala riunioni' },
-      { src: 'images/team1.jpg', alt: 'Studio Ca Bragadin - Team professionale' },
-      { src: 'images/team2.jpg', alt: 'Studio Ca Bragadin - Collaborazione tra professionisti' },
-      { src: 'images/team-balcony.jpg', alt: 'Studio Ca Bragadin - Team sul balcone' },
-      { src: 'images/ufficio-lenzi.jpg', alt: 'Studio Avv. Lenzi - Ufficio privato' }
+      { src: '../images/front-hall.jpg', alt: 'Ca Bragadin Studios - Main hall' },
+      { src: '../images/mid-hall.jpg', alt: 'Ca Bragadin Studios - Waiting room' },
+      { src: '../images/glass-room.jpg', alt: 'Ca Bragadin Studios - Glass meeting room' },
+      { src: '../images/glass-room2.jpg', alt: 'Ca Bragadin Studios - Modern workspace' },
+      { src: '../images/glass-room3.jpg', alt: 'Ca Bragadin Studios - Collaborative space' },
+      { src: '../images/team-glass-room.jpg', alt: 'Ca Bragadin Studios - Team in meeting room' },
+      { src: '../images/team1.jpg', alt: 'Ca Bragadin Studios - Professional team' },
+      { src: '../images/team2.jpg', alt: 'Ca Bragadin Studios - Professional collaboration' },
+      { src: '../images/team-balcony.jpg', alt: 'Ca Bragadin Studios - Team on balcony' },
+      { src: '../images/ufficio-lenzi.jpg', alt: 'Law. Lenzi Office - Private office' }
     ];
 
     const track = document.getElementById('gallery-track');
@@ -255,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create dot
         const dot = document.createElement('button');
         dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
-        dot.setAttribute('aria-label', `Vai all'immagine ${index + 1}`);
+        dot.setAttribute('aria-label', `Go to image ${index + 1}`);
         dot.addEventListener('click', () => goToSlide(index));
         dotsContainer.appendChild(dot);
       });

@@ -85,30 +85,29 @@
   <section class="hero">
     <div class="hero-background">
       <div class="carousel" id="carousel">
-        <div class="slide active" aria-label="Studio Commercialisti Ca' Bragadin - Elegant office reception area">
+        <!-- Critical first image loaded immediately with preload -->
+        <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Elegant office reception area">
           <div class="slideOverlay"></div>
-          <img src="images/mid-hall.jpg" alt="Slide 1" class="heroImage" loading="eager" fetchpriority="high">
+          <img src="images/mid-hall.avif" alt="Studio Commercialisti Ca' Bragadin - Elegant office reception area" class="heroImage" loading="eager" fetchpriority="high" width="1920" height="1080">
         </div>
+        <!-- Other images with lazy loading -->
         <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Modern meeting room">
           <div class="slideOverlay"></div>
-          <img src="images/glass-room.jpg" alt="Slide 2" class="heroImage">
+          <img src="images/glass-room.jpg" alt="Studio Commercialisti Ca' Bragadin - Modern meeting room" class="heroImage" loading="lazy" width="1920" height="1080">
         </div>
         <div class="slide" aria-label="Studio Commercialisti Ca' Bragadin - Professional workspace">
           <div class="slideOverlay"></div>
-          <img src="images/front-hall.jpg" alt="Slide 3" class="heroImage">
+          <img src="images/front-hall.jpg" alt="Studio Commercialisti Ca' Bragadin - Professional workspace" class="heroImage" loading="lazy" width="1920" height="1080">
         </div>
       </div>
     </div>
     
     <div class="hero-content-wrapper">
-      <div class="container">
-        <div class="hero-content">
-          <h1>Studi Professionali <br> <span>Ca' Bragadin</span></h1>
-          <p class="hero-subtitle">Consulenza legale e fiscale integrata per imprese e professionisti</p>
-          <div class="hero-cta">
-            <a href="contatti.html" class="ctaButton">Richiedi consulenza</a>
-
-          </div>
+      <div class="hero-content">
+        <h1>Studi Professionali <br> <span>Ca' Bragadin</span></h1>
+        <p class="hero-subtitle">Consulenza legale e fiscale integrata per imprese e professionisti</p>
+        <div class="hero-cta">
+          <a href="contatti.html" class="ctaButton">Richiedi consulenza</a>
         </div>
       </div>
     </div>
@@ -209,7 +208,7 @@
       <p>Avvocato specializzato in diritto commerciale e societario con oltre 18 anni di esperienza.</p>
     </div>
     <div class="card-contact">
-      <p><strong>Telefono:</strong> <a href="tel:0498751356">049-8751356</a></p>
+      <p><strong>Telefono:</strong> <a href="tel:0498751356">(+39) 049-8751356</a></p>
       <p><strong>Email:</strong> <a href="mailto:avvocatolenzi@studicabragadin.it">avvocatolenzi@studicabragadin.it</a></p>
       <div class="card-cta">
         <a href="mailto:avvocatolenzi@studicabragadin.it?subject=Richiesta%20di%20consulenza&body=Gentile%20Avvocato%20Lenzi," target="_blank" rel="noopener noreferrer" class="ctaButton small">Contatta</a>
@@ -231,7 +230,7 @@
       <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza.</p>
     </div>
     <div class="card-contact">
-      <p><strong>Telefono:</strong> <a href="tel:0499562428">049-9562428</a></p>
+      <p><strong>Telefono:</strong> <a href="tel:0499562428">(+39) 049-9562428</a></p>
       <p><strong>Email:</strong> <a href="mailto:andrea.maretto@studicabragadin.it">andrea.maretto@studicabragadin.it</a></p>
       <div class="card-cta">
         <a href="mailto:andrea.maretto@studicabragadin.it?subject=Richiesta%20di%20consulenza&body=Gentile%20Dottore%20Maretto," target="_blank" rel="noopener noreferrer" class="ctaButton small">Contatta</a>
@@ -253,7 +252,7 @@
       <p>Dottore Commercialista e Revisore Legale con 13 anni di esperienza.</p>
     </div>
     <div class="card-contact">
-      <p><strong>Telefono:</strong> <a href="tel:0497851468">049-7851468</a></p>
+      <p><strong>Telefono:</strong> <a href="tel:0497851468">(+39) 049-7851468</a></p>
       <p><strong>Email:</strong> <a href="mailto:studio@studiocecolin.com">studio@studiocecolin.com</a></p>
       <div class="card-cta">
         <a href="mailto:studio@studiocecolin.com?subject=Richiesta%20di%20consulenza&body=Gentile%20Dottore%20Cecolin," target="_blank" rel="noopener noreferrer" class="ctaButton small">Contatta</a>
@@ -361,7 +360,7 @@
       <div class="footerInfo">
         <p><strong>Indirizzo:</strong> Via G. Belzoni 180, 35121 Padova</p>
         <p><strong>Email:</strong> info@studicabragadin.it</p>
-        <p><strong>Tel:</strong> +39 049 1234567</p>
+        <p><strong>Tel:</strong> (+39) 049-8751356</p>
       </div>
     </div>
 
